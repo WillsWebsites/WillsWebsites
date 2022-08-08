@@ -1,4 +1,34 @@
 // Header intersection observer - add class scrolled once scrolled
+const header = document.querySelector('.header');
+
+const headerReveal = function (entry, headerObserver) {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.remove('hidden');
+    headerObserver.unobserve(entry.target);
+}
+
+const headerObserver = new IntersectionObserver(headerReveal, {
+  root: null,
+  threshold: .2,
+});
+
+header.classList.add('hidden');
+headerObserver.observe(header);
+
+// const observer = new IntersectionObserver(
+//   ([entry]) => {
+//     if (entry.boundingClientRect.top < 0) {
+//       if (entry.isIntersecting) {
+//         // entered viewport at the top edge, hence scroll direction is up
+//       } else {
+//         // left viewport at the top edge, hence scroll direction is down
+//       }
+//     }
+//   },
+//   {
+//     root: rootElement,
+//   },
+// );
 
 
 

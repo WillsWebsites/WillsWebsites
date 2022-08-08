@@ -1,3 +1,4 @@
+// Colors
 $transparent: rgba(255, 255, 255, 0);
 $light: rgb(255, 255, 255);
 $dark: rgb(14, 14, 16);
@@ -6,4 +7,3 @@ $primary: rgb(26, 33, 17);
 $secondary: rgb(88, 191, 29);
 $tertiary: lighten($secondary, 8);
 $highlight: complement($primary);
-
