@@ -4,12 +4,14 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999999;
+  z-index: 9999;
   transition: all 0.4s ease-in;
 }
 .header-overlay {
   background: rgba(90, 102, 35, 0);
-  transition: background 0.7s ease;
+}
+.header-container {
+  padding: 5px 0;
 }
 .header-inner {
   display: flex;
@@ -22,18 +24,15 @@ header a {
   color: $light;
 }
 
+.logo-link {
+    display: flex;
+}
 .main-logo {
   width: 100%;
   height: auto;
-  max-width: 130px;
-  filter: none;
+  max-width: 75px;
   transition: all 0.4s ease-in-out;
   margin: 5px 0;
-
-  @media (min-width: 992px) {
-    max-width: 220px;
-    margin: 10px 0;
-  }
 }
 .header-right {
   display: flex;
@@ -57,11 +56,11 @@ header a {
 }
 
 .nav-item {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   transition: all 0.4s ease;
 
   a {
-    padding: 25px 20px;
+    padding: 10px 20px;
   }
 }
 
@@ -72,6 +71,10 @@ header a {
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
 }
 #menuToggle {
   display: flex;

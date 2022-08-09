@@ -56,12 +56,15 @@ p {
 }
 
 //prettier-ignore
-a, a:visited, a:active, a:focus {
-  text-decoration: none;
-  color: $secondary;
-  transition: color 0.2s ease;
-  outline: 0;
+a, a:visited, a:active, a:focus { 
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    outline: 0;
+    color: $secondary;
+}
 
+a {
   //prettier-ignore
   &:hover, &:focus, &:active {
     color: $primary;
@@ -87,21 +90,22 @@ section {
 }
 
 .container {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 
-  &:not(.header-container, .footer-container) {
+  &:not(.header-container, .f-container) {
     padding: 40px 0;
   }
 
   @media (min-width: 768px) {
-    &:not(.header-container, .footer-container) {
+    &:not(.header-container, .f-container) {
       padding: 75px 0;
     }
   }
 
   @media (min-width: 1200px) {
     width: 85%;
+    max-width: 1400px;
   }
 }
 
@@ -112,7 +116,6 @@ section {
   border: none;
   border-radius: 10px;
   font-size: 18px;
-  cursor: pointer;
   transition: all 0.2s ease;
 
   &:hover {
