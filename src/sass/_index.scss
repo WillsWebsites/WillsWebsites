@@ -5,69 +5,67 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  -webkit-box-sizing: $box-model;
 }
 html {
-  background-color: $dark;
+  background-color: $primary;
   z-index: 100;
 }
 body {
-  color: $light;
+  color: $secondary;
+  overflow-x: hidden;
+  min-height: calc(100vh - 2 * 4vw);
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  min-height: calc(100vh - 2 * 4vw);
 }
 
-//prettier-ignore
+// //prettier-ignore
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Outfit", sans-serif;
   margin: 15px 0;
 }
 
-//prettier-ignore
-p, a, span, div, ul, ol, li, button {
-  font-family: "Outfit", sans-serif;
-}
+// //prettier-ignore
+// p, a, span, div, ul, ol, li, button {
+// }
 
 h1 {
-  font-size: 4rem;
+  font-size: $x-large;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: $large-m;
 
-  @media (min-width: 768px) {
-    font-size: 3rem;
+  @media ($tablet) {
+    font-size: $large;
   }
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: $small-m;
   margin: 10px 0;
 
-  @media (min-width: 768px) {
-    font-size: 1.5rem;
+  @media ($tablet) {
+    font-size: $small;
   }
 }
 
 //prettier-ignore
 a, a:visited, a:active, a:focus { 
+    color: $secondary;
     cursor: pointer;
     text-decoration: none;
     transition: color 0.2s ease;
     outline: 0;
-    color: $secondary;
 }
 
 a {
   //prettier-ignore
   &:hover, &:focus, &:active {
-    color: $primary;
+    color: $secondary-highlight;
   }
 }
 section {
@@ -85,42 +83,39 @@ section {
   -o-background-position: center center;
   -ms-background-position: center center;
 }
-.overlay {
-  overflow: auto;
-}
 
 .container {
-  width: 90%;
+  width: $container-m;
   margin: 0 auto;
 
-  &:not(.header-container, .f-container) {
+  &:not(.h-container, .f-container) {
     padding: 40px 0;
   }
 
-  @media (min-width: 768px) {
-    &:not(.header-container, .f-container) {
+  @media ($tablet) {
+    &:not(.h-container, .f-container) {
       padding: 75px 0;
     }
   }
 
-  @media (min-width: 1200px) {
-    width: 85%;
-    max-width: 1400px;
+  @media ($desktop) {
+    width: $container;
+    max-width: $container-max;
   }
 }
 
 .btn {
   padding: 15px 35px;
-  background-color: var(--light-green);
-  box-shadow: 0 5px var(--light-green-shadow);
+  background-color: $btn;
+  font-size: $medium;
+  box-shadow: 0 5px $shadow;
   border: none;
   border-radius: 10px;
-  font-size: 18px;
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: var(--dark-green);
-    box-shadow: 0, 0 $transparent;
+    background-color: $btn-hover;
+    box-shadow: 0, 0 transparent;
     transform: translateY(5px);
   }
 }
@@ -137,14 +132,14 @@ section {
   top: 0;
 }
 .se-pre-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: var(--dark-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: $dark;
 }

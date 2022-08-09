@@ -1,9 +1,62 @@
 // Colors
-$transparent: rgba(255, 255, 255, 0);
-$light: rgb(255, 255, 255);
-$dark: rgb(14, 14, 16);
-$light-gray: rgb(35, 35, 35);
-$primary: rgb(26, 33, 17);
-$secondary: rgb(88, 191, 29);
-$tertiary: lighten($secondary, 8);
-$highlight: complement($primary);
+$light: rgb(228, 228, 228);
+$dark: rgb(18, 18, 18);
+$medium: rgb(63, 63, 63);
+$primary: rgb(18, 38, 51);
+$primary-shadow: darken($primary, 12);
+$primary-highlight: lighten($primary, 12);
+$secondary: rgb(100, 134, 125);
+$secondary-shadow: darken($secondary, 12);
+$secondary-highlight: lighten($secondary, 12);
+$special: complement($primary);
+
+$link: $secondary;
+$link-hover: $secondary-shadow;
+
+$btn: $secondary;
+$btn-hover: $secondary-shadow;
+$btn-color: $light;
+$btn-color-hover: $dark;
+
+$footer: $light;
+$footer-primary: $secondary;
+
+$shadow: rgba($dark, .3);
+
+// Font sizes desktop
+$x-small: .8rem;
+$small: 1.2rem;
+$medium: 1.9rem;
+$large: 3rem;
+$x-large: 4rem;
+
+// Font sizes mobile
+$x-small-m: .6rem;
+$small-m: .9rem;
+$medium-m: 1.6rem;
+$large-m: 2.4rem;
+$x-large-m: 3.2rem;
+
+// Breakpoint min-width's
+$mobile: 'min-width: 368px';
+$mobile-large: 'min-width: 568px';
+$tablet: 'min-width: 768px';
+$laptop: 'min-width: 992px';
+$desktop: 'min-width: 1200px';
+$desktop-large: 'min-width: 1800px';
+
+// Breakpoint max-width's
+$mobile-max: 'max-width: 367px';
+$mobile-large-max: 'max-width: 567px';
+$tablet-max: 'max-width: 767px';
+$laptop-max: 'max-width: 991px';
+$desktop-max: 'max-width: 1199px';
+$desktop-large-max: 'max-width: 1799px';
+
+// Container width's
+$container-m: 95%;
+$container: 85%;
+$container-max: 1400px;
+
+// Box model style
+$box-model: border-box;
