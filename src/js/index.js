@@ -1,93 +1,83 @@
-// $('<div id="headerView" aria-hidden="true"/>').prependTo("body");
+// Get header height for anchor support
+let headerHeight = document.querySelector('.header').getBoundingClientRect().height;
 
-//Get Height of header
-//Used for anchor support
-var headerHeight = document.querySelector('.header').getBoundingClientRect().height;
-console.log(headerHeight)
-function getHeaderHeight(){
-  var headerHeight = document.querySelector('.header').offsetHeight;
-  console.log(headerHeight)
+const getHeaderHeight = function() {
+  headerHeight = document.querySelector('.header').getBoundingClientRect().height;
   return headerHeight;
+}
+
+const clickHandler = function(target) {
+  if (target.length) {
+    headerHeight = getHeaderHeight();
+    $('html,body').stop().animate({
+      // offsets for fixed header
+      scrollTop: target.offset().top - headerHeight
+      }, {
+        // ensures that it goes all the way to the anchor link
+        complete: function() {
+          headerHeight = getHeaderHeight();
+          //prettier-ignore
+          if(document.body.scrollTop !== headerHeight || document.documentElement.scrollTop !== headerHeight) {
+            $('html,body').animate({
+              // offsets for fixed header
+              scrollTop: target.offset().top - headerHeight
+            }, 1);
+          }
+          $('html,body').stop(true, true);
+        }
+    });
+  }
 }
 
 document.querySelector('main').style.paddingTop = `${headerHeight}px`;
 
-
-
-//Anchor tag implementation
-//On click of anchor tag
+//Anchor tag click implementation
 $('a[href*="#"]:not([href="#"])').click(function (e) {
-  var urlPath = this.href.substring(0, this.href.indexOf("#")); //url wthout hash
-  var locationPath = location.href;
-  if(locationPath.includes("#")){
-    locationPath = location.href.substring(0, location.href.indexOf("#")); //url wthout hash
+  const urlPath = this.href.substring(0, this.href.indexOf('#')); // url wthout hash
+  let locationPath = location.href;
+
+  if (locationPath.includes('#')) {
+    locationPath = location.href.substring(0, location.href.indexOf('#')); // url wthout hash
   }
-  if(urlPath == locationPath){ //If the urls are the same then do the anchor animation
-    var target = $(this.href.substring(this.href.indexOf("#")));
-    if (target.length) {
-      var headerHeight = getHeaderHeight();
-      $('html,body').stop().animate({
-        scrollTop: target.offset().top - headerHeight //offsets for fixed header
-        }, {
-          complete: function() { //ensures that it goes all the way to the anchor link
-            headerHeight = getHeaderHeight();
-            if(document.body.scrollTop != headerHeight || document.documentElement.scrollTop != headerHeight){
-              $('html,body').animate({
-                scrollTop: target.offset().top - headerHeight //offsets for fixed header
-              }, 1);
-            }
-            $('html,body').stop(true, true);
-          }
-      });
-    }
+  // If the urls are the same then do the anchor animation
+  if (urlPath == locationPath) {
+    const target = $(this.href.substring(this.href.indexOf("#")));
+    clickHandler(target);
   }
   // Close mobile nav for on page anchors, if clicked in the navigation
-  if($(this).closest('ul').hasClass('c-topnav__container') || $(this).closest('ul').hasClass('c-topnav__submenu')){
-    $('.js-navbar__toggle').trigger("click");
+  if($(this).closest('ul').hasClass('menu-list')) {
+    $('input[type="checkbox"]').trigger("click");
   }
 });
 
+// Go to the anchor tag on site load
+$(window).on('pageshow',function() { 
+  const hash = window.location.hash;
 
-//On load of site going to the anchor tag
-$(window).on('pageshow',function(){ 
-  var hash = window.location.hash
+  //prettier-ignore
   if (hash == '' || hash == '#' || hash == undefined) return false;
-  var target = $(hash);
-  //target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-  if (target.length) {
-    var headerHeight = getHeaderHeight();
-    $('html,body').stop().animate({
-        scrollTop: target.offset().top - headerHeight //offsets for fixed header
-        }, {
-        complete: function() { //ensures that it goes all the way to the anchor link
-            headerHeight = getHeaderHeight();
-            if(document.body.scrollTop != headerHeight || document.documentElement.scrollTop != headerHeight){
-                $('html,body').animate({
-                    scrollTop: target.offset().top - headerHeight //offsets for fixed header
-                }, 1);
-            }
-            $('html,body').stop(true, true);
-        }
-    });
-  }
+
+  const target = $(hash);
+  clickHandler(target);
 });
 
+// Header observer
+$('<div id="headerView" aria-hidden="true"/>').prependTo('body');
+const headerView = document.getElementById('headerView');
 
+const headerOptions = {
+  threshold: 1,
+  rootMargin: '50px'
+};
 
-// //Observer options
-// const resizeOptions = {
-//   threshold: 1,
-// };
+const headerReveal = ([entry]) => {
+    if (entry.isIntersecting) {
+      $('.header').removeClass('scrolled');
+    } else {
+      $('.header').addClass('scrolled');
+    }
+  };
 
-// //Activate observer for added item
-// const resizeObserver = new IntersectionObserver((entries) => {
-//   entries.forEach(function callbackFN(entry) {
-//     //Once visible
-//     if (entry.isIntersecting) {
-//       document.getElementsByClassName("header")[0].classList.remove("scrolled"); //remove when item is visible
-//     } else {
-//       document.getElementsByClassName("header")[0].classList.add("scrolled"); //Add when item is not visible
-//     }
-//   });
-// }, resizeOptions);
-// resizeObserver.observe(document.querySelector("#headerView"));
+const headerObserver = new IntersectionObserver(headerReveal, headerOptions);
+
+headerObserver.observe(headerView);
