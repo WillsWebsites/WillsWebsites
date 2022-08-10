@@ -2,13 +2,13 @@
 $light: rgb(228, 228, 228);
 $dark: rgb(18, 18, 18);
 $medium: rgb(63, 63, 63);
-$primary: rgb(18, 38, 51);
+$primary: #122633;
 $primary-shadow: darken($primary, 12);
 $primary-highlight: lighten($primary, 12);
-$secondary: rgb(100, 134, 125);
+$secondary: #779f95;
 $secondary-shadow: darken($secondary, 12);
 $secondary-highlight: lighten($secondary, 12);
-$special: complement($primary);
+$special: #6d473e;
 
 $link: $secondary;
 $link-hover: $secondary-shadow;
@@ -24,18 +24,18 @@ $footer-primary: $secondary;
 $shadow: rgba($dark, .3);
 
 // Font sizes desktop
-$x-small: .8rem;
+$x-small: .9rem;
 $small: 1.2rem;
 $medium: 1.9rem;
-$large: 3rem;
+$large: 2.9rem;
 $x-large: 4rem;
 
 // Font sizes mobile
-$x-small-m: .6rem;
-$small-m: .9rem;
+$x-small-m: .8rem;
+$small-m: 1rem;
 $medium-m: 1.6rem;
 $large-m: 2.4rem;
-$x-large-m: 3.2rem;
+$x-large-m: 3rem;
 
 // Breakpoint min-width's
 $mobile: 'min-width: 368px';

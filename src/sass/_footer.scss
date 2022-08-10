@@ -7,7 +7,7 @@ footer {
   .container {
     padding: 10px 0;
 
-    @media($desktop) {
+    @media ($desktop) {
       padding: 15px 0;
     }
   }
@@ -16,8 +16,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     width: 100%;
-    text-align: left;
     margin: 0 auto;
   }
 
@@ -28,19 +28,19 @@ footer {
   p {
     font-size: $small-m;
     margin-top: 20px;
-    
+
     @media ($laptop) {
       font-size: $small;
     }
   }
   h5 {
-    font-size: $small-m;
+    font-size: $medium-m;
     font-weight: bold;
     color: $secondary;
     margin-top: 0 0 20px 0;
 
     @media ($tablet) {
-      font-size: $small;
+      font-size: $medium;
     }
   }
 
@@ -57,12 +57,21 @@ footer {
   }
   ul {
     list-style-type: none;
+
+    &.f-nav-list {
+      @media ($mobile) and ($mobile-large-max) {
+        display: flex;
+      }
+    }
   }
   li {
     font-size: $small;
     padding: 5px 0;
 
     p {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       font-size: $small;
       margin: 0;
     }
@@ -74,25 +83,35 @@ footer {
         color: $secondary-shadow !important;
       }
     }
+
+    &.f-nav-item {
+      @media ($mobile) and ($mobile-large-max) {
+        padding: 5px 10px;
+        min-width: 80px;
+
+        &:not(:last-child) {
+          border-right: 1px solid $secondary;
+        }
+      }
+    }
   }
 
   .fab {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     color: $light;
     font-size: $small;
-    margin-right: 20px;
     padding: 8px;
     border: 2px solid $light;
     border-radius: 50%;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
-      background-color: $secondary-shadow;
-      color: $primary-shadow;
+      background-color: $secondary;
+      color: $special;
       border-color: $light;
     }
   }
@@ -101,12 +120,53 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  width: calc(25% - 50px);
-  padding-left: 30px;
-  
-  &:not(:last-child) {
-    margin-right: 50px;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto 20px auto;
+
+  .f-main-logo {
+    padding-top: 12px;
+  }
+
+  address i {
+    margin-right: 10px;
+  }
+
+  @media ($mobile-large) {
+    align-items: center;
+    width: calc(50% - 50px);
+    margin: 20px 25px;
+  }
+
+  @media ($laptop) {
+    width: calc(25% - 50px);
+    margin: 0 25px;
+    align-items: flex-start;
+    text-align: left;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      width: auto;
+    }
+  }
+
+  @media ($desktop) {
+    width: calc(23% - 50px);
+    margin: 0 25px;
+  }
+
+  @media ($mobile-large) and ($laptop-max) {
+    &.f-company {
+      order: 3;
+    }
+
+    &.f-social-media {
+      order: 4;
+    }
   }
 }
 
@@ -114,6 +174,10 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  .instagram {
+    margin: 0 10px;
+  }
 }
 .f-nav {
   display: flex;
