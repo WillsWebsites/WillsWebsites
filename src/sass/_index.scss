@@ -9,11 +9,8 @@
   -moz-box-sizing: $box-model;
   -webkit-box-sizing: $box-model;
 }
-html {
-  background-color: $primary;
-  z-index: 100;
-}
 body {
+  background-color: $light;
   color: $secondary;
   overflow-x: hidden;
   min-height: calc(100vh - 2 * 4vw);
