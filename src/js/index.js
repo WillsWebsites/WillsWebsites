@@ -53,7 +53,6 @@ $('a[href*="#"]:not([href="#"])').click(function (e) {
 // Go to the anchor tag on site load
 $(window).on('pageshow',function() { 
   const hash = window.location.hash;
-
   //prettier-ignore
   if (hash == '' || hash == '#' || hash == undefined) return false;
 

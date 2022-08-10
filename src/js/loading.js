@@ -1,5 +1,5 @@
 $(document).ready(function() {
     setTimeout(() => {
-        $(".se-pre-con").fadeOut("slow");;
+        $(".loading").fadeOut("slow");;
     }, 350)
 });
