@@ -5,9 +5,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: $box-model;
-  -moz-box-sizing: $box-model;
-  -webkit-box-sizing: $box-model;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 body {
   background-color: $light;
@@ -34,7 +34,7 @@ h1 {
   font-size: $x-large-m;
 
   @media ($tablet) {
-    font-size: $x-large
+    font-size: $x-large;
   }
 }
 h2 {

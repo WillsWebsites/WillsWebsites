@@ -21,42 +21,39 @@ $btn-color-hover: $dark;
 $footer: $light;
 $footer-primary: $secondary;
 
-$shadow: rgba($dark, .3);
+$shadow: rgba($dark, 0.3);
 
 // Font sizes desktop
-$x-small: .9rem;
+$x-small: 0.9rem;
 $small: 1.2rem;
 $medium: 1.9rem;
 $large: 2.9rem;
 $x-large: 4rem;
 
 // Font sizes mobile
-$x-small-m: .8rem;
+$x-small-m: 0.8rem;
 $small-m: 1rem;
 $medium-m: 1.6rem;
 $large-m: 2.4rem;
 $x-large-m: 3rem;
 
 // Breakpoint min-width's
-$mobile: 'min-width: 368px';
-$mobile-large: 'min-width: 568px';
-$tablet: 'min-width: 768px';
-$laptop: 'min-width: 992px';
-$desktop: 'min-width: 1200px';
-$desktop-large: 'min-width: 1800px';
+$mobile: "min-width: 368px";
+$mobile-large: "min-width: 568px";
+$tablet: "min-width: 768px";
+$laptop: "min-width: 992px";
+$desktop: "min-width: 1200px";
+$desktop-large: "min-width: 1800px";
 
 // Breakpoint max-width's
-$mobile-max: 'max-width: 367px';
-$mobile-large-max: 'max-width: 567px';
-$tablet-max: 'max-width: 767px';
-$laptop-max: 'max-width: 991px';
-$desktop-max: 'max-width: 1199px';
-$desktop-large-max: 'max-width: 1799px';
+$mobile-max: "max-width: 367px";
+$mobile-large-max: "max-width: 567px";
+$tablet-max: "max-width: 767px";
+$laptop-max: "max-width: 991px";
+$desktop-max: "max-width: 1199px";
+$desktop-large-max: "max-width: 1799px";
 
 // Container width's
 $container-m: 95%;
 $container: 85%;
 $container-max: 1400px;
-
-// Box model style
-$box-model: border-box;

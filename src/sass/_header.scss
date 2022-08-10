@@ -3,7 +3,7 @@ header {
   background-color: $dark;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 99;
   transition: all 0.4s ease-in;
 
   a {
@@ -40,7 +40,7 @@ header {
   align-items: center;
 }
 
-/* Navigation */
+/* Desktop Navigation */
 .nav {
   display: flex;
   align-items: center;
@@ -61,6 +61,7 @@ header {
 
   a {
     padding: 10px 20px;
+    color: $light;
   }
 
   &:last-child a {
@@ -69,7 +70,6 @@ header {
 }
 
 /* Hamburger Navigation */
-
 .mobile-navigation {
   display: flex;
   justify-content: center;
@@ -169,9 +169,9 @@ header {
   padding: 75px 0 0 0;
   border: 1px solid $primary-shadow;
   border-radius: 0 0 0 10px;
-  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 8px 16px 0 rgba($dark, 0.2);
   transform-origin: 0% 0%;
-  transition: right 1s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: right 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
 
   ul {
     list-style-type: none;
@@ -180,9 +180,9 @@ header {
   a {
     display: inline-block;
     width: 100%;
-    font-size: $medium;
+    font-size: $medium-m;
     color: $light;
-    padding: 15px 35px;
+    padding: 15px 30px;
     transition: all 0.3s ease;
 
     &:hover {
