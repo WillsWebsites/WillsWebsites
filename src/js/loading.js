@@ -1,3 +1,5 @@
 $(document).ready(function() {
-    $(".se-pre-con").fadeOut("slow");;
+    setTimeout(() => {
+        $(".se-pre-con").fadeOut("slow");;
+    }, 400)
 });
