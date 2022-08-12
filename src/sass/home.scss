@@ -62,7 +62,7 @@
     }
     h4 {
       font-size: $medium;
-      font-family: 'Teko', sans-serif;
+      font-family: $tertiary-font;
       text-transform: uppercase;
       letter-spacing: 3px;
       margin-bottom: 0
@@ -88,7 +88,7 @@
       margin: 20px auto;
       padding: 20px 35px;
       width: 75%;
-      font-size: $small + .2rem;
+      font-size: $small - .2rem;
       background: repeat padding-box border-box 0% 0%/auto auto scroll linear-gradient(229deg, rgba($secondary, .5) 0%, $primary 80%), $primary !important;
       box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
       transition: all .25s ease;

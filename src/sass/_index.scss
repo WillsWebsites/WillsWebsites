@@ -10,7 +10,7 @@
   -webkit-box-sizing: border-box;
 }
 body {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: $primary-font;
   background-color: $primary;
   color: $secondary;
   overflow-x: hidden;
@@ -24,7 +24,7 @@ body {
 
 //prettier-ignore
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: $secondary-font;
   margin: 20px 0;
 }
 
@@ -41,9 +41,9 @@ h1 {
 }
 h2 {
   font-size: $large-m;
-  // font-family: 'Teko', sans-serif;
-  // letter-spacing: 3px;
-
+  font-family: $tertiary-font;
+  font-weight: 600;
+  
   @media ($tablet) {
     font-size: $large;
   }
@@ -110,7 +110,7 @@ section {
 
   @media ($tablet) {
     &:not(.h-container, .f-container) {
-      padding: 75px 0;
+      padding: 50px 0;
     }
   }
 
@@ -131,7 +131,7 @@ section {
   background-color: $btn;
   color: $btn-color;
   text-align: center;
-  font-family: 'Teko', sans-serif;
+  font-family: $tertiary-font;
   font-size: $btn-size;
   font-weight: bold;
   text-transform: uppercase;

@@ -1,7 +1,7 @@
 // Fonts
-$primary-font: "'Pacifico', cursive";
-$secondary-font: "'Pacifico', cursive";
-$tertiary-font: "'Pacifico', cursive";
+$primary-font: 'Libre Franklin', sans-serif;
+$secondary-font: 'Montserrat Alternates', sans-serif;
+$tertiary-font: 'Rajdhani', sans-serif;
 
 
 
@@ -12,6 +12,7 @@ $medium: rgb(63, 63, 63);
 $primary: #122633;
 $primary-shadow: darken($primary, 12);
 $primary-highlight: lighten($primary, 12);
+// $secondary: #87b1a7;
 $secondary: #779f95;
 $secondary-shadow: darken($secondary, 12);
 $secondary-highlight: lighten($secondary, 12);
@@ -26,10 +27,10 @@ $footer-primary: $secondary;
 $shadow: rgba($dark, 0.3);
 
 // Font sizes desktop
-$x-small: 0.9rem;
+$x-small: 1.1rem;
 $small: 1.6rem;
 $medium: 2.1rem;
-$large: 2.8rem;
+$large: 3.0rem;
 $x-large: 5rem;
 
 // Font sizes mobile
