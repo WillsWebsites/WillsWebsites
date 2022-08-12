@@ -1,0 +1,102 @@
+@import 'main';
+
+.hero {
+  display: flex;
+  align-items: center;
+  
+  .overlay {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40%;
+      height: 100%;
+      background-color: $secondary;
+      z-index: -1;
+
+      @media($desktop) {
+        width: 35%;
+      }
+
+      @media ($desktop-large) {
+        width: 50%
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    max-width: none;
+
+    @media ($desktop-large) {
+      max-width: 1400px;
+    }
+  }
+  .hero-left {
+    width: 60%;
+
+    @media ($desktop) {
+      width: 65%;
+    }
+
+    @media ($desktop-large) {
+      width: 50%
+    }
+
+    .introduction {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-top: 0;
+      transform: translateX(-5px);
+    }
+    h4 {
+      font-size: $medium;
+      font-family: 'Teko', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 0
+    }
+    p {
+      font-size: $medium;
+    }
+  }
+  .hero-right  {   
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    @media ($desktop) {
+      width: 35%;
+    }
+
+    @media ($desktop-large) {
+      width: 50%
+    }
+
+    .btn {
+      margin: 20px auto;
+      padding: 20px 35px;
+      width: 75%;
+      font-size: $small + .2rem;
+      background: repeat padding-box border-box 0% 0%/auto auto scroll linear-gradient(229deg, rgba($secondary, .5) 0%, $primary 80%), $primary !important;
+      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+      transition: all .25s ease;
+      
+      &:hover {
+        background: $tertiary !important;
+        box-shadow: none;
+      }
+    }
+  }
+}

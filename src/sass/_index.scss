@@ -10,7 +10,8 @@
   -webkit-box-sizing: border-box;
 }
 body {
-  background-color: $light;
+  font-family: 'Libre Franklin', sans-serif;
+  background-color: $primary;
   color: $secondary;
   overflow-x: hidden;
   min-height: calc(100vh - 2 * 4vw);
@@ -23,7 +24,8 @@ body {
 
 //prettier-ignore
 h1, h2, h3, h4, h5, h6 {
-  margin: 15px 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  margin: 20px 0;
 }
 
 //prettier-ignore
@@ -39,6 +41,8 @@ h1 {
 }
 h2 {
   font-size: $large-m;
+  // font-family: 'Teko', sans-serif;
+  // letter-spacing: 3px;
 
   @media ($tablet) {
     font-size: $large;
@@ -55,7 +59,7 @@ p {
 }
 
 //prettier-ignore
-a, a:visited, a:active, a:focus { 
+a, a:active, a:focus { 
     color: $secondary;
     cursor: pointer;
     text-decoration: none;
@@ -76,11 +80,12 @@ i {
   align-items: center;
   width: 20px;
   height: 20px;
-  color: $special;
+  color: $tertiary;
 }
 
 section {
   display: block;
+  width: 100%;
   background-repeat: no-repeat;
   -moz-background-repeat: no-repeat;
   -o-background-repeat: no-repeat;
@@ -115,19 +120,33 @@ section {
   }
 }
 
+.overlay {
+  width: 100%;
+}
+
 .btn {
-  padding: 15px 35px;
+  display: inline-block;
+  padding: 10px 35px;
+  margin: 0 20px;
   background-color: $btn;
-  font-size: $medium;
+  color: $btn-color;
+  text-align: center;
+  font-family: 'Teko', sans-serif;
+  font-size: $btn-size;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   box-shadow: 0 5px $shadow;
-  border: none;
-  border-radius: 10px;
+  border: $btn-border;
+  border-radius: $btn-radius;
   transition: all 0.2s ease;
 
   &:hover {
     background-color: $btn-hover;
-    box-shadow: 0, 0 transparent;
-    transform: translateY(5px);
+    color: $btn-color-hover;
+    // box-shadow: 0, 0 transparent;
+    transform: translateY(2px);
+    // border-color: $secondary;
   }
 }
 

@@ -1,3 +1,10 @@
+// Fonts
+$primary-font: "'Pacifico', cursive";
+$secondary-font: "'Pacifico', cursive";
+$tertiary-font: "'Pacifico', cursive";
+
+
+
 // Colors
 $light: rgb(228, 228, 228);
 $dark: rgb(18, 18, 18);
@@ -8,15 +15,10 @@ $primary-highlight: lighten($primary, 12);
 $secondary: #779f95;
 $secondary-shadow: darken($secondary, 12);
 $secondary-highlight: lighten($secondary, 12);
-$special: #6d473e;
+$tertiary: #6d473e;
 
 $link: $secondary;
 $link-hover: $secondary-shadow;
-
-$btn: $secondary;
-$btn-hover: $secondary-shadow;
-$btn-color: $light;
-$btn-color-hover: $dark;
 
 $footer: $light;
 $footer-primary: $secondary;
@@ -25,17 +27,17 @@ $shadow: rgba($dark, 0.3);
 
 // Font sizes desktop
 $x-small: 0.9rem;
-$small: 1.2rem;
-$medium: 1.9rem;
-$large: 2.9rem;
-$x-large: 4rem;
+$small: 1.6rem;
+$medium: 2.1rem;
+$large: 2.8rem;
+$x-large: 5rem;
 
 // Font sizes mobile
 $x-small-m: 0.8rem;
 $small-m: 1rem;
 $medium-m: 1.6rem;
-$large-m: 2.4rem;
-$x-large-m: 3rem;
+$large-m: 2.2rem;
+$x-large-m: 3.5rem;
 
 // Breakpoint min-width's
 $mobile: "min-width: 368px";
@@ -43,7 +45,7 @@ $mobile-large: "min-width: 568px";
 $tablet: "min-width: 768px";
 $laptop: "min-width: 992px";
 $desktop: "min-width: 1200px";
-$desktop-large: "min-width: 1800px";
+$desktop-large: "min-width: 2000px";
 
 // Breakpoint max-width's
 $mobile-max: "max-width: 367px";
@@ -51,9 +53,18 @@ $mobile-large-max: "max-width: 567px";
 $tablet-max: "max-width: 767px";
 $laptop-max: "max-width: 991px";
 $desktop-max: "max-width: 1199px";
-$desktop-large-max: "max-width: 1799px";
+$desktop-large-max: "max-width: 1999px";
 
 // Container width's
 $container-m: 95%;
 $container: 85%;
 $container-max: 1400px;
+
+// Buttons
+$btn: transparent;
+$btn-hover: $tertiary;
+$btn-color: $light;
+$btn-color-hover: $light;
+$btn-size: $small;
+$btn-border: 3px solid $light;
+$btn-radius: 10px;

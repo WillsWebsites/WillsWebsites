@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
+    <!--prettier-ignore-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="robots" content="noindex, nofollow" />
     <!-- <meta name="description" content="Page Description">
     <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Page Title">
@@ -27,39 +25,37 @@
     <meta name="twitter:title" content="Home | Company Name">
     <meta name="twitter:description" content="Page-Description">
     <meta name="twitter:image" content="Image URL"> -->
-    <title>Home | Company Name</title>
-    <!-- <link rel="shortcut icon" type="image/png" href="./src/img/favicon.png" /> -->
-    <link rel="stylesheet" href="src/sass/main.scss" />
+    <title>Home | Will's Websites</title>
+    <link rel="shortcut icon" type="image/png" href="./src/img/favicon.png" />
+    <link rel="stylesheet" href="src/sass/home.scss" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    <script defer src="./src/js/index.js" type="module"></script>
+    <!-- <script defer src="./src/js/index.js" type="module"></script> -->
     <script defer src="./src/js/home.js" type="module"></script>
     <script src="./src/js/loading.js" type="module"></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-  </head>
+    <!--prettier-ignore-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Montserrat+Alternates&family=Teko&display=swap" rel="stylesheet" SameSite="none">
   <body class="homepage">
     <div class="loading"></div>
-    <header id="header" class="header">
+    <!-- <header id="header" class="header">
       <div class="h-overlay overlay">
         <div class="h-container container">
           <div class="h-inner">
             <div class="h-left">
               <a href="index.html" class="logo-link">
-                <!-- <img src="./src/img/main-logo.png" class="main-logo" alt="Company Logo" /> -->
+                <img src="./src/img/main-logo.png" class="main-logo" alt="Company Logo" />
               </a>
             </div>
             <div class="h-right">
               <div class="desktop-navigation">
                 <nav class="nav">
                   <ul class="nav-list">
-                    <li class="nav-item"><a href="#">Home</a></li>
-                    <li class="nav-item"><a href="#">About</a></li>
-                    <li class="nav-item"><a href="#">Process</a></li>
+                    <li class="nav-item"><a href="#">Build a Website</a></li>
+                    <li class="nav-item"><a href="#">Projects</a></li>
+                    <li class="nav-item"><a href="#">Meet Will</a></li>
                     <li class="nav-item"><a href="#">Contact</a></li>
                   </ul>
                 </nav>
@@ -72,9 +68,9 @@
                   <span class="bottom"></span>
                   <nav id="menu" class="mobile-nav">
                     <ul class="menu-list">
-                      <li class="mobile-nav-item"><a href="#">Home</a></li>
-                      <li class="mobile-nav-item"><a href="#">About</a></li>
-                      <li class="mobile-nav-item"><a href="#">Process</a></li>
+                      <li class="mobile-nav-item"><a href="#">Build a Website</a></li>
+                      <li class="mobile-nav-item"><a href="#">Projects</a></li>
+                      <li class="mobile-nav-item"><a href="#">Meet Will</a></li>
                       <li class="mobile-nav-item"><a href="#">Contact</a></li>
                     </ul>
                   </nav>
@@ -84,13 +80,25 @@
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
     <main>
       <section id="section-0" class="section hero">
         <div class="overlay">
           <div class="container">
-            <h1>Page Introduction</h1>
-            <i class="fas fa-chevron-down fa-xl"></i>
+            <div class="hero-left">
+              <div class="introduction">
+                <h4>Hello! Welcome to</h4>
+                <h1>Will's Websites</h1>
+                <p>Let me help get you started out in the right direction:</p>
+              </div>
+            </div>
+            <div class="hero-right">
+              <a href="/build-website.html" class="btn">Build a Website</a>
+              <a href="#" class="btn">Projects</a>
+              <a href="#" class="btn">Meet Will</a>
+              <a href="#" class="btn">Contact</a>
+            </div>
+            <!-- <i class="fas fa-chevron-down fa-xl"></i> -->
           </div>
         </div>
       </section>
@@ -101,9 +109,9 @@
           <div class="f-inner">
             <div class="f-block f-company">
               <a href="index.html" class="f-logo-link">
-                <!-- <img src="./src/img/main-logo.png" class="f-main-logo main-logo" alt="Company Logo" /> -->
+                <img src="./src/img/main-logo.png" class="f-main-logo main-logo" alt="Company Logo" />
               </a>
-              <h6>© 2022 Company name</h6>
+              <h6>© 2022 Will's Websites</h6>
             </div>
             <div class="f-block f-contact">
               <h5>Contact</h5>
@@ -136,9 +144,9 @@
             <nav class="f-block f-nav">
               <h5>Company</h5>
               <ul class="f-nav-list">
-                <li class="f-nav-item"><a href="#">Home</a></li>
-                <li class="f-nav-item"><a href="#">About</a></li>
-                <li class="f-nav-item"><a href="#">Process</a></li>
+                <li class="f-nav-item"><a href="/build-website.html">Build a Website</a></li>
+                <li class="f-nav-item"><a href="#">Projects</a></li>
+                <li class="f-nav-item"><a href="#">Meet Will</a></li>
                 <li class="f-nav-item"><a href="#">Contact</a></li>
               </ul>
             </nav>
