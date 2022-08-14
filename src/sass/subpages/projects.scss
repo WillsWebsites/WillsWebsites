@@ -106,6 +106,10 @@
                 }
             }
 
+            .screen-window {
+                min-width: 450px;
+            }
+
             .info-content {
                 p {
                     font-size: $x-small !important;
