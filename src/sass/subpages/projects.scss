@@ -58,7 +58,7 @@
     box-shadow: -10px 8px 16px #7c7c7c1a;
     border: 1px solid rgba($light, .3);
     overflow: hidden;
-    min-width: 450px;
+    min-height: 320px;
     
     .desktop-overlay {
         position: absolute;
@@ -155,7 +155,7 @@
     border-radius: 20px;
     border: 1px solid rgba($light, .3);
     overflow: hidden;
-    min-width: 140px;
+    min-height: 270px;
 
     .mobile-space {
         padding: 2px 0 12px 0;
