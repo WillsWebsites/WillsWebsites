@@ -355,19 +355,8 @@
       }
     }
   }
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   inset: 0;
-  //   width: 50%;
-  //   background-color: $secondary;
-  //   z-index: -1;
-  //   border-top: 5px solid $light;
-  //   border-bottom: 5px solid $light;
-  //   border-bottom-color: $tertiary;
-  // }
 }
+
 .project-start {
   background-color: $light;
   text-align: center;
@@ -448,6 +437,10 @@
       .project-mobile {
         transform: scale(1.06);
       }
+
+      .desktop-screen, .mobile-screen {
+        box-shadow: -10px 8px 16px #6463637e;
+      }
     }
 
     .desktop-overlay,
@@ -484,7 +477,7 @@
     .desktop-overlay,
     .mobile-overlay {
       opacity: 0 !important;
-      height: 0% !important;
+      height: 0 !important;
     }
     .desktop-info,
     .mobile-info {
