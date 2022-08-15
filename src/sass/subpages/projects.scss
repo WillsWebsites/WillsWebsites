@@ -3,32 +3,32 @@
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes accentAnimation {
   0% {
-      opacity: 0;
-      height: 0;
+    opacity: 0;
+    height: 0;
   }
   100% {
-      opacity: 1;
-      height: 65%;
+    opacity: 1;
+    height: 65%;
   }
 }
 
 @keyframes titleAccentAnimation {
   0% {
-      opacity: 0;
-      width: 0;
+    opacity: 0;
+    width: 0;
   }
   100% {
-      opacity: 1;
-      width: 98%;
+    opacity: 1;
+    width: 98%;
   }
 }
 
@@ -42,7 +42,7 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -10px;
       left: 4px;
@@ -52,7 +52,7 @@
       background-color: $light;
 
       animation: titleAccentAnimation ease 1s;
-      animation-delay: .6s;
+      animation-delay: 0.6s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
 
@@ -109,13 +109,13 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
       height: 100%;
       width: 55%;
-      background-color: rgba($secondary, .2);
+      background-color: rgba($secondary, 0.2);
       border-top-right-radius: 75px;
       border-bottom-right-radius: 75px;
       box-shadow: $shadow;
@@ -125,7 +125,7 @@
       }
 
       @media ($desktop) {
-        width: 60%
+        width: 60%;
       }
     }
   }
@@ -151,6 +151,7 @@
     .project-info-left {
       width: 95%;
       padding: 50px 5% 20px 0;
+      z-index: 5;
 
       @media ($tablet-max) {
         max-width: 500px;
@@ -181,7 +182,7 @@
         position: relative;
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           left: -20px;
           top: 50%;
@@ -193,7 +194,7 @@
           opacity: 0;
 
           animation: accentAnimation ease 1s;
-          animation-delay: .6s;
+          animation-delay: 0.6s;
           animation-iteration-count: 1;
           animation-fill-mode: forwards;
         }
@@ -257,7 +258,7 @@
         @media ($desktop) {
           left: 50px;
         }
-  
+
         li {
           height: 16%;
           color: $dark;
@@ -265,7 +266,7 @@
           display: flex;
           align-items: center;
           opacity: 0;
-          animation: fadeInAnimation ease .8s;
+          animation: fadeInAnimation ease 0.8s;
           animation-delay: 1.6s;
           animation-iteration-count: 1;
           animation-fill-mode: forwards;
@@ -280,10 +281,10 @@
             animation-delay: 1s;
           }
           &:nth-child(5) {
-            animation-delay: .8s;
+            animation-delay: 0.8s;
           }
           &:last-child {
-            animation-delay: .6s;
+            animation-delay: 0.6s;
           }
         }
       }
@@ -295,12 +296,16 @@
         width: 35px;
         height: 0;
         background: $secondary;
-        background-image: linear-gradient(180deg, rgba($secondary, .7), rgba($primary, .7));
+        background-image: linear-gradient(
+          180deg,
+          rgba($secondary, 0.7),
+          rgba($primary, 0.7)
+        );
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         border: 2px solid $light;
         border-bottom: none;
-        box-shadow: 0px 8px 16px 0px rgba($dark, .2);
+        box-shadow: 0px 8px 16px 0px rgba($dark, 0.2);
 
         @media ($mobile-large) {
           left: 22%;
@@ -338,7 +343,7 @@
           color: $tertiary;
           font-family: $tertiary-font;
           font-weight: bold;
-          
+
           @media ($mobile-max) {
             font-size: $large;
           }
@@ -384,7 +389,7 @@
       height: auto;
       transition: all 0.3s ease;
 
-      &:hover {
+      &:hover, &:active {
         max-width: 40px;
         filter: drop-shadow(2px 2px 3px rgba($dark, 0.4));
       }
@@ -411,11 +416,12 @@
 .project-item {
   position: relative;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
   transition: all 0.8s ease;
 
   @media ($mobile-large) {
     width: 80%;
+    margin-bottom: 100px;
   }
 
   @media ($tablet) {
@@ -432,7 +438,7 @@
     -ms-user-select: none;
   }
 
-  &:hover {
+  &:hover, &:active {
     @media ($mobile-large) {
       .project-desktop,
       .project-mobile {
@@ -451,10 +457,6 @@
     }
   }
 
-  &.project-item4 .desktop-screen .desktop-overlay .desktop-info .company img {
-    height: 50px;
-  }
-
   &.project-item8 .company img,
   &.project-item9 .company img {
     filter: none !important;
@@ -463,9 +465,9 @@
 
 .project-desktop {
   width: 90%;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 
-  @media ($laptop) {
+  @media (min-widht: 1400px) {
     width: 80%;
   }
 }
@@ -473,6 +475,28 @@
   position: relative;
   box-shadow: -10px 8px 16px #7070706b;
   overflow: hidden;
+  min-height: 49vw;
+  background-color: rgba($dark, 0.6);
+
+  @media ($mobile-large) {
+    min-height: 40vw;
+  }
+
+  @media ($tablet) {
+    min-height: 25vw;
+  }
+
+  @media ($laptop) {
+    min-height: 22vw;
+  }
+
+  @media ($desktop) {
+    min-height: 20vw;
+  }
+
+  @media (min-width: 1550px) {
+    min-height: 335px;
+  }
 
   .screen-window {
     display: flex;
@@ -490,13 +514,26 @@
     border: 1px solid rgba($light, 0.3);
     transition: 0.3s all ease;
 
+    @media ($mobile-large-max) {
+      padding: 10px;
+    }
+
     .desktop-info {
-      width: 80%;
+      width: 70%;
       opacity: 0;
       transition: 0.2s all ease;
       transition-delay: 0.25s;
 
+      @media (min-widht: 1400px) {
+        widht: 80%;
+      }
+
       .company {
+
+        @media ($laptop-max) {
+          display: none;
+        }
+
         a {
           display: flex;
           justify-content: flex-start;
@@ -509,10 +546,14 @@
         }
 
         img {
-          height: 40px;
+          height: 30px;
           width: auto;
           filter: brightness(0) invert(1);
           margin-right: 15px;
+
+          @media ($laptop) {
+            height: 40px;
+          }
         }
 
         h3 {
@@ -525,8 +566,21 @@
 
       .info-content {
         p {
-          font-size: $x-small !important;
-          margin-top: 30px;
+          margin-top: 10px;
+          font-size: $x-small-m !important;
+
+          @media ($mobile-max) {
+            font-size: $x-small-m - .2rem !important;
+          }
+
+          @media ($desktop) {
+            font-size: 1.0rem !important;
+          }
+
+          @media (min-width: 1400px) {
+            margin-top: 30px;
+            font-size: $x-small !important;
+          }
         }
         .info-btns {
           display: flex;
@@ -562,11 +616,13 @@
   right: 0;
   top: 20%;
   width: 27%;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 
   @media ($tablet) {
-    right: 10%;
+    right: -15px !important;
+    top: 30%;
     width: 23%;
+    
   }
 }
 .mobile-screen {
@@ -589,10 +645,27 @@
   .mobile-space {
     padding: 2px 0 12px 0;
     background-color: #cdcccc;
+    min-height: 50vw;
     border-radius: 15px;
 
     @media ($mobile-max) {
       border-radius: 5px;
+    }
+
+    @media ($mobile-large) {
+      min-height: 37vw;
+    }
+
+    @media ($tablet) {
+      min-height: 20vw;
+    }
+
+    @media ($desktop) {
+      min-height: 18vw;
+    }
+
+    @media (min-width: 1550px) {
+      min-height: 295px;
     }
 
     .utility {
@@ -601,19 +674,28 @@
       margin-bottom: 4px;
     }
   }
+
   .mobile-overlay {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 0;
-    padding: 20px;
+    padding: 10px;
     opacity: 0;
     color: $light;
     background-color: rgba($dark, 0.85);
     border-radius: 20px;
     transition: all 0.35s ease-in-out;
     transition-delay: 0.1s;
+
+    @media ($mobile-max) {
+      border-radius: 10px;
+    }
+
+    @media ($laptop) {
+      padding: 20px;
+    }
 
     .mobile-info {
       opacity: 0;
@@ -633,14 +715,25 @@
     }
     li {
       font-weight: bold;
-      padding: 8px 0;
+      padding: 5px 0;
       border-bottom: 1px solid rgba($light, 0.7);
-      font-size: $x-small-m;
+      font-size: $x-small-m - .2rem;
+
+      @media ($laptop) {
+        font-size: $x-small-m;
+        padding: 8px 0;
+      }
 
       &:last-child {
         border-bottom: none;
       }
     }
+  }
+}
+
+@media ($desktop) {
+  .project-item:nth-child(even) .project-mobile {
+    right: -50px !important;
   }
 }
 
@@ -650,6 +743,9 @@
   }
   .project-item:nth-child(even) .project-desktop {
     margin-left: 10%;
+  }
+  .project-item:nth-child(odd) .project-mobile {
+    right: 30px !important;
   }
 }
 

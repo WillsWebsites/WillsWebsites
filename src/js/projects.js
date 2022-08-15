@@ -89,7 +89,7 @@ const barAnimation = function() {
 }
 
 $(document).ready(function() {
-    if ( $(this).width() > 992) {
+    if ( $(this).width() > 768) {
         barAnimation();
     } else {
         websitesBar.style.height = (104 * .69) + '%';

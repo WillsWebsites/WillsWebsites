@@ -71,9 +71,9 @@ const headerOptions = {
 
 const headerReveal = ([entry]) => {
   if (entry.isIntersecting) {
-    $('.header').removeClass('scrolled').css('top', `-${headerHeight + 20}px`);
+    $('.header').removeClass('scrolled');
   } else {
-    $('.header').addClass('scrolled').css('top', '0');
+    $('.header').addClass('scrolled');
   }
 };
 
