@@ -45,10 +45,23 @@ const switchPlayer = function () {
 rollBtn.addEventListener('click', function () {
   if (playing) {
     const dice = Math.trunc(Math.random() * 6) + 1;
-    console.log(dice);
-
+    
+    if (dice === 1) {
+      diceEl.src = new URL('dice-1.png', import.meta.url);
+    } else if (dice === 2) {
+      diceEl.src = new URL('dice-2.png', import.meta.url);
+    } else if (dice === 3) {
+      diceEl.src = new URL('dice-3.png', import.meta.url);
+    } else if (dice === 4) {
+      diceEl.src = new URL('dice-4.png', import.meta.url);
+    } else if (dice === 5) {
+      diceEl.src = new URL('dice-5.png', import.meta.url);
+    } else if (dice === 6) {
+      diceEl.src = new URL('dice-6.png', import.meta.url);
+    }
+    
     diceEl.classList.remove('hidden');
-    diceEl.src = new URL(`dice-${dice}.png`, import.meta.url);
+
 
     if (dice !== 1) {
       currentScore += dice;
