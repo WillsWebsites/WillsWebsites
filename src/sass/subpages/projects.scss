@@ -21,14 +21,70 @@
   }
 }
 
+@keyframes titleAccentAnimation {
+  0% {
+      opacity: 0;
+      width: 0;
+  }
+  100% {
+      opacity: 1;
+      width: 98%;
+  }
+}
+
 .subpage-banner .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 0px;
+
+  h1 {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 4px;
+      width: 0;
+      height: 5px;
+      border-radius: 5px;
+      background-color: $light;
+
+      animation: titleAccentAnimation ease 1s;
+      animation-delay: .6s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @media ($mobile-large-max) {
+    flex-direction: column;
+
+    .btn {
+      max-width: 275px;
+    }
+  }
 }
 
 .project-btns {
-  margin-top: 50px;
+  margin-top: 15px;
+
+  @media ($laptop-max) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+
+    .btn {
+      width: 90%;
+
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
 
 .project-intro {
@@ -43,14 +99,22 @@
     &::after {
       content: '';
       position: absolute;
-      right: left;
+      left: 0;
       top: 0;
       height: 100%;
-      width: 60%;
+      width: 55%;
       background-color: rgba($secondary, .2);
       border-top-right-radius: 75px;
       border-bottom-right-radius: 75px;
       box-shadow: $shadow;
+
+      @media ($tablet-max) {
+        width: 95%;
+      }
+
+      @media ($desktop) {
+        width: 60%
+      }
     }
   }
 
@@ -64,9 +128,39 @@
     background-color: $light;
     border-bottom-right-radius: 100px;
 
+    @media ($tablet-max) {
+      flex-direction: column;
+    }
+
+    @media ($laptop-max) {
+      align-items: center;
+    }
+
     .project-info-left {
-      width: 65%;
-      padding: 50px 20% 50px 0;
+      width: 95%;
+      padding: 50px 5% 20px 0;
+
+      @media ($tablet-max) {
+        max-width: 500px;
+      }
+
+      @media ($tablet) {
+        width: 50%;
+        padding: 50px 5% 50px 0;
+      }
+
+      @media ($laptop) {
+        width: 58%;
+      }
+
+      @media ($desktop) {
+        width: 65%;
+        padding: 50px 10% 50px 0;
+      }
+
+      @media (min-width: 1500px) {
+        padding: 50px 20% 50px 0;
+      }
 
       h2 {
         color: $primary;
@@ -99,10 +193,35 @@
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
-      width: 35%;
-      min-width: 25px;
+      width: 95%;
+      max-width: 450px;
       min-height: 200px;
-      padding: 100px 60px 50px 20px;
+      margin-bottom: 10px;
+      padding: 50px 60px 50px 20px;
+
+      @media ($mobile-large-max) {
+        padding: 75px 30px 50px 0;
+        max-width: 350px;
+      }
+
+      @media ($tablet) {
+        width: 50%;
+        margin-bottom: 0;
+        padding: 100px 10px 50px 20px;
+      }
+
+      @media ($laptop) {
+        width: 42%;
+      }
+
+      @media ($desktop) {
+        padding: 100px 10px 50px 20px;
+        width: 35%;
+      }
+
+      @media (min-width: 1500px) {
+        padding: 100px 60px 50px 20px;
+      }
 
       ul {
         display: flex;
@@ -111,9 +230,21 @@
         list-style-type: none;
         position: absolute;
         text-align: right;
-        left: 50px;
+        left: 10px;
         bottom: 0;
         height: 100%;
+
+        @media ($mobile-large) {
+          left: 45px;
+        }
+
+        @media ($tablet) {
+          left: 65px;
+        }
+
+        @media ($desktop) {
+          left: 50px;
+        }
   
         li {
           height: 16%;
@@ -148,7 +279,7 @@
       #websites-bar {
         position: absolute;
         bottom: 20px;
-        left: 25%;
+        left: 15%;
         width: 35px;
         height: 0;
         background: $secondary;
@@ -158,6 +289,20 @@
         border: 2px solid $light;
         border-bottom: none;
         box-shadow: 0px 8px 16px 0px rgba($dark, .2);
+
+        @media ($mobile-large) {
+          left: 22%;
+          bottom: 15px;
+        }
+
+        @media ($tablet) {
+          left: 30%;
+          bottom: 20px;
+        }
+
+        @media ($laptop) {
+          left: 25%;
+        }
       }
 
       .website-details {
@@ -170,6 +315,10 @@
           color: $primary;
           font-size: $medium;
           margin: 0 0 0 60px;
+
+          @media ($mobile-max) {
+            font-size: $small;
+          }
         }
         h4 {
           margin: 0 0 0 60px;
@@ -177,6 +326,10 @@
           color: $tertiary;
           font-family: $tertiary-font;
           font-weight: bold;
+          
+          @media ($mobile-max) {
+            font-size: $large;
+          }
         }
       }
     }
@@ -268,9 +421,11 @@
   }
 
   &:hover {
-    .project-desktop,
-    .project-mobile {
-      transform: scale(1.06);
+    @media ($mobile-large) {
+      .project-desktop,
+      .project-mobile {
+        transform: scale(1.06);
+      }
     }
 
     .desktop-overlay,

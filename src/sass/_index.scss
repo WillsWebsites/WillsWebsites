@@ -132,21 +132,27 @@ section {
   color: $btn-color;
   text-align: center;
   font-family: $tertiary-font;
-  font-size: $btn-size;
+  font-size: $x-small-m;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 3px;
-  box-shadow: 0 5px $shadow;
+  box-shadow: $shadow;
   border: $btn-border;
   border-radius: $btn-radius;
   transition: all 0.2s ease;
 
+  @media ($tablet) {
+    font-size: $x-small;
+  }
+
+  @media ($desktop) {
+    font-size: $btn-size;
+  }
+
   &:hover {
     background-color: $btn-hover;
     color: $btn-color-hover;
-    // box-shadow: 0, 0 transparent;
     transform: translateY(2px);
-    // border-color: $secondary;
   }
 }
 
