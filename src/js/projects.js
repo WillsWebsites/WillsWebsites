@@ -104,12 +104,12 @@ $(document).ready(function() {
             e.target.closest('.project-item').classList.toggle('project-tapped');
         });
 
-        document.querySelector('.close-mobile').addEventListener('touchend', function() {
+        document.querySelectorAll('.close-mobile').forEach(phone => phone.addEventListener('touchend', function(e) {
             this.closest('.desktop-overlay').style.height = 0;
             this.closest('.desktop-overlay').style.opacity = 0;
             this.closest('.project-item').querySelector('.mobile-overlay').style.height = 0;
             this.closest('.project-item').querySelector('.mobile-overlay').style.opacity = 0;
-        })
+        }))
     }
 });
 

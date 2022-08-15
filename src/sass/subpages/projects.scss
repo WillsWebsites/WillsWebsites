@@ -547,6 +547,12 @@
       right: 10px;
       top: 10px;
       cursor: pointer;
+      background-color: $light;
+      border: 2px solid $tertiary;
+
+      @media ($laptop) {
+        display: none;
+      }
     }
 
     .desktop-info {
