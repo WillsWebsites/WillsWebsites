@@ -542,11 +542,12 @@
     }
 
     .close-mobile {
-      padding: 5px 10px;
+      cursor: pointer;
       position: absolute;
       right: 10px;
       top: 10px;
-      cursor: pointer;
+      padding: 5px 10px;
+      color: $primary;
       background-color: $light;
       border: 2px solid $tertiary;
 
