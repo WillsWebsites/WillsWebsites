@@ -47,7 +47,7 @@
       bottom: -10px;
       left: 4px;
       width: 0;
-      height: 5px;
+      height: 3px;
       border-radius: 5px;
       background-color: $light;
 
@@ -55,6 +55,18 @@
       animation-delay: .6s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
+
+      @media ($tablet) {
+        height: 4px;
+      }
+
+      @media ($desktop) {
+        height: 5px;
+      }
+    }
+
+    @media ($tablet-max) {
+      margin-bottom: 40px;
     }
   }
 
@@ -68,14 +80,14 @@
 }
 
 .project-btns {
-  margin-top: 15px;
+  margin-top: 20px;
 
   @media ($laptop-max) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+    margin-top: 15px;
 
     .btn {
       width: 90%;
