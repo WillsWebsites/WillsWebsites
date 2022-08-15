@@ -89,11 +89,19 @@ const barAnimation = function() {
 }
 
 $(document).ready(function() {
-    if ( $(this).width() > 768) {
+    if ($(this).width() >= 768) {
         barAnimation();
     } else {
         websitesBar.style.height = (104 * .69) + '%';
         websiteCount.textContent = Math.floor(104);
+    }
+
+    if ($(this).width() <= 991) {
+        document.querySelector('.projects .container').addEventListener('touchend', function(e) {
+            if (!e.target.closest('.project-item')) return;
+            e.target.closest('.project-item').classList.toggle('project-tapped');
+            console.log(e.target.closest('.project-item'));
+        })
     }
 });
 
