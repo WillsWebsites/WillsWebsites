@@ -1,9 +1,30 @@
 @import "../_main.scss";
 @import "./subpages.scss";
 
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes accentAnimation {
+  0% {
+      opacity: 0;
+      height: 0;
+  }
+  100% {
+      opacity: 1;
+      height: 65%;
+  }
+}
+
 .subpage-banner .container {
   display: flex;
   justify-content: space-between;
+  padding-top: 0px;
 }
 
 .project-btns {
@@ -11,9 +32,27 @@
 }
 
 .project-intro {
+  padding-top: 50px;
   position: relative;
   background-color: $light;
   z-index: 10;
+
+  .overlay {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: left;
+      top: 0;
+      height: 100%;
+      width: 60%;
+      background-color: rgba($secondary, .2);
+      border-top-right-radius: 75px;
+      border-bottom-right-radius: 75px;
+      box-shadow: $shadow;
+    }
+  }
 
   .container {
     display: flex;
@@ -22,19 +61,36 @@
     color: $dark;
     padding: 0;
     z-index: 2;
-    background-color: #ACC2BC;
-    border-top: 5px solid $light;
-    border-bottom: 5px solid $tertiary;
+    background-color: $light;
     border-bottom-right-radius: 100px;
 
     .project-info-left {
       width: 65%;
-      background-color: $secondary;
       padding: 50px 20% 50px 0;
 
       h2 {
         color: $primary;
         margin-top: 0;
+        margin-left: 20px;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: -20px;
+          top: 50%;
+          transform: translateY(-53%);
+          background-color: $tertiary;
+          height: 0;
+          width: 5px;
+          border-radius: 5px;
+          opacity: 0;
+
+          animation: accentAnimation ease 1s;
+          animation-delay: .6s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+        }
       }
     }
 
@@ -46,11 +102,12 @@
       width: 35%;
       min-width: 25px;
       min-height: 200px;
-      padding: 150px 60px 50px 20px;
-      background-color: #ACC2BC;
-      border-bottom-right-radius: 100px;
+      padding: 100px 60px 50px 20px;
 
       ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         list-style-type: none;
         position: absolute;
         text-align: right;
@@ -59,31 +116,42 @@
         height: 100%;
   
         li {
-          height: 19%;
+          height: 16%;
           color: $dark;
           font-size: $x-small-m;
-          padding-top: 100%;
-          position: relative;
+          display: flex;
+          align-items: center;
+          opacity: 0;
+          animation: fadeInAnimation ease .8s;
+          animation-delay: 1.6s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
 
-          &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -325%;
-            width: 275%;
-            height: 1px;
-            background-color: rgba($dark, 0.4);
-            transform: translateY(-50%);
+          &:nth-child(2) {
+            animation-delay: 1.4s;
+          }
+          &:nth-child(3) {
+            animation-delay: 1.2s;
+          }
+          &:nth-child(4) {
+            animation-delay: 1s;
+          }
+          &:nth-child(5) {
+            animation-delay: .8s;
+          }
+          &:last-child {
+            animation-delay: .6s;
           }
         }
       }
 
       #websites-bar {
         position: absolute;
-        bottom: 0;
+        bottom: 20px;
         left: 25%;
         width: 35px;
         height: 0;
+        background: $secondary;
         background-image: linear-gradient(180deg, rgba($secondary, .7), rgba($primary, .7));
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
@@ -114,17 +182,17 @@
     }
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 50%;
-    background-color: $secondary;
-    z-index: -1;
-    border-top: 5px solid $light;
-    border-bottom: 5px solid $light;
-    border-bottom-color: $tertiary;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   inset: 0;
+  //   width: 50%;
+  //   background-color: $secondary;
+  //   z-index: -1;
+  //   border-top: 5px solid $light;
+  //   border-bottom: 5px solid $light;
+  //   border-bottom-color: $tertiary;
+  // }
 }
 .project-start {
   background-color: $light;
@@ -200,7 +268,10 @@
   }
 
   &:hover {
-    transform: scale(1.06);
+    .project-desktop,
+    .project-mobile {
+      transform: scale(1.06);
+    }
 
     .desktop-overlay,
     .mobile-overlay {
@@ -225,6 +296,7 @@
 
 .project-desktop {
   width: 90%;
+  transition: all .4s ease;
 
   @media ($laptop) {
     width: 80%;
@@ -232,7 +304,7 @@
 }
 .desktop-screen {
   position: relative;
-  box-shadow: -10px 8px 16px #707070c9;
+  box-shadow: -10px 8px 16px #7070706b;
   overflow: hidden;
 
   .screen-window {
@@ -323,6 +395,7 @@
   right: 0;
   top: 20%;
   width: 27%;
+  transition: all .4s ease;
 
   @media ($tablet) {
     right: 10%;

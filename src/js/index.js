@@ -51,14 +51,14 @@ $('a[href*="#"]:not([href="#"])').click(function (e) {
 });
 
 // Go to the anchor tag on site load
-$(window).on("pageshow", function () {
-  const hash = window.location.hash;
-  //prettier-ignore
-  if (hash == '' || hash == '#' || hash == undefined) return false;
+// $(window).on("pageshow", function () {
+//   const hash = window.location.hash;
+//   //prettier-ignore
+//   if (hash == '' || hash == '#' || hash == undefined) return false;
 
-  const target = $(hash);
-  scrollHandler(target);
-});
+//   const target = $(hash);
+//   scrollHandler(target);
+// });
 
 // Header observer
 $('<div id="headerView" aria-hidden="true"/>').prependTo("body");
@@ -71,9 +71,9 @@ const headerOptions = {
 
 const headerReveal = ([entry]) => {
   if (entry.isIntersecting) {
-    $(".header").removeClass("scrolled");
+    $('.header').removeClass('scrolled').css('top', `-${headerHeight + 20}px`);
   } else {
-    $(".header").addClass("scrolled");
+    $('.header').addClass('scrolled').css('top', '0');
   }
 };
 

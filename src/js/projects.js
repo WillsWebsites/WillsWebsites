@@ -48,16 +48,19 @@ projects.forEach((project, i) => {
     projectObserver.observe(project);
 });
 
+
+// Website Count Bar Animation
+
 $(document).ready(function() {
     setTimeout(() => {
         const websitesBar = document.getElementById('websites-bar');
         const websiteCount = document.getElementById('website-count');
         let height = 1;
-        let adjustHeight = setInterval(frame, .5);
+        let adjustHeight = setInterval(frame, .1);
 
         const websitesHandler = function(heightSpeed) {
             height += heightSpeed;
-            websitesBar.style.height = (height * .73) + '%';
+            websitesBar.style.height = (height * .69) + '%';
             websiteCount.textContent = Math.floor(height);
         }
         
@@ -65,23 +68,23 @@ $(document).ready(function() {
             if (height >= 104) {
                 clearInterval(adjustHeight);
             } else if (height >= 100) {
-                websitesHandler(.02)
+                websitesHandler(.03)
             } else if (height >= 93) {
-                websitesHandler(.05)
+                websitesHandler(.07)
             } else if (height >= 80) {
-                websitesHandler(.1)
+                websitesHandler(.15)
             } else if (height >= 70) {
-                websitesHandler(.2)
+                websitesHandler(.25)
             } else if (height >= 60) {
-                websitesHandler(.3)
+                websitesHandler(.35)
             } else if (height >= 50) {
-                websitesHandler(.4)
+                websitesHandler(.45)
             } else if (height >= 40) {
-                websitesHandler(.5)
+                websitesHandler(.55)
             } else {
-                websitesHandler(.8)
+                websitesHandler(.85)
             }
         }
-    }, 750);
+    }, 650);
 });
 
