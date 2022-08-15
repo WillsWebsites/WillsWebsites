@@ -475,6 +475,20 @@
   }
 }
 
+@media ($laptop-max) {
+  div.project-item:not(.project-tapped) {
+    .desktop-overlay,
+    .mobile-overlay {
+      opacity: 0 !important;
+      height: 0% !important;
+    }
+    .desktop-info,
+    .mobile-info {
+      opacity: 0 !important;
+    }
+  }
+}
+
 .project-desktop {
   width: 90%;
   transition: all 0.4s ease;
