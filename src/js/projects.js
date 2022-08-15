@@ -49,50 +49,37 @@ projects.forEach((project, i) => {
 });
 
 $(document).ready(function() {
-    const containerHeight = document.querySelector('.project-intro .container').getBoundingClientRect().height;
-    document.querySelector('.project-intro .container .project-info-right').style.minHeight = `${containerHeight * .8}px`;
-
-
     setTimeout(() => {
         const websitesBar = document.getElementById('websites-bar');
         const websiteCount = document.getElementById('website-count');
         let height = 1;
         let adjustHeight = setInterval(frame, .5);
+
+        const websitesHandler = function(heightSpeed) {
+            height += heightSpeed;
+            websitesBar.style.height = (height * .73) + '%';
+            websiteCount.textContent = Math.floor(height);
+        }
+        
         function frame() {
-            if (height >= 100) {
-                    clearInterval(adjustHeight);
-            } else if (height >= 97) {
-                height += .02;
-                websitesBar.style.height = height + '%';
-                websiteCount.textContent = Math.floor(height);
-            } else if (height >= 90) {
-                height += .05;
-                websitesBar.style.height = height + '%';
-                websiteCount.textContent = Math.floor(height);
+            if (height >= 104) {
+                clearInterval(adjustHeight);
+            } else if (height >= 100) {
+                websitesHandler(.02)
+            } else if (height >= 93) {
+                websitesHandler(.05)
             } else if (height >= 80) {
-                height += .1;
-                websitesBar.style.height = height + '%';
-                websiteCount.textContent = Math.floor(height);
+                websitesHandler(.1)
             } else if (height >= 70) {
-                height += .2;
-                websitesBar.style.height = height + '%';
-                websiteCount.textContent = Math.floor(height);
+                websitesHandler(.2)
             } else if (height >= 60) {
-                height += .3;
-                websitesBar.style.height = height + '%';
-                websiteCount.textContent = Math.floor(height);
+                websitesHandler(.3)
             } else if (height >= 50) {
-                height += .4;
-                websitesBar.style.height = height + '%';
-                websiteCount.textContent = Math.floor(height);
+                websitesHandler(.4)
             } else if (height >= 40) {
-                height += .5;
-                websitesBar.style.height = height + '%';
-                websiteCount.textContent = Math.floor(height);
+                websitesHandler(.5)
             } else {
-                height += .8; 
-                websitesBar.style.height = height + '%'; 
-                websiteCount.textContent = Math.floor(height);
+                websitesHandler(.8)
             }
         }
     }, 750);
