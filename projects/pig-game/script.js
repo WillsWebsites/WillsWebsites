@@ -48,7 +48,7 @@ rollBtn.addEventListener('click', function () {
     console.log(dice);
 
     diceEl.classList.remove('hidden');
-    diceEl.src = `./dice-${dice}.png`;
+    diceEl.src = `https://www.willswebsitesdesign.com/projects/pig-game/dice-${dice}.png`;
 
     if (dice !== 1) {
       currentScore += dice;
