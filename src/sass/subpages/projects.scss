@@ -114,7 +114,7 @@
       left: 0;
       top: 0;
       height: 100%;
-      width: 55%;
+      width: 55-%;
       background-color: rgba($secondary, 0.2);
       border-top-right-radius: 75px;
       border-bottom-right-radius: 75px;
@@ -476,7 +476,7 @@
 }
 
 @media ($laptop-max) {
-  div.project-item:not(.project-tapped, :hover) {
+  div.project-item:not(.project-tapped, :hover, :active) {
     .desktop-overlay,
     .mobile-overlay {
       opacity: 0 !important;
