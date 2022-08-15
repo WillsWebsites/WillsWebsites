@@ -1,3 +1,5 @@
+import './dice-1.png'
+
 'use strict';
 
 const scoreEl0 = document.getElementById('score--0');
@@ -46,7 +48,7 @@ rollBtn.addEventListener('click', function () {
     console.log(dice);
 
     diceEl.classList.remove('hidden');
-    diceEl.src = `./pig-game/dice-${dice}.png`;
+    diceEl.src = new URL(`dice-${dice}.png`, import.meta.url);
 
     if (dice !== 1) {
       currentScore += dice;
