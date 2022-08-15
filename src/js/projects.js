@@ -103,6 +103,13 @@ $(document).ready(function() {
             if (!e.target.closest('.project-item')) return;
             e.target.closest('.project-item').classList.toggle('project-tapped');
         });
+
+        document.querySelector('.close-mobile').addEventListener('touchend', function() {
+            this.closest('.desktop-overlay').style.height = 0;
+            this.closest('.desktop-overlay').style.opacity = 0;
+            this.closest('.project-item').querySelector('.mobile-overlay').style.height = 0;
+            this.closest('.project-item').querySelector('.mobile-overlay').style.opacity = 0;
+        })
     }
 });
 

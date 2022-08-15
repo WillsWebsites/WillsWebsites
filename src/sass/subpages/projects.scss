@@ -541,6 +541,14 @@
       padding: 10px;
     }
 
+    .close-mobile {
+      padding: 5px 10px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+
     .desktop-info {
       width: 70%;
       opacity: 0;
