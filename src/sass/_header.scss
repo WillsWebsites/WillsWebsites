@@ -170,10 +170,10 @@ header {
   top: 0;
   right: -210px;
   width: 200px;
-  background: $dark;
+  background: $primary;
   margin: 0;
   padding: 75px 0 0 0;
-  border: 1px solid $primary-shadow;
+  border: 1px solid $light;
   border-radius: 0 0 0 10px;
   box-shadow: 0 8px 16px 0 rgba($dark, 0.2);
   transform-origin: 0% 0%;
@@ -186,14 +186,14 @@ header {
   a {
     display: inline-block;
     width: 100%;
-    font-size: $medium-m;
+    font-size: $small - .4rem;
     color: $light;
-    padding: 15px 30px;
+    padding: 15px 25px;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: $primary;
-      color: $secondary;
+      background-color: $secondary;
+      color: $primary;
     }
   }
 
