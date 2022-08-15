@@ -476,7 +476,7 @@
 }
 
 @media ($laptop-max) {
-  div.project-item:not(.project-tapped) {
+  div.project-item:not(.project-tapped, :hover) {
     .desktop-overlay,
     .mobile-overlay {
       opacity: 0 !important;

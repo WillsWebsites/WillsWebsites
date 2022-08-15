@@ -89,6 +89,7 @@ const barAnimation = function() {
 }
 
 $(document).ready(function() {
+    // Turn off the website bar animation for any device below tablet
     if ($(this).width() >= 768) {
         barAnimation();
     } else {
@@ -96,12 +97,12 @@ $(document).ready(function() {
         websiteCount.textContent = Math.floor(104);
     }
 
+    // Fix mobile touch on projects
     if ($(this).width() <= 991) {
         document.querySelector('.projects .container').addEventListener('touchend', function(e) {
             if (!e.target.closest('.project-item')) return;
             e.target.closest('.project-item').classList.toggle('project-tapped');
-            console.log(e.target.closest('.project-item'));
-        })
+        });
     }
 });
 
