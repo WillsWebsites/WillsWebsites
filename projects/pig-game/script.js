@@ -48,7 +48,7 @@ rollBtn.addEventListener('click', function () {
     console.log(dice);
 
     diceEl.classList.remove('hidden');
-    diceEl.src = new URL(`./dice-${dice}.png`, import.meta.url);
+    diceEl.src = `./dice-${dice}.png`;
 
     if (dice !== 1) {
       currentScore += dice;
