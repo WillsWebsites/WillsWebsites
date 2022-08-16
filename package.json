@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "build": "parcel build index.html --dist-dir ./dist",
+    "copy": "cp public/.htaccess dist"
   },
   "author": "William Schaefermeyer",
   "license": "ISC",
