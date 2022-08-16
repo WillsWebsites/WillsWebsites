@@ -99,17 +99,34 @@ $(document).ready(function() {
 
     // Fix mobile touch on projects
     if ($(this).width() <= 991) {
-        document.querySelector('.projects .container').addEventListener('touchend', function(e) {
-            if (!e.target.closest('.project-item')) return;
-            e.target.closest('.project-item').classList.toggle('project-tapped');
-        });
+        // document.querySelector('.projects .container').addEventListener('touchend', function(e) {
+        //     if (!e.target.closest('.project-item')) return;
+        //     e.target.closest('.project-item').classList.toggle('project-tapped');
+        // });
 
-        document.querySelectorAll('.close-mobile').forEach(phone => phone.addEventListener('touchend', function(e) {
-            this.closest('.desktop-overlay').style.height = 0;
-            this.closest('.desktop-overlay').style.opacity = 0;
-            this.closest('.project-item').querySelector('.mobile-overlay').style.height = 0;
-            this.closest('.project-item').querySelector('.mobile-overlay').style.opacity = 0;
-        }))
+        // document.querySelectorAll('.close-mobile').forEach(phone => phone.addEventListener('touchend', function(e) {
+        //     this.closest('.desktop-overlay').style.height = 0;
+        //     this.closest('.desktop-overlay').style.opacity = 0;
+        //     this.closest('.project-item').querySelector('.mobile-overlay').style.height = 0;
+        //     this.closest('.project-item').querySelector('.mobile-overlay').style.opacity = 0;
+        // }))
+        $(element)
+        .on('touchstart', function () {
+            $(this).data('moved', '0');
+        })
+        .on('touchmove', function () {
+            $(this).data('moved', '1');
+        })
+        .on('touchend', function () {
+            if($(this).data('moved') == 0){
+                // HERE YOUR CODE TO EXECUTE ON TAP-EVENT
+
+                this.closest('.desktop-overlay').style.height = 0;
+                this.closest('.desktop-overlay').style.opacity = 0;
+                this.closest('.project-item').querySelector('.mobile-overlay').style.height = 0;
+                this.closest('.project-item').querySelector('.mobile-overlay').style.opacity = 0;
+            }
+        });
     }
 });
 
