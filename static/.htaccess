@@ -1,8 +1,6 @@
-RewriteEngine on
+#remove html file extension-e.g. https://example.com/file.html will become https://example.com/file
+RewriteEngine on 
 RewriteBase /
-RewriteCond %{https://www.willswebsitesdesign.com/} !(\.[^./]+)$
-RewriteCond %{REQUEST_fileNAME} !-d
-RewriteCond %{REQUEST_fileNAME} !-f
-RewriteRule (.*) /$1.html [L]
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
-RewriteRule ^([^.]+)\.html$ https://wwww.willswebsitesdesign.com/$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
