@@ -9,14 +9,14 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist",
-    "copy": "cp public/.htaccess dist"
+    "build": " parcel build index.html --dist-dir ./dist"
   },
   "author": "William Schaefermeyer",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
-    "parcel": "^2.7.0"
+    "parcel": "^2.7.0",
+    "parcel-reporter-static-files-copy": "^1.4.0"
   },
   "dependencies": {
     "core-js": "^3.22.3",
