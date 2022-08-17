@@ -1,0 +1,13 @@
+.quick-links {
+    width: 20%;
+    padding-left: 20px;
+}
+.quick-links h4 {
+    text-decoration: underline;
+    margin: 10px 0;
+}
+.quick-links ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 10px 0;
+}

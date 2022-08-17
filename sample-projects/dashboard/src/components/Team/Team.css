@@ -1,0 +1,29 @@
+.c-team-section__container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: flex-start;
+}
+
+@media (min-width: 546px) {
+    .c-team-section__container {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-team-section__container {
+        padding: 0;
+    }
+}
+
+.style-selector {
+    text-align: center;
+}
+
+.style-selector select {
+    padding: 10px 20px;
+}
