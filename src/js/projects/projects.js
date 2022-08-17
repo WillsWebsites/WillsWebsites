@@ -43,7 +43,7 @@ $(document).ready(function () {
 
   const projectObserver = new IntersectionObserver(projectReveal, {
     root: null,
-    threshold: 0.2,
+    threshold: 0.05,
   });
 
   projects.forEach((project, i) => {
