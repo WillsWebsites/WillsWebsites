@@ -30,15 +30,15 @@ root.render(<Project />);
 // images.forEach(img => imageObserver.observe(img));
 
 $(document).ready(function () {
-  // // Projects Observer
-  // const projects = document.querySelectorAll(".project-item");
+  // Projects Observer
+  const projects = document.querySelectorAll(".project-item");
 
-  // if (projects) {
-  //   document.querySelector(".testing").textContent =
-  //     projects[0].getBoundingClientRect().height;
-  // } else {
-  //   document.querySelector(".testing").textContent = "Projects not found";
-  // }
+  if (projects) {
+    document.querySelector(".testing").textContent =
+      projects[0].getBoundingClientRect().height;
+  } else {
+    document.querySelector(".testing").textContent = "Projects not found";
+  }
 
   // const projectReveal = function (entries, observer) {
   //   entries.forEach((entry) => {
