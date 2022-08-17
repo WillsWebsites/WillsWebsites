@@ -37,14 +37,13 @@ $(document).ready(function () {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add('project-reveal');
-      // observer.unobserve(entry.target);
+      observer.unobserve(entry.target);
     });
   };
 
   const projectObserver = new IntersectionObserver(projectReveal, {
-    root: null,
-    threshold: 0.05,
-    rootMargin: '70px'
+    root: document.body,
+    threshold: 0.2,
   });
 
   projects.forEach((project, i) => {
