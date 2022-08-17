@@ -31,37 +31,37 @@ root.render(<Project />);
 
 $(document).ready(function () {
   setTimeout(() => {
-      // Projects Observer
-  const projects = document.querySelectorAll(".project-item");
+    // Projects Observer
+    const projects = document.querySelectorAll(".project-item");
 
-  if (projects) {
-    document.querySelector(".testing").textContent =
-      projects[0].getBoundingClientRect().height;
-  } else {
-    document.querySelector(".testing").textContent = "Projects not found";
-  }
-  const projectReveal = function (entries, observer) {
-    entries.forEach((entry) => {
-      console.log(entry);
-      if (!entry.isIntersecting) return;
+    if (projects) {
+      document.querySelector(".testing").textContent =
+        projects[0].getBoundingClientRect().height;
+    } else {
+      document.querySelector(".testing").textContent = "Projects not found";
+    }
+    const projectReveal = function (entries, observer) {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (!entry.isIntersecting) return;
 
-      entry.target.classList.add("project-reveal");
-      observer.unobserve(entry.target);
+        entry.target.classList.add("project-reveal");
+        observer.unobserve(entry.target);
+      });
+    };
+
+    const projectObserver = new IntersectionObserver(projectReveal, {
+      root: null,
+      threshold: 0.2,
     });
-  };
 
-  const projectObserver = new IntersectionObserver(projectReveal, {
-    root: null,
-    threshold: 0.2,
-  });
-
-  projects.forEach((project, i) => {
-    project.style.transitionDelay = `${
-      i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
-    }s`;
-    projectObserver.observe(project);
-  });
-  }, 500);
+    projects.forEach((project, i) => {
+      project.style.transitionDelay = `${
+        i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
+      }s`;
+      projectObserver.observe(project);
+    });
+  }, 300);
 
   // Website Count Bar Animation
   const websitesBar = document.getElementById("websites-bar");
@@ -118,7 +118,7 @@ setTimeout(() => {
       $(".open-details").on("click touchend", function () {
         $(this).closest(".project-item").addClass("reveal-details");
       });
-  
+
       $(".close-details").on("click touchend", function () {
         $(this).closest(".project-item").removeClass("reveal-details");
       });
@@ -128,5 +128,4 @@ setTimeout(() => {
   $(window).on("load resize", function () {
     mobileDetails();
   });
-}, 500);
-
+}, 300);
