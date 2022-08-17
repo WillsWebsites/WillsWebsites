@@ -112,19 +112,21 @@ $(document).ready(function () {
 });
 
 // Fix mobile touch on projects
-function mobileDetails() {
-  if (window.matchMedia("(max-width: 991px)").matches) {
-    $(".open-details").on("click touchend", function () {
-      $(this).closest(".project-item").addClass("reveal-details");
-    });
-
-    $(".close-details").on("click touchend", function () {
-      $(this).closest(".project-item").removeClass("reveal-details");
-    });
+setTimeout(() => {
+  function mobileDetails() {
+    if (window.matchMedia("(max-width: 991px)").matches) {
+      $(".open-details").on("click touchend", function () {
+        $(this).closest(".project-item").addClass("reveal-details");
+      });
+  
+      $(".close-details").on("click touchend", function () {
+        $(this).closest(".project-item").removeClass("reveal-details");
+      });
+    }
   }
-}
-mobileDetails();
-
-$(window).on("load resize", function () {
   mobileDetails();
-});
+  $(window).on("load resize", function () {
+    mobileDetails();
+  });
+}, 500);
+
