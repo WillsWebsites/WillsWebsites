@@ -9,9 +9,9 @@ const Project = (props) => {
         "Golf Tribe is a golf simulator built to take advantage of the most advanced launch monitor technology at a fraction of the price of other hitting bays.",
       url: "https://golf-tribe.com",
       urlShort: "golf-tribe.com",
-      desktopImg: new URL("../../img/projects/desktop/gt.jpg?as=webp&width=1329&height=778", import.meta.url),
+      desktopImg: new URL("../../img/projects/desktop/gt.jpg?width=1329&height=778", import.meta.url),
       mobileImg: new URL(
-        "../../img/projects/mobile/gt-mobile.jpg?as=webp&width=393&height=711",
+        "../../img/projects/mobile/gt-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
       logo: new URL("../../img/projects/logos/gt-logo.png", import.meta.url),
@@ -25,11 +25,11 @@ const Project = (props) => {
       url: "https://www.concordiaexchange.com/",
       urlShort: "concordiaexchange.com",
       desktopImg: new URL(
-        "../../img/projects/desktop/concordia.jpg?as=webp&width=1329&height=778",
+        "../../img/projects/desktop/concordia.jpg?width=1329&height=778",
         import.meta.url
       ),
       mobileImg: new URL(
-        "../../img/projects/mobile/concordia-mobile.jpg?as=webp&width=393&height=711",
+        "../../img/projects/mobile/concordia-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
       logo: new URL(
@@ -45,11 +45,11 @@ const Project = (props) => {
       url: "https://www.cwmofnewengland.com/",
       urlShort: "cwmofnewengland.com",
       desktopImg: new URL(
-        "../../img/projects/desktop/concord.jpg?as=webp&width=1329&height=778",
+        "../../img/projects/desktop/concord.jpg?width=1329&height=778",
         import.meta.url
       ),
       mobileImg: new URL(
-        "../../img/projects/mobile/concord-mobile.jpg?as=webp&width=393&height=711",
+        "../../img/projects/mobile/concord-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
       logo: new URL("../../img/projects/logos/concord-logo.png", import.meta.url),
@@ -62,11 +62,11 @@ const Project = (props) => {
       url: "https://www.nesteggadvisors.net/",
       urlShort: "nesteggadvisors.net",
       desktopImg: new URL(
-        "../../img/projects/desktop/nestegg.jpg?as=webp&width=1329&height=778",
+        "../../img/projects/desktop/nestegg.jpg?width=1329&height=778",
         import.meta.url
       ),
       mobileImg: new URL(
-        "../../img/projects/mobile/nestegg-mobile.jpg?as=webp&width=393&height=711",
+        "../../img/projects/mobile/nestegg-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
       logo: new URL("../../img/projects/logos/nestegg-logo.png", import.meta.url),
@@ -79,11 +79,11 @@ const Project = (props) => {
       url: "https://www.hartwellfp.com/",
       urlShort: "hartwellfp.com",
       desktopImg: new URL(
-        "../../img/projects/desktop/hartwell.jpg?as=webp&width=1329&height=778",
+        "../../img/projects/desktop/hartwell.jpg?width=1329&height=778",
         import.meta.url
       ),
       mobileImg: new URL(
-        "../../img/projects/mobile/hartwell-mobile.jpg?as=webp&width=393&height=711",
+        "../../img/projects/mobile/hartwell-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
       logo: new URL("../../img/projects/logos/hartwell-logo.png", import.meta.url),
@@ -95,9 +95,9 @@ const Project = (props) => {
         "Smart & successful professionals enlist a WealthRhino advisor to guide them through all of life's most important financial decisions.",
       url: "https://www.wealthrhino.com/",
       urlShort: "wealthrhino.com",
-      desktopImg: new URL("../../img/projects/desktop/rhino.jpg?as=webp&width=1329&height=778", import.meta.url),
+      desktopImg: new URL("../../img/projects/desktop/rhino.jpg?width=1329&height=778", import.meta.url),
       mobileImg: new URL(
-        "../../img/projects/mobile/rhino-mobile.jpg?as=webp&width=393&height=711",
+        "../../img/projects/mobile/rhino-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
       logo: new URL("../../img/projects/logos/rhino-logo.png", import.meta.url),
@@ -109,11 +109,11 @@ const Project = (props) => {
       url: "https://www.hemlockwealth.com/",
       urlShort: "hemlockwealth.com",
       desktopImg: new URL(
-        "../../img/projects/desktop/hemlock.jpg?as=webp&width=1329&height=778",
+        "../../img/projects/desktop/hemlock.jpg?width=1329&height=778",
         import.meta.url
       ),
       mobileImg: new URL(
-        "../../img/projects/mobile/hemlock-mobile.jpg?as=webp&width=393&height=711",
+        "../../img/projects/mobile/hemlock-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
       logo: new URL("../../img/projects/logos/hemlock-logo.png", import.meta.url),
@@ -125,11 +125,11 @@ const Project = (props) => {
       url: "https://www.xcountry.financial/",
       urlShort: "xcountry.financial",
       desktopImg: new URL(
-        "../../img/projects/desktop/xcountry.jpg?as=webp&width=1329&height=778",
+        "../../img/projects/desktop/xcountry.jpg?width=1329&height=778",
         import.meta.url
       ),
       mobileImg: new URL(
-        "../../img/projects/mobile/xcountry-mobile.jpg?as=webp&width=393&height=711",
+        "../../img/projects/mobile/xcountry-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
       logo: new URL("../../img/projects/logos/xcountry-logo.png", import.meta.url),
