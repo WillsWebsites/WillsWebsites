@@ -12,7 +12,7 @@ const Footer = props => {
                         <Contact />
                         <QuickLinks />
                         <div className={styles.disclosure}>
-                            <p>The content is developed from sources believed to be providing accurate information. The information in this material is not intended as tax or legal advice. Please consult legal or tax professionalsfor specific information regarding your individual situation. Some of this material was developed and produced byFMG Suite to provide information on a topic that may be of interest. FMG Suite is not affiliated with the namedrepresentative, broker - dealer, state - or SEC - registered investment advisory firm. The opinions expressed andmaterial provided are for general information, and should not be considered a solicitation for the purchase orsale of any security.</p>
+                            <p>Disclosure</p>
                         </div>
                     </div>
                 </div>

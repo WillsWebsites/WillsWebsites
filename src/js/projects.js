@@ -1,3 +1,11 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Project from './Project';
+
+const root = ReactDOM.createRoot(document.getElementById('project-list'));
+root.render(<Project />);
+
+
 // //Lazy Load images
 // const images = document.querySelectorAll('img[data-src]');
 
@@ -88,16 +96,18 @@ const barAnimation = function() {
     }, 650);
 }
 
+// Turn off the website bar animation for any device below tablet
 $(document).ready(function() {
-    // Turn off the website bar animation for any device below tablet
     if (window.matchMedia('(min-width: 768px)').matches) {
         barAnimation();
     } else {
         websitesBar.style.height = (104 * .69) + '%';
         websiteCount.textContent = Math.floor(104);
     }
+});
 
-    // Fix mobile touch on projects
+ // Fix mobile touch on projects
+$(window).on('load resize', function() {
     if (window.matchMedia('(max-width: 991px)').matches) {
         $('.open-details').on('click touchend', function() {
             $(this).closest('.project-item').addClass('reveal-details');
@@ -108,4 +118,3 @@ $(document).ready(function() {
         });
     }
 });
-

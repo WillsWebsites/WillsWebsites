@@ -2,7 +2,8 @@
     background: $light;
     z-index: -2;
   
-    .container {
+    #project-list {
+      list-style-type: none;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -82,6 +83,7 @@
       -webkit-user-drag: none;
       -webkit-user-select: none;
       -ms-user-select: none;
+      pointer-events: none;
     }
   
     &.project-item8 .company img,
@@ -103,6 +105,13 @@
       .open-details {
         opacity: 0;
         cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
+
+    &:not(.reveal-details, :hover) {
+      .desktop-overlay, .mobile-overlay {
+        pointer-events: none;
       }
     }
     
@@ -443,20 +452,28 @@
     .search {
       width: 80%;
       height: 7px;
+      padding: 0 4px;
       margin: 3px 10% 0 auto;
       background-color: rgba($medium-gray, 0.2);
       border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
   
       i {
         font-size: 4px;
         color: $dark;
         height: 7px;
-        width: 15px;
+        width: 7px;
+        margin-right: 2px;
       }
       span {
-        display: flex;
         font-size: 5px;
         color: $dark;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        transform: translateY(-.4px);
       }
     }
   }
