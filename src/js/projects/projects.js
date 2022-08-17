@@ -29,12 +29,20 @@ root.render(<Project />);
 
 // images.forEach(img => imageObserver.observe(img));
 
+
 $(document).ready(function () {
   // Projects Observer
   const projects = document.querySelectorAll(".project-item");
+  
+  if (projects) {
+    document.querySelector('.testing').textContent = "Projects Loaded";
+  } else {
+    document.querySelector('.testing').textContent = "Projects not found";
+  }
 
   const projectReveal = function (entries, observer) {
     entries.forEach((entry) => {
+      console.log(entry)
       if (!entry.isIntersecting) return;
       entry.target.classList.add("project-reveal");
       observer.unobserve(entry.target);
@@ -45,19 +53,12 @@ $(document).ready(function () {
     root: null,
     threshold: 0.2,
   });
-
-  if (window.matchMedia("min-width: 992px").matches) {
     projects.forEach((project, i) => {
       project.style.transitionDelay = `${
         i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
       }s`;
       projectObserver.observe(project);
     });
-  } else {
-    projects.forEach(project => {
-      project.classList.add("project-reveal");
-    });
-  }
 
   // Website Count Bar Animation
   const websitesBar = document.getElementById("websites-bar");
