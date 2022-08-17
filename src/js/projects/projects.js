@@ -35,7 +35,6 @@ $(document).ready(function () {
 
   const projectReveal = function (entries, observer) {
     entries.forEach((entry) => {
-      console.log(entry);
       if (!entry.isIntersecting) return;
       entry.target.style.transform = "translateY(0)";
       entry.target.style.opacity = 1;
@@ -107,7 +106,7 @@ $(document).ready(function () {
 });
 
 // Fix mobile touch on projects
-$(window).on("load resize", function () {
+function mobileDetails() {
   if (window.matchMedia("(max-width: 991px)").matches) {
     $(".open-details").on("click touchend", function () {
       $(this).closest(".project-item").addClass("reveal-details");
@@ -117,4 +116,9 @@ $(window).on("load resize", function () {
       $(this).closest(".project-item").removeClass("reveal-details");
     });
   }
+}
+mobileDetails();
+
+$(window).on("load resize", function () {
+  mobileDetails();
 });

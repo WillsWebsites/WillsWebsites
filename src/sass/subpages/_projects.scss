@@ -102,25 +102,24 @@
     .desktop-info,
     .mobile-info {
       opacity: 1 !important;
-      pointer-events: none;
-      user-select: none;
-      -moz-user-select: none;
-      -webkit-user-drag: none;
-      pointer-events: none;
     }
 
     .open-details {
       opacity: 0;
+      pointer-events: none;
     }
     .desktop-info .btn {
       display: block !important;
     }
   }
 
-  &:not(.reveal-details, :hover) {
+  &:not(.reveal-details, :hover, :active) {
     .desktop-overlay,
     .mobile-overlay {
       pointer-events: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
     }
   }
 

@@ -9,7 +9,10 @@ const Project = (props) => {
         "Golf Tribe is a golf simulator built to take advantage of the most advanced launch monitor technology at a fraction of the price of other hitting bays.",
       url: "https://golf-tribe.com",
       urlShort: "golf-tribe.com",
-      desktopImg: new URL("../../img/projects/desktop/gt.jpg?width=1329&height=778", import.meta.url),
+      desktopImg: new URL(
+        "../../img/projects/desktop/gt.jpg?width=1329&height=778",
+        import.meta.url
+      ),
       mobileImg: new URL(
         "../../img/projects/mobile/gt-mobile.jpg?width=393&height=711",
         import.meta.url
@@ -52,7 +55,10 @@ const Project = (props) => {
         "../../img/projects/mobile/concord-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
-      logo: new URL("../../img/projects/logos/concord-logo.png", import.meta.url),
+      logo: new URL(
+        "../../img/projects/logos/concord-logo.png",
+        import.meta.url
+      ),
       builtWith: ["HTML", "CSS", "JS/jQuery", "FMG Suite Platform"],
     },
     {
@@ -69,7 +75,10 @@ const Project = (props) => {
         "../../img/projects/mobile/nestegg-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
-      logo: new URL("../../img/projects/logos/nestegg-logo.png", import.meta.url),
+      logo: new URL(
+        "../../img/projects/logos/nestegg-logo.png",
+        import.meta.url
+      ),
       builtWith: ["HTML", "SCSS/CSS", "JS/jQuery", "FMG Suite Platform"],
     },
     {
@@ -86,7 +95,10 @@ const Project = (props) => {
         "../../img/projects/mobile/hartwell-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
-      logo: new URL("../../img/projects/logos/hartwell-logo.png", import.meta.url),
+      logo: new URL(
+        "../../img/projects/logos/hartwell-logo.png",
+        import.meta.url
+      ),
       builtWith: ["HTML", "CSS", "JS/jQuery", "FMG Suite Platform"],
     },
     {
@@ -95,7 +107,10 @@ const Project = (props) => {
         "Smart & successful professionals enlist a WealthRhino advisor to guide them through all of life's most important financial decisions.",
       url: "https://www.wealthrhino.com/",
       urlShort: "wealthrhino.com",
-      desktopImg: new URL("../../img/projects/desktop/rhino.jpg?width=1329&height=778", import.meta.url),
+      desktopImg: new URL(
+        "../../img/projects/desktop/rhino.jpg?width=1329&height=778",
+        import.meta.url
+      ),
       mobileImg: new URL(
         "../../img/projects/mobile/rhino-mobile.jpg?width=393&height=711",
         import.meta.url
@@ -116,12 +131,16 @@ const Project = (props) => {
         "../../img/projects/mobile/hemlock-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
-      logo: new URL("../../img/projects/logos/hemlock-logo.png", import.meta.url),
+      logo: new URL(
+        "../../img/projects/logos/hemlock-logo.png",
+        import.meta.url
+      ),
       builtWith: ["HTML", "CSS", "JS/jQuery", "FMG Suite Platform"],
     },
     {
       company: "XCountry",
-      companyDescription: 'XCountry provides financial game plans that are designed to help clients achieve their individual financial goals throughout the investment curve.',
+      companyDescription:
+        "XCountry provides financial game plans that are designed to help clients achieve their individual financial goals throughout the investment curve.",
       url: "https://www.xcountry.financial/",
       urlShort: "xcountry.financial",
       desktopImg: new URL(
@@ -132,7 +151,10 @@ const Project = (props) => {
         "../../img/projects/mobile/xcountry-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
-      logo: new URL("../../img/projects/logos/xcountry-logo.png", import.meta.url),
+      logo: new URL(
+        "../../img/projects/logos/xcountry-logo.png",
+        import.meta.url
+      ),
       builtWith: ["HTML", "SCSS/CSS", "JS/jQuery", "FMG Suite Platform"],
     },
   ];
