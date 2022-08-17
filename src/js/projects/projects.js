@@ -35,7 +35,7 @@ $(document).ready(function () {
   const projects = document.querySelectorAll(".project-item");
   
   if (projects) {
-    document.querySelector('.testing').textContent = "Projects Loaded";
+    document.querySelector('.testing').textContent = projects[0].getBoundingClientRect().height;
   } else {
     document.querySelector('.testing').textContent = "Projects not found";
   }
