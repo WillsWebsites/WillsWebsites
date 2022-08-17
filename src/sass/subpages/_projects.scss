@@ -108,6 +108,9 @@
         opacity: 0;
         pointer-events: none;
       }
+      .desktop-info {
+        display: block !important;
+      }
     }
 
     &:not(.reveal-details, :hover) {
@@ -138,6 +141,9 @@
         .desktop-info,
         .mobile-info {
           opacity: 1 !important;
+        }
+        .desktop-info {
+          display: block !important;
         }
       }
     }
@@ -201,6 +207,7 @@
         opacity: 0;
         transition: 0.2s all ease;
         transition-delay: 0.25s;
+        display: none;
   
         @media (min-widht: 1400px) {
           widht: 80%;
