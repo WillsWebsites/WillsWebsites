@@ -29,12 +29,14 @@ root.render(<Project />);
 
 // images.forEach(img => imageObserver.observe(img));
 
-$(document).ready(function () {
-  // Projects Observer
+
+// Projects Observer
+function projectHandler() {
   const projects = document.querySelectorAll(".project-item");
 
   const projectReveal = function (entries, observer) {
     entries.forEach((entry) => {
+      console.log(entry);
       if (!entry.isIntersecting) return;
       entry.target.style.transform = "translateY(0)";
       entry.target.style.opacity = 1;
@@ -56,6 +58,12 @@ $(document).ready(function () {
     }s`;
     projectObserver.observe(project);
   });
+}
+projectHandler();
+
+$(document).ready(function () {
+  // Projects Observer
+  projectHandler();
 
   // Website Count Bar Animation
   const websitesBar = document.getElementById("websites-bar");
