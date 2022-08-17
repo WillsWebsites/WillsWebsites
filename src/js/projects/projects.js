@@ -29,9 +29,36 @@ root.render(<Project />);
 
 // images.forEach(img => imageObserver.observe(img));
 
-
 // Projects Observer
-function projectHandler() {
+const projects = document.querySelectorAll(".project-item");
+
+const projectReveal = function (entries, observer) {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (!entry.isIntersecting) return;
+    entry.target.style.transform = "translateY(0)";
+    entry.target.style.opacity = 1;
+
+    observer.unobserve(entry.target);
+  });
+};
+
+const projectObserver = new IntersectionObserver(projectReveal, {
+  root: null,
+  threshold: 0.25,
+});
+
+projects.forEach((project, i) => {
+  project.style.transform = "translateY(100px)";
+  project.style.opacity = 0;
+  project.style.transitionDelay = `${
+    i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
+  }s`;
+  projectObserver.observe(project);
+});
+
+$(document).ready(function () {
+  // Projects Observer
   const projects = document.querySelectorAll(".project-item");
 
   const projectReveal = function (entries, observer) {
@@ -58,12 +85,6 @@ function projectHandler() {
     }s`;
     projectObserver.observe(project);
   });
-}
-projectHandler();
-
-$(document).ready(function () {
-  // Projects Observer
-  projectHandler();
 
   // Website Count Bar Animation
   const websitesBar = document.getElementById("websites-bar");
