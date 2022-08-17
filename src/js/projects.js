@@ -90,7 +90,7 @@ const barAnimation = function() {
 
 $(document).ready(function() {
     // Turn off the website bar animation for any device below tablet
-    if ($(this).width() >= 768) {
+    if (window.matchMedia('(min-width: 768px)').matches) {
         barAnimation();
     } else {
         websitesBar.style.height = (104 * .69) + '%';
@@ -98,18 +98,14 @@ $(document).ready(function() {
     }
 
     // Fix mobile touch on projects
-    if ($(this).width() <= 991) {
-        document.querySelector('.projects .container').addEventListener('touchend', function(e) {
-            if (!e.target.closest('.project-item')) return;
-            e.target.closest('.project-item').classList.toggle('project-tapped');
+    if (window.matchMedia('(max-width: 991px)').matches) {
+        $('.open-details').on('click touchend', function() {
+            $(this).closest('.project-item').addClass('reveal-details');
         });
 
-        document.querySelectorAll('.close-mobile').forEach(phone => phone.addEventListener('touchend', function(e) {
-            this.closest('.desktop-overlay').style.height = 0;
-            this.closest('.desktop-overlay').style.opacity = 0;
-            this.closest('.project-item').querySelector('.mobile-overlay').style.height = 0;
-            this.closest('.project-item').querySelector('.mobile-overlay').style.opacity = 0;
-        }))
+        $('.close-details').on('click touchend', function() {
+            $(this).closest('.project-item').removeClass('reveal-details');
+        });
     }
 });
 

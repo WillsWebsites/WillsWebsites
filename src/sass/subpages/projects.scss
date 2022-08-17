@@ -391,6 +391,18 @@
 
     small {
       color: $dark;
+
+      &.hover-directions {
+        @media($laptop-max) {
+          display: none;
+        }
+      }
+
+      &.tap-directions {
+        @media ($laptop) {
+          display: none;
+        }
+      }
     }
     a {
       min-height: 60px;
@@ -429,16 +441,61 @@
 .project-item {
   position: relative;
   width: 100%;
-  margin-bottom: 90px;
+  margin-bottom: 140px;
   transition: all 0.8s ease;
 
   @media ($mobile-large) {
     width: 80%;
-    margin-bottom: 100px;
   }
 
   @media ($tablet) {
     width: 50%;
+  }
+
+  @media ($laptop) {
+    margin-bottom: 100px;
+  }
+
+  .open-details {
+    cursor: pointer;
+    position: absolute;
+    left: 5%;
+    bottom: -45px;
+    margin: 0;
+    padding: 15px 35px;
+    width: 60%;
+    border-width: 2px;
+    background-color: $primary;
+    opacity: .9;
+    transition: opacity .3s ease-in-out;
+    box-shadow: 1px 3px 8px rgba($dark, 0.35);
+
+    &:hover {
+      transform: none;
+    }
+
+    @media ($mobile-large) {
+      font-size: $small-m;
+    }
+
+    @media ($laptop) {
+      display: none;
+    }
+  }
+
+  .close-details {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 8px 13px;
+    color: $primary;
+    background-color: $light;
+    border: 2px solid $tertiary;
+
+    @media ($laptop) {
+      display: none;
+    }
   }
 
   img {
@@ -451,18 +508,12 @@
     -ms-user-select: none;
   }
 
-  &:hover, &:active {
-    @media ($mobile-large) {
-      .project-desktop,
-      .project-mobile {
-        transform: scale(1.06);
-      }
+  &.project-item8 .company img,
+  &.project-item9 .company img {
+    filter: none !important;
+  }
 
-      .desktop-screen, .mobile-screen {
-        box-shadow: -10px 8px 16px #6463637e;
-      }
-    }
-
+  &.reveal-details {
     .desktop-overlay,
     .mobile-overlay {
       opacity: 1;
@@ -472,36 +523,35 @@
     .mobile-info {
       opacity: 1 !important;
     }
-  }
 
-  &.project-item8 .company img,
-  &.project-item9 .company img {
-    filter: none !important;
-  }
-}
-
-.project-item.project-tapped {
-  .desktop-overlay,
-  .mobile-overlay {
-    opacity: 1 !important;
-    height: 100% !important;
-  }
-  .desktop-info,
-  .mobile-info {
-    opacity: 1 !important;
-  }
-}
-
-@media ($laptop-max) {
-  div.project-item:not(.project-tapped, :hover, :active) {
-    .desktop-overlay,
-    .mobile-overlay {
-      opacity: 0 !important;
-      height: 0 !important;
+    .open-details {
+      opacity: 0;
+      cursor: not-allowed;
     }
-    .desktop-info,
-    .mobile-info {
-      opacity: 0 !important;
+  }
+  
+
+  @media ($laptop) {
+    &:hover, &:active {
+    
+      .project-desktop,
+      .project-mobile {
+        transform: scale(1.06);
+      }
+
+      .desktop-screen, .mobile-screen {
+        box-shadow: -10px 8px 16px #6463637e;
+      }
+
+      .desktop-overlay,
+      .mobile-overlay {
+        opacity: 1;
+        height: 100%;
+      }
+      .desktop-info,
+      .mobile-info {
+        opacity: 1 !important;
+      }
     }
   }
 }
@@ -509,11 +559,8 @@
 .project-desktop {
   width: 90%;
   transition: all 0.4s ease;
-
-  @media (min-widht: 1400px) {
-    width: 80%;
-  }
 }
+
 .desktop-screen {
   position: relative;
   box-shadow: -10px 8px 16px #7070706b;
@@ -559,21 +606,6 @@
 
     @media ($mobile-large-max) {
       padding: 10px;
-    }
-
-    .close-mobile {
-      cursor: pointer;
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      padding: 5px 10px;
-      color: $primary;
-      background-color: $light;
-      border: 2px solid $tertiary;
-
-      @media ($laptop) {
-        display: none;
-      }
     }
 
     .desktop-info {
