@@ -1,10 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Project from './Project';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Project from "./Project";
 
-const root = ReactDOM.createRoot(document.getElementById('project-list'));
+const root = ReactDOM.createRoot(document.getElementById("project-list"));
 root.render(<Project />);
-
 
 // //Lazy Load images
 // const images = document.querySelectorAll('img[data-src]');
@@ -30,91 +29,92 @@ root.render(<Project />);
 
 // images.forEach(img => imageObserver.observe(img));
 
-// Projects Observer
+$(document).ready(function () {
+  // Projects Observer
+  const projects = document.querySelectorAll(".project-item");
 
-const projects = document.querySelectorAll('.project-item');
+  const projectReveal = function (entries, observer) {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (!entry.isIntersecting) return;
+      entry.target.style.transform = "translateY(0)";
+      entry.target.style.opacity = 1;
 
-const projectReveal = function(entries, observer) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.style.transform = 'translateY(0)';
-        entry.target.style.opacity = 1;
-
-        observer.unobserve(entry.target);
+      observer.unobserve(entry.target);
     });
-};
+  };
 
-const projectObserver = new IntersectionObserver(projectReveal, {
+  const projectObserver = new IntersectionObserver(projectReveal, {
     root: null,
-    threshold: .25,
-});
+    threshold: 0.25,
+  });
 
-projects.forEach((project, i) => {
-    project.style.transform = 'translateY(100px)';
+  projects.forEach((project, i) => {
+    project.style.transform = "translateY(100px)";
     project.style.opacity = 0;
-    project.style.transitionDelay = `${i % 2 === 0 ?  .2 + (i * .03) : .4 + (i * .02)}s`;
+    project.style.transitionDelay = `${
+      i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
+    }s`;
     projectObserver.observe(project);
-});
+  });
 
+  // Website Count Bar Animation
+  const websitesBar = document.getElementById("websites-bar");
+  const websiteCount = document.getElementById("website-count");
 
-// Website Count Bar Animation
-const websitesBar = document.getElementById('websites-bar');
-const websiteCount = document.getElementById('website-count');
-
-const barAnimation = function() {
+  const barAnimation = function () {
     setTimeout(() => {
-        let height = 1;
-        let adjustHeight = setInterval(frame, .1);
+      let height = 1;
+      let adjustHeight = setInterval(frame, 0.1);
 
-        const websitesHandler = function(heightSpeed) {
-            height += heightSpeed;
-            websitesBar.style.height = (height * .69) + '%';
-            websiteCount.textContent = Math.floor(height);
+      const websitesHandler = function (heightSpeed) {
+        height += heightSpeed;
+        websitesBar.style.height = height * 0.69 + "%";
+        websiteCount.textContent = Math.floor(height);
+      };
+
+      function frame() {
+        if (height >= 104) {
+          clearInterval(adjustHeight);
+        } else if (height >= 100) {
+          websitesHandler(0.03);
+        } else if (height >= 93) {
+          websitesHandler(0.07);
+        } else if (height >= 80) {
+          websitesHandler(0.15);
+        } else if (height >= 70) {
+          websitesHandler(0.25);
+        } else if (height >= 60) {
+          websitesHandler(0.35);
+        } else if (height >= 50) {
+          websitesHandler(0.45);
+        } else if (height >= 40) {
+          websitesHandler(0.55);
+        } else {
+          websitesHandler(0.85);
         }
-        
-        function frame() {
-            if (height >= 104) {
-                clearInterval(adjustHeight);
-            } else if (height >= 100) {
-                websitesHandler(.03)
-            } else if (height >= 93) {
-                websitesHandler(.07)
-            } else if (height >= 80) {
-                websitesHandler(.15)
-            } else if (height >= 70) {
-                websitesHandler(.25)
-            } else if (height >= 60) {
-                websitesHandler(.35)
-            } else if (height >= 50) {
-                websitesHandler(.45)
-            } else if (height >= 40) {
-                websitesHandler(.55)
-            } else {
-                websitesHandler(.85)
-            }
-        }
+      }
     }, 650);
-}
+  };
 
-// Turn off the website bar animation for any device below tablet
-$(document).ready(function() {
-    if (window.matchMedia('(min-width: 768px)').matches) {
-        barAnimation();
-    } else {
-        websitesBar.style.height = (104 * .69) + '%';
-        websiteCount.textContent = Math.floor(104);
-    }
+  // Turn off the website bar animation for any device below tablet
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    barAnimation();
+  } else {
+    websitesBar.style.height = 104 * 0.69 + "%";
+    websiteCount.textContent = Math.floor(104);
+  }
 });
 
- // Fix mobile touch on projects
-$(window).on('load resize', function() {
-    if (window.matchMedia('(max-width: 991px)').matches) {
-        $('.open-details').on('click touchend', function() {
-            $(this).closest('.project-item').addClass('reveal-details');
-        });
+// Fix mobile touch on projects
+$(window).on("load resize", function () {
+  if (window.matchMedia("(max-width: 991px)").matches) {
+    $(".open-details").on("click touchend", function () {
+      $(this).closest(".project-item").addClass("reveal-details");
+    });
 
-        $('.close-details').on('click touchend', function() {
-            $(this).closest('.project-item').removeClass('reveal-details');
-        });
-    }
+    $(".close-details").on("click touchend", function () {
+      $(this).closest(".project-item").removeClass("reveal-details");
+    });
+  }
 });
