@@ -20,6 +20,8 @@
   width: 100%;
   margin-bottom: 140px;
   transition: all 0.8s ease;
+  opacity: 0;
+  transform: translateY(100px);
 
   @media ($mobile-large) {
     width: 80%;
@@ -31,6 +33,11 @@
 
   @media ($laptop) {
     margin-bottom: 100px;
+  }
+
+  &.project-reveal {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .open-details {

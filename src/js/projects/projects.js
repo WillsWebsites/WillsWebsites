@@ -35,11 +35,8 @@ $(document).ready(function () {
 
   const projectReveal = function (entries, observer) {
     entries.forEach((entry) => {
-      console.log(entry);
       if (!entry.isIntersecting) return;
-      entry.target.style.transform = "translateY(0)";
-      entry.target.style.opacity = 1;
-
+      entry.target.classList.add('project-reveal');
       observer.unobserve(entry.target);
     });
   };
@@ -50,8 +47,6 @@ $(document).ready(function () {
   });
 
   projects.forEach((project, i) => {
-    project.style.transform = "translateY(100px)";
-    project.style.opacity = 0;
     project.style.transitionDelay = `${
       i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
     }s`;
