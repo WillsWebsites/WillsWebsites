@@ -30,7 +30,8 @@ root.render(<Project />);
 // images.forEach(img => imageObserver.observe(img));
 
 $(document).ready(function () {
-  // Projects Observer
+  setTimeout(() => {
+      // Projects Observer
   const projects = document.querySelectorAll(".project-item");
 
   if (projects) {
@@ -39,28 +40,28 @@ $(document).ready(function () {
   } else {
     document.querySelector(".testing").textContent = "Projects not found";
   }
+  const projectReveal = function (entries, observer) {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (!entry.isIntersecting) return;
 
-  // const projectReveal = function (entries, observer) {
-  //   entries.forEach((entry) => {
-  //     console.log(entry);
-  //     if (!entry.isIntersecting) return;
+      entry.target.classList.add("project-reveal");
+      observer.unobserve(entry.target);
+    });
+  };
 
-  //     entry.target.classList.add("project-reveal");
-  //     observer.unobserve(entry.target);
-  //   });
-  // };
+  const projectObserver = new IntersectionObserver(projectReveal, {
+    root: null,
+    threshold: 0.2,
+  });
 
-  // const projectObserver = new IntersectionObserver(projectReveal, {
-  //   root: null,
-  //   threshold: 0.2,
-  // });
-
-  // projects.forEach((project, i) => {
-  //   project.style.transitionDelay = `${
-  //     i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
-  //   }s`;
-  //   projectObserver.observe(project);
-  // });
+  projects.forEach((project, i) => {
+    project.style.transitionDelay = `${
+      i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
+    }s`;
+    projectObserver.observe(project);
+  });
+  }, 500);
 
   // Website Count Bar Animation
   const websitesBar = document.getElementById("websites-bar");
