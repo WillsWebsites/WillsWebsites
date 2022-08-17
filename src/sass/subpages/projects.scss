@@ -821,6 +821,10 @@
   }
 }
 
+.project-item:nth-child(even) .open-details {
+  left: 15%;
+}
+
 @media ($desktop) {
   .project-item:nth-child(even) .project-mobile {
     right: -50px !important;
