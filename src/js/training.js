@@ -12,19 +12,14 @@ const modalHandler = function () {
     let modalJS = $(".m-js");
     let modalReact = $(".m-react");
 
-    const modalContentHandler = function (
-      title,
-      description,
-      project,
-      repo,
-      builtWith
-    ) {
-      $('.m-build i').addClass('m-hidden');
+    // Adding the content to the modal for whichever project is selected
+    const modalContentHandler = function (title, description, project, repo, builtWith) {
+      $(".m-build i").addClass("m-hidden");
       $(modalTitle).text(title);
       $(modalDescription).text(description);
-      $(modalProject).attr('href', project);
-      $(modalRepo).attr('href', repo);
-      $(builtWith === 'JS' ? modalJS : modalReact).removeClass('m-hidden');
+      $(modalProject).attr("href", project);
+      $(modalRepo).attr("href", repo);
+      $(builtWith === "JS" ? modalJS : modalReact).removeClass("m-hidden");
     };
 
     $(".training-item").click(function (e) {
@@ -35,6 +30,8 @@ const modalHandler = function () {
           modalContentHandler(
             "Guess Number",
             "The primary use would be to...",
+            "/guess-number.html",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/guess-number",
             "JS"
           );
           break;
@@ -42,9 +39,72 @@ const modalHandler = function () {
           modalContentHandler(
             "Pig Game",
             "The primary use would be to...",
-            "./pig-game.html",
+            "/pig-game.html",
             "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/pig-game",
             "JS"
+          );
+          break;
+        case $(e.target).closest(".training-item").hasClass("bankist"):
+          modalContentHandler(
+            "Bankist",
+            "The primary use would be to...",
+            "/bankist.html",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist",
+            "JS"
+          );
+          break;
+        case $(e.target).closest(".training-item").hasClass("bankist2"):
+          modalContentHandler(
+            "Bankist2",
+            "The primary use would be to...",
+            "/bankist2.html",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist2",
+            "JS"
+          );
+          break;
+        case $(e.target).closest(".training-item").hasClass("mapty"):
+          modalContentHandler(
+            "Mapty",
+            "The primary use would be to...",
+            "/mapty.html",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/mapty",
+            "JS"
+          );
+          break;
+        case $(e.target).closest(".training-item").hasClass("forkify"):
+          modalContentHandler(
+            "Forkify",
+            "The primary use would be to...",
+            "/forkify.html",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/forkify",
+            "JS"
+          );
+          break;
+        case $(e.target).closest(".training-item").hasClass("expenses"):
+          modalContentHandler(
+            "Expenses",
+            "The primary use would be to...",
+            "/expenses.html",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/expenses",
+            "React"
+          );
+          break;
+        case $(e.target).closest(".training-item").hasClass("food-order"):
+          modalContentHandler(
+            "Food Order",
+            "The primary use would be to...",
+            "/food-order.html",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/food-order",
+            "React"
+          );
+          break;
+        case $(e.target).closest(".training-item").hasClass("dashboard"):
+          modalContentHandler(
+            "Dashboard",
+            "The primary use would be to...",
+            "/dashboard.html",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/dashboard",
+            "React"
           );
           break;
       }
