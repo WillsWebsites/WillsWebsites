@@ -4,4 +4,4 @@
 ## What I Learned:
 ### How to implement logic based on user feedback and display them to the DOM
 ## Focus:
-### Javascript
+### ![JavaScript Icon](../../src/img/js.png)
