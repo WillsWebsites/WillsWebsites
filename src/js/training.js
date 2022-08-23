@@ -26,11 +26,11 @@ const modalHandler = function () {
       $(modal).addClass('modal-opened');
 
       switch (true) {
-        case $(e.target).closest('.training-item').hasClass('guess-number'):
+        case $(e.target).closest('.training-item').hasClass('number-guesser'):
           modalContentHandler(
-            'Guess Number',
-            'The primary use would be to...',
-            '/guess-number.html',
+            'Number Guesser',
+            `A simple single player game where you try and guess a random number in the fewest attempts possible. Maybe if you're lucky you can get it first try?`,
+            '/number-guesser.html',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/guess-number',
             'JS'
           );

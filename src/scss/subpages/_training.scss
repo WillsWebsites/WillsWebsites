@@ -117,7 +117,7 @@
             position: absolute; 
             right: 0; 
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-50%) scale(1.04);
             min-width: 100%; 
             min-height: 100%;
             width: 100%; 
@@ -125,6 +125,11 @@
             z-index: -100;
             background-size: cover;
             overflow: hidden;
+        }
+
+        &.number-guesser video {
+            width: 200%;
+            right: -50%;
         }
     }
 }

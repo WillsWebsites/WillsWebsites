@@ -2,6 +2,7 @@
 
 const checkBtn = document.querySelector('.check');
 const againBtn = document.querySelector('.again');
+const againMobileBtn = document.querySelector('.again-mobile');
 let message = document.querySelector('.message');
 let number = document.querySelector('.number');
 let score = document.querySelector('.score');
@@ -38,7 +39,7 @@ checkBtn.addEventListener('click', function() {
     return guess;
 });
 
-againBtn.addEventListener('click', function() {
+const againHandler = function() {
     scoreCounter = 20;
     randomNumber = Math.trunc(Math.random() * 20) + 1;
     message.textContent = 'Start Guessing...';
@@ -49,4 +50,7 @@ againBtn.addEventListener('click', function() {
     number.style.width = '15rem';
     checkBtn.disabled = false;
     document.querySelector('.guess').disabled = false;
-});
+}
+
+againBtn.addEventListener('click', againHandler);
+againMobileBtn.addEventListener('click', againHandler);

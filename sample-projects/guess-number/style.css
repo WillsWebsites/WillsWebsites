@@ -30,24 +30,39 @@ main {
   color: #eee;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .left {
-  width: 52rem;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .right {
-  width: 52rem;
+  width: 95%;
   font-size: 2rem;
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+  .left {
+    width: 40%;
+  }
+  .right {
+    width: 60%;
+  }
 }
 
 /* ELEMENTS STYLE */
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   position: absolute;
   width: 100%;
@@ -78,10 +93,26 @@ h1 {
 
 .again {
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   left: 2rem;
+  display: none;
 }
 
+@media (min-width: 768px) {
+  .again {
+    display: block;
+  }
+  .again-mobile {
+    display: none;
+  }
+}
+
+.again-mobile {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .guess {
   background: none;
   border: 4px solid #eee;
@@ -89,7 +120,7 @@ h1 {
   color: inherit;
   font-size: 5rem;
   padding: 2.5rem;
-  width: 25rem;
+  width: 250px;
   text-align: center;
   display: block;
   margin-bottom: 3rem;
@@ -110,8 +141,20 @@ h1 {
 }
 
 .message {
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
   height: 3rem;
+}
+
+@media (min-width: 768px) {
+  .message {
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  .message {
+    font-size: 3rem;
+  }
 }
 
 .label-score {
