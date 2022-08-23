@@ -80,12 +80,12 @@ const modalHandler = function () {
             'JS'
           );
           break;
-        case $(e.target).closest('.training-item').hasClass('expenses'):
+        case $(e.target).closest('.training-item').hasClass('expense-tracker'):
           modalContentHandler(
-            'Expenses',
+            'Expense Tracker',
             'The primary use would be to...',
-            '/expenses.html',
-            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/expenses',
+            '/expense-tracker.html',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/expense-tracker',
             'React'
           );
           break;
