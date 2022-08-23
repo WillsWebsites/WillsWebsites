@@ -1,3 +1,9 @@
+.training-intro small {
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+}
+
 .training-modal {
     display: none;
     opacity: 0;
@@ -28,20 +34,42 @@
         width: 70%;
         background-color: $primary;
         border-radius: 50px;
-        border: 2px solid rgba($secondary, .3);
+        border: 2px solid rgba($light, .3);
         transform: translate(-50%, -50%);
         padding: 20px 30px;
+
+        .m-close {
+            position: absolute;
+            right: 35px;
+            padding: 7px 10px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+    }
+
+    .m-content {
+        opacity: 0;
+        width: 80%;
     }
 
     &.modal-opened {
         display: block;
         opacity: 1;
+
+        .m-content {
+            margin: 15px;
+            overflow: auto;
+            animation: fadeInAnimation ease 1s;
+            animation-delay: 0.2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
     }
 }
 
 .training-projects .container {
     width: 98%;
-    max-width: none;
+    max-width: 1700px;
 }
 
 .training-grid {
@@ -54,7 +82,7 @@
     
     .training-item {
         margin: 10px;
-        border: 2px solid $light;
+        border: 1px solid $light;
         border-radius: 10px;
         overflow: hidden;
         position: relative;

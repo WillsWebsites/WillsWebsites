@@ -36,8 +36,9 @@
     <link rel="stylesheet" href="src/scss/subpages/sample-projects.scss" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    <script defer src="./src/js/index.js" type="module"></script>
-    <script defer src="./src/js/projects/projects.js" type="module"></script>
+    <script src="./src/js/index.js" type="module"></script>
+    <script src="./src/js/training.js" type="module"></script>
+    <script src="./src/js/projects/projects.js" type="module"></script>
     <script src="./src/js/loading.js" type="module"></script>
     <link
       rel="stylesheet"
@@ -61,6 +62,16 @@
         <div class="m-content">
           <h2 class="m-title"></h2>
           <p class="m-description"></p>
+          <hr />
+          <div class="m-buttons">
+            <a href="#" class="btn"></a>
+            <a href="#" class="btn"></a>
+          </div>
+          <hr />
+          <div class="m-build">
+            <p>Focus:</p><img src="./src/img/js.png" />
+            <a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Javascript icons created by Freepik - Flaticon</a>
+          </div>
         </div>
       </div>
     </div>
@@ -165,7 +176,6 @@
             <small class="tap-directions"
               >Tap on the project button to view site details</small
             >
-            <!-- <div class="testing">test</div> -->
             <a href="#section-3">
               <img
                 src="./src/img/down-arrow.png"
@@ -194,7 +204,22 @@
           </div>
         </div>
       </section>
-      <section id="section-5" class="section training-projects">
+      <section id="section-5" class="section training-start">
+        <div class="overlay">
+          <div class="container">
+            <small class="hover-directions">Hover to view site details</small>
+            <small>Click on a project for details</small>
+            <a href="#section-6">
+              <img
+                src="./src/img/down-arrow.png"
+                alt="Down Arrow"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="section-6" class="section training-projects">
         <div class="overlay">
           <div class="container">
             <div class="training-grid">
@@ -203,10 +228,12 @@
               </div>
               <div href="./pig-game.html" target="_blank" class="training-item pig-game">
                 <div class="t-overlay"></div>
-                <video loop autoplay muted>
-                  <source src="./src/video/pig-game.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <figure>
+                  <video loop autoplay muted>
+                    <source src="./src/video/pig-game.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </figure>
               </div>
               <div href="./bankist.html" target="_blank" class="training-item bankist" data-training="1">Bankist</div>
               <div href="./bankist2.html" target="_blank" class="training-item bankist2">Bankist2</div>
