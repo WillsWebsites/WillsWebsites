@@ -41,6 +41,7 @@ $(document).ready(function () {
     // } else {
     //   document.querySelector(".testing").textContent = "Projects not found";
     // }
+
     const projectReveal = function (entries, observer) {
       entries.forEach((entry) => {
         console.log(entry);
@@ -109,6 +110,35 @@ $(document).ready(function () {
   } else {
     websitesBar.style.height = 104 * 0.69 + "%";
     websiteCount.textContent = Math.floor(104);
+  }
+
+  // Training project Modal
+  if (window.matchMedia("(min-width: 992px)").matches) {
+    // Opening Modal and setting content
+    const modal = $(".training-modal");
+    const modalBg = $(".m-background");
+    const modalClose = $(".m-close");
+    let modalTitle = $(".m-title");
+    let modalDescription = $(".m-description");
+
+    $(".training-item").click(function (e) {
+      $(modal).addClass("modal-opened");
+
+      if ($(e.target).hasClass("guess-number")) {
+        $(modalTitle).text("Guess Number");
+        $(modalDescription).text("The primary use would be to...");
+      }
+    });
+
+    // Closing Modal and clearing content
+
+    const hideModal = function () {
+      $(modal).removeClass("modal-opened");
+      $(modalTitle).text("");
+      $(modalDescription).text("");
+    };
+    $(modalClose).click(hideModal);
+    $(modalBg).click(hideModal);
   }
 });
 

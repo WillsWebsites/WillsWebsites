@@ -54,6 +54,16 @@
   </head>
   <body class="supage page-projects">
     <div class="loading"></div>
+    <div class="training-modal">
+      <div class="m-background"></div>
+      <div class="m-body">
+        <button class="m-close">X</button>
+        <div class="m-content">
+          <h2 class="m-title"></h2>
+          <p class="m-description"></p>
+        </div>
+      </div>
+    </div>
     <header id="header" class="header">
       <div class="h-overlay overlay">
         <div class="h-container container">
@@ -176,28 +186,36 @@
       <section id="section-4" class="section training-intro">
         <div class="overlay">
           <div class="container">
-            <div class="training-info-left">
-              <h2>Training/Practice Projects 3</h2>
-              <p>
-                Careful crafted websites with a focus on design and user
-                experience.
-              </p>
-            </div>
-            <div class="training-info-right">
-              <a href="./pig-game.html" target="_blank" class="btn">Pig Game</a>
+            <h2>Training/Practice Projects 3</h2>
+            <p>
+              Careful crafted websites with a focus on design and user
+              experience.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="section-5" class="section training-projects">
+        <div class="overlay">
+          <div class="container">
+            <div class="training-grid">
               <!-- prettier-ignore -->
-              <a href="./guess-number.html" target="_blank" class="btn">Guess Number</a>
-              <a href="./bankist.html" target="_blank" class="btn">Bankist</a>
-              <a href="./bankist2.html" target="_blank" class="btn">Bankist2</a>
-              <a href="./mapty.html" target="_blank" class="btn">Mapty</a>
-              <a href="./forkify.html" target="_blank" class="btn">Forkify</a>
-              <a href="./expenses.html" target="_blank" class="btn">Expenses</a>
-              <a href="./food-order.html" target="_blank" class="btn"
-                >Food Order</a
-              >
-              <a href="./dashboard.html" target="_blank" class="btn"
-                >Dashboard</a
-              >
+              <div href="./guess-number.html" target="_blank" class="training-item guess-number">
+              </div>
+              <div href="./pig-game.html" target="_blank" class="training-item pig-game">
+                <div class="t-overlay"></div>
+                <video loop autoplay muted>
+                  <source src="./src/video/pig-game.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div href="./bankist.html" target="_blank" class="training-item bankist" data-training="1">Bankist</div>
+              <div href="./bankist2.html" target="_blank" class="training-item bankist2">Bankist2</div>
+              <div href="./mapty.html" target="_blank" class="training-item mapty">Mapty</div>
+              <div href="./forkify.html" target="_blank" class="training-item forkify">Forkify</div>
+              <div href="./expenses.html" target="_blank" class="training-item expenses">Expenses</div>
+              <div href="./food-order.html" target="_blank" class="training-item food-order">Food Order</div>
+              <div href="./dashboard.html" target="_blank" class="training-item dashboard">Dashboard</div>
+              <div href="./dashboard.html" target="_blank" class="training-item movies">Movies</div>
             </div>
           </div>
         </div>
