@@ -65,6 +65,10 @@
             animation-fill-mode: forwards;
         }
     }
+
+    .m-hidden {
+        display: none !important;
+    }
 }
 
 .training-projects .container {
