@@ -68,16 +68,16 @@ $(document).ready(function () {
 
       const websitesHandler = function (heightSpeed) {
         height += heightSpeed;
-        websitesBar.style.height = height * 0.69 + "%";
+        websitesBar.style.height = height * 0.8 + "%";
         websiteCount.textContent = Math.floor(height);
       };
 
       function frame() {
-        if (height >= 104) {
+        if (height >= 94) {
           clearInterval(adjustHeight);
-        } else if (height >= 100) {
+        } else if (height >= 91) {
           websitesHandler(0.03);
-        } else if (height >= 93) {
+        } else if (height >= 86) {
           websitesHandler(0.07);
         } else if (height >= 80) {
           websitesHandler(0.15);

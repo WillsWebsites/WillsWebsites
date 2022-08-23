@@ -1,110 +1,110 @@
 // Training project Modal
 const modalHandler = function () {
-  if (window.matchMedia("(min-width: 992px)").matches) {
+  if (window.matchMedia('(min-width: 992px)').matches) {
     // Opening Modal and setting content
-    const modal = $(".training-modal");
-    const modalBg = $(".m-background");
-    const modalClose = $(".m-close");
-    let modalTitle = $(".m-title");
-    let modalDescription = $(".m-description");
-    let modalProject = $(".m-project");
-    let modalRepo = $(".m-repo");
-    let modalJS = $(".m-js");
-    let modalReact = $(".m-react");
+    const modal = $('.training-modal');
+    const modalBg = $('.m-background');
+    const modalClose = $('.m-close');
+    let modalTitle = $('.m-title');
+    let modalDescription = $('.m-description');
+    let modalProject = $('.m-project');
+    let modalRepo = $('.m-repo');
+    let modalJS = $('.m-js');
+    let modalReact = $('.m-react');
 
     // Adding the content to the modal for whichever project is selected
     const modalContentHandler = function (title, description, project, repo, builtWith) {
-      $(".m-build i").addClass("m-hidden");
+      $('.m-build i').addClass('m-hidden');
       $(modalTitle).text(title);
       $(modalDescription).text(description);
-      $(modalProject).attr("href", project);
-      $(modalRepo).attr("href", repo);
-      $(builtWith === "JS" ? modalJS : modalReact).removeClass("m-hidden");
+      $(modalProject).attr('href', project);
+      $(modalRepo).attr('href', repo);
+      $(builtWith === 'JS' ? modalJS : modalReact).removeClass('m-hidden');
     };
 
-    $(".training-item").click(function (e) {
-      $(modal).addClass("modal-opened");
+    $('.training-item').click(function (e) {
+      $(modal).addClass('modal-opened');
 
       switch (true) {
-        case $(e.target).closest(".training-item").hasClass("guess-number"):
+        case $(e.target).closest('.training-item').hasClass('guess-number'):
           modalContentHandler(
-            "Guess Number",
-            "The primary use would be to...",
-            "/guess-number.html",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/guess-number",
-            "JS"
+            'Guess Number',
+            'The primary use would be to...',
+            '/guess-number.html',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/guess-number',
+            'JS'
           );
           break;
-        case $(e.target).closest(".training-item").hasClass("pig-game"):
+        case $(e.target).closest('.training-item').hasClass('pig-game'):
           modalContentHandler(
-            "Pig Game",
-            "The primary use would be to...",
-            "/pig-game.html",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/pig-game",
-            "JS"
+            'Pig Game',
+            'The primary use would be to...',
+            '/pig-game.html',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/pig-game',
+            'JS'
           );
           break;
-        case $(e.target).closest(".training-item").hasClass("bankist"):
+        case $(e.target).closest('.training-item').hasClass('bankist'):
           modalContentHandler(
-            "Bankist",
-            "The primary use would be to...",
-            "/bankist.html",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist",
-            "JS"
+            'Bankist',
+            'The primary use would be to...',
+            '/bankist.html',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist',
+            'JS'
           );
           break;
-        case $(e.target).closest(".training-item").hasClass("bankist2"):
+        case $(e.target).closest('.training-item').hasClass('bankist2'):
           modalContentHandler(
-            "Bankist2",
-            "The primary use would be to...",
-            "/bankist2.html",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist2",
-            "JS"
+            'Bankist2',
+            'The primary use would be to...',
+            '/bankist2.html',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist2',
+            'JS'
           );
           break;
-        case $(e.target).closest(".training-item").hasClass("mapty"):
+        case $(e.target).closest('.training-item').hasClass('mapty'):
           modalContentHandler(
-            "Mapty",
-            "The primary use would be to...",
-            "/mapty.html",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/mapty",
-            "JS"
+            'Mapty',
+            'The primary use would be to...',
+            '/mapty.html',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/mapty',
+            'JS'
           );
           break;
-        case $(e.target).closest(".training-item").hasClass("forkify"):
+        case $(e.target).closest('.training-item').hasClass('forkify'):
           modalContentHandler(
-            "Forkify",
-            "The primary use would be to...",
-            "/forkify.html",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/forkify",
-            "JS"
+            'Forkify',
+            'The primary use would be to...',
+            '/forkify.html',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/forkify',
+            'JS'
           );
           break;
-        case $(e.target).closest(".training-item").hasClass("expenses"):
+        case $(e.target).closest('.training-item').hasClass('expenses'):
           modalContentHandler(
-            "Expenses",
-            "The primary use would be to...",
-            "/expenses.html",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/expenses",
-            "React"
+            'Expenses',
+            'The primary use would be to...',
+            '/expenses.html',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/expenses',
+            'React'
           );
           break;
-        case $(e.target).closest(".training-item").hasClass("food-order"):
+        case $(e.target).closest('.training-item').hasClass('food-order'):
           modalContentHandler(
-            "Food Order",
-            "The primary use would be to...",
-            "/food-order.html",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/food-order",
-            "React"
+            'Food Order',
+            'The primary use would be to...',
+            '/food-order.html',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/food-order',
+            'React'
           );
           break;
-        case $(e.target).closest(".training-item").hasClass("dashboard"):
+        case $(e.target).closest('.training-item').hasClass('dashboard'):
           modalContentHandler(
-            "Dashboard",
-            "The primary use would be to...",
-            "/dashboard.html",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/dashboard",
-            "React"
+            'Dashboard',
+            'The primary use would be to...',
+            '/dashboard.html',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/dashboard',
+            'React'
           );
           break;
       }
@@ -113,9 +113,11 @@ const modalHandler = function () {
     // Closing Modal and clearing content
 
     const hideModal = function () {
-      $(modal).removeClass("modal-opened");
-      $(modalTitle).text("");
-      $(modalDescription).text("");
+      $(modal).removeClass('modal-opened');
+      $(modalTitle).text('');
+      $(modalDescription).text('');
+      $(modalProject).removeAttr('href');
+      $(modalRepo).removeAttr('href');
     };
     $(modalClose).click(hideModal);
     $(modalBg).click(hideModal);

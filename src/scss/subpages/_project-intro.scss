@@ -163,7 +163,7 @@
           position: absolute;
           text-align: right;
           left: 10px;
-          bottom: 0;
+          bottom: -15px;
           height: 100%;
   
           @media ($mobile-large) {
@@ -183,7 +183,7 @@
           }
   
           li {
-            height: 16%;
+            height: 20%;
             color: $dark;
             font-size: $x-small-m;
             display: flex;
@@ -237,7 +237,7 @@
   
           @media ($tablet) {
             left: 30%;
-            bottom: 20px;
+            bottom: 15px;
           }
   
           @media ($desktop) {
