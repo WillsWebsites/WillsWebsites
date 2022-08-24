@@ -7,8 +7,6 @@ import BookmarksView from './views/BookmarksView.js';
 import PageView from './views/PageView.js';
 import AddRecipeView from './views/AddRecipeView.js';
 
-// https://forkify-api.herokuapp.com/v2
-
 ///////////////////////////////////////
 const controlRecipes = async function () {
   try {
