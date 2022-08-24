@@ -1,7 +1,64 @@
-.training-intro small {
-    color: white;
-    text-align: center;
-    margin: 20px auto;
+.training-intro {
+    position: relative;
+
+    &::after{
+        content: "";
+        height: 90%;
+        width: 65%;
+        background-color: #779f9533;
+        border-top-left-radius: 75px;
+        border-bottom-left-radius: 75px;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        box-shadow: 0 8px 16px #23232326;
+    }
+    .training-intro-content {
+        margin-left: auto;
+        width: 60%;
+    }
+
+    .container {
+        padding: 100px 0 75px 0;
+    }
+    h2, p {
+        color: $light;
+    }
+}
+
+.training-directions {
+    display: none;
+}
+@media ($laptop) {
+    .training-directions {
+        display: block;
+    }
+    .training-directions-mobile {
+        display: none;
+    }
+}
+.training-start {
+    .container {
+        text-align: center;
+        min-height: 150px;
+        padding-bottom: 25px;
+    }
+    small {
+        color: $light;
+    }
+    img {
+        width: 100%;
+        max-width: 30px;
+        height: auto;
+        margin: 20px auto 0;
+        transition: all .3s;
+        filter: brightness(0) invert(1);
+
+        &:hover {
+            max-width: 40px;
+            filter: drop-shadow(2px 2px 3px #23232366);
+        }
+    }
 }
 
 .training-modal {
@@ -171,7 +228,7 @@
         grid-area: 1 / 1 / span 1 / span 1;
     }
 }
-.pig-game {
+.one-n-done {
     grid-area: 1 / 2 / span 1 / span 2;
 }
 .bankist {

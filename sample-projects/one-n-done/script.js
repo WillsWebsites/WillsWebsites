@@ -1,4 +1,4 @@
-import './dice-1.png'
+import './img/dice-1.png'
 
 'use strict';
 
@@ -47,17 +47,17 @@ rollBtn.addEventListener('click', function () {
     const dice = Math.trunc(Math.random() * 6) + 1;
     
     if (dice === 1) {
-      diceEl.src = new URL('dice-1.png', import.meta.url);
+      diceEl.src = new URL('img/dice-1.png', import.meta.url);
     } else if (dice === 2) {
-      diceEl.src = new URL('dice-2.png', import.meta.url);
+      diceEl.src = new URL('img/dice-2.png', import.meta.url);
     } else if (dice === 3) {
-      diceEl.src = new URL('dice-3.png', import.meta.url);
+      diceEl.src = new URL('img/dice-3.png', import.meta.url);
     } else if (dice === 4) {
-      diceEl.src = new URL('dice-4.png', import.meta.url);
+      diceEl.src = new URL('img/dice-4.png', import.meta.url);
     } else if (dice === 5) {
-      diceEl.src = new URL('dice-5.png', import.meta.url);
+      diceEl.src = new URL('img/dice-5.png', import.meta.url);
     } else if (dice === 6) {
-      diceEl.src = new URL('dice-6.png', import.meta.url);
+      diceEl.src = new URL('img/dice-6.png', import.meta.url);
     }
     
     diceEl.classList.remove('hidden');

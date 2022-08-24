@@ -36,12 +36,12 @@ const modalHandler = function () {
             'JS'
           );
           break;
-        case $(e.target).closest('.training-item').hasClass('pig-game'):
+        case $(e.target).closest('.training-item').hasClass('one-n-done'):
           modalContentHandler(
-            'Pig Game',
+            `One-N'-Done`,
             'The primary use would be to...',
-            'pig-game',
-            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/pig-game',
+            'one-n-done',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/one-n-done',
             'JS'
           );
           break;
