@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="robots" content="noindex nofollow" />
-    <link rel="stylesheet" href="./sample-projects/one-n-done/style.css" />
+    <link rel="stylesheet" href="./sample-projects/one-n-done/style.scss" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="./sample-projects/one-n-done/script.js" type="module"></script>
+    <script src="./sample-projects/one-n-done/instructions.js" type="module"></script>
     <title>One-N'-Done</title>
   </head>
   <body>
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <p>The goal is to be the first player to 100 points. You accumulate points by rolling the dice and then 'holding' those points. However if you roll a '1' then whatever points you haven't held will be lost and it will switch to the other players turn. Don't get too greedy!</p>
+      <button class="close-instructions">X</button>
+      <button class="open-instructions tab-hidden"><</button>
+    </div>
     <main>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
@@ -32,6 +42,5 @@
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
     </main>
-    <script src="./sample-projects/one-n-done/script.js" type="module"></script>
   </body>
 </html>
