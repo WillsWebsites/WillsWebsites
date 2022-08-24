@@ -54,12 +54,12 @@ const modalHandler = function () {
             'JS'
           );
           break;
-        case $(e.target).closest('.training-item').hasClass('bankist'):
+        case $(e.target).closest('.training-item').hasClass('thread-bank'):
           modalContentHandler(
-            'Bankist',
+            'Thread Bank',
             'The primary use would be to...',
-            'bankist',
-            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist',
+            'thread-bank',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/thread-bank',
             'JS'
           );
           break;
