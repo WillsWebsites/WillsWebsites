@@ -287,6 +287,10 @@
     &.bankist {
       background-color: #f3f3f3;
     }
+
+    &.wills-meals video {
+      top: 60%;
+    }
   }
 }
 
@@ -367,7 +371,7 @@
     grid-area: 1 / 6 / span 1 / span 1;
   }
 }
-.food-order {
+.wills-meals {
   // grid-area: 3 / 1 / span 2 / span 2;
 
   @media ($tablet) {
