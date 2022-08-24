@@ -45,7 +45,7 @@ main {
 .right {
   width: 95%;
   font-size: 2rem;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 @media (min-width: 768px) {
