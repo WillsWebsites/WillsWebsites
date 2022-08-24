@@ -140,6 +140,7 @@ section {
   border: $btn-border;
   border-radius: $btn-radius;
   transition: all 0.2s ease;
+  user-select: none; 
 
   @media ($tablet) {
     font-size: $x-small;
@@ -149,7 +150,7 @@ section {
     font-size: $btn-size;
   }
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: $btn-hover;
     color: $btn-color-hover;
     transform: translateY(2px);

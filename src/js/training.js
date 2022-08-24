@@ -7,6 +7,8 @@ const modalHandler = function () {
     const modalClose = $('.m-close');
     let modalTitle = $('.m-title');
     let modalDescription = $('.m-description');
+    let modalInstructions = $('.m-instructions');
+    let modalTakeaways = $('.m-takeaways');
     let modalProject = $('.m-project');
     let modalRepo = $('.m-repo');
     let modalJS = $('.m-js');
@@ -17,7 +19,9 @@ const modalHandler = function () {
       $('.m-build i').addClass('m-hidden');
       $(modalProject).addClass('m-hidden');
       $(modalTitle).text(title);
-      $(modalDescription).text(description);
+      $(modalDescription).text(description[0]);
+      $(modalInstructions).text(description[1]);
+      $(modalTakeaways).text(description[2]);
       $('.m-project.m-project-' + project).removeClass('m-hidden');
       $(modalRepo).attr('href', repo);
       $(builtWith === 'JS' ? modalJS : modalReact).removeClass('m-hidden');
@@ -30,7 +34,7 @@ const modalHandler = function () {
         case $(e.target).closest('.training-item').hasClass('number-guesser'):
           modalContentHandler(
             'Number Guesser',
-            `A simple single player game where you try and guess a random number in the fewest attempts possible. Maybe if you're lucky you can get it first try?`,
+            [`A simple single player game where you try and guess a random number in the fewest attempts possible. Maybe if you're lucky you can get it first try?`, `Guess a number between 1-20. You will then find out if your guess is too high or too low from the wording on the right. Each time you guess incorrectly, your score will decrease. Once you guess the correct number your score will be kept and you can try again to beat it. How good of a score can you get?`, `How to implement logic based on user feedback and display them to the DOM`],
             'number-guesser',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/number-guesser',
             'JS'
