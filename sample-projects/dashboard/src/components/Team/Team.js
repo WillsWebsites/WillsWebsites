@@ -46,28 +46,25 @@ const Team = props => {
         }
     ];
 
-    const styleChangeHandler = (event) => {
-        setMemberStyle(event.target.value)
-    };
-
     console.log('test1');
+    
+    const styleChangeHandler = (event) => {
+        setMemberStyle(event.target.value);
+    };
 
     useEffect(() => {
         setFlipStyle(false);
-        
         if (memberStyle === 'flip-card-style') {
             setFlipStyle(true);
-            console.log('test2');
         }
         return () => {
             setFlipStyle(false);
-            console.log('test3');
         }
     }, [memberStyle]);
 
 
     return(
-        <Section id={props.id} className={memberStyle} sectionType={'c-grid__collapse--TeamList'} onAdjustSettings={styleChangeHandler}>
+        <Section id={props.id} className={memberStyle} sectionType={'c-grid__collapse--TeamList'} onAdjustSettings={styleChangeHandler} selectedStyle={memberStyle}>
             <div className={`c-team-section__container`}>
                 {!flipStyle && members.map(member => <TeamMember memberInfo={member} key={Math.random().toFixed(4)} />)}
                 {flipStyle && members.map(member => <TeamFlip memberInfo={member} key={Math.random().toFixed(4)} />)}

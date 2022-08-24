@@ -42,6 +42,7 @@ const Section = (props) => {
             onClose={closeSettingsHandler}
             onAdjustSettings={props.onAdjustSettings}
             sectionType={props.sectionType}
+            selectedStyle={props.selectedStyle}
           />
         )}
       </div>

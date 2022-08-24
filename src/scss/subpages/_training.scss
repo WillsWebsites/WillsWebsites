@@ -94,11 +94,21 @@
 
 .training-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 90vh;
     min-height: 600px;
     max-height: 1000px;
+
+    @media ($desktop) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: 75vh;
+    }
+
+    @media (min-width: 1500px) {
+        height: 90vh;
+    }
     
     .training-item {
         margin: 10px;
@@ -140,8 +150,15 @@
             background-size: cover;
             
             video {
-                z-index: 999;
+                z-index: 99;
                 transform: translateY(-50%) scale(1.1);
+            }
+        }
+        &.bankist {
+            background-color: #F3F3F3;
+            
+            video {
+                z-index: 99;
             }
         }
     }
@@ -149,6 +166,10 @@
 
 .guess-number {
     grid-area: 1 / 1 / span 1 / span 1;
+
+    @media ($desktop) {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
 }
 .pig-game {
     grid-area: 1 / 2 / span 1 / span 2;
@@ -163,7 +184,11 @@
     grid-area: 4 / 3 / span 1 / span 2;
 }
 .forkify {
-    grid-area: 1 / 4 / span 3 / span 2 ;
+    grid-area: 1 / 2 / span 2 / span 2;
+
+    @media ($desktop) {
+        grid-area: 1 / 4 / span 3 / span 2 ; 
+    }
 }
 .expense-tracker {
     grid-area: 1 / 6 / span 1 / span 1;

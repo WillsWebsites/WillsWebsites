@@ -15,9 +15,10 @@ const modalHandler = function () {
     // Adding the content to the modal for whichever project is selected
     const modalContentHandler = function (title, description, project, repo, builtWith) {
       $('.m-build i').addClass('m-hidden');
+      $(modalProject).addClass('m-hidden');
       $(modalTitle).text(title);
       $(modalDescription).text(description);
-      $(modalProject).attr('href', project);
+      $('.m-project.m-project-' + project).removeClass('m-hidden');
       $(modalRepo).attr('href', repo);
       $(builtWith === 'JS' ? modalJS : modalReact).removeClass('m-hidden');
     };
@@ -30,7 +31,7 @@ const modalHandler = function () {
           modalContentHandler(
             'Number Guesser',
             `A simple single player game where you try and guess a random number in the fewest attempts possible. Maybe if you're lucky you can get it first try?`,
-            '/number-guesser.html',
+            'number-guesser',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/number-guesser',
             'JS'
           );
@@ -39,7 +40,7 @@ const modalHandler = function () {
           modalContentHandler(
             'Pig Game',
             'The primary use would be to...',
-            '/pig-game.html',
+            'pig-game',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/pig-game',
             'JS'
           );
@@ -48,7 +49,7 @@ const modalHandler = function () {
           modalContentHandler(
             'Bankist',
             'The primary use would be to...',
-            '/bankist.html',
+            'bankist',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist',
             'JS'
           );
@@ -57,7 +58,7 @@ const modalHandler = function () {
           modalContentHandler(
             'Bankist2',
             'The primary use would be to...',
-            '/bankist2.html',
+            'bankist2',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist2',
             'JS'
           );
@@ -66,7 +67,7 @@ const modalHandler = function () {
           modalContentHandler(
             'Mapty',
             'The primary use would be to...',
-            '/mapty.html',
+            'mapty',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/mapty',
             'JS'
           );
@@ -75,7 +76,7 @@ const modalHandler = function () {
           modalContentHandler(
             'Forkify',
             'The primary use would be to...',
-            '/forkify.html',
+            'forkify',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/forkify',
             'JS'
           );
@@ -84,7 +85,7 @@ const modalHandler = function () {
           modalContentHandler(
             'Expense Tracker',
             'The primary use would be to...',
-            '/expense-tracker.html',
+            'expense-tracker',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/expense-tracker',
             'React'
           );
@@ -93,7 +94,7 @@ const modalHandler = function () {
           modalContentHandler(
             'Food Order',
             'The primary use would be to...',
-            '/food-order.html',
+            'food-order',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/food-order',
             'React'
           );
@@ -102,7 +103,7 @@ const modalHandler = function () {
           modalContentHandler(
             'Dashboard',
             'The primary use would be to...',
-            '/dashboard.html',
+            'dashboard',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/dashboard',
             'React'
           );
@@ -116,7 +117,6 @@ const modalHandler = function () {
       $(modal).removeClass('modal-opened');
       $(modalTitle).text('');
       $(modalDescription).text('');
-      $(modalProject).removeAttr('href');
       $(modalRepo).removeAttr('href');
     };
     $(modalClose).click(hideModal);

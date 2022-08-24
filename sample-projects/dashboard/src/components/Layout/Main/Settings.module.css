@@ -2,12 +2,30 @@
     margin: 20px auto;
     padding: 10px 30px;
     background-color: #2d69ff;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 14%), 0 3px 6px rgb(0 0 0 / 20%);
     color: white;
     border-radius: 5px;
     border: 0px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    transition: .2s all ease;
+    filter: brightness(90%);
+}
+
+.settings .cancel {
+    background-color: #ffffff;
+    color: #1b1b1b;
+    margin-right: 20px;
+    border: 1px solid #1b1b1b4e;
+    filter: brightness(100%);
+}
+.settings button:hover {
+    filter: brightness(120%);
+}
+
+.settings .cancel:hover {
+    filter: brightness(90%);
 }
 
 .settings-list {
@@ -25,4 +43,8 @@
 .settings-title h3 {
     font-weight: normal;
     color: #333;
+}
+
+.settings-lower {
+    display: flex;
 }
