@@ -1,9 +1,9 @@
 # Number Guesser
 ## A simple single player game where you try and guess a random number in the fewest attempts possible. Maybe if you're lucky you can get it first try?
-![Number Guesser Preview](../../src/img/projects/previews/forkify-preview.png)
+![Number Guesser Preview](../../src/img/projects/previews/number-guesser-preview.png)
 ## Instructions
-### Search recipes by typing a type of food into the search bar. Click through the options to view the recipes. You can also increase the servings and even bookmark your favorite recipes. If you want to add your own recipes you can do that as well!
+### Guess a number between 1-20. You will then find out if your guess is too high or too low from the wording on the right. Each time you guess incorrectly, your score will decrease. Once you guess the correct number your score will be kept and you can try again to beat it. How good of a score can you get?
 ## What I Learned:
-### How to write a more complex application using MVC architecture. Connecting with an API for GET and POST requests. Further learned how to use external libraries such as Fracty.
+### How to implement logic based on user feedback and display them to the DOM
 ## Focus:
 ### ![JavaScript Icon](../../src/img/js.png)
