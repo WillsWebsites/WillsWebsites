@@ -31,7 +31,7 @@ const modalHandler = function () {
             'Number Guesser',
             `A simple single player game where you try and guess a random number in the fewest attempts possible. Maybe if you're lucky you can get it first try?`,
             '/number-guesser.html',
-            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/guess-number',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/number-guesser',
             'JS'
           );
           break;

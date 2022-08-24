@@ -109,7 +109,6 @@ const clearBookmarks = function () {
 
 export const uploadRecipe = async function (newRecipe) {
   try {
-    console.log(Object.entries(newRecipe));
     const ingredients = Object.entries(newRecipe)
       .filter(entry => entry[0].startsWith('ingredient') && entry[1] !== '')
       .map(ing => {
@@ -146,10 +145,4 @@ const init = function () {
   const storage = localStorage.getItem('bookmarks');
   if (storage) state.bookmarks = JSON.parse(storage);
 };
-init()
-
-const basicOp = function (operation, value1, value2) {
-  return eval(value1 + operation + value2)
-}
-
-console.log(basicOp('*', 2, 5))
+init();

@@ -133,6 +133,17 @@
             width: 200%;
             right: -50%;
         }
+
+        &.forkify {
+            background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            video {
+                z-index: 999;
+                transform: translateY(-50%) scale(1.1);
+            }
+        }
     }
 }
 

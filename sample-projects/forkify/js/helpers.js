@@ -31,39 +31,19 @@ export const AJAX = async function (url, uploadData = undefined) {
   }
 };
 
-// export const getJSON = async function (url) {
-//   try {
-//     const fetchData = fetch(url);
-//     //prettier-ignore
-//     const res = await Promise.race([fetchData, timeout(TIMEOUT_SEC)]);
-//     const data = await res.json();
+$('.close-instructions').on('click touchend', function() {
+  $('.instructions').removeClass('instructions-open');
+  $('.open-instructions').removeClass('tab-hidden');
+  $(this).addClass('tab-hidden');
+});
 
-//     if (!res.ok) throw new Error(`${data.message} (${data.status})`);
+$('.open-instructions').on('click touchend', function() {
+  $('.instructions').addClass('instructions-open');
+  $('.close-instructions').removeClass('tab-hidden');
+  $(this).addClass('tab-hidden');
+});
 
-//     return data;
-//   } catch (err) {
-//     throw err;
-//   }
-// };
+setTimeout(() => {
+  $('.instructions').addClass('instructions-open');
 
-// export const sendJSON = async function (url, uploadData) {
-//   try {
-//     const sendData = fetch(url, {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(uploadData),
-//     });
-
-//     //prettier-ignore
-//     const res = await Promise.race([sendData, timeout(TIMEOUT_SEC)]);
-//     const data = await res.json();
-
-//     if (!res.ok) throw new Error(`${data.message} (${data.status})`);
-
-//     return data;
-//   } catch (err) {
-//     throw err;
-//   }
-// };
+}, 1000);

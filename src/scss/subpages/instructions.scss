@@ -17,7 +17,7 @@
 
     @media ($tablet) {
         width: 450px;
-        right: -452px;
+        right: -440px;
     }
 
     &.instructions-open {
@@ -66,5 +66,13 @@
         border: 2px solid $light;
         font-weight: bold;
         transition: all .4s ease;
+    }
+}
+.forkify .instructions {
+    h2 {
+        font-size: 34px;
+    }
+    p {
+        font-size: 20px;
     }
 }
