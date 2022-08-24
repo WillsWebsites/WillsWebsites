@@ -54,6 +54,16 @@
 .project-btns {
   margin-top: 20px;
 
+  .btn {
+    background-color: $secondary;
+    color: $primary;
+
+    &:hover {
+      background-color: $tertiary;
+      color: $light;
+    }
+  }
+
   @media ($laptop-max) {
     display: flex;
     flex-direction: column;

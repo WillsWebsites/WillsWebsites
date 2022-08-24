@@ -94,6 +94,7 @@
     top: 10%;
     right: 0;
     box-shadow: 0 8px 16px #23232326;
+    z-index: -1;
   }
   .training-intro-content {
     margin-left: auto;
@@ -174,14 +175,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  height: 90vh;
-  min-height: 600px;
-  max-height: 1000px;
 
   @media ($desktop) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 75vh;
   }
 
   @media (min-width: 1500px) {
@@ -197,6 +194,15 @@
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
+    min-height: 250px;
+
+    @media ($desktop) {
+      min-height: 150px;
+    }
+
+    @media (min-width: 1300px) {
+      min-height: 175px;
+    }
 
     &:hover {
       transform: scale(1.04);
@@ -212,9 +218,13 @@
       min-height: 100%;
       width: 100%;
       height: auto;
-      z-index: -100;
+      z-index: 50;
       background-size: cover;
       overflow: hidden;
+    }
+
+    &.number-guesser {
+      background-color: #222222;
     }
 
     &.forkify {
@@ -223,55 +233,122 @@
       background-size: cover;
 
       video {
-        z-index: 99;
-        transform: translateY(-50%) scale(1.1);
+        transform: translateY(-50%) scale(1.15);
       }
     }
     &.bankist {
       background-color: #f3f3f3;
-
-      video {
-        z-index: 99;
-      }
     }
   }
 }
 
-.guess-number {
-  grid-area: 1 / 1 / span 1 / span 1;
+.number-guesser {
+  // grid-area: 1 / 1 / span 1 / span 1;
+
+  @media ($tablet) {
+    // grid-area: 1 / 1 / span 1 / span 1;
+  }
 
   @media ($desktop) {
     grid-area: 1 / 1 / span 1 / span 1;
   }
 }
 .one-n-done {
-  grid-area: 1 / 2 / span 1 / span 2;
+  // grid-area: 1 / 2 / span 1 / span 2;
+
+  @media ($tablet) {
+    // grid-area: 1 / 2 / span 1 / span 2;
+  }
+
+  @media ($desktop) {
+    grid-area: 1 / 2 / span 1 / span 2;
+  }
 }
 .bankist {
-  grid-area: 2 / 3 / span 2 / span 1;
+  // grid-area: 2 / 3 / span 2 / span 1;
+
+  @media ($tablet) {
+    // grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  @media ($desktop) {
+    grid-area: 2 / 1 / span 1 / span 2;
+  }
 }
 .bankist2 {
-  grid-area: 2 / 6 / span 4 / span 1;
+  // grid-area: 2 / 6 / span 4 / span 1;
+
+  @media ($tablet) {
+    // grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  @media ($desktop) {
+    grid-area: 2 / 6 / span 4 / span 1;
+  }
 }
 .mapty {
-  grid-area: 4 / 3 / span 1 / span 2;
+  // grid-area: 4 / 3 / span 1 / span 2;
+
+  @media ($tablet) {
+    // grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  @media ($desktop) {
+    grid-area: 4 / 3 / span 1 / span 2;
+  }
 }
 .forkify {
-  grid-area: 1 / 2 / span 2 / span 2;
+  // grid-area: 1 / 2 / span 2 / span 2;
+
+  @media ($tablet) {
+    grid-area: 1 / 2 / span 2 / span 2;
+  }
 
   @media ($desktop) {
     grid-area: 1 / 4 / span 3 / span 2;
   }
 }
 .expense-tracker {
-  grid-area: 1 / 6 / span 1 / span 1;
+  // grid-area: 1 / 6 / span 1 / span 1;
+
+  @media ($tablet) {
+    // grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  @media ($desktop) {
+    grid-area: 1 / 6 / span 1 / span 1;
+  }
 }
 .food-order {
-  grid-area: 3 / 1 / span 2 / span 2;
+  // grid-area: 3 / 1 / span 2 / span 2;
+
+  @media ($tablet) {
+    // grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  @media ($desktop) {
+    grid-area: 3 / 1 / span 2 / span 2;
+  }
 }
 .dashboard {
-  grid-area: 2 / 1 / span 1 / span 2;
+  // grid-area: 2 / 1 / span 1 / span 2;
+
+  @media ($tablet) {
+    // grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  @media ($desktop) {
+    grid-area: 2 / 3 / span 2 / span 1;
+  }
 }
 .movies {
-  grid-area: 4 / 5 / span 1 / span 1;
+  // grid-area: 4 / 5 / span 1 / span 1;
+
+  @media ($tablet) {
+    // grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  @media ($desktop) {
+    grid-area: 4 / 5 / span 1 / span 1;
+  }
 }

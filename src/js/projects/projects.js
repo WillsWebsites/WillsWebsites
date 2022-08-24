@@ -36,7 +36,6 @@ $(document).ready(function () {
 
     const projectReveal = function (entries, observer) {
       entries.forEach((entry) => {
-        console.log(entry);
         if (!entry.isIntersecting) return;
 
         entry.target.classList.add("project-reveal");
@@ -73,21 +72,21 @@ $(document).ready(function () {
       };
 
       function frame() {
-        if (height >= 94) {
+        if (height >= 92) {
           clearInterval(adjustHeight);
-        } else if (height >= 91) {
+        } else if (height >= 88) {
           websitesHandler(0.03);
-        } else if (height >= 86) {
+        } else if (height >= 82) {
           websitesHandler(0.07);
-        } else if (height >= 80) {
-          websitesHandler(0.15);
         } else if (height >= 70) {
-          websitesHandler(0.25);
+          websitesHandler(0.15);
         } else if (height >= 60) {
-          websitesHandler(0.35);
+          websitesHandler(0.25);
         } else if (height >= 50) {
-          websitesHandler(0.45);
+          websitesHandler(0.35);
         } else if (height >= 40) {
+          websitesHandler(0.45);
+        } else if (height >= 30) {
           websitesHandler(0.55);
         } else {
           websitesHandler(0.85);
@@ -100,8 +99,8 @@ $(document).ready(function () {
   if (window.matchMedia("(min-width: 768px)").matches) {
     barAnimation();
   } else {
-    websitesBar.style.height = 104 * 0.69 + "%";
-    websiteCount.textContent = Math.floor(104);
+    websitesBar.style.height = 92 * 0.8 + "%";
+    websiteCount.textContent = Math.floor(92);
   }
 });
 

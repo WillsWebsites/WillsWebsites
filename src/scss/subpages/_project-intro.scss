@@ -214,7 +214,7 @@
   
         #websites-bar {
           position: absolute;
-          bottom: 20px;
+          bottom: 10px;
           left: 15%;
           width: 35px;
           height: 0;
@@ -232,12 +232,12 @@
   
           @media ($mobile-large) {
             left: 22%;
-            bottom: 15px;
+            bottom: 7px;
           }
   
           @media ($tablet) {
             left: 30%;
-            bottom: 15px;
+            bottom: 12px;
           }
   
           @media ($desktop) {
