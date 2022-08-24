@@ -12,12 +12,18 @@
     />
 
     <link rel="stylesheet" href="./sample-projects/thread-bank/style.css" />
+    <link rel="stylesheet" href="./sample-projects/thread-bank/instructions.scss" />
     <title>Thread Bank | Wills Websites</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="./sample-projects/thread-bank/script.js" type="module"></script>
+    <script src="./sample-projects/thread-bank/instructions.js" type="module"></script>
   </head>
   <body>
     <div class="instructions">
       <h2>Instructions</h2>
-      <p>Some sample expense items are already added in. Add as many expenses as you'd like and you'll be able to sort them by year to keep things organized.</p>
+      <p>Get started by logging in using demo login credentials. Once inside you can request a loan which can take a few seconds to process, or you can transfer money by inputting another demo users information, or close your account by confirming your demo credentials. You can also sort the transactions in the list, and keep in mind it will log you out of your account after 10 minutes for security reasons!</p>
+      <p>DEMO LOGIN CREDENTIALS:<br />ws - 1111<br />jf - 2222</p>
       <button class="close-instructions">X</button>
       <button class="open-instructions tab-hidden"><</button>
     </div>
@@ -124,11 +130,5 @@
         You will be logged out in <span class="timer">05:00</span>
       </p>
     </main>
-
-    <!-- <footer>
-      &copy; by Jonas Schmedtmann. Don't claim as your own :)
-    </footer> -->
-
-    <script src="./sample-projects/thread-bank/script.js" type="module"></script>
   </body>
 </html>
