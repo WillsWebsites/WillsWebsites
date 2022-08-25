@@ -26,33 +26,46 @@ body {
 /* LAYOUT */
 main {
   position: relative;
-  width: 100rem;
-  height: 60rem;
+  width: 95%;
+  height: 40rem;
   background-color: rgba(255, 255, 255, 0.35);
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
-  overflow: hidden;
   display: flex;
+
+  @media ($tablet) {
+    width: 100rem;
+    height: 60rem;
+    overflow: hidden;
+  }
 }
 
 .player {
   flex: 50%;
-  padding: 9rem;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: all 0.75s;
+
+  @media ($tablet) {
+    padding: 9rem;
+  }
 }
 
 /* ELEMENTS */
 .name {
   position: relative;
-  font-size: 4rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 300;
   margin-bottom: 1rem;
+
+  @media ($mobile-large) {
+    font-size: 4rem;
+  }
 }
 
 .score {
@@ -81,10 +94,14 @@ main {
   opacity: 0.8;
   border-radius: 9px;
   color: #fff;
-  width: 65%;
+  width: 100%;
   padding: 2rem;
   text-align: center;
   transition: all 0.75s;
+
+  @media ($mobile-large) {
+    width: 65%;
+  }
 }
 
 .current-label {
@@ -128,13 +145,31 @@ main {
 }
 
 .btn--new {
-  top: 4rem;
+  top: -7rem;
+  min-width: 190px;
+
+  @media ($tablet) {
+    top: 4rem;
+  }
 }
 .btn--roll {
-  top: 39.3rem;
+  bottom: -8rem;
+  min-width: 190px;
+
+  @media ($tablet) {
+    bottom: initial;
+    top: 39.3rem;
+  }
 }
 .btn--hold {
-  top: 46.1rem;
+  bottom: -15rem;
+  min-width: 140px;
+
+
+  @media ($tablet) {
+    bottom: initial;
+    top: 46.1rem;
+  }
 }
 
 .btn:active {
