@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" type="image/png" href="./sample-projects/mapty/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="./sample-projects/activity-tracker/icon.png" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./sample-projects/mapty/style.css" />
+    <link rel="stylesheet" href="./sample-projects/activity-tracker/instructions.scss" />
+    <link rel="stylesheet" href="./sample-projects/activity-tracker/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
     <script defer src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
-
-    <script src="./sample-projects/mapty/script.js" type="module"></script>
-    <title>mapty // Map your workouts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="./sample-projects/activity-tracker/script.js" type="module"></script>
+    <script src="./sample-projects/activity-tracker/instructions.js" type="module"></script>
+    <title>Activity Tracker | Wills Websites</title>
   </head>
   <body>
     <div class="instructions">
@@ -26,7 +28,7 @@
       <button class="open-instructions tab-hidden"><</button>
     </div>
     <div class="sidebar">
-      <img src="./sample-projects/mapty/logo.png" alt="Logo" class="logo" />
+      <h1>Activity <span class="white-word">Tracker</span></h1>
 
       <ul class="workouts">
         <form class="form hidden">

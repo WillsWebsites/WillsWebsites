@@ -43,23 +43,6 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-const message = document.createElement('div');
-
-message.classList.add('cookie-message');
-
-message.innerHTML =
-  '<p>Testing this out</p><button class=" btn btn--close-cookie">Close</button>';
-
-header.prepend(message);
-
-document.querySelector('.btn--close-cookie').addEventListener('click', () => {
-  message.remove();
-});
-
-message.style.backgroundColor = '#1b1b1b';
-message.style.width = 'calc(100% + 60px)';
-message.style.height =
-  Number.parseFloat(getComputedStyle(message).height) + 10 + 'px';
 
 // Starting Lectures
 
@@ -96,7 +79,7 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
 
   //Matching strategy
-  if (e.target.classList.contains('nav__link')) {
+  if (e.target.classList.contains('nav__link') && !e.target.classList.contains('btn--show-modal')) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth',
@@ -196,8 +179,17 @@ const images = document.querySelectorAll('img[data-src]');
 const imageReveal = function (entries, observer) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-
-    entry.target.src = entry.target.dataset.src;
+    switch (true) {
+      case entry.target.alt === 'Computer':
+        entry.target.src = new URL("./img/digital.jpg", import.meta.url);
+        break;
+      case entry.target.alt === 'Plant':
+        entry.target.src = new URL("./img/grow.jpg", import.meta.url);
+        break;
+      case entry.target.alt === 'Credit card':
+        entry.target.src = new URL("./img/card.jpg", import.meta.url);
+        break;
+    }
     entry.target.addEventListener('load', function () {
       entry.target.classList.remove('lazy-img');
     });

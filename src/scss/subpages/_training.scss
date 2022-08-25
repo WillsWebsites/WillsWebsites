@@ -231,7 +231,7 @@
 
   @media ($desktop) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
   }
 
   @media (min-width: 1500px) {
@@ -256,7 +256,6 @@
 
     @media (min-width: 1300px) {
       min-height: 175px;
-      // max-height: 300px;
     }
 
     &:hover {
@@ -299,10 +298,10 @@
       background-color: #3F3F3F;
 
       video {
-        top: 60%;
+        top: 66%;
 
         @media (min-width: 1400px) {
-          top: 51%;
+          top: 70%;
         }
       }
     }
@@ -313,6 +312,16 @@
       video {
         top: 55%;
       }
+    }
+
+    &.bankist {
+      video {
+        top: 55%;
+      }
+    }
+
+    &.activity-tracker {
+      background-color: #2C3439;
     }
   }
 }
@@ -325,7 +334,7 @@
   }
 
   @media ($desktop) {
-    grid-area: 1 / 1 / span 1 / span 1;
+    grid-area: 1 / 1 / span 2 / span 1;
   }
 }
 .one-n-done {
@@ -336,7 +345,7 @@
   }
 
   @media ($desktop) {
-    grid-area: 1 / 2 / span 1 / span 2;
+    grid-area: 1 / 2 / span 2 / span 2;
   }
 }
 .thread-bank {
@@ -347,10 +356,10 @@
   }
 
   @media ($desktop) {
-    grid-area: 2 / 1 / span 1 / span 2;
+    grid-area: 3 / 1 / span 3 / span 2;
   }
 }
-.bankist2 {
+.bankist {
   // grid-area: 2 / 6 / span 4 / span 1;
 
   @media ($tablet) {
@@ -358,10 +367,10 @@
   }
 
   @media ($desktop) {
-    grid-area: 2 / 6 / span 4 / span 1;
+    grid-area: 4 / 6 / span 5 / span 1;
   }
 }
-.mapty {
+.activity-tracker {
   // grid-area: 4 / 3 / span 1 / span 2;
 
   @media ($tablet) {
@@ -369,18 +378,18 @@
   }
 
   @media ($desktop) {
-    grid-area: 4 / 3 / span 1 / span 2;
+    grid-area: 6 / 3 / span 3 / span 2;
   }
 }
 .forkify {
   // grid-area: 1 / 2 / span 2 / span 2;
 
-  @media ($tablet) {
-    grid-area: 1 / 2 / span 2 / span 2;
-  }
+  // @media ($tablet) {
+  //   grid-area: 1 / 2 / span 2 / span 2;
+  // }
 
   @media ($desktop) {
-    grid-area: 1 / 4 / span 3 / span 2;
+    grid-area: 1 / 4 / span 5 / span 2;
   }
 }
 .expense-tracker {
@@ -391,7 +400,7 @@
   }
 
   @media ($desktop) {
-    grid-area: 1 / 6 / span 1 / span 1;
+    grid-area: 1 / 6 / span 3 / span 1;
   }
 }
 .wills-meals {
@@ -402,7 +411,7 @@
   }
 
   @media ($desktop) {
-    grid-area: 3 / 1 / span 2 / span 2;
+    grid-area: 6 / 1 / span 3 / span 2;
   }
 }
 .team-styler {
@@ -413,7 +422,7 @@
   }
 
   @media ($desktop) {
-    grid-area: 2 / 3 / span 2 / span 1;
+    grid-area: 3 / 3 / span 3 / span 1;
   }
 }
 .movies {
@@ -424,6 +433,6 @@
   }
 
   @media ($desktop) {
-    grid-area: 4 / 5 / span 1 / span 1;
+    grid-area: 6 / 5 / span 3 / span 1;
   }
 }

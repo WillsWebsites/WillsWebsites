@@ -40,6 +40,19 @@ a:visited {
   color: var(--color-brand--1);
 }
 
+
+h1 {
+  text-align: center;
+  align-self: center;
+  margin-bottom: 4rem;
+  font-size: 4rem;
+  color: var(--color-brand--2);
+}
+
+.white-word {
+  color: #ffffff !important;
+}
+
 /* SIDEBAR */
 .sidebar {
   flex-basis: 50rem;

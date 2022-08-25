@@ -92,9 +92,9 @@ class App {
 
     this.#map = L.map('map').setView(coords, this.#mapZoom);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
     }).addTo(this.#map);
     this.#map.on('click', this._showForm.bind(this));
     this.#workouts.forEach(work => { 

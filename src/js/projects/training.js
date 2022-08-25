@@ -63,21 +63,21 @@ const modalHandler = function () {
             'JS'
           );
           break;
-        case $(e.target).closest('.training-item').hasClass('bankist2'):
+        case $(e.target).closest('.training-item').hasClass('bankist'):
           modalContentHandler(
-            'Bankist2',
+            'Bankist',
             'The primary use would be to...',
-            'bankist2',
-            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist2',
+            'bankist',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist',
             'JS'
           );
           break;
-        case $(e.target).closest('.training-item').hasClass('mapty'):
+        case $(e.target).closest('.training-item').hasClass('activity-tracker'):
           modalContentHandler(
-            'Mapty',
+            'Activity Tracker',
             'The primary use would be to...',
-            'mapty',
-            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/mapty',
+            'activity-tracker',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/activity-tracker',
             'JS'
           );
           break;
