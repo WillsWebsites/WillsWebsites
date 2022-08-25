@@ -309,6 +309,10 @@
 
     &.number-guesser {
       background-color: #222222;
+
+      video {
+        transform: translateY(-50%) scale(1.2);
+      }
     }
 
     &.forkify {
