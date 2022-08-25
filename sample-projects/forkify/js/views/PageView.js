@@ -55,12 +55,12 @@ class PageView extends View {
                 <svg class="search__icon">
                 <use href="${icons}#icon-arrow-left"></use>
                 </svg>
-                <span>Page ${curPage - 1}</span>
+                <span>Page ${curPage ? curPage - 1 : ''}</span>
             </button>
             <button data-goto="${
               curPage + 1
             }" class="btn--inline pagination__btn--next">
-                <span>Page ${curPage + 1}</span>
+                <span>Page ${curPage ? curPage + 1 : ''}</span>
                 <svg class="search__icon">
                 <use href="${icons}#icon-arrow-right"></use>
                 </svg>
