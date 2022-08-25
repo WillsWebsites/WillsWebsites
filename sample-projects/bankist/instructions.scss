@@ -5,13 +5,14 @@
     top: 0;
     right: -95%;
     height: 50%;
+    min-height: 600px;
     width: 95%;
-    background-color: rgba($light, .95);
+    background-color: rgba(white, .95);
     z-index: 9999999;
     padding: 50px 30px;
     border-bottom-left-radius: 50px;
-    border-left: 5px solid $secondary;
-    border-bottom: 5px solid $secondary;
+    border-left: 5px solid #444;
+    border-bottom: 5px solid #444;
     box-shadow: $shadow;
     transition: right .8s cubic-bezier(0.77, 0.2, 0.41, 0.98);
 
@@ -26,7 +27,7 @@
 
     h2 {
         font-size: 28px;
-        color: $primary;
+        color: #444;
     }
     p {
         color: $dark;
@@ -47,11 +48,10 @@
         right: 20px;
         padding: 8px;
         font-size: $small;
-        background-color: $primary;
-        color: $light;
+        background-color: #ff585f;
+        color: white;
         outline: none;
-        border: 2px solid $secondary;
-        border-radius: 5px;
+        border: 2px solid #444;
     }
 
     .open-instructions {
@@ -61,10 +61,10 @@
         top: 70px;
         padding: 10px;
         font-size: $medium;
-        background-color: $primary;
-        color: $light;
+        background-color: #5ec576;
+        color: white;
         outline: none;
-        border: 2px solid $light;
+        border: 2px solid #444;
         font-weight: bold;
         transition: all .4s ease;
     }

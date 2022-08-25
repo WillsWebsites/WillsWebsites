@@ -66,7 +66,7 @@ const modalHandler = function () {
         case $(e.target).closest('.training-item').hasClass('bankist'):
           modalContentHandler(
             'Bankist',
-            'The primary use would be to...',
+            [`A mock banking website that neatly displays the company's details to help guide clients to open up an account`, `Scroll through the website and interact with features such as the Operation section's "tab divider", or the Testimonial section's "rotator". You can also click on open an account buttons to mock sign up for an account (doesn't create a real account).`, `How to implement Lazy Loading images for increased speed and performance. Creating a tab divider content to display different pieces of content based on user selection. Creating a rotator to rotate through different slides of content.`],
             'bankist',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist',
             'JS'
@@ -75,7 +75,7 @@ const modalHandler = function () {
         case $(e.target).closest('.training-item').hasClass('activity-tracker'):
           modalContentHandler(
             'Activity Tracker',
-            'The primary use would be to...',
+            [`A great way to keep track of the cardio activites completed by location.`, `You have to enable location services for this application to work. Click somewhere on the map to add a location pin for your activity then fill out the appropriate information and hit enter. You will see your pin added to the map with the corresponding details. As this project is under construction there are various bugs to fix and features to be added.`, `How to work with an external library/API in a more complex, object-oriented structure. Rendered an interactive map that allows users to place pins based on location.`],
             'activity-tracker',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/activity-tracker',
             'JS'
