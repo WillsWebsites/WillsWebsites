@@ -125,6 +125,15 @@ const modalHandler = function () {
             'React'
           );
           break;
+        case $(e.target).closest('.training-item').hasClass('country-finder'):
+          modalContentHandler(
+            'Country Finder',
+            'As soon as-',
+            'country-finder',
+            'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/country-finder',
+            'JS'
+          );
+          break;
       }
     });
 
