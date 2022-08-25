@@ -10,6 +10,7 @@
 }
 .header-inner {
     width: 95%;
+    max-width: 1400px;
     margin: 0 auto;
     padding-top: 5px;
     display: flex;

@@ -18,9 +18,9 @@ const TeamSelector = (props, ref) => {
                 <select value={props.selectedStyle} onChange={props.onChangeStyle} ref={styleRef}>
                     <option value="default">Default</option>
                     <option value="flip-card-style">Flip Card</option>
-                    <option value="grow">Grow</option>
-                    <option value="draper">Draper</option>
-                    <option value="shadow-hover">Shadow Hover</option>
+                    <option value="grow">Scale Up</option>
+                    <option value="draper">Modern</option>
+                    <option value="shadow-hover">Shadow</option>
                 </select>
             </form>
         </div>

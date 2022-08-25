@@ -4,11 +4,10 @@ const Navigation = props => {
     return (
         <nav>
             <ul className={styles.nav}>
-                <li>Marketing Calendar</li>
+                <li>Calendar</li>
                 <li>Inbox</li>
-                <li>Draft <span className={styles.draft}>5</span></li>
-                <li>Compliance <span className={styles.compliance}>26</span></li>
-                <li>User</li>
+                <li>Team Members</li>
+                <li>Account Access</li>
             </ul>
         </nav>
     );

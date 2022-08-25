@@ -107,7 +107,7 @@ section:first-child .add-section{
 .add-section:hover {
     border-radius: 50px;
     width: 130px;
-    background-color:#2d69ff;
+    background-color:#ff4c2d;
 }
 .add-section span {
     font-size: 20px;
