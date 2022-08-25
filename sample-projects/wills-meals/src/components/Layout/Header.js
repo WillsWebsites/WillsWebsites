@@ -9,7 +9,7 @@ const Header = props => {
   return (
     <Fragment>
       <header className={classes.header}>
-        <h1>Wills Meals</h1>
+        <h1>Will's Meals</h1>
         <HeaderCartButton onCartOpen={props.onCartOpen}/>
       </header>
       <div className={classes['main-image']}>

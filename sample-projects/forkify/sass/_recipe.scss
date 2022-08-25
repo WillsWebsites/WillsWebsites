@@ -122,13 +122,17 @@
   ///////////
   // INGREDIENTS
   &__ingredients {
-    padding: 5rem 8rem;
+    padding: 5rem 3rem;
     font-size: 1.6rem;
     line-height: 1.4;
     background-color: $color-grey-light-2;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: 768px) {
+      padding: 5rem 8rem;
+    }
   }
 
   &__ingredient-list {

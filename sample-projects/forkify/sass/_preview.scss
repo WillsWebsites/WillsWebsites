@@ -1,4 +1,8 @@
 .preview {
+  @media (max-width: 767px) {
+    width: 50%;
+  }
+
   &__link {
     &:link,
     &:visited {
@@ -8,6 +12,10 @@
       transition: all 0.3s;
       border-right: 1px solid #fff;
       text-decoration: none;
+
+      @media (max-width: 767px) {
+        padding: 1.2rem 1.5rem;
+      }
     }
 
     &:hover {
