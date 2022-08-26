@@ -7,3 +7,5 @@
 ### How to work with React components. Focused on structuring the component tree to keep things organized while still being accessible. Passed data through multiple components using props.
 ## Focus:
 ### ![Atom Icon](../../src/img/atom.png)
+## Credit:
+### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)
