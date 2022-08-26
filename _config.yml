@@ -1,7 +1,0 @@
-require 'kramdown'
-require 'kramdown-parser-gfm'
-
-Kramdown::Document.new(text, input: 'GFM').to_html
-
-kramdown:
-  input: Kramdown
