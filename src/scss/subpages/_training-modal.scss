@@ -9,6 +9,53 @@
     height: 100%;
     z-index: 99999;
     overflow: hidden;
+
+    &.modal-construction {
+      .m-body::before {
+        content: 'Under Construction';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        min-width: 225px;
+        height: 75px;
+        font-size: $x-small;
+        color: $primary;
+        font-weight: bold;
+        background: rgba(255, 203, 3, .6);
+        background-image: linear-gradient(to top left, rgba(255, 176, 3 , .6), rgba(255, 203, 3, .6));
+        border-bottom-right-radius: 25px;
+        opacity: 0;
+        animation: fadeInAnimation ease 1s;
+        animation-delay: 0.2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+  
+        @media ($tablet) {
+          top: initial;
+          left: initial;
+          bottom: 0;
+          right: 0;
+          width: 35%;
+          height: 100px;
+          max-width: 600px;
+          border-top-left-radius: 25px;
+        }
+  
+        @media ($laptop) {
+          font-size: $small;
+        }
+      }
+
+      @media ($tablet-max) {
+        .m-content {
+          margin-top: 75px;
+        }
+      }
+    }
   
     .m-background {
       width: 100%;

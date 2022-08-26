@@ -16,7 +16,7 @@ const modalHandler = function () {
 
     // Adding the content to the modal for whichever project is selected
     // prettier-ignore
-    const modalContentHandler = function (title, description, project, repo, builtWith, credit) {
+    const modalContentHandler = function (title, description, project, repo, builtWith, credit, construction = false) {
       $('.m-build i').addClass('m-hidden');
       $(modalProject).addClass('m-hidden');
       $(modalTitle).text(title);
@@ -26,6 +26,7 @@ const modalHandler = function () {
       $('.m-project.m-project-' + project).removeClass('m-hidden');
       $(modalRepo).attr('href', repo);
       $(builtWith === 'JS' ? modalJS : modalReact).removeClass('m-hidden');
+      $(construction ? modal : '').addClass('modal-construction');
 
       if (credit === 'maximillian') {
         $('.m-credit h3').show();
@@ -97,7 +98,8 @@ const modalHandler = function () {
             'activity-tracker',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/activity-tracker',
             'JS',
-            'jonas'
+            'jonas',
+            true
           );
           break;
         case $(e.target).closest('.training-item').hasClass('forkify'):
@@ -145,7 +147,8 @@ const modalHandler = function () {
             'team-styler',
             'https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/team-styler',
             'React',
-            'self'
+            'self',
+            true
           );
           break;
         case $(e.target).closest('.training-item').hasClass('country-finder'):
@@ -165,6 +168,7 @@ const modalHandler = function () {
 
     const hideModal = function () {
       $(modal).removeClass('modal-opened');
+      $(modal).removeClass('modal-construction');
       $(modalTitle).text('');
       $(modalDescription).text('');
       $(modalRepo).removeAttr('href');
