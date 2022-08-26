@@ -8,4 +8,4 @@
 ## Focus:
 ### ![Atom Icon](../../src/img/atom.png)
 ## Credit:
-### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)
+### Project idea credit to Maximilian Schwarzmüller of <a href="https://academind.com/" target="_blank">Academind</a>
