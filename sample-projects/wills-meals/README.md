@@ -7,3 +7,5 @@
 ### How to configure an app wide content for managing state. Creating items based on user input and needing to handle the side effects that happen as a result of working with form inputs.
 ## Focus:
 ### ![Atom Icon](../../src/img/atom.png)
+## Credit:
+### Project idea credit to Maximilian Schwarzmüller of [Academind](https://academind.com/)

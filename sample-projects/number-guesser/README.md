@@ -7,3 +7,5 @@
 ### How to implement logic based on user feedback and display them to the DOM
 ## Focus:
 ### ![JavaScript Icon](../../src/img/js.png)
+## Credit:
+### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)
