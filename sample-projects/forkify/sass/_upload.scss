@@ -4,6 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100rem;
+  max-width: 98%;
   background-color: white;
   border-radius: 9px;
 
@@ -45,6 +46,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 
   &__column {
     display: grid;

@@ -19,26 +19,48 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #444;
   background-color: #f3f3f3;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   padding: 2rem;
+  position: relative;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0;
+  position: relative;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 .welcome {
   font-size: 1.9rem;
   font-weight: 500;
+  display: none;
 }
 
 .logo {
   height: 5.25rem;
-  filter: brightness(0)
+  filter: brightness(0);
 }
+
+@media (min-width: 768px) {
+  .welcome {
+    display: block;
+  }
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav {
+    padding: 0 2rem;
+  }
+}
+
 
 .login {
   display: flex;
@@ -87,6 +109,7 @@ nav {
 /* MAIN */
 .app {
   position: relative;
+  width: 98%;
   max-width: 100rem;
   margin: 4rem auto;
   display: grid;
@@ -97,6 +120,12 @@ nav {
   /* NOTE This creates the fade in/out anumation */
   opacity: 0;
   transition: all 1s;
+}
+
+@media (max-width: 767px) {
+  .app {
+    grid-template-rows: auto repeat(6, 15rem) auto;
+  }
 }
 
 .balance {
@@ -123,6 +152,12 @@ nav {
   font-weight: 400;
 }
 
+@media (max-width: 767px) {
+  .balance__value {
+    font-size: 2.5rem;
+  }
+}
+
 /* MOVEMENTS */
 .movements {
   grid-row: 2 / span 3;
@@ -136,6 +171,16 @@ nav {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 767px) {
+  .movements {
+    grid-area: 2 / 1 / span 3 / span 2;
+  }
+
+  .movements__row {
+    padding: 2.25rem 2rem;
+  }
 }
 
 .movements__type {
@@ -189,6 +234,22 @@ nav {
   margin-right: 2.5rem;
 }
 
+@media (max-width: 767px) {
+  .summary {
+    grid-area: 8 / 1 / span 1 / span 1;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .summary__label {
+    width: 20%;
+  }
+  .summary__value {
+    width: 65%;
+
+  }
+}
+
 .summary__value--in,
 .summary__value--interest {
   color: #66c873;
@@ -214,6 +275,12 @@ nav {
   color: #333;
 }
 
+@media (max-width: 767px) {
+  .operation {
+    padding: 3rem 2rem;
+  }
+}
+
 .operation--transfer {
   background-image: linear-gradient(to top left, #ffb003, #ffcb03);
 }
@@ -222,8 +289,24 @@ nav {
   background-image: linear-gradient(to top left, #39b385, #9be15d);
 }
 
+
 .operation--close {
   background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+@media (max-width: 767px) {
+  .operation--transfer {
+    grid-area: 5 / 1 / span 1 / span 2;
+  }
+
+  .operation--loan {
+    grid-area: 6 / 1 / span 1 / span 2;
+  }
+
+  .operation--close {
+    grid-area: 7 / 1 / span 1 / span 2;
+  }
+  
 }
 
 h2 {
@@ -293,8 +376,20 @@ h2 {
   font-size: 1.25rem;
 }
 
+@media (max-width: 767px) {
+  .logout-timer {
+    grid-area: 8 / 2 / span 1 / span 1;
+  }
+}
+
 .timer {
   font-weight: 600;
+}
+
+.credit {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
 .credit a {
@@ -304,4 +399,22 @@ h2 {
 
 .credit a:hover {
   color: #9be15d;
+}
+
+.thread-bank {
+  text-align: center;
+  margin: 200px 0;
+}
+
+.thread-bank h1 {
+  font-size: 45px;
+}
+.thread-bank p {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .thread-bank h1 {
+    font-size: 70px;
+  }
 }

@@ -26,6 +26,11 @@
   @extend %btn;
 
   padding: 1.5rem 4rem;
+
+  @media (max-width: 767px) {
+    padding: 1.5rem 2rem;
+  }
+  
   font-size: 1.5rem;
   font-weight: 600;
 

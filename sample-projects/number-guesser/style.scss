@@ -22,6 +22,9 @@ header {
   position: relative;
   height: 35vh;
   border-bottom: 7px solid #eee;
+  max-width: 2000px;
+  max-height: 500px;
+  margin: 0 auto;
 }
 
 main {
@@ -32,6 +35,10 @@ main {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+
+  max-width: 2000px;
+  max-height: 1000px;
+  margin: 0 auto;
 }
 
 .left {
@@ -44,7 +51,7 @@ main {
 .right {
   width: 95%;
   font-size: 2rem;
-  margin-top: 25px;
+  margin-top: 75px;
 }
 
 @media (min-width: 768px) {
@@ -56,6 +63,7 @@ main {
   }
   .right {
     width: 60%;
+    margin-top: 25px;
   }
 }
 
