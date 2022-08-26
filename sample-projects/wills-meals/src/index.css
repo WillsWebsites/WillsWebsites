@@ -12,4 +12,14 @@ body {
   margin: 0;
   background-color: #3f3f3f;
 }
-
+.credit {
+  color: white;
+  padding: 10px;
+}
+.credit a {
+  color: white;
+  transition: all .2s ease;
+}
+.credit a:hover {
+  color: #8a2b06
+}

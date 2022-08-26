@@ -1,9 +1,9 @@
 # Country Finder
-## Search for countries and you'll be shown some useful data about that country and the neighboring country
+## An informational application to view data on the country you're in or a country you choose to search
 ![Country Finder Preview](../../src/img/projects/previews/forkify-preview.png)
 ## Instructions
-### You have to enable location services for this application to work. Click somewhere on the map to add a location pin for your activity then fill out the appropriate information and hit enter. You will see your pin added to the map with the corresponding details. As this project is under construction there are various bugs to fix and features to be added.
+### A sample country with some data about the country is loaded in view to start. To search for that same information about the current country you're in, utilize the "Where am I?" box. To search for data on a specific country of your choice, utilize the "Search a Country" box.
 ## Project Takeaways:
-### How to work with an external library/API in a more complex, object-oriented structure. Rendered an interactive map that allows users to place pins based on location.
+### How to deal with AJAX calls to an external API and handle both resolved and rejected promises. Also focused on handling user input to search for external data and ultimately have that data displayed to the DOM
 ## Focus:
 ### ![JavaScript Icon](../../src/img/js.png)

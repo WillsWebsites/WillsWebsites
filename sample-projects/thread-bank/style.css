@@ -296,3 +296,12 @@ h2 {
 .timer {
   font-weight: 600;
 }
+
+.credit a {
+  color: #39b385;
+  transition: all .2s ease;
+}
+
+.credit a:hover {
+  color: #9be15d;
+}

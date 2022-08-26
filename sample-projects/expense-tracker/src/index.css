@@ -11,5 +11,17 @@ html {
 body {
   margin: 0;
   background-color: #000000;
+  min-height: calc(100vh - 30px);
+  position: relative;
+}
+
+.credit {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+}
+.credit a {
+  color: #a892ee;
 }
 
