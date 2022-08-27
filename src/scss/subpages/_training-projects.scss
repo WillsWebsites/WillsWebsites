@@ -84,8 +84,8 @@
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -khtml-border-radius: 15px;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
+    -webkit-transform: translateZ(0) translateY(75px);
+    transform: translateZ(0) translateY(75px);
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease;
@@ -185,7 +185,10 @@
       background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
       background-repeat: no-repeat;
       background-size: cover;
-      transform: translateY(-100px);
+      
+      @media ($tablet) {
+        transform: translateY(-100px);
+      }
 
       .btn {
         border-color: #222;
@@ -240,7 +243,10 @@
       background-image: linear-gradient(to bottom right, #b33038, #7a3777);
       background-repeat: no-repeat;
       background-size: cover;
-      transform: translateY(100px);
+      
+      @media ($tablet) {
+        transform: translateY(100px);
+      }
 
       .btn {
         border-color: white;
@@ -261,7 +267,10 @@
       background-image: linear-gradient(120deg, #2b5b7c, #3c9eaa);
       background-repeat: no-repeat;
       background-size: cover;
-      transform: translateY(100px);
+      
+      @media ($tablet) {
+        transform: translateY(100px);
+      }
 
       .btn {
         border-color: #444;
@@ -304,7 +313,10 @@
 
     &.bankist {
       background-color: #f3f3f3;
-      transform: translateX(75px);
+      
+      @media ($tablet) {
+        transform: translateX(75px);
+      }
 
       .btn {
         border-color: #2a2929;
@@ -400,7 +412,10 @@
 
     &.number-guesser {
       background-color: #222222;
-      transform: translateX(-100px);
+     
+      @media ($tablet) {
+        transform: translateX(-100px);
+      }
 
       // &.training-reveal {
       //   margin-left: -200px;
@@ -430,7 +445,10 @@
 
     &.thread-bank {
       background-color: #f3f3f3;
-      transform: translateY(-150px);
+      
+      @media ($tablet) {
+        transform: translateY(-120px);
+      }
 
       .btn {
         border-color: #333;
@@ -457,7 +475,11 @@
 
     &.wills-meals {
       background-color: #3f3f3f;
-      transform: translateY(70px);
+      
+
+      @media ($tablet) {
+        transform: translateY(70px);
+      }
 
       .btn {
         border-color: white;
@@ -510,7 +532,11 @@
 
     &.expense-tracker {
       background-color: #000;
-      transform: translateX(70px);
+      
+
+      @media ($tablet) {
+        transform: translateX(70px);
+      }
 
       .btn {
         border-color: white;
@@ -546,7 +572,10 @@
 
     &.team-styler {
       background-color: #dae2db;
-      transform: translateY(-100px);
+      
+      @media ($tablet) {
+        transform: translateY(-100px);
+      }
 
       .btn {
         border-color: #232323;
@@ -607,7 +636,10 @@
 
     &.activity-tracker {
       background-color: #2a3334;
-      transform: translateX(100px);
+      
+      @media ($tablet) {
+        transform: translateX(100px);
+      }
 
       .btn {
         border-color: #2a3334;

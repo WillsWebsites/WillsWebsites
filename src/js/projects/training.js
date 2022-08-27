@@ -240,6 +240,10 @@ const trainingObserver = new IntersectionObserver(trainingReveal, {
 });
 
 trainingProjects.forEach((project, i) => {
-  project.style.transitionDelay = `${Math.random().toFixed(4)}s`;
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    project.style.transitionDelay = `${Math.random().toFixed(4)}s`;
+  } else {
+    project.style.transitionDelay = `${i < 7 ? i * .1 : i * .07}s`;
+  }
   trainingObserver.observe(project);
 });
