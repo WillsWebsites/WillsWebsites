@@ -1,8 +1,5 @@
 'use strict';
 
-///////////////////////////////////////
-// Modal window
-
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
@@ -43,9 +40,6 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-
-// Starting Lectures
-
 // Functions
 const randomInt = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
@@ -62,18 +56,6 @@ btnScrollTo.addEventListener('click', e => {
   section1.scrollIntoView({ behavior: 'smooth' });
 });
 
-//Option that isn't as efficient because it adds function to each item
-// document.querySelectorAll('.nav__link').forEach(function (el) {
-//   el.addEventListener('click', function(e) {
-//     e.preventDefault();
-//     const id = this.getAttribute('href');
-//     document.querySelector(id).scrollIntoView({
-//       behavior: 'smooth'
-//     });
-//   });
-// });
-
-//More efficient solution because of event delegation, add event listener to common parent, then determine what element in there caused the event
 // Smooth Scrolling
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
@@ -120,14 +102,6 @@ const navHoverHandler = function (e) {
 
 nav.addEventListener('mouseover', navHoverHandler.bind(0.5));
 nav.addEventListener('mouseout', navHoverHandler.bind(1));
-
-//Add class with scroll event listener, not recommended
-// const sectionCoords = section1.getBoundingClientRect();
-
-// window.addEventListener('scroll', function () {
-//   if (window.scrollY >= sectionCoords.top) nav.classList.add('sticky')
-//   else (nav.classList.remove('sticky'));
-// });
 
 //Intersection Observers
 

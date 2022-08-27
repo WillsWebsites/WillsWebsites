@@ -47,16 +47,16 @@ const modalHandler = function () {
       $(modal).addClass("modal-opened");
 
       switch (true) {
-        case $(e.target).closest(".training-item").hasClass("number-guesser"):
+        case $(e.target).closest(".training-item").hasClass("forkify"):
           modalContentHandler(
-            "Number Guesser",
+            "Forkify",
             [
-              `A simple single player game where you try and guess a random number in the fewest attempts possible. Maybe if you're lucky you can get it first try?`,
-              `Guess a number between 1-20. You will then find out if your guess is too high or too low from the wording on the right. Each time you guess incorrectly, your score will decrease. Once you guess the correct number your score will be kept and you can try again to beat it. How good of a score can you get?`,
-              `How to implement logic based on user feedback and display them to the DOM.`,
+              `A convenient recipe finder that you can use to discover and save tasty new recipes.`,
+              `Search recipes by typing a type of food into the search bar. Click through the options to view the recipes. You can also increase the servings and even bookmark your favorite recipes. If you have some recipes of your own, you can also add them and they will be automatically added as a bookmark.`,
+              `How to write a more complex application using a MVC, object-oriented architecture. Handled resolved and rejected promises from POST and GET requests to a recipe API. Further learned how to use external libraries such as Fracty.`,
             ],
-            "number-guesser",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/number-guesser",
+            "forkify",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/forkify",
             "JS",
             "jonas"
           );
@@ -75,6 +75,49 @@ const modalHandler = function () {
             "jonas"
           );
           break;
+        case $(e.target).closest(".training-item").hasClass("country-finder"):
+          modalContentHandler(
+            "Country Finder",
+            [
+              `View data on the country you're in or search a country of your choice.`,
+              `You have to enable location services for this application to work. A sample country with some data about the country is loaded in view to start. To search for that same information about the current country you're in, utilize the "Where am I?" box. To search for data on a specific country of your choice, utilize the "Search a Country" box.`,
+              `How to deal with AJAX calls to an external API and handle both resolved and rejected promises. Also focused on handling user input to search for external data and ultimately have that data displayed to the DOM.`,
+            ],
+            "country-finder",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/country-finder",
+            "JS",
+            "jonas",
+            true
+          );
+          break;
+        case $(e.target).closest(".training-item").hasClass("bankist"):
+          modalContentHandler(
+            "Bankist",
+            [
+              `A mock banking website that neatly displays the company's details to help guide clients to open up an account.`,
+              `Scroll through the website and interact with features such as the Operation section's "tab divider", or the Testimonial section's "rotator". You can also click on open an account buttons to mock sign up for an account (doesn't create a real account).`,
+              `How to implement Lazy Loading images for increased speed and performance. Creating a tab divider content to display different pieces of content based on user selection. Creating a rotator to rotate through different slides of content.`,
+            ],
+            "bankist",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist",
+            "JS",
+            "jonas"
+          );
+          break;
+        case $(e.target).closest(".training-item").hasClass("number-guesser"):
+          modalContentHandler(
+            "Number Guesser",
+            [
+              `A simple single player game where you attempt to guess a random number in the fewest attempts possible.`,
+              `Guess a number between 1-20. You will then find out if your guess is too high or too low from the wording on the right. Each time you guess incorrectly your score will decrease. Once you guess the correct number your score will be kept and you can try again to beat it. Maybe if you're lucky you can get it first try?`,
+              `How to implement logic based on user feedback and adjust the DOM accordingly.`,
+            ],
+            "number-guesser",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/number-guesser",
+            "JS",
+            "jonas"
+          );
+          break;
         case $(e.target).closest(".training-item").hasClass("thread-bank"):
           modalContentHandler(
             "Thread Bank",
@@ -89,47 +132,18 @@ const modalHandler = function () {
             "jonas"
           );
           break;
-        case $(e.target).closest(".training-item").hasClass("bankist"):
+        case $(e.target).closest(".training-item").hasClass("wills-meals"):
           modalContentHandler(
-            "Bankist",
+            `Will's Meals`,
             [
-              `A mock banking website that neatly displays the company's details to help guide clients to open up an account`,
-              `Scroll through the website and interact with features such as the Operation section's "tab divider", or the Testimonial section's "rotator". You can also click on open an account buttons to mock sign up for an account (doesn't create a real account).`,
-              `How to implement Lazy Loading images for increased speed and performance. Creating a tab divider content to display different pieces of content based on user selection. Creating a rotator to rotate through different slides of content.`,
+              `A food ordering application that allows you to add items to your cart and adjust things in the cart.`,
+              `Add items to your cart in whatever quanitites you'd like. Then you can access the cart and update any items if needed and all the totals will be calculated for you. Nothing happens when you checkout for now but more features to be added soon!`,
+              `How to configure an app wide context for managing state. Creating items based on user input and needing to handle the side effects that happen as a result of working with form and user input.`,
             ],
-            "bankist",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist",
-            "JS",
-            "jonas"
-          );
-          break;
-        case $(e.target).closest(".training-item").hasClass("activity-tracker"):
-          modalContentHandler(
-            "Activity Tracker",
-            [
-              `A great way to keep track of the cardio activites completed by location.`,
-              `You have to enable location services for this application to work. Click somewhere on the map to add a location pin for your activity then fill out the appropriate information and hit enter. You will see your pin added to the map with the corresponding details. As this project is under construction there are various bugs to fix and features to be added.`,
-              `How to work with an external library/API in a more complex, object-oriented structure. Rendered an interactive map that allows users to place pins based on location.`,
-            ],
-            "activity-tracker",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/activity-tracker",
-            "JS",
-            "jonas",
-            true
-          );
-          break;
-        case $(e.target).closest(".training-item").hasClass("forkify"):
-          modalContentHandler(
-            "Forkify",
-            [
-              `A convenient recipe finder that you can use to discover and save tasty new recipes.`,
-              `Search recipes by typing a type of food into the search bar. Click through the options to view the recipes. You can also increase the servings and even bookmark your favorite recipes. If you want to add your own recipes you can do that as well!`,
-              `How to write a more complex application using MVC architecture. Connecting with an API for GET and POST requests and working with promises. Further learned how to use external libraries such as Fracty.`,
-            ],
-            "forkify",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/forkify",
-            "JS",
-            "jonas"
+            "wills-meals",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/wills-meals",
+            "React",
+            "maximillian"
           );
           break;
         case $(e.target).closest(".training-item").hasClass("expense-tracker"):
@@ -138,24 +152,10 @@ const modalHandler = function () {
             [
               `An application to keep track of outgoing expenses and sort them by year.`,
               `There are already a few sample expense items so you can see how it functions. Add as many other expenses as you'd like into the tracker and then sort them by year to keep things organized.`,
-              `How to work with React components. Focused on structuring the component tree to keep things organized while still being accessible. Passed data through multiple components using props.`,
+              `How to structure React components. Focused on structuring the component tree to keep things organized while still being accessible. Passed data through multiple components using props.`,
             ],
             "expense-tracker",
             "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/expense-tracker",
-            "React",
-            "maximillian"
-          );
-          break;
-        case $(e.target).closest(".training-item").hasClass("wills-meals"):
-          modalContentHandler(
-            `Will's Meals`,
-            [
-              `A food ordering application that allows you to add items to your cart and adjust things in the cart.`,
-              `Add items to your cart in whatever quanitites you'd like. Then you can access the cart and update any items if needed and all the totals will be calculated for you. Nothing happens when you checkout for now but more features to be added soon!`,
-              `How to configure an app wide content for managing state. Creating items based on user input and needing to handle the side effects that happen as a result of working with form inputs.`,
-            ],
-            "wills-meals",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/wills-meals",
             "React",
             "maximillian"
           );
@@ -166,7 +166,7 @@ const modalHandler = function () {
             [
               `A way to neatly display your team members and will eventually include various features to add more members and sections, and have a lot more adjustable settings.`,
               `As the project is under construction, for now you can click on the settings cog wheel on the upper right of any team section and then choose a team style to apply to the team members. You can also click on the add section button (+) to select a new section, although it will not add it to the section list for now. Many more features to come!`,
-              `How to build a React application from scratch and structure/organize it in a convenient and reusable way. Also added a model to adjust settings and apply css based on user input. Implemented various hooks and modern React features.`,
+              `How to build a React application from scratch and structure/organize it in a convenient and reusable way. Also added a modal to adjust settings and apply css based on user input. Implemented various hooks and modern React features.`,
             ],
             "team-styler",
             "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/team-styler",
@@ -175,16 +175,16 @@ const modalHandler = function () {
             true
           );
           break;
-        case $(e.target).closest(".training-item").hasClass("country-finder"):
+        case $(e.target).closest(".training-item").hasClass("activity-tracker"):
           modalContentHandler(
-            "Country Finder",
+            "Activity Tracker",
             [
-              `An informational application to view data on the country you're in or a country you choose to search`,
-              `A sample country with some data about the country is loaded in view to start. To search for that same information about the current country you're in, utilize the "Where am I?" box. To search for data on a specific country of your choice, utilize the "Search a Country" box.`,
-              `How to deal with AJAX calls to an external API and handle both resolved and rejected promises. Also focused on handling user input to search for external data and ultimately have that data displayed to the DOM`,
+              `A great way to keep track of fitness activites completed by location.`,
+              `You have to enable location services for this application to work. Click somewhere on the map to add a location pin for your activity then fill out the appropriate information and hit enter. You will see your pin added to the map with the corresponding details. As this project is under construction there are various bugs to fix and features to be added.`,
+              `How to work with an external library/API in a more complex, object-oriented structure. Rendered an interactive map that allows users to place pins based on location.`,
             ],
-            "country-finder",
-            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/country-finder",
+            "activity-tracker",
+            "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/activity-tracker",
             "JS",
             "jonas",
             true

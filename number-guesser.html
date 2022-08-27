@@ -4,19 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="robots" content="noindex nofollow" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="A simple single player game where you attempt to guess a random number in the fewest attempts possible"
+    />
     <link rel="stylesheet" href="./sample-projects/number-guesser/style.scss" />
-    <link rel="stylesheet" href="./sample-projects/number-guesser/instructions.scss" />
+    <link
+      rel="stylesheet"
+      href="./sample-projects/number-guesser/instructions.scss"
+    />
     <title>Number Guesser | Will's Websites</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    <script src="./sample-projects/number-guesser/script.js" type="module"></script>
-    <script src="./sample-projects/number-guesser/instructions.js" type="module"></script>
+    <script
+      src="./sample-projects/number-guesser/script.js"
+      type="module"
+    ></script>
+    <script
+      src="./sample-projects/number-guesser/instructions.js"
+      type="module"
+    ></script>
   </head>
   <body class="subpage number-guesser">
     <div class="instructions">
       <h2>Instructions</h2>
-      <p>Some sample expense items are already added in. Add as many expenses as you'd like and you'll be able to sort them by year to keep things organized.</p>
+      <p>
+        Guess a number between 1-20. You will then find out if your guess is too
+        high or too low from the wording on the right. Each time you guess
+        incorrectly your score will decrease. Once you guess the correct number
+        your score will be kept and you can try again to beat it. Maybe if
+        you're lucky you can get it first try?
+      </p>
       <button class="close-instructions">X</button>
       <button class="open-instructions tab-hidden"><</button>
     </div>
@@ -41,8 +60,12 @@
       <button class="btn again-mobile">Again!</button>
     </main>
     <div class="credit">
-      <small class="credit-description">Project idea credit to Jonas Schmedtmann of</small>
-      <a class="credit-link" target="_blank" href="https://codingheroes.io/">Coding Heroes</a>
+      <small class="credit-description"
+        >Project idea credit to Jonas Schmedtmann of</small
+      >
+      <a class="credit-link" target="_blank" href="https://codingheroes.io/"
+        >Coding Heroes</a
+      >
     </div>
   </body>
 </html>
