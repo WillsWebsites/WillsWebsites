@@ -9,7 +9,7 @@
     height: 100%;
     width: 100%;
     max-height: 700px;
-    background-color: rgba($secondary, .12);
+    background-color: rgba($secondary, 0.12);
     border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
     z-index: 0;
 
@@ -19,7 +19,7 @@
     animation-fill-mode: forwards;
 
     @media ($tablet) {
-      background-color: rgba($secondary, .08);
+      background-color: rgba($secondary, 0.08);
       top: -5%;
       left: -10%;
       height: 100%;
@@ -32,7 +32,7 @@
   .container {
     width: 95%;
     max-width: 1900px;
-  
+
     @media ($desktop) and (max-width: 1275px) {
       width: 100%;
     }
@@ -97,7 +97,7 @@
 
     @media (min-width: 440px) {
       min-height: 165px;
-      margin: 10px
+      margin: 10px;
     }
 
     @media ($mobile-large) {
@@ -137,8 +137,8 @@
       border-top-left-radius: 10px;
       border-right-width: 0;
       border-bottom-width: 0;
-      font-size: $x-small-m + .1rem;
-      opacity: .9;
+      font-size: $x-small-m + 0.1rem;
+      opacity: 0.9;
 
       @media ($laptop) {
         display: none;
@@ -148,7 +148,6 @@
         transform: none;
       }
     }
-
 
     video {
       position: absolute;
@@ -168,7 +167,11 @@
 
     &.forkify {
       background: #fbdb89;
-      background-image: -webkit-linear-gradient(to bottom right, #fbdb89, #f48982);
+      background-image: -webkit-linear-gradient(
+        to bottom right,
+        #fbdb89,
+        #f48982
+      );
       background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
       background-repeat: no-repeat;
       background-size: cover;
@@ -177,7 +180,11 @@
         border-color: #222;
         color: #222;
         background: #fbdb89;
-        background-image: -webkit-linear-gradient(to bottom right, #fbdb89, #f48982);
+        background-image: -webkit-linear-gradient(
+          to bottom right,
+          #fbdb89,
+          #f48982
+        );
         background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
       }
 
@@ -204,43 +211,51 @@
       }
 
       video {
-        transform: translate(0px, -50%) scale(1.10);
+        transform: translate(0px, -50%) scale(1.1);
 
         @media ($desktop) {
-          transform: translate(2px, -50%) scale(1.10);
+          transform: translate(2px, -50%) scale(1.1);
         }
       }
     }
 
     &.one-n-done {
-      background: #95335B;
-      background-image: -webkit-linear-gradient(to bottom right, #B33038, #7A3777);
-      background-image: linear-gradient(to bottom right, #B33038, #7A3777);
+      background: #95335b;
+      background-image: -webkit-linear-gradient(
+        to bottom right,
+        #b33038,
+        #7a3777
+      );
+      background-image: linear-gradient(to bottom right, #b33038, #7a3777);
       background-repeat: no-repeat;
       background-size: cover;
 
       .btn {
         border-color: white;
         color: white;
-        background: #95335B;
-        background-image: -webkit-linear-gradient(to bottom right, #B33038, #7A3777);
-        background-image: linear-gradient(to bottom right, #B33038, #7A3777);
+        background: #95335b;
+        background-image: -webkit-linear-gradient(
+          to bottom right,
+          #b33038,
+          #7a3777
+        );
+        background-image: linear-gradient(to bottom right, #b33038, #7a3777);
       }
     }
 
     &.country-finder {
-      background: #337B93;
-      background-image: -webkit-linear-gradient(120deg, #2B5B7C, #3C9EAA);
-      background-image: linear-gradient(120deg, #2B5B7C, #3C9EAA);
+      background: #337b93;
+      background-image: -webkit-linear-gradient(120deg, #2b5b7c, #3c9eaa);
+      background-image: linear-gradient(120deg, #2b5b7c, #3c9eaa);
       background-repeat: no-repeat;
       background-size: cover;
 
       .btn {
         border-color: #444;
         color: white;
-        background: #337B93;
-        background-image: -webkit-linear-gradient(120deg, #2B5B7C, #3C9EAA);
-        background-image: linear-gradient(120deg, #2B5B7C, #3C9EAA);
+        background: #337b93;
+        background-image: -webkit-linear-gradient(120deg, #2b5b7c, #3c9eaa);
+        background-image: linear-gradient(120deg, #2b5b7c, #3c9eaa);
       }
 
       .country-finder-taller {
@@ -275,7 +290,7 @@
     }
 
     &.bankist {
-      background-color: #F3F3F3;
+      background-color: #f3f3f3;
 
       .btn {
         border-color: #2a2929;
@@ -294,7 +309,7 @@
         z-index: 200;
         width: 100%;
         padding: 8px 7px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         pointer-events: none;
         user-select: none;
 
@@ -317,26 +332,27 @@
               max-width: 15px;
             }
           }
-  
+
           h5 {
-            font-size: .3rem;
+            font-size: 0.3rem;
             font-family: $tertiary-font;
             margin: 0 0 0 5px;
             color: $dark;
 
             @media ($mobile-large) {
-              font-size: .5rem;
+              font-size: 0.5rem;
             }
           }
         }
 
-        p, span {
-          font-size: .2rem;
+        p,
+        span {
+          font-size: 0.2rem;
           margin: 2px 2px 2px 5px;
           color: $dark;
 
           @media ($mobile-large) {
-            font-size: .3rem;
+            font-size: 0.3rem;
           }
 
           &.btn-bankist {
@@ -361,7 +377,7 @@
 
       video {
         top: 52%;
-        
+
         @media (min-width: 1400px) {
           top: 55%;
         }
@@ -391,13 +407,17 @@
     }
 
     &.thread-bank {
-      background-color: #F3F3F3;
+      background-color: #f3f3f3;
 
       .btn {
         border-color: #333;
         color: #333;
-        background: #FFBF03;
-        background-image: -webkit-linear-gradient(to top left, #ffb003, #ffcb03);
+        background: #ffbf03;
+        background-image: -webkit-linear-gradient(
+          to top left,
+          #ffb003,
+          #ffcb03
+        );
         background-image: linear-gradient(to top left, #ffb003, #ffcb03);
       }
 
@@ -405,11 +425,11 @@
         transform: translateY(-50%) scale(1.15);
 
         @media ($mobile) {
-          transform: translateY(-50%) scale(.77);
+          transform: translateY(-50%) scale(0.77);
         }
 
         @media ($tablet) {
-          transform: translateY(-50%) scale(.8);
+          transform: translateY(-50%) scale(0.8);
         }
 
         @media ($desktop) {
@@ -419,7 +439,7 @@
     }
 
     &.wills-meals {
-      background-color: #3F3F3F;
+      background-color: #3f3f3f;
 
       .btn {
         border-color: white;
@@ -427,12 +447,11 @@
         background: #872d06;
       }
 
-
       .wills-meals-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #872D06;
+        background-color: #872d06;
         pointer-events: none;
         user-select: none;
 
@@ -442,10 +461,10 @@
           margin: 0 20px;
           padding: 5px 20px;
           border-radius: 20px;
-          font-size: .5rem;
+          font-size: 0.5rem;
 
           span {
-            background-color: #872D06;
+            background-color: #872d06;
             padding: 3px 7px;
             border-radius: 50%;
             margin: 3px 0 3px 10px;
@@ -494,7 +513,7 @@
       }
 
       video {
-        transform: translateY(-50%) scale(.9);
+        transform: translateY(-50%) scale(0.9);
 
         @media ($mobile) {
           transform: translateY(-50%) scale(1.2);
@@ -507,7 +526,7 @@
     }
 
     &.team-styler {
-      background-color: #DAE2DB;
+      background-color: #dae2db;
 
       .btn {
         border-color: #232323;
@@ -516,40 +535,41 @@
       }
 
       .team-styler-header {
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: white;
-          z-index: 200;
-          width: 100%;
-          padding: 8px 10px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
-          pointer-events: none;
-          user-select: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        z-index: 200;
+        width: 100%;
+        padding: 8px 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+        user-select: none;
 
-          h5 {
-            font-size: .3rem;
-            font-family: $tertiary-font;
-            margin: 0 0 0 5px;
-            color: $dark;
+        h5 {
+          font-size: 0.3rem;
+          font-family: $tertiary-font;
+          margin: 0 0 0 5px;
+          color: $dark;
 
-            @media ($mobile-large) {
-              font-size: .5rem;
-            }
+          @media ($mobile-large) {
+            font-size: 0.5rem;
           }
+        }
 
-          p, span {
-            font-size: .2rem;
-            margin: 2px 2px 2px 5px;
-            color: $dark;
-  
-            @media ($mobile-large) {
-              font-size: .3rem;
-            }
+        p,
+        span {
+          font-size: 0.2rem;
+          margin: 2px 2px 2px 5px;
+          color: $dark;
+
+          @media ($mobile-large) {
+            font-size: 0.3rem;
           }
+        }
       }
 
       video {
@@ -566,10 +586,10 @@
     }
 
     &.activity-tracker {
-      background-color: #2A3334;
+      background-color: #2a3334;
 
       .btn {
-        border-color: #2A3334;
+        border-color: #2a3334;
         color: white;
         background-color: #00c46a;
       }

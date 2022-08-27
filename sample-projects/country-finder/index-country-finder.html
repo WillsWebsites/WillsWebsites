@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="View data on the country you're in or search a country of your choice"
+    />
+    <link rel="stylesheet" href="./sample-projects/country-finder/style.scss" />
+    <link
+      rel="stylesheet"
+      href="./sample-projects/country-finder/instructions.scss"
+    />
+    <script
+      src="./sample-projects/country-finder/script.js"
+      type="module"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script
+      src="./sample-projects/country-finder/instructions.js"
+      type="module"
+    ></script>
+    <title>Country Finder | Will's Websites</title>
+  </head>
+  <body>
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <p>*Currently under construction</p>
+      <p>
+        You have to enable location services for this application to work. A
+        sample country with some data about the country is loaded in view to
+        start. To search for that same information about the current country
+        you're in, utilize the "Where am I?" box. To search for data on a
+        specific country of your choice, utilize the "Search a Country" box.
+      </p>
+      <button class="close-instructions">X</button>
+      <button class="open-instructions tab-hidden"><</button>
+    </div>
+    <main class="container">
+      <h1>Country Finder</h1>
+      <div class="countries"></div>
+      <h2 class="search-loading">Seacrhing Country...</h2>
+      <div class="view-countries">
+        <div class="view-countries-left">
+          <h3>Where am I?</h3>
+          <p>
+            Click the button below to search your location. Once your location
+            is pinpointed, two cards will display data about the country you're
+            in and a random neighboring country respectively.
+          </p>
+          <button class="btn-country">Get Location</button>
+        </div>
+        <div class="view-countries-right">
+          <h3>Search a Country</h3>
+          <form class="search">
+            <input
+              type="text"
+              class="search-field"
+              placeholder="i.e. 'France'"
+            />
+            <input type="submit" class="search-submit" value="Search Country" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <div class="credit">
+      <small class="credit-description"
+        >Project idea credit to Jonas Schmedtmann of</small
+      >
+      <a class="credit-link" target="_blank" href="https://codingheroes.io/"
+        >Coding Heroes</a
+      >
+    </div>
+  </body>
+</html>

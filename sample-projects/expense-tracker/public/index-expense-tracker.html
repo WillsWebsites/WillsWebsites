@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      href="./sample-projects/expense-tracker/public/favicon.ico"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="An application to keep track of outgoing expenses and sort them by year"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./sample-projects/expense-tracker/public/logo192.png"
+    />
+    <link
+      rel="manifest"
+      href="./sample-projects/expense-tracker/public/manifest.json"
+    />
+    <link
+      rel="stylesheet"
+      href="./sample-projects/expense-tracker/src/instructions.scss"
+    />
+    <title>Expense Tracker | Will's Websites</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script
+      src="./sample-projects/expense-tracker/src/index.js"
+      type="module"
+    ></script>
+    <script
+      src="./sample-projects/expense-tracker/src/instructions.js"
+      type="module"
+    ></script>
+  </head>
+  <body>
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <p>
+        There are already a few sample expense items so you can see how it
+        functions. Add as many other expenses as you'd like into the tracker and
+        then sort them by year to keep things organized.
+      </p>
+      <button class="close-instructions">X</button>
+      <button class="open-instructions tab-hidden"><</button>
+    </div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <div class="credit">
+      <small class="credit-description"
+        >Project idea credit to Maximilian Schwarzmüller of</small
+      >
+      <a class="credit-link" target="_blank" href="https://academind.com/"
+        >Academind</a
+      >
+    </div>
+  </body>
+</html>

@@ -4,29 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="robots" content="noindex nofollow" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="A convenient recipe finder that you can use to discover and save tasty new recipes"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./sample-projects/forkify/img/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./sample-projects/forkify/img/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./sample-projects/forkify/sass/main.scss" />
-    <link rel="stylesheet" href="./src/scss/subpages/instructions.scss" />
-    <script type="module" defer src="./sample-projects/forkify/js/controller.js"></script>
+    <link rel="stylesheet" href="./sample-projects/forkify/instructions.scss" />
+    <script
+      type="module"
+      src="./sample-projects/forkify/js/controller.js"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script
+      type="module"
+      src="./sample-projects/forkify/instructions.js"
+    ></script>
     <title>Forkify | Will's Websites</title>
   </head>
   <body class="subpage forkify">
     <div class="instructions">
       <h2>Instructions</h2>
-      <p>Search recipes by typing a type of food into the search bar. Click through the options to view the recipes. You can also increase the servings and even bookmark your favorite recipes. If you want to add your own recipes you can do that as well!</p>
+      <p>
+        Search recipes by typing a type of food into the search bar. Click
+        through the options to view the recipes. You can also increase the
+        servings and even bookmark your favorite recipes. If you have some
+        recipes of your own, you can also add them and they will be
+        automatically added as a bookmark.
+      </p>
       <button class="close-instructions">X</button>
       <button class="open-instructions tab-hidden"><</button>
     </div>
     <div class="container">
       <header class="header">
-        <img src="./sample-projects/forkify/img/logo.png" alt="Logo" class="header__logo" />
+        <img
+          src="./sample-projects/forkify/img/logo.png"
+          alt="Logo"
+          class="header__logo"
+        />
         <form class="search">
           <input
             type="text"
@@ -35,7 +60,9 @@
           />
           <button class="btn search__btn">
             <svg class="search__icon">
-              <use href="./sample-projects/forkify/img/icons.svg#icon-search"></use>
+              <use
+                href="./sample-projects/forkify/img/icons.svg#icon-search"
+              ></use>
             </svg>
             <span>Search</span>
           </button>
@@ -45,7 +72,9 @@
             <li class="nav__item">
               <button class="nav__btn nav__btn--add-recipe">
                 <svg class="nav__icon">
-                  <use href="./sample-projects/forkify/img/icons.svg#icon-edit"></use>
+                  <use
+                    href="./sample-projects/forkify/img/icons.svg#icon-edit"
+                  ></use>
                 </svg>
                 <span>Add recipe</span>
               </button>
@@ -53,7 +82,9 @@
             <li class="nav__item">
               <button class="nav__btn nav__btn--bookmarks">
                 <svg class="nav__icon">
-                  <use href="./sample-projects/forkify/img/icons.svg#icon-bookmark"></use>
+                  <use
+                    href="./sample-projects/forkify/img/icons.svg#icon-bookmark"
+                  ></use>
                 </svg>
                 <span>Bookmarks</span>
               </button>
@@ -62,7 +93,9 @@
                   <div class="message">
                     <div>
                       <svg>
-                        <use href="./sample-projects/forkify/img/icons.svg#icon-smile"></use>
+                        <use
+                          href="./sample-projects/forkify/img/icons.svg#icon-smile"
+                        ></use>
                       </svg>
                     </div>
                     <p>
@@ -77,33 +110,31 @@
       </header>
 
       <div class="search-results">
-        <ul class="results">
-        </ul>
+        <ul class="results"></ul>
 
-        <div class="pagination">
-        </div>
-
-        <p class="copyright">
-          &copy; Copyright by
-          <a
-            class="twitter-link"
-            target="_blank"
-            href="https://twitter.com/jonasschmedtman"
-            >Jonas Schmedtmann</a
-          >. Use for learning or your portfolio. Don't use to teach. Don't claim
-          as your own.
-        </p>
+        <div class="pagination"></div>
       </div>
 
       <div class="recipe">
         <div class="message">
           <div>
             <svg>
-              <use href="./sample-projects/forkify/img/icons.svg#icon-smile"></use>
+              <use
+                href="./sample-projects/forkify/img/icons.svg#icon-smile"
+              ></use>
             </svg>
           </div>
           <p>Start by searching for a recipe or an ingredient. Have fun!</p>
         </div>
+      </div>
+
+      <div class="credit">
+        <small class="credit-description"
+          >Project idea credit to Jonas Schmedtmann of</small
+        >
+        <a class="credit-link" target="_blank" href="https://codingheroes.io/"
+          >Coding Heroes</a
+        >
       </div>
     </div>
 
@@ -114,24 +145,23 @@
         <div class="upload__column">
           <h3 class="upload__heading">Recipe data</h3>
           <label>Title</label>
-          <input value="TESTDATA" required name="title" type="text" />
+          <input required name="title" type="text" />
           <label>URL</label>
-          <input value="TESTDATA" required name="sourceUrl" type="text" />
+          <input required name="sourceUrl" type="text" />
           <label>Image URL</label>
-          <input value="TESTDATA" required name="image" type="text" />
+          <input required name="image" type="text" />
           <label>Publisher</label>
-          <input value="TESTDATA" required name="publisher" type="text" />
+          <input required name="publisher" type="text" />
           <label>Prep time</label>
-          <input value="23" required name="cookingTime" type="number" />
+          <input required name="cookingTime" type="number" min="0" />
           <label>Servings</label>
-          <input value="23" required name="servings" type="number" />
+          <input required name="servings" type="number" min="0" />
         </div>
 
         <div class="upload__column">
           <h3 class="upload__heading">Ingredients</h3>
           <label>Ingredient 1</label>
           <input
-            value="0.5,kg,Rice"
             type="text"
             required
             name="ingredient-1"
@@ -139,14 +169,12 @@
           />
           <label>Ingredient 2</label>
           <input
-            value="1,,Avocado"
             type="text"
             name="ingredient-2"
             placeholder="Format: 'Quantity,Unit,Description'"
           />
           <label>Ingredient 3</label>
           <input
-            value=",,salt"
             type="text"
             name="ingredient-3"
             placeholder="Format: 'Quantity,Unit,Description'"
@@ -173,7 +201,9 @@
 
         <button class="btn upload__btn">
           <svg>
-            <use href="./sample-projects/forkify/img/icons.svg#icon-upload-cloud"></use>
+            <use
+              href="./sample-projects/forkify/img/icons.svg#icon-upload-cloud"
+            ></use>
           </svg>
           <span>Upload</span>
         </button>

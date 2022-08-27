@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="A great way to keep track of fitness activites completed by location"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./sample-projects/activity-tracker/icon.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./sample-projects/activity-tracker/instructions.scss"
+    />
+    <link
+      rel="stylesheet"
+      href="./sample-projects/activity-tracker/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script
+      src="./sample-projects/activity-tracker/script.js"
+      type="module"
+    ></script>
+    <script
+      src="./sample-projects/activity-tracker/instructions.js"
+      type="module"
+    ></script>
+    <title>Activity Tracker | Will's Websites</title>
+  </head>
+  <body>
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <p>*Currently under construction</p>
+      <p>
+        You have to enable location services for this application to work. Click
+        somewhere on the map to add a location pin for your activity then fill
+        out the appropriate information and hit enter. You will see your pin
+        added to the map with the corresponding details. As this project is
+        under construction there are various bugs to fix and features to be
+        added.
+      </p>
+      <button class="close-instructions">X</button>
+      <button class="open-instructions tab-hidden"><</button>
+    </div>
+    <div class="sidebar">
+      <h1>Activity <span class="white-word">Tracker</span></h1>
+      <h2 class="apologies">
+        Apologies, this application is not yet adjusted for smaller screen
+        sizes. Please switch to a computer to view for now.
+      </h2>
+
+      <ul class="workouts">
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label">Type</label>
+            <select class="form__input form__input--type">
+              <option value="running">Running</option>
+              <option value="cycling">Cycling</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Distance</label>
+            <input class="form__input form__input--distance" placeholder="km" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Duration</label>
+            <input
+              class="form__input form__input--duration"
+              placeholder="min"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Cadence</label>
+            <input
+              class="form__input form__input--cadence"
+              placeholder="step/min"
+            />
+          </div>
+          <div class="form__row form__row--hidden">
+            <label class="form__label">Elev Gain</label>
+            <input
+              class="form__input form__input--elevation"
+              placeholder="meters"
+            />
+          </div>
+          <button class="form__btn">OK</button>
+        </form>
+      </ul>
+
+      <div class="credit">
+        <small class="credit-description"
+          >Project idea credit to Jonas Schmedtmann of</small
+        >
+        <a class="credit-link" target="_blank" href="https://codingheroes.io/"
+          >Coding Heroes</a
+        >
+      </div>
+    </div>
+
+    <div id="map"></div>
+  </body>
+</html>
