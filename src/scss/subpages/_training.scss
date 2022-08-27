@@ -324,23 +324,35 @@
 
           img {
             width: 100%;
-            max-width: 15px;
+            max-width: 12px;
             height: auto;
             filter: brightness(0);
+
+            @media ($mobile-large) {
+              max-width: 15px;
+            }
           }
   
           h5 {
-            font-size: .5rem;
+            font-size: .3rem;
             font-family: $tertiary-font;
             margin: 0 0 0 5px;
             color: $dark;
+
+            @media ($mobile-large) {
+              font-size: .5rem;
+            }
           }
         }
 
         p, span {
-          font-size: .3rem;
+          font-size: .2rem;
           margin: 2px 2px 2px 5px;
           color: $dark;
+
+          @media ($mobile-large) {
+            font-size: .3rem;
+          }
 
           &.btn-bankist {
             padding: 3px 4px;
