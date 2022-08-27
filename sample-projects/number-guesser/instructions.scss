@@ -4,8 +4,8 @@
     position: fixed;
     top: 0;
     right: -95%;
-    height: 50%;
-    min-height: 500px;
+    height: 80%;
+    min-height: 700px;
     width: 95%;
     background-color: rgba($light, .95);
     z-index: 9999999;
@@ -17,6 +17,8 @@
     transition: right .8s cubic-bezier(0.77, 0.2, 0.41, 0.98);
 
     @media ($tablet) {
+        height: 65%;
+        min-height: 650px;
         width: 450px;
         right: -450px;
     }
@@ -44,7 +46,7 @@
     .close-instructions {
         cursor: pointer;
         position: absolute;
-        top: 20px;
+        top: 10px;
         right: 20px;
         padding: 8px;
         font-size: $small;
@@ -53,6 +55,10 @@
         outline: none;
         border: 2px solid #222222;
         border-radius: 0;
+
+        @media($tablet) {
+            top: 20px;
+        }
     }
 
     .open-instructions {

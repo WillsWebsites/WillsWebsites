@@ -168,7 +168,6 @@
     -webkit-transform: translateZ(0);
     overflow: hidden;
     position: relative;
-    cursor: pointer;
     transition: all 0.3s ease;
     min-height: 190px;
 
@@ -190,6 +189,7 @@
     }
 
     @media ($laptop) {
+      cursor: pointer;
       min-height: 200px;
     }
 
@@ -205,6 +205,30 @@
       transform: scale(1.04);
       box-shadow: 0px 5px 16px rgba($light, 0.25);
     }
+
+    .btn {
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      padding: 8px 15px;
+      border-radius: 0;
+      border-top-left-radius: 10px;
+      border-right-width: 0;
+      border-bottom-width: 0;
+      font-size: $x-small-m + .1rem;
+      opacity: .75;
+
+      @media ($laptop) {
+        display: none;
+      }
+
+      &:hover {
+        transform: none;
+      }
+    }
+
 
     video {
       position: absolute;
@@ -228,6 +252,14 @@
       background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
       background-repeat: no-repeat;
       background-size: cover;
+
+      .btn {
+        border-color: #222;
+        color: #222;
+        background: #fbdb89;
+        background-image: -webkit-linear-gradient(to bottom right, #fbdb89, #f48982);
+        background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+      }
 
       .forkify-standard {
         display: none;
@@ -266,6 +298,14 @@
       background-image: linear-gradient(to bottom right, #B33038, #7A3777);
       background-repeat: no-repeat;
       background-size: cover;
+
+      .btn {
+        border-color: white;
+        color: white;
+        background: #95335B;
+        background-image: -webkit-linear-gradient(to bottom right, #B33038, #7A3777);
+        background-image: linear-gradient(to bottom right, #B33038, #7A3777);
+      }
     }
 
     &.country-finder {
@@ -274,6 +314,14 @@
       background-image: linear-gradient(120deg, #2B5B7C, #3C9EAA);
       background-repeat: no-repeat;
       background-size: cover;
+
+      .btn {
+        border-color: #444;
+        color: white;
+        background: #337B93;
+        background-image: -webkit-linear-gradient(120deg, #2B5B7C, #3C9EAA);
+        background-image: linear-gradient(120deg, #2B5B7C, #3C9EAA);
+      }
 
       .country-finder-taller {
         display: none;
@@ -308,6 +356,12 @@
 
     &.bankist {
       background-color: #F3F3F3;
+
+      .btn {
+        border-color: #2a2929;
+        color: #2a2929;
+        background: #5ec576;
+      }
 
       .bankist-header {
         position: absolute;
@@ -397,6 +451,12 @@
     &.number-guesser {
       background-color: #222222;
 
+      .btn {
+        border-color: white;
+        color: white;
+        background: #60b347;
+      }
+
       video {
         transform: translateY(-50%) scale(1.15);
 
@@ -412,6 +472,14 @@
 
     &.thread-bank {
       background-color: #F3F3F3;
+
+      .btn {
+        border-color: #333;
+        color: #333;
+        background: #FFBF03;
+        background-image: -webkit-linear-gradient(to top left, #ffb003, #ffcb03);
+        background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+      }
 
       video {
         transform: translateY(-50%) scale(1.15);
@@ -432,6 +500,12 @@
 
     &.wills-meals {
       background-color: #3F3F3F;
+
+      .btn {
+        border-color: white;
+        color: white;
+        background: #872d06;
+      }
 
 
       .wills-meals-header {
@@ -480,6 +554,12 @@
     &.expense-tracker {
       background-color: #000;
 
+      .btn {
+        border-color: white;
+        color: white;
+        background-color: #40005d;
+      }
+
       .expense-tracker-standard {
         @media ($desktop) {
           display: none;
@@ -508,6 +588,12 @@
 
     &.team-styler {
       background-color: #DAE2DB;
+
+      .btn {
+        border-color: #232323;
+        color: white;
+        background-color: #ff4c2d;
+      }
 
       .team-styler-header {
           position: absolute;
@@ -561,6 +647,12 @@
 
     &.activity-tracker {
       background-color: #2A3334;
+
+      .btn {
+        border-color: #2A3334;
+        color: white;
+        background-color: #00c46a;
+      }
 
       video {
         transform: translate(15%, -50%) scale(1.4);

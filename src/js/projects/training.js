@@ -1,6 +1,6 @@
 // Training project Modal
 const modalHandler = function () {
-  if (window.matchMedia("(min-width: 992px)").matches) {
+  // if (window.matchMedia("(min-width: 992px)").matches) {
     // Opening Modal and setting content
     const modal = $(".training-modal");
     const modalBg = $(".m-background");
@@ -43,9 +43,7 @@ const modalHandler = function () {
       }
     };
 
-    $(".training-item").click(function (e) {
-      $(modal).addClass("modal-opened");
-
+    const trainingInfoHandler = function(e) {
       switch (true) {
         case $(e.target).closest(".training-item").hasClass("forkify"):
           modalContentHandler(
@@ -191,6 +189,20 @@ const modalHandler = function () {
           );
           break;
       }
+    }
+
+    $(".training-item").click(function (e) {
+      if (window.matchMedia("(min-width: 992px)").matches) {
+        $(modal).addClass("modal-opened");
+        trainingInfoHandler(e);
+      }
+    });
+
+    $(".training-item .btn").on('click touchend', function (e) {
+      if (window.matchMedia("(max-width: 991px)").matches) {
+        $(modal).addClass("modal-opened");
+        trainingInfoHandler(e);
+      }
     });
 
     // Closing Modal and clearing content
@@ -204,7 +216,7 @@ const modalHandler = function () {
     };
     $(modalClose).click(hideModal);
     $(modalBg).click(hideModal);
-  }
+  // }
 };
 modalHandler();
 
