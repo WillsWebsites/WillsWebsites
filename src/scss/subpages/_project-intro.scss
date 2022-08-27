@@ -28,7 +28,7 @@
         }
   
         @media ($desktop-large) {
-          width: 55%;
+          width: calc(50% + 200px);
         }
       }
     }

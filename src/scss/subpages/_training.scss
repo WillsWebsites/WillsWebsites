@@ -25,6 +25,9 @@
     @media ($desktop) {
       width: 65%;
     }
+    @media ($desktop-large) {
+      width: calc(50% + 200px);
+    }
   }
   .training-intro-content {
     margin-left: auto;
