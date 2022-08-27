@@ -66,19 +66,27 @@
     justify-content: center;
     background-color: $secondary;
     color: $primary;
+    font-size: $x-small;
     padding: 25px;
     height: 125px;
     width: 150px;
     border-width: 5px;
     opacity: 0.85;
+    transition: all .3s ease;
 
     @media ($mobile-large) {
-      height: 150px;
+      height: 100px;
       width: 210px;
     }
 
     &:first-child {
-      border-radius: 73% 27% 60% 27% / 34% 41% 59% 66%;
+      border-radius: 68% 32% 55% 45% / 48% 51% 49% 52% ;
+      // border-radius: 64% 36% 46% 54% / 55% 54% 46% 45%;
+
+
+      @media ($laptop) {
+        margin-right: 70px;
+      }
     }
 
     &:last-child {
