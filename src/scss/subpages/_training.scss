@@ -203,21 +203,69 @@
       overflow: hidden;
     }
 
-    &.number-guesser {
-      background-color: #222222;
-
-      video {
-        transform: translateY(-50%) scale(1.2);
-      }
-    }
-
     &.forkify {
+      background: #fbdb89;
+      background-image: -webkit-linear-gradient(to bottom right, #fbdb89, #f48982);
       background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
       background-repeat: no-repeat;
       background-size: cover;
 
       video {
         transform: translate(3px, -50%) scale(1.15);
+      }
+    }
+
+    &.one-n-done {
+      background: #95335B;
+      background-image: -webkit-linear-gradient(to bottom right, #B33038, #7A3777);
+      background-image: linear-gradient(to bottom right, #B33038, #7A3777);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &.country-finder {
+      background: #337B93;
+      background-image: -webkit-linear-gradient(120deg, #2B5B7C, #3C9EAA);
+      background-image: linear-gradient(120deg, #2B5B7C, #3C9EAA);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .country-finder-taller {
+        display: none;
+
+        @media ($desktop) {
+          display: block;
+        }
+      }
+
+      .country-finder-standard {
+        @media ($desktop) {
+          display: none;
+        }
+      }
+
+      video {
+        transform: translateY(-49%) scale(1.05);
+
+        @media ($tablet) {
+          transform: translateY(-49%) scale(1.2);
+        }
+
+        @media ($laptop) {
+          transform: translateY(-49%) scale(1.05);
+        }
+
+        @media ($desktop) {
+          transform: translate(-1%, -49%) scale(1.25);
+        }
+      }
+    }
+
+    &.number-guesser {
+      background-color: #222222;
+
+      video {
+        transform: translateY(-50%) scale(1.2);
       }
     }
     &.thread-bank {
@@ -252,40 +300,6 @@
 
     &.activity-tracker {
       background-color: #2C3439;
-    }
-
-    &.country-finder {
-      background-image: linear-gradient(120deg, #2B5B7C, #3C9EAA);
-
-      .country-finder-taller {
-        display: none;
-
-        @media ($desktop) {
-          display: block;
-        }
-      }
-
-      .country-finder-standard {
-        @media ($desktop) {
-          display: none;
-        }
-      }
-
-      video {
-        transform: translateY(-49%) scale(1.05);
-
-        @media ($tablet) {
-          transform: translateY(-49%) scale(1.2);
-        }
-
-        @media ($laptop) {
-          transform: translateY(-49%) scale(1.05);
-        }
-
-        @media ($desktop) {
-          transform: translate(-1%, -49%) scale(1.25);
-        }
-      }
     }
   }
 }
