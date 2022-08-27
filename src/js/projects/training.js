@@ -230,6 +230,9 @@ const trainingReveal = function (entries, observer) {
     if (!entry.isIntersecting) return;
 
     entry.target.classList.add("training-reveal");
+    setTimeout(() => {
+      entry.target.style.transitionDelay = '0s';
+    }, 1000);
     observer.unobserve(entry.target);
   });
 };
