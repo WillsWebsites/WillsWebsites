@@ -120,12 +120,12 @@
   &::before {
     content: "";
     position: absolute;
-    top: -5%;
-    left: -10%;
-    height: 90%;
+    top: 0;
+    left: -15%;
+    height: 100%;
     width: 100%;
-    max-height: 1000px;
-    background-color: rgba($secondary, .08);
+    max-height: 700px;
+    background-color: rgba($secondary, .12);
     border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
     z-index: 0;
 
@@ -135,8 +135,12 @@
     animation-fill-mode: forwards;
 
     @media ($tablet) {
+      background-color: rgba($secondary, .08);
+      top: -5%;
+      left: -10%;
       height: 100%;
       width: 70%;
+      max-height: 1000px;
       max-height: initial;
     }
   }
@@ -250,7 +254,7 @@
       border-right-width: 0;
       border-bottom-width: 0;
       font-size: $x-small-m + .1rem;
-      opacity: .75;
+      opacity: .9;
 
       @media ($laptop) {
         display: none;
@@ -698,137 +702,5 @@
         }
       }
     }
-  }
-}
-
-
-// Grid items placement for all screen sizes
-.forkify {
-  grid-area: 1 / 1 / span 2 / span 1;
-}
-.one-n-done {
-  grid-area: 3 / 1 / span 1 / span 1;
-}
-.country-finder {
-  grid-area: 4 / 1 / span 1 / span 1;
-}
-.bankist {
-  grid-area: 5 / 1 / span 2 / span 1;
-}
-.number-guesser {
-  grid-area: 7 / 1 / span 1 / span 1;
-}
-.thread-bank {
-  grid-area: 8 / 1 / span 1 / span 1;
-}
-.wills-meals {
-  grid-area: 9 / 1 / span 1 / span 1;
-}
-.expense-tracker {
-  grid-area: 10 / 1 / span 1 / span 1;
-}
-.team-styler {
-  grid-area: 11 / 1 / span 2 / span 1;
-}
-.activity-tracker {
-  grid-area: 13 / 1 / span 1 / span 1;
-}
-
-@media ($mobile) {
-  .forkify {
-    grid-area: 1 / 1 / span 2 / span 2;
-  }
-  .one-n-done {
-    grid-area: 3 / 1 / span 1 / span 2;
-  }
-  .country-finder {
-    grid-area: 4 / 2 / span 1 / span 1;
-  }
-  .bankist {
-    grid-area: 4 / 1 / span 2 / span 1;
-  }
-  .number-guesser {
-    grid-area: 6 / 1 / span 1 / span 1;
-  }
-  .thread-bank {
-    grid-area: 9 / 1 / span 1 / span 2;
-  }
-  .wills-meals {
-    grid-area: 7 / 1 / span 2 / span 2;
-  }
-  .expense-tracker {
-    grid-area: 10 / 2 / span 1 / span 1;
-  }
-  .team-styler {
-    grid-area: 5 / 2 / span 2 / span 1;
-  }
-  .activity-tracker {
-    grid-area: 10 / 1 / span 1 / span 1;
-  }
-}
-
-@media ($tablet) {
-  .forkify {
-    grid-area: 1 / 3 / span 2 / span 2;
-  }
-  .one-n-done {
-    grid-area: 3 / 3 / span 1 / span 2;
-  }
-  .country-finder {
-    grid-area: 1 / 2 / span 1 / span 1;
-  }
-  .bankist {
-    grid-area: 2 / 2 / span 2 / span 1;
-  }
-  .number-guesser {
-    grid-area: 3 / 1 / span 1 / span 1;
-  }
-  .thread-bank {
-    grid-area: 4 / 3 / span 1 / span 2;
-  }
-  .wills-meals {
-    grid-area: 4 / 1 / span 2 / span 2;
-  }
-  .expense-tracker {
-    grid-area: 5 / 4 / span 1 / span 1;
-  }
-  .team-styler {
-    grid-area: 1 / 1 / span 2 / span 1;
-  }
-  .activity-tracker {
-    grid-area: 5 / 3 / span 1 / span 1;
-  }
-}
-
-@media ($desktop) {
-  .forkify {
-    grid-area: 1 / 4 / span 5 / span 2;
-  }
-  .one-n-done {
-    grid-area: 1 / 2 / span 2 / span 2;
-  }
-  .country-finder {
-    grid-area: 3 / 3 / span 3 / span 1;
-  }
-  .bankist {
-    grid-area: 4 / 6 / span 5 / span 1;
-  }
-  .number-guesser {
-    grid-area: 1 / 1 / span 2 / span 1;
-  }
-  .thread-bank {
-    grid-area: 3 / 1 / span 3 / span 2;
-  }
-  .wills-meals {
-    grid-area: 6 / 1 / span 3 / span 2;
-  }
-  .expense-tracker {
-    grid-area: 1 / 6 / span 3 / span 1;
-  }
-  .team-styler {
-    grid-area: 6 / 5 / span 3 / span 1;
-  }
-  .activity-tracker {
-    grid-area: 6 / 3 / span 3 / span 2;
   }
 }
