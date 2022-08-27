@@ -45,8 +45,8 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        padding: 8px;
-        font-size: $small;
+        padding: 8px 10px;
+        font-size: $small -.2rem;
         background-color: #40005d;
         color: $light;
         outline: none;
@@ -56,10 +56,10 @@
     .open-instructions {
         cursor: pointer;
         position: absolute;
-        left: -40px;
+        left: -42px;
         top: 70px;
         padding: 10px;
-        font-size: $medium;
+        font-size: $medium - .2rem;
         background-color: #40005d;
         color: $light;
         outline: none;
