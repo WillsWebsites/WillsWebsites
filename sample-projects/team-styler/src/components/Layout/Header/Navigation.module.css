@@ -23,6 +23,19 @@
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
 }
+
+@media (max-width: 767px) {
+    nav {
+        width: 60%;
+    }
+    .nav {
+        padding-left: 10px;
+    }
+    .nav li:first-child,
+    .nav li:last-child {
+        display: none;
+    }
+}
 .draft {
     padding: 7px;
     width: 22px;

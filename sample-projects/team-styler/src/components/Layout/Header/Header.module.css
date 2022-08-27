@@ -26,3 +26,19 @@
     height: auto;
     max-width: 100px;
 }
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    p {
+        margin: 0 !important;
+    }
+
+    .logo-container {
+        flex-direction: column;
+    }
+}
+
