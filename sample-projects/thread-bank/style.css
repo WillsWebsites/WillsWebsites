@@ -23,6 +23,7 @@ body {
   min-height: 100vh;
   padding: 2rem;
   position: relative;
+  overflow: hidden;
 }
 
 nav {
@@ -33,6 +34,7 @@ nav {
   position: relative;
   max-width: 2000px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .welcome {
