@@ -1,7 +1,7 @@
 # Country Finder
 ## View data on the country you're in or search a country of your choice
 ### *Currently under construction
-![Country Finder Preview](../../src/img/projects/previews/country-finder.png)
+![Country Finder Preview](../../src/img/projects/previews/country-finder.jpg)
 ## Instructions
 ### You have to enable location services for this application to work. A sample country with some data about the country is loaded in view to start. To search for that same information about the current country you're in, utilize the "Where am I?" box. To search for data on a specific country of your choice, utilize the "Search a Country" box.
 ## Project Takeaways:
