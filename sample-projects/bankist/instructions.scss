@@ -67,13 +67,6 @@
         border: 2px solid #444;
         font-weight: bold;
         transition: all .4s ease;
-    }
-}
-.forkify .instructions {
-    h2 {
-        font-size: 28px;
-    }
-    p {
-        font-size: 18px;
+        border-radius: 10px 0 0 10px !important;
     }
 }
