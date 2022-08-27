@@ -68,6 +68,12 @@
     display: flex;
     align-items: center;
     padding: 7.5rem 8rem 3.5rem 8rem;
+
+    @media (max-width: 567px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
   }
 
   &__info {
