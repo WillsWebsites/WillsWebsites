@@ -157,7 +157,7 @@
   }
 
   .training-item {
-    margin: 10px;
+    margin: 6px;
     border: 0px solid #496d837e;
     box-shadow: 0px 5px 16px 2px rgba($light, 0.2);
     border-radius: 15px;
@@ -178,6 +178,7 @@
 
     @media (min-width: 440px) {
       min-height: 165px;
+      margin: 10px
     }
 
     @media ($mobile-large) {
@@ -316,10 +317,14 @@
         background-color: white;
         z-index: 200;
         width: 100%;
-        padding: 8px 10px;
+        padding: 8px 7px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
         pointer-events: none;
         user-select: none;
+
+        @media (min-width: 440px) {
+          padding: 8px 7px;
+        }
 
         .bankist-header-left {
           display: flex;
