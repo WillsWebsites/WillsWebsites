@@ -375,6 +375,12 @@
             display: none;
           }
         }
+
+        @media ($mobile-large-max) {
+          span:nth-child(2) {
+            display: none;
+          }
+        }
       }
 
       video {
