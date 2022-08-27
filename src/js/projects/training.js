@@ -221,3 +221,25 @@ const modalHandler = function () {
 modalHandler();
 
 $(window).resize(modalHandler);
+
+// Training Projects Observer
+const trainingProjects = document.querySelectorAll(".training-item");
+
+const trainingReveal = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.add("training-reveal");
+    observer.unobserve(entry.target);
+  });
+};
+
+const trainingObserver = new IntersectionObserver(trainingReveal, {
+  root: null,
+  threshold: 0.2,
+});
+
+trainingProjects.forEach((project, i) => {
+  project.style.transitionDelay = `${Math.random().toFixed(4)}s`;
+  trainingObserver.observe(project);
+});
