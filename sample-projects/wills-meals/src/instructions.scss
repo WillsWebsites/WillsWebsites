@@ -2,7 +2,7 @@
 
 .instructions {
     position: fixed;
-    top: 0;
+    top: 20px;
     right: -95%;
     height: 50%;
     min-height: 500px;
@@ -60,11 +60,12 @@
         left: -40px;
         top: 70px;
         padding: 10px;
-        font-size: $medium;
+        font-size: $medium - .2rem;
         background-color: #8a2b06;
         color: white;
         outline: none;
         border: 2px solid white;
+        border-radius: 10px 0 0 10px !important;
         font-weight: bold;
         transition: all .4s ease;
     }
