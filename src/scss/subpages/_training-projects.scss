@@ -137,6 +137,8 @@
       border-top-left-radius: 10px;
       border-right-width: 0;
       border-bottom-width: 0;
+      border-color: black !important;
+      color: white !important;
       font-size: $x-small-m + 0.1rem;
       box-shadow: -2px -2px 8px rgba($dark, .3);
       opacity: 0.95;
@@ -295,8 +297,8 @@
 
       .btn {
         border-color: #2a2929;
-        color: #2a2929;
-        background: #5ec576;
+        color: #2a2929 !important;
+        background: #f3f3f3 !important;
       }
 
       .bankist-header {
@@ -391,7 +393,7 @@
       .btn {
         border-color: white;
         color: white;
-        background: #60b347;
+        background: #222222;
       }
 
       video {
@@ -412,14 +414,8 @@
 
       .btn {
         border-color: #333;
-        color: #333;
-        background: #ffbf03;
-        background-image: -webkit-linear-gradient(
-          to top left,
-          #ffb003,
-          #ffcb03
-        );
-        background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+        color: #333 !important;
+        background: #f3f3f3 !important;
       }
 
       video {
@@ -445,7 +441,7 @@
       .btn {
         border-color: white;
         color: white;
-        background: #872d06;
+        background: #3F3F3F !important;
       }
 
       .wills-meals-header {
@@ -497,7 +493,7 @@
       .btn {
         border-color: white;
         color: white;
-        background-color: #40005d;
+        background-color: black !important;
       }
 
       .expense-tracker-standard {
@@ -531,8 +527,8 @@
 
       .btn {
         border-color: #232323;
-        color: white;
-        background-color: #ff4c2d;
+        color: #232323 !important;
+        background-color: white !important;
       }
 
       .team-styler-header {
@@ -592,7 +588,7 @@
       .btn {
         border-color: #2a3334;
         color: white;
-        background-color: #00c46a;
+        background-color: #2a3334 !important;
       }
 
       video {
