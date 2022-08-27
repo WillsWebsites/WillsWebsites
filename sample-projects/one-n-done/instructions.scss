@@ -4,8 +4,9 @@
     position: fixed;
     top: 0;
     right: -95%;
-    height: 50%;
     width: 95%;
+    height: 60%;
+    min-height: 500px;
     background-color: rgba($light, .95);
     z-index: 9999999;
     padding: 50px 30px;
@@ -16,6 +17,7 @@
     transition: right .8s cubic-bezier(0.77, 0.2, 0.41, 0.98);
 
     @media ($tablet) {
+        height: 50%;
         width: 450px;
         right: -450px;
     }
@@ -65,7 +67,7 @@
         color: $light;
         outline: none;
         border: 2px solid $light;
-        border-radius: 0;
+        border-radius: 10px 0 0 10px !important;
         font-weight: bold;
         transition: all .4s ease;
     }
