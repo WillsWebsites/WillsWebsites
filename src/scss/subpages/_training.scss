@@ -218,6 +218,8 @@
       z-index: -1;
       background-size: cover;
       overflow: hidden;
+      pointer-events: none;
+      user-select: none;
     }
 
     &.forkify {
@@ -384,7 +386,11 @@
       }
 
       video {
-        top: 55%;
+        top: 52%;
+        
+        @media (min-width: 1400px) {
+          top: 55%;
+        }
       }
     }
 
@@ -433,6 +439,8 @@
         justify-content: space-between;
         align-items: center;
         background-color: #872D06;
+        pointer-events: none;
+        user-select: none;
 
         .btn-wills-meals {
           background-color: #4d1601;
@@ -546,7 +554,7 @@
         }
 
         @media (min-width: 1700px) {
-          top: 75%;
+          top: 72%;
         }
       }
     }
