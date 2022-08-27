@@ -20,8 +20,8 @@
         align-items: center;
         justify-content: center;
         width: 30%;
-        min-width: 225px;
-        height: 65px;
+        min-width: 250px;
+        height: 60px;
         font-size: $x-small;
         color: $primary;
         font-weight: bold;
@@ -52,7 +52,7 @@
 
       @media ($tablet-max) {
         .m-content {
-          margin-top: 65px;
+          margin-top: 60px;
         }
       }
     }
@@ -111,7 +111,7 @@
   
       .m-close {
         position: absolute;
-        right: 35px;
+        right: 30px;
         padding: 8px 12px;
         font-weight: bold;
         cursor: pointer;
@@ -142,7 +142,7 @@
   
     .m-content {
       opacity: 0;
-      width: 95%;
+      width: 90%;
 
       @media (min-width: 1500px) {
         width: 85%;
