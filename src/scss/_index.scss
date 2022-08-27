@@ -169,3 +169,10 @@ section {
   z-index: 9999;
   background: $dark;
 }
+
+.disabled-for-modal {
+  pointer-events: none;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: hidden !important;
+}

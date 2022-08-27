@@ -200,6 +200,7 @@ const modalHandler = function () {
 
     $(".training-item .btn").on('click touchend', function (e) {
       if (window.matchMedia("(max-width: 991px)").matches) {
+        $('body').addClass('disabled-for-modal');
         $(modal).addClass("modal-opened");
         trainingInfoHandler(e);
       }
@@ -208,6 +209,7 @@ const modalHandler = function () {
     // Closing Modal and clearing content
 
     const hideModal = function () {
+      $('body').removeClass('disabled-for-modal');
       $(modal).removeClass("modal-opened");
       $(modal).removeClass("modal-construction");
       $(modalTitle).text("");
