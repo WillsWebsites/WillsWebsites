@@ -113,27 +113,39 @@
 .training-projects .container {
   width: 95%;
   max-width: 1900px;
+
+  @media ($desktop) and (max-width: 1275px) {
+    width: 100%;
+  }
 }
 
 .training-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(14, 1fr);
+  grid-template-rows: repeat(13, 1fr);
 
   @media ($mobile) {
+    max-width: 420px;
+    margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(10, 1fr);
+  }
+
+  @media ($mobile-large) {
+    max-width: 600px;
   }
 
   @media ($tablet) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    max-width: 1050px;
   }
 
   @media ($desktop) {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(8, 1fr);
-    height: 700px;
+    max-width: 1800px;
+    min-height: 700px;
   }
 
   @media (min-width: 1500px) {
@@ -169,7 +181,7 @@
     }
 
     @media ($tablet) {
-      min-height: 180px;
+      min-height: 160px;
     }
 
     @media ($laptop) {
@@ -198,7 +210,7 @@
       min-height: 100%;
       width: 100%;
       height: auto;
-      z-index: 50;
+      z-index: -1;
       background-size: cover;
       overflow: hidden;
     }
@@ -210,8 +222,34 @@
       background-repeat: no-repeat;
       background-size: cover;
 
+      .forkify-standard {
+        display: none;
+
+        @media ($mobile) {
+          display: block;
+        }
+
+        @media ($desktop) {
+          display: none;
+        }
+      }
+
+      .forkify-tall {
+        @media ($mobile) {
+          display: none;
+        }
+
+        @media ($desktop) {
+          display: block;
+        }
+      }
+
       video {
-        transform: translate(3px, -50%) scale(1.15);
+        transform: translate(0px, -50%) scale(1.10);
+
+        @media ($desktop) {
+          transform: translate(2px, -50%) scale(1.10);
+        }
       }
     }
 
@@ -261,45 +299,188 @@
       }
     }
 
-    &.number-guesser {
-      background-color: #222222;
+    &.bankist {
+      background-color: #F3F3F3;
 
-      video {
-        transform: translateY(-50%) scale(1.2);
-      }
-    }
-    &.thread-bank {
-      background-color: #f3f3f3;
-    }
+      .bankist-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        z-index: 200;
+        width: 100%;
+        padding: 8px 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+        pointer-events: none;
+        user-select: none;
 
-    &.wills-meals {
-      background-color: #3F3F3F;
+        .bankist-header-left {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
 
-      video {
-        top: 66%;
+          img {
+            width: 100%;
+            max-width: 15px;
+            height: auto;
+            filter: brightness(0);
+          }
+  
+          h5 {
+            font-size: .5rem;
+            font-family: $tertiary-font;
+            margin: 0 0 0 5px;
+            color: $dark;
+          }
+        }
 
-        @media (min-width: 1400px) {
-          top: 70%;
+        p, span {
+          font-size: .3rem;
+          margin: 2px 2px 2px 5px;
+          color: $dark;
+
+          &.btn-bankist {
+            padding: 3px 4px;
+            background-color: #5ec576;
+            border-radius: 10px;
+          }
+        }
+
+        @media ($laptop-max) {
+          span:first-child {
+            display: none;
+          }
         }
       }
-    }
-
-    &.team-styler {
-      background-color: #f3f3f4;
 
       video {
         top: 55%;
       }
     }
 
-    &.bankist {
+    &.number-guesser {
+      background-color: #222222;
+
+      video {
+        transform: translateY(-50%) scale(1.15);
+
+        @media ($mobile-large) {
+          transform: translateY(-50%) scale(1.2);
+        }
+
+        @media ($tablet) {
+          transform: translateY(-50%) scale(1.15);
+        }
+      }
+    }
+
+    &.thread-bank {
+      background-color: #F3F3F3;
+
+      video {
+        transform: translateY(-50%) scale(1.15);
+
+        @media ($mobile) {
+          transform: translateY(-50%) scale(.85);
+        }
+
+        @media ($tablet) {
+          transform: translateY(-50%) scale(.8);
+        }
+
+        @media ($desktop) {
+          transform: translateY(-50%) scale(1.15);
+        }
+      }
+    }
+
+    &.wills-meals {
+      background-color: #3F3F3F;
+
+
+      .wills-meals-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #872D06;
+
+        .btn-wills-meals {
+          background-color: #4d1601;
+          color: white;
+          margin: 0 20px;
+          padding: 5px 20px;
+          border-radius: 20px;
+          font-size: .5rem;
+
+          span {
+            background-color: #872D06;
+            padding: 3px 7px;
+            border-radius: 50%;
+            margin: 3px 0 3px 10px;
+          }
+        }
+        h5 {
+          color: white;
+          font-family: $primary-font;
+          margin: 10px 20px;
+        }
+      }
+
+      video {
+        transform: translateY(-50%) scale(1.2);
+
+        @media ($mobile) {
+          transform: translateY(-50%) scale(1.6);
+        }
+
+        @media ($desktop) {
+          transform: translateY(-50%) scale(1.2);
+        }
+      }
+    }
+
+    &.expense-tracker {
+      background-color: #000;
+
+      .expense-tracker-standard {
+        @media ($desktop) {
+          display: none;
+        }
+      }
+      .expense-tracker-tall {
+        display: none;
+
+        @media ($desktop) {
+          display: block;
+        }
+      }
+
+      video {
+        transform: translateY(-50%) scale(.9);
+
+        @media ($mobile) {
+          transform: translateY(-50%) scale(1.2);
+        }
+
+        @media ($desktop) {
+          transform: translateY(-50%) scale(1.25);
+        }
+      }
+    }
+
+    &.team-styler {
+      background-color: #DAE2DB;
+
       video {
         top: 55%;
       }
     }
 
     &.activity-tracker {
-      background-color: #2C3439;
+      background-color: #2A3334;
     }
   }
 }
@@ -325,16 +506,16 @@
   grid-area: 8 / 1 / span 1 / span 1;
 }
 .wills-meals {
-  grid-area: 9 / 1 / span 2 / span 1;
+  grid-area: 9 / 1 / span 1 / span 1;
 }
 .expense-tracker {
-  grid-area: 11 / 1 / span 1 / span 1;
+  grid-area: 10 / 1 / span 1 / span 1;
 }
 .team-styler {
-  grid-area: 12 / 1 / span 2 / span 1;
+  grid-area: 11 / 1 / span 2 / span 1;
 }
 .activity-tracker {
-  grid-area: 14 / 1 / span 1 / span 1;
+  grid-area: 13 / 1 / span 1 / span 1;
 }
 
 @media ($mobile) {

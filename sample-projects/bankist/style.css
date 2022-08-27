@@ -394,6 +394,7 @@ h4 {
   transform: translateY(-50%);
   width: 100%;
   max-width: 400px;
+  margin: 0 2.5rem;
 }
 
 @media (max-width: 767px) {
@@ -420,7 +421,6 @@ h4 {
 
 .operations__tab--3 {
   background-color: var(--color-tertiary);
-  margin: 0;
 }
 
 .operations__tab--3:hover {
