@@ -173,11 +173,15 @@
     min-height: 190px;
 
     @media ($mobile) {
+      min-height: 150px;
+    }
+
+    @media (min-width: 440px) {
       min-height: 165px;
     }
 
     @media ($mobile-large) {
-      min-height: 240px;
+      min-height: 220px;
     }
 
     @media ($tablet) {
@@ -486,13 +490,70 @@
     &.team-styler {
       background-color: #DAE2DB;
 
+      .team-styler-header {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: white;
+          z-index: 200;
+          width: 100%;
+          padding: 8px 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+          pointer-events: none;
+          user-select: none;
+
+          h5 {
+            font-size: .3rem;
+            font-family: $tertiary-font;
+            margin: 0 0 0 5px;
+            color: $dark;
+
+            @media ($mobile-large) {
+              font-size: .5rem;
+            }
+          }
+
+          p, span {
+            font-size: .2rem;
+            margin: 2px 2px 2px 5px;
+            color: $dark;
+  
+            @media ($mobile-large) {
+              font-size: .3rem;
+            }
+          }
+      }
+
       video {
-        top: 55%;
+        top: 50%;
+
+        @media ($desktop) {
+          top: 70%;
+        }
+
+        @media (min-width: 1700px) {
+          top: 75%;
+        }
       }
     }
 
     &.activity-tracker {
       background-color: #2A3334;
+
+      video {
+        transform: translate(15%, -50%) scale(1.4);
+
+        @media ($mobile) {
+          transform: translate(35%, -50%) scale(1.7);
+        }
+
+        @media ($desktop) {
+          transform: translate(40%, -45%) scale(1.9);
+        }
+      }
     }
   }
 }
