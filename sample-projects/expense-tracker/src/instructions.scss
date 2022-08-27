@@ -35,7 +35,7 @@
         font-size: 16px;
     }
     .tab-hidden {
-        opacity: 0;
+        opacity: 0 !important;
         pointer-events: none;
         transition: all .5s ease;
     }
@@ -66,5 +66,8 @@
         border: 2px solid $light;
         font-weight: bold;
         transition: all .4s ease;
+        opacity: .7;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
 }
