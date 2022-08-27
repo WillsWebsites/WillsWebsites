@@ -4,19 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="robots" content="noindex nofollow" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="A 2-player game to see who can get to 100 points first. But be careful, if you roll a 1 then any points you haven't held will be lost!"
+    />
     <link rel="stylesheet" href="./sample-projects/one-n-done/style.scss" />
-    <link rel="stylesheet" href="./sample-projects/one-n-done/instructions.scss" />
+    <link
+      rel="stylesheet"
+      href="./sample-projects/one-n-done/instructions.scss"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script src="./sample-projects/one-n-done/script.js" type="module"></script>
-    <script src="./sample-projects/one-n-done/instructions.js" type="module"></script>
+    <script
+      src="./sample-projects/one-n-done/instructions.js"
+      type="module"
+    ></script>
     <title>One-N'-Done | Will's Websites</title>
   </head>
   <body>
     <div class="instructions">
       <h2>Instructions</h2>
-      <p>The goal is to be the first player to 100 points. You accumulate points by rolling the dice and then 'holding' those points. However if you roll a '1' then whatever points you haven't held will be lost and it will switch to the other players turn. Don't get too greedy!</p>
+      <p>
+        The goal is to be the first player to 100 points. You accumulate points
+        by rolling the dice and then 'holding' those points. However if you roll
+        a '1', then whatever points you haven't held will be lost and it will
+        switch to the other players turn. Don't get too greedy!
+      </p>
       <button class="close-instructions">X</button>
       <button class="open-instructions tab-hidden"><</button>
     </div>
@@ -38,14 +53,22 @@
         </div>
       </section>
 
-      <img src="./sample-projects/one-n-done/img/dice-5.png" alt="Playing dice" class="dice" />
+      <img
+        src="./sample-projects/one-n-done/img/dice-5.png"
+        alt="Playing dice"
+        class="dice"
+      />
       <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
     </main>
     <div class="credit">
-      <small class="credit-description">Project idea credit to Jonas Schmedtmann of</small>
-      <a class="credit-link" target="_blank" href="https://codingheroes.io/">Coding Heroes</a>
+      <small class="credit-description"
+        >Project idea credit to Jonas Schmedtmann of</small
+      >
+      <a class="credit-link" target="_blank" href="https://codingheroes.io/"
+        >Coding Heroes</a
+      >
     </div>
   </body>
 </html>

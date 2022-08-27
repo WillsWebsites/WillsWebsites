@@ -63,9 +63,6 @@ const getCountryData = (country) => {
     });
 };
 
-// btn.addEventListener('click', function () {
-//   getCountryData('germany');
-// });
 
 //////////////////////////////////////////////////////////
 

@@ -1,6 +1,6 @@
 # Expense Tracker
 ## An application to keep track of outgoing expenses and sort them by year
-![Expense Tracker Preview](../../src/img/projects/previews/expense-tracker.png)
+![Expense Tracker Preview](../../src/img/projects/previews/expense-tracker.jpg)
 ## Instructions
 ### There are already a few sample expense items so you can see how it functions. Add as many other expenses as you'd like into the tracker and then sort them by year to keep things organized.
 ## Project Takeaways:
