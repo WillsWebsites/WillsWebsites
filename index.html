@@ -31,7 +31,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <!-- <script defer src="./src/js/index.js" type="module"></script> -->
-    <script defer src="./src/js/home.js" type="module"></script>
+    <!-- <script src="./src/js/home.js" type="module"></script> -->
     <script src="./src/js/loading.js" type="module"></script>
     <!--prettier-ignore-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
@@ -41,47 +41,6 @@
   </head>
   <body class="homepage">
     <div class="loading"></div>
-    <!-- <header id="header" class="header">
-      <div class="h-overlay overlay">
-        <div class="h-container container">
-          <div class="h-inner">
-            <div class="h-left">
-              <a href="index.html" class="logo-link">
-                <img src="./src/img/main-logo.png" class="main-logo" alt="Company Logo" />
-              </a>
-            </div>
-            <div class="h-right">
-              <div class="desktop-navigation">
-                <nav class="nav">
-                  <ul class="nav-list">
-                    <li class="nav-item"><a href="#">Build a Website</a></li>
-                    <li class="nav-item"><a href="#">Projects</a></li>
-                    <li class="nav-item"><a href="#">Meet Will</a></li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="mobile-navigation" role="navigation">
-                <div id="menuToggle">
-                  <input type="checkbox" />
-                  <span class="top"></span>
-                  <span class="middle"></span>
-                  <span class="bottom"></span>
-                  <nav id="menu" class="mobile-nav">
-                    <ul class="menu-list">
-                      <li class="mobile-nav-item"><a href="#">Build a Website</a></li>
-                      <li class="mobile-nav-item"><a href="#">Projects</a></li>
-                      <li class="mobile-nav-item"><a href="#">Meet Will</a></li>
-                      <li class="mobile-nav-item"><a href="#">Contact</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header> -->
     <main>
       <section id="section-0" class="section hero">
         <div class="overlay">
@@ -93,12 +52,70 @@
                 <p>Let me help get you started out in the right direction:</p>
               </div>
             </div>
-            <div class="hero-right">
-              <a href="./build-website.html" class="btn">Build a Website</a>
-              <a href="./projects.html" class="btn">Projects</a>
-              <a href="./meet-will.html" class="btn">Meet Will</a>
-              <a href="./contact.html" class="btn">Contact</a>
-            </div>
+            <header class="hero-right">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="./projects.html" class="blob-btn">
+                      Projects
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./meet-will.html" class="blob-btn">
+                      Meet Will
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./contact.html" class="blob-btn">
+                      Contact
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+  
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur
+                      in="SourceGraphic"
+                      result="blur"
+                      stdDeviation="10"
+                    ></feGaussianBlur>
+                    <feColorMatrix
+                      in="blur"
+                      mode="matrix"
+                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                      result="goo"
+                    ></feColorMatrix>
+                    <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                  </filter>
+                </defs>
+              </svg>
+            </header>
           </div>
         </div>
       </section>
