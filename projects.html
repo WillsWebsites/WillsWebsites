@@ -529,11 +529,31 @@
             </div>
             <div class="rc-right">
               <h2>Get in contact!</h2>
-              <form action="https://formsubmit.co/291228ff3f48bd22374de79b8c1cbeee" method="POST">
+              <form action="https://formsubmit.co/291228ff3f48bd22374de79b8c1cbeee" method="POST" class="formsubmit-form">
                 <input type="hidden" name="_next" value="/thanks.html" />
                 <input type="hidden" name="_subject" value="Will's Websites | Projects | Inquiry" />
                 <input type="hidden" name="_autoresponse" value="Thank you for submitting a message to Will's Websites! I look forward to getting in contact with you and will follow up promptly! Until then - Will">
                 <input type="text" name="_honey" style="display:none">
+                <div class="form-info">
+                  <input type="name" name="name" placeholder="Name" title="Add a name" required />
+                  <input type="email" title="Not a valid email address. Should be in a similar format to 'willswebsites@example.com'" name="email" placeholder="Email Address" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required />
+                </div>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit" name="submit" class="blob-btn">Submit                
+                  <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                      <span class="blob-btn__blob"></span>
+                      <span class="blob-btn__blob"></span>
+                      <span class="blob-btn__blob"></span>
+                      <span class="blob-btn__blob"></span>
+                    </span>
+                  </span>
+                </button>
+              </form>
+
+              <form name="contact" action="/thanks.html" netlify-honeypot="bot-field" method="POST" data-netlify="true" class="netlify-form" data-netlify-recaptcha="true">
+                <input type="hidden" name="_subject" value="Will's Websites | Projects | Inquiry" />
+                <input type="hidden" name="_autoresponse" value="Thank you for submitting a message to Will's Websites! I look forward to getting in contact with you and will follow up promptly! Until then - Will">
                 <div class="form-info">
                   <input type="name" name="name" placeholder="Name" title="Add a name" required />
                   <input type="email" title="Not a valid email address. Should be in a similar format to 'willswebsites@example.com'" name="email" placeholder="Email Address" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required />
