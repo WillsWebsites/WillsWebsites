@@ -1,55 +1,76 @@
-@import 'main';
+@import "main";
 
 .hero {
   display: flex;
   align-items: center;
-  
+
   .overlay {
     position: relative;
 
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 40%;
-      height: 100%;
-      background-color: $secondary;
-      z-index: -1;
-
-      @media($desktop) {
-        width: 35%;
-      }
-
-      @media ($desktop-large) {
-        width: 50%
+    @media ($laptop) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100%;
+        background-color: $secondary;
+        z-index: -1;
+  
+        @media ($desktop) {
+          width: 35%;
+        }
+  
+        @media ($desktop-large) {
+          width: 50%;
+        }
       }
     }
   }
 
   .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     height: 100vh;
-    min-height: 900px;
+    min-height: 1000px;
     width: 100%;
     max-width: none;
+    max-height: 2000px;
+    padding: 0;
+
+    @media ($tablet) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40 0;
+    }
 
     @media ($desktop-large) {
       max-width: 1400px;
     }
   }
   .hero-left {
-    width: 60%;
+    width: 100%;
+    height: 60vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media ($tablet) {
+      width: 60%;
+    }
 
     @media ($desktop) {
       width: 65%;
     }
 
     @media ($desktop-large) {
-      width: 50%
+      width: 50%;
     }
 
     .introduction {
@@ -66,102 +87,171 @@
       font-family: $tertiary-font;
       text-transform: uppercase;
       letter-spacing: 3px;
-      margin-bottom: 0
+      margin-bottom: 0;
     }
     p {
       font-size: $medium;
     }
   }
-  .hero-right  {   
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40%;
-    height: 100%;
+  .hero-right {
+    width: 100%;
+    height: 40vh;
+    min-height: 400px;
+    background-color: $secondary;
+
+    @media ($tablet) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background-color: none;
+    }
 
     @media ($desktop) {
       width: 35%;
     }
 
     @media ($desktop-large) {
-      width: 50%
+      width: 50%;
     }
 
-    .nav, .nav-list {
+    .nav,
+    .nav-list {
       height: 100%;
       width: 100%;
     }
+    .nav-list {
+      flex-wrap: wrap;
+      justify-content: center;
 
-    .nav-list-item {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @media ($tablet-max) {
+        max-height: 300px;
+        max-width: 420px;
+      }
+    }
+    .nav {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
+    }
+
+    .nav-list-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 49%;
       height: 20%;
-      min-height: 250px;
-      transform: translate(-50%, -50%);
-      transition: all .4s ease-in-out;
+      min-height: 150px;
+      transition: all 0.4s ease-in-out;
+
+      @media ($tablet-max) {
+        &:first-child {
+          width: 61%;
+        }
+      }
+
+      @media ($tablet) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 20%;
+        min-height: 250px;
+      }
 
       .blob-btn {
-        content: '';
+        content: "";
         display: flex;
         justify-content: center;
         align-items: center;
         width: 50%;
-        max-width: 300px;
         height: 90%;
         margin: 20px;
+        min-width: 165px;
+        font-size: $x-small;
         color: $light;
-        font-size: $small - .2rem;
-        background-color: rgba(#253e47, .4);
+        background-color: rgba(#253e47, 0.4);
         -webkit-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
         -moz-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
         -khtml-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
         border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
-        transition: all .3s ease;
+        transition: all 0.3s ease-in-out;
         overflow: hidden;
-        
-        animation: blob1 ease 20s;
-        animation-iteration-count: infinite;
-        animation-fill-mode: forwards;
 
-        &:active, &:visited {
+        @media ($mobile-large) {
+          font-size: $small - 0.2rem;
+        }
+
+        @media ($tablet) {
+          max-width: 225px;
+          height: 75%;
+          width: 60%;
+        }
+
+        @media ($laptop) {
+          width: 50%;
+          max-width: 275px;
+          height: 80%;
+          animation: blob1 ease 22s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: forwards;
+
+          &:hover {
+            transform: translateZ(0) scale(1.08);
+          }
+        }
+
+        @media ($desktop) {
+          width: 40%;
+          max-width: 250px;
+          height: 75%;
+        }
+
+        &:active,
+        &:visited {
           -webkit-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           -moz-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           -khtml-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+          transform: translateZ(0);
         }
 
         &::before {
-          animation: blob1 ease 20s;
-          animation-iteration-count: infinite;
-          animation-fill-mode: forwards;
           -webkit-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           -moz-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           -khtml-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           border-color: transparent;
+          transform: translateZ(0);
+
+          @media ($desktop) {
+            animation: blob1 ease 22s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+          }
         }
 
         &__inner {
-          animation: blob1 ease 20s;
-          animation-iteration-count: infinite;
-          animation-fill-mode: forwards;
           background: transparent;
           -webkit-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           -moz-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           -khtml-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+
+          @media ($laptop) {
+            animation: blob1 ease 22s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+          }
         }
 
         &__blob {
           background: #253e47;
-          width: 30%;
+          width: 27%;
         }
       }
 
@@ -169,24 +259,27 @@
         top: 20%;
 
         .blob-btn {
-          background-color: rgba($primary, .6);
-          animation: blob2 ease 15s;
-          animation-delay: .5s;
-          animation-iteration-count: infinite;
-          animation-fill-mode: forwards;
+          background-color: rgba($primary, 0.6);
 
-          &::before {
+          @media ($laptop) {
             animation: blob2 ease 15s;
-            animation-delay: .5s;
+            animation-delay: 0.5s;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
-          }
 
-          &__inner {
-            animation: blob2 ease 15s;
-            animation-delay: .5s;
-            animation-iteration-count: infinite;
-            animation-fill-mode: forwards;
+            &::before {
+              animation: blob2 ease 15s;
+              animation-delay: 0.5s;
+              animation-iteration-count: infinite;
+              animation-fill-mode: forwards;
+            }
+
+            &__inner {
+              animation: blob2 ease 15s;
+              animation-delay: 0.5s;
+              animation-iteration-count: infinite;
+              animation-fill-mode: forwards;
+            }
           }
 
           &__blob {
@@ -199,23 +292,26 @@
         top: 80%;
 
         .blob-btn {
-          background-color: rgba($tertiary, .6);
-          animation: blob3 ease 18s;
-          animation-iteration-count: infinite;
-          animation-fill-mode: forwards;
-          animation-delay: .7s;
+          background-color: rgba($tertiary, 0.6);
 
-          &::before {
+          @media ($laptop) {
             animation: blob3 ease 18s;
-            animation-delay: .7s;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
-          }
-          &__inner {
-            animation: blob3 ease 18s;
-            animation-delay: .7s;
-            animation-iteration-count: infinite;
-            animation-fill-mode: forwards;
+            animation-delay: 0.7s;
+
+            &::before {
+              animation: blob3 ease 18s;
+              animation-delay: 0.7s;
+              animation-iteration-count: infinite;
+              animation-fill-mode: forwards;
+            }
+            &__inner {
+              animation: blob3 ease 18s;
+              animation-delay: 0.7s;
+              animation-iteration-count: infinite;
+              animation-fill-mode: forwards;
+            }
           }
 
           &__blob {

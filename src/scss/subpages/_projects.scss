@@ -70,7 +70,7 @@
 .project-item {
   position: relative;
   width: 100%;
-  margin-bottom: 140px;
+  margin-bottom: 120px;
   transition: all 0.8s ease;
   opacity: 0;
   transform: translateY(100px);
@@ -92,14 +92,20 @@
     transform: translateY(0);
   }
 
+  &.project-item1 {
+    .info-content p {
+      margin-top: 5px !important;
+    }
+  }
+
   .open-details {
     cursor: pointer;
     position: absolute;
     left: 5%;
-    bottom: -45px;
+    bottom: -35px;
     margin: 0;
-    padding: 15px 35px;
-    width: 60%;
+    padding: 13px 30px;
+    width: 50%;
     border-width: 2px;
     color: $light;
     background-color: $primary;

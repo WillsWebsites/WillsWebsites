@@ -14,11 +14,15 @@ footer {
 
   .f-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
+
+    @media ($mobile-large) {
+      justify-content: space-between;
+    }
   }
 
   //prettier-ignore
@@ -113,10 +117,14 @@ footer {
     input {
       font-size: $x-small;
       margin: 0 0 5px 0;
-      padding: 5px 0 2px 0;
+      padding: 15px 0 7px 0;
       width: 100%;
-      border-bottom-width: 1px;
-      
+      border-bottom: 1px solid #e4e4e4;
+
+      @media ($laptop) {
+        padding: 5px 0 2px 0;
+      }
+
       &::placeholder {
         font-family: $primary-font;
         font-size: $x-small;
@@ -227,3 +235,18 @@ footer {
   flex-direction: column;
 }
 
+@media ($mobile-large-max) {
+  .copyright {
+    display: none;
+  }
+}
+
+.copyright-mobile {
+  text-align: center;
+}
+
+@media ($mobile-large) {
+  .copyright-mobile {
+    display: none;
+  }
+}
