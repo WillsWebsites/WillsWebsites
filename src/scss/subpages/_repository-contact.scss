@@ -84,12 +84,6 @@
       border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
       z-index: -1;
       transform: scale(1.1) rotate(40deg);
-      opacity: 0;
-
-      animation: fadeInAnimation ease 0.8s;
-      animation-delay: 1.6s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
 
       @media ($mobile-large) {
         width: 100%;
@@ -124,13 +118,7 @@
       border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
       z-index: -1;
       transform: scale(1.1) rotate(190deg);
-      opacity: 0;
-
-      animation: fadeInAnimation ease 0.8s;
-      animation-delay: 1.6s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-
+      
       @media ($mobile-large) {
         top: 0;
         left: 0;
