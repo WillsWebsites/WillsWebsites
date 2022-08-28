@@ -92,12 +92,6 @@
     transform: translateY(0);
   }
 
-  &.project-item1 {
-    .info-content p {
-      margin-top: 5px !important;
-    }
-  }
-
   .open-details {
     cursor: pointer;
     position: absolute;
@@ -106,6 +100,8 @@
     margin: 0;
     padding: 13px 30px;
     width: 50%;
+    min-width: 175px;
+    max-width: 225px;
     border-width: 2px;
     color: $light;
     background-color: $primary;
@@ -120,6 +116,10 @@
 
     @media ($mobile-large) {
       font-size: $small-m;
+    }
+
+    @media ($tablet) {
+      min-width: 190px;
     }
 
     @media ($laptop) {
@@ -321,11 +321,20 @@
 
       .info-content {
         p {
-          margin-top: 10px;
-          font-size: $x-small-m !important;
+          margin-top: 5px;
+          font-size:$x-small-m - 0.2rem !important;
 
-          @media ($mobile-max) {
-            font-size: $x-small-m - 0.2rem !important;
+
+          @media ($mobile) {
+            font-size: $x-small-m !important;
+          }
+
+          @media ($mobile-large) {
+            font-size: $x-small-m + .1rem !important;
+          }
+
+          @media ($tablet) {
+            font-size: $x-small-m !important;
           }
 
           @media ($desktop) {
@@ -339,9 +348,18 @@
         }
         .info-btns {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: flex-start;
-          margin-top: 20px;
+          flex-direction: column;
+          margin-top: 10px;
+
+          @media (min-width: 420px) {
+            margin-top: 20px;
+          }
+
+          @media ($laptop) {
+            flex-direction: row;
+          }
 
           .btn {
             color: $light;
@@ -350,12 +368,18 @@
             font-size: $x-small-m;
             letter-spacing: 2px;
             margin: 0;
+            min-width: 160px;
             border-width: 2px;
             padding: 7px 15px;
             display: none;
 
             &:first-child {
-              margin-right: 10px;
+              margin-bottom: 5px;
+
+              @media ($laptop) {
+                margin-right: 10px;
+                margin-bottom: 0;
+              }
             }
 
             &:hover {
