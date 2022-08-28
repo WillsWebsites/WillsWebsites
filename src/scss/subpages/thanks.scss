@@ -1,0 +1,18 @@
+@import "../_main.scss";
+@import "subpages";
+
+body {
+    min-height: 100vh;
+}
+header {
+    top: 0;
+    position: sticky;
+}
+.subpage-banner {
+    height: 70vh;
+    min-height: 700px;
+
+    h1 {
+        font-size: $large;
+    }
+}
