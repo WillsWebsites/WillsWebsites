@@ -33,7 +33,12 @@ nav {
   position: relative;
   max-width: 2000px;
   margin: 0 auto;
-  overflow: hidden;
+}
+
+@media (max-width: 567px) {
+  nav {
+    overflow: hidden;
+  }
 }
 
 .welcome {
