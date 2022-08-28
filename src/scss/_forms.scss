@@ -46,6 +46,7 @@ form {
 
     &::placeholder {
       color: white;
+      font-family: $tertiary-font;
     }
 
     &:focus,

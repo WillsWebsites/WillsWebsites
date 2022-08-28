@@ -1,6 +1,6 @@
 footer {
   color: $footer;
-  background-color: $primary;
+  background-color: #253e47;
   text-align: center;
   border-top: 2px solid $light;
 
@@ -119,12 +119,15 @@ footer {
       
       &::placeholder {
         font-family: $primary-font;
+        font-size: $x-small;
       }
     }
 
     textarea {
       padding-left: 2px;
       min-height: 50px;
+      height: 75px;
+      max-height: 150px;
     }
 
     .blob-btn {
@@ -132,6 +135,7 @@ footer {
       margin-top: 10px;
       font-size: $x-small-m;
       min-width: 125px;
+      margin-bottom: 10px;
     }
   }
 

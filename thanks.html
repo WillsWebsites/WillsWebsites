@@ -52,7 +52,9 @@
               <div class="desktop-navigation">
                 <nav class="nav">
                   <ul class="nav-list">
-                    <li class="nav-item"><a href="./projects.html">Projects</a></li>
+                    <li class="nav-item">
+                      <a href="./projects.html">Projects</a>
+                    </li>
                     <li class="nav-item"><a href="#">Meet Will</a></li>
                     <li class="nav-item"><a href="#">Contact</a></li>
                   </ul>
@@ -66,7 +68,9 @@
                   <span class="bottom"></span>
                   <nav id="menu" class="mobile-nav">
                     <ul class="menu-list">
-                      <li class="mobile-nav-item"><a href="./projects.html">Projects</a></li>
+                      <li class="mobile-nav-item">
+                        <a href="./projects.html">Projects</a>
+                      </li>
                       <li class="mobile-nav-item"><a href="#">Meet Will</a></li>
                       <li class="mobile-nav-item"><a href="#">Contact</a></li>
                     </ul>
@@ -82,8 +86,42 @@
       <section id="section-0" class="section subpage-banner">
         <div class="overlay">
           <div class="container">
-            <h1>Thank you for submitting a message to Will's Websites! I look forward to getting in contact with you! Responses usually with 3-5 business days</h1>
-            <p> Until then - Will</p>
+            <h1>
+              Thank you for submitting a message to Will's Websites! I look
+              forward to getting in contact with you! Responses are usually within 3-5
+              business days
+            </h1>
+            <p>Until then - Will</p>
+            <a href="./index.html" class="blob-btn">
+              BACK TO HOME
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </a>
+
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur
+                    in="SourceGraphic"
+                    result="blur"
+                    stdDeviation="10"
+                  ></feGaussianBlur>
+                  <feColorMatrix
+                    in="blur"
+                    mode="matrix"
+                    values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                    result="goo"
+                  ></feColorMatrix>
+                  <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                </filter>
+              </defs>
+            </svg>
           </div>
         </div>
       </section>
@@ -133,7 +171,9 @@
             <nav class="f-block f-nav">
               <h5>Company</h5>
               <ul class="f-nav-list">
-                <li class="f-nav-item"><a href="./projects.html">Projects</a></li>
+                <li class="f-nav-item">
+                  <a href="./projects.html">Projects</a>
+                </li>
                 <li class="f-nav-item"><a href="#">Meet Will</a></li>
                 <li class="f-nav-item"><a href="#">Contact</a></li>
               </ul>
