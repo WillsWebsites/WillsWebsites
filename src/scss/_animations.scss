@@ -7,17 +7,6 @@
   }
 }
 
-@keyframes leftReveal {
-  0% {
-    margin-left: -200px;
-    opacity: 0;
-  }
-  100% {
-    margin-left: 0;
-    opacity: 1;
-  }
-}
-
 @keyframes accentAnimation {
   0% {
     opacity: 0;
@@ -37,5 +26,68 @@
   100% {
     opacity: 1;
     width: 98%;
+  }
+}
+
+@keyframes blob1 {
+  0% {
+    border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+  }
+  20% {
+    border-radius: 73% 27% 73% 27% / 34% 58% 42% 66%;
+  }
+  40% {
+    border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%
+  }
+  60% {
+    border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+  }
+  80% {
+    border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+  }
+  100% {
+    border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+  }
+}
+
+@keyframes blob2 {
+  0% {
+    border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%;
+  }
+  20% {
+    border-radius: 33% 67% 68% 32% / 69% 67% 33% 31% ;
+  }
+  40% {
+    border-radius: 73% 27% 73% 27% / 34% 58% 42% 66%;
+  }
+  60% {
+    border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+  }
+  80% {
+    border-radius: 33% 67% 68% 32% / 69% 67% 33% 31%;
+  }
+  100% {
+    border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%
+  }
+}
+
+@keyframes blob3 {
+  0% {
+    border-radius: 33% 67% 68% 32% / 69% 67% 33% 31%;
+  }
+  20% {
+    border-radius: 73% 27% 73% 27% / 34% 58% 42% 66%;
+  }
+  40% {
+    border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%
+  }
+  60% {
+    border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+  }
+  80% {
+    border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+  }
+  100% {
+    border-radius: 33% 67% 68% 32% / 69% 67% 33% 31%;
   }
 }

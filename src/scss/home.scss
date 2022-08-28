@@ -32,7 +32,8 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 900px;
     width: 100%;
     max-width: none;
 
@@ -72,9 +73,11 @@
     }
   }
   .hero-right  {   
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 40%;
+    height: 100%;
 
     @media ($desktop) {
       width: 35%;
@@ -84,19 +87,111 @@
       width: 50%
     }
 
-    .btn {
-      margin: 20px auto;
-      padding: 20px 35px;
-      width: 75%;
-      font-size: $small - .2rem;
-      background: repeat padding-box border-box 0% 0%/auto auto scroll linear-gradient(229deg, rgba($secondary, .5) 0%, $primary 80%), $primary !important;
-      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
-      transition: all .25s ease;
-      
-      &:hover {
-        background: $tertiary !important;
-        box-shadow: none;
+    .nav, .nav-list {
+      height: 100%;
+      width: 100%;
+    }
+
+    .nav-list-item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 20%;
+      min-height: 250px;
+      transform: translate(-50%, -50%);
+      transition: all .4s ease-in-out;
+
+      .blob-btn {
+        content: '';
+        width: 90%;
+        max-width: 400px;
+        height: 110%;
+        margin: 20px;
+        font-size: $small - .2rem;
+        background-color: rgba(#253e47, .4);
+        border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+        transition: all .3s ease;
+        
+        animation: blob1 ease 20s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+
+        &::before {
+          animation: blob1 ease 20s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: forwards;
+          border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+          border-color: transparent;
+        }
+
+        &__inner {
+          animation: blob1 ease 20s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: forwards;
+          background: transparent;
+          border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+        }
+
+        &__blob {
+          background: #253e47;
+          width: 30%;
+        }
       }
+
+      &.nav-project {
+        top: 20%;
+
+        .blob-btn {
+          background-color: rgba($primary, .6);
+          animation: blob2 ease 15s;
+          animation-delay: .5s;
+
+          &::before {
+            animation: blob2 ease 15s;
+            animation-delay: .5s;
+          }
+
+          &__inner {
+            animation: blob2 ease 15s;
+            animation-delay: .5s;
+          }
+
+          &__blob {
+            background: $primary;
+          }
+        }
+      }
+
+      &.nav-contact {
+        top: 80%;
+
+        .blob-btn {
+          background-color: rgba($tertiary, .6);
+          animation: blob3 ease 18s;
+          animation-delay: .7s;
+
+          &::before {
+            animation: blob3 ease 18s;
+            animation-delay: .7s;
+          }
+          &__inner {
+            animation: blob3 ease 18s;
+            animation-delay: .7s;
+          }
+
+          &__blob {
+            background: $tertiary;
+          }
+        }
+      }
+    }
+
+    svg {
+      display: none;
     }
   }
 }
