@@ -24,10 +24,14 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba($primary, .8);
+        background-color: rgba($primary, .65);
         height: 100%;
         width: 100%;
         z-index: 0;
+
+        @media ($tablet) {
+            background-color: rgba($primary, .8);
+        }
     }
 
     h1 {
