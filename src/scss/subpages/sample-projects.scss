@@ -75,13 +75,13 @@
     transition: all .3s ease;
 
     @media ($mobile-large) {
-      height: 100px;
-      width: 210px;
+      height: 150px;
+      width: 170px;
     }
 
     &:first-child {
       border-radius: 68% 32% 55% 45% / 48% 51% 49% 52% ;
-      // border-radius: 64% 36% 46% 54% / 55% 54% 46% 45%;
+      border-radius: 64% 36% 46% 54% / 55% 54% 46% 45%;
 
 
       @media ($laptop) {
