@@ -9,10 +9,36 @@ header {
     position: sticky;
 }
 .subpage-banner {
+    position: relative;
     height: 70vh;
     min-height: 700px;
+    background-image: url(../../img/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($primary, .8);
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
 
     h1 {
-        font-size: $large;
+        font-size: $medium;
+        padding: 20px;
+        
+        @media ($tablet) {
+            font-size: $large;
+        }
+    }
+    p {
+        color: $light;
     }
 }
