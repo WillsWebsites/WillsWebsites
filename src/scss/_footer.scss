@@ -96,6 +96,45 @@ footer {
     }
   }
 
+  form {
+    max-width: 350px;
+
+    @media ($mobile-large) {
+      align-items: flex-start;
+    }
+
+    .form-info {
+      @media ($tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    input {
+      font-size: $x-small;
+      margin: 0 0 5px 0;
+      padding: 5px;
+      width: 100%;
+      border-bottom-width: 1px;
+      
+      &::placeholder {
+        font-family: $primary-font;
+      }
+    }
+
+    textarea {
+      padding-left: 2px;
+      min-height: 50px;
+    }
+
+    .blob-btn {
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: $x-small-m;
+      min-width: 125px;
+    }
+  }
+
   .fab {
     display: flex;
     justify-content: center;
@@ -183,3 +222,4 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
