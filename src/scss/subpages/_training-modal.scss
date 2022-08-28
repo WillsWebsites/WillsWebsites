@@ -75,7 +75,7 @@
       max-height: 1000px;
       width: 100%;
       max-width: 1800px;
-      background-color: rgba(#253e47, .7);
+      background-color: rgba(#253e47, .6);
       border-radius: 50px;
       border: 2px solid rgba($light, 0.1);
       box-shadow: 0 8px 16px #0e0e0e6f;
@@ -90,6 +90,7 @@
       }
 
       @media ($mobile-large) {
+        background-color: rgba(#253e47, .7);
         height: 80%;
         width: 90%;
       }
