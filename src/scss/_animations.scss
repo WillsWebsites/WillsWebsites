@@ -31,21 +31,39 @@
 
 @keyframes blob1 {
   0% {
+    -webkit-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+    -moz-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+    -khtml-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
     border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
   }
   20% {
+    -webkit-border-radius: 73% 27% 73% 27% / 34% 58% 42% 66%;
+    -moz-border-radius: 73% 27% 73% 27% / 34% 58% 42% 66%;
+    -khtml-border-radius: 73% 27% 73% 27% / 34% 58% 42% 66%;
     border-radius: 73% 27% 73% 27% / 34% 58% 42% 66%;
   }
   40% {
-    border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%
+    -webkit-border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%;
+    -moz-border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%;
+    -khtml-border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%;
+    border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%;
   }
   60% {
+    -webkit-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+    -moz-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+    -khtml-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
     border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
   }
   80% {
+    -webkit-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+    -moz-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+    -khtml-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
     border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
   }
   100% {
+    -webkit-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+    -moz-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+    -khtml-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
     border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
   }
 }
@@ -82,7 +100,7 @@
     border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%
   }
   60% {
-    border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
+    border-radius: 64% 36% 67% 33% / 34% 66% 34% 66%;
   }
   80% {
     border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
