@@ -245,13 +245,13 @@ const trainingObserver = new IntersectionObserver(trainingReveal, {
 trainingProjects.forEach((project, i) => {
   if (window.matchMedia("(min-width: 768px)").matches) {
     project.style.transitionDelay = `${Math.random().toFixed(4)}s`;
+  } else {
+    project.style.transitionDelay = `${i < 7 ? i * .1 : i * .07}s`;
     project.querySelector('video').play()
     .then(() => {})
      .catch((error) => {
         alert('Please turn off low power mode to properly display video collage');
     });
-  } else {
-    project.style.transitionDelay = `${i < 7 ? i * .1 : i * .07}s`;
   }
   trainingObserver.observe(project);
 });
