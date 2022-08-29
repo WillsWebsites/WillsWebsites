@@ -126,7 +126,7 @@ footer {
       border-radius: 0 !important;
 
       @media ($mobile-large) {
-        padding: 15px 0 7px 0;
+        padding: 10px 0 7px 0;
       }
 
       @media ($laptop) {
@@ -140,11 +140,15 @@ footer {
     }
 
     textarea {
-      padding-top: 5px;
+      padding-top: 10px;
       padding-left: 2px;
       min-height: 50px;
       height: 50px;
       max-height: 150px;
+
+      @media ($laptop) {
+        padding-top: 5px;
+      }
 
       &::placeholder {
         font-family: $primary-font;
