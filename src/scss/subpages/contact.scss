@@ -2,7 +2,11 @@
 @import "subpages";
 header {
   top: 0 !important;
-  position: relative !important;
+  position: sticky !important;
+
+  @media ($laptop) {
+    position: relative;
+  }
 }
 body {
   overflow-x: hidden;
@@ -84,20 +88,6 @@ main {
             font-size: $small;
         }
       }
-
-      .required {
-        position: relative;
-
-        &::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: 50%;
-          width: 100px;
-          height: 100px;
-          background-color: red;
-        }
-      }
     }
 
     .blob-btn {
@@ -108,6 +98,9 @@ main {
         }
     }
   }
+}
+a[href*="thanks"] {
+  display: none;
 }
 
 .blob-btn__blob {
