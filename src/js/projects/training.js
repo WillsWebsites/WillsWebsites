@@ -236,7 +236,7 @@ const trainingReveal = function (entries, observer) {
 
     // Tries to play the first two video elements on mobile and tablet. If there's an error (only error so far is IOS low power mode) then replace videos with images
 
-    if ((window.matchMedia('(max-width: 991px').matches) && i < 2) {
+    if (i < 2) {
       entry.target
         .querySelector("video")
         .play()
