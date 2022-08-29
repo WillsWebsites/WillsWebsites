@@ -120,7 +120,7 @@ html {
     .introduction {
       width: 80%;
       max-width: 300px;
-      margin: 0 auto;
+      margin: 0 auto 65px auto;
 
       @media ($mobile-large) {
         max-width: 410px;
@@ -128,6 +128,7 @@ html {
 
       @media ($tablet) {
         max-width: initial;
+        margin: 0 auto;
       }
 
       @media ($desktop) {
@@ -245,7 +246,7 @@ html {
   .hero-right {
     width: 100%;
     height: 40vh;
-    min-height: 250px;
+    min-height: 350px;
     background-image: url(../img/main-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
