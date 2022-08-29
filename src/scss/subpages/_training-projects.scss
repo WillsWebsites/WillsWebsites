@@ -84,15 +84,15 @@
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -khtml-border-radius: 15px;
-    // -webkit-transform: translateZ(0) translateY(75px);
-    // transform: translateZ(0) translateY(75px);
+    -webkit-transform: translateZ(0) translateY(75px);
+    transform: translateZ(0) translateY(75px);
     overflow: hidden;
     position: relative;
     transition: all 0.4s ease;
     min-height: 190px;
-    // opacity: 0;
+    opacity: 0;
 
-    // &.training-reveal {
+    &.training-reveal {
       opacity: 1;
       -webkit-transform: translateZ(0) translate(0, 0) !important;
       transform: translateZ(0) translate(0, 0) !important;
@@ -101,7 +101,7 @@
         -webkit-transform: translateZ(0) translate(0, 0) !important;
         transform: translateZ(0) translate(0, 0) !important;
       }
-    // }
+    }
 
     @media ($mobile) {
       min-height: 140px;
@@ -181,6 +181,10 @@
       overflow: hidden;
       pointer-events: none;
       user-select: none;
+
+      &::-webkit-media-controls {
+        display: none !important;
+      }
     }
 
     &.forkify {

@@ -223,30 +223,30 @@ modalHandler();
 $(window).resize(modalHandler);
 
 // Training Projects Observer
-// const trainingProjects = document.querySelectorAll(".training-item");
+const trainingProjects = document.querySelectorAll(".training-item");
 
-// const trainingReveal = function (entries, observer) {
-//   entries.forEach((entry) => {
-//     if (!entry.isIntersecting) return;
+const trainingReveal = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
 
-//     entry.target.classList.add("training-reveal");
-//     setTimeout(() => {
-//       entry.target.style.transitionDelay = '0s';
-//     }, 1000);
-//     observer.unobserve(entry.target);
-//   });
-// };
+    entry.target.classList.add("training-reveal");
+    setTimeout(() => {
+      entry.target.style.transitionDelay = '0s';
+    }, 1000);
+    observer.unobserve(entry.target);
+  });
+};
 
-// const trainingObserver = new IntersectionObserver(trainingReveal, {
-//   root: null,
-//   threshold: 0.2,
-// });
+const trainingObserver = new IntersectionObserver(trainingReveal, {
+  root: null,
+  threshold: 0.2,
+});
 
-// trainingProjects.forEach((project, i) => {
-//   if (window.matchMedia("(min-width: 768px)").matches) {
-//     project.style.transitionDelay = `${Math.random().toFixed(4)}s`;
-//   } else {
-//     project.style.transitionDelay = `${i < 7 ? i * .1 : i * .07}s`;
-//   }
-//   trainingObserver.observe(project);
-// });
+trainingProjects.forEach((project, i) => {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    project.style.transitionDelay = `${Math.random().toFixed(4)}s`;
+  } else {
+    project.style.transitionDelay = `${i < 7 ? i * .1 : i * .07}s`;
+  }
+  trainingObserver.observe(project);
+});
