@@ -116,10 +116,18 @@ footer {
 
     input {
       font-size: $x-small;
+      padding: 20px 0 10px 0;
       margin: 0 0 5px 0;
-      padding: 15px 0 7px 0;
       width: 100%;
       border-bottom: 1px solid #e4e4e4;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -khtml-border-radius: 0;
+      border-radius: 0 !important;
+
+      @media ($mobile-large) {
+        padding: 15px 0 7px 0;
+      }
 
       @media ($laptop) {
         padding: 5px 0 2px 0;
