@@ -76,6 +76,27 @@
     height: 950px;
   }
 
+  &.allow-controls { 
+    video {
+      overflow: initial;
+      pointer-events: all;
+      user-select: initial;
+    }
+    
+    @media ($laptop-max) {
+      .low-power {
+        display: block;
+      }
+    }
+  }
+
+  .low-power {
+    text-align: center;
+    color: $light;
+    font-size: $x-small-m;
+    display: none;
+  }
+
   .training-item {
     margin: 8px;
     border: 0px solid #496d837e;
@@ -167,27 +188,6 @@
       }
     }
 
-    *::-webkit-media-controls-panel {
-      display: none!important;
-      -webkit-appearance: none;
-    }
-    
-    /* Old shadow dom for play button */
-    
-    *::-webkit-media-controls-play-button {
-      display: none!important;
-      -webkit-appearance: none;
-    }
-    
-    /* New shadow dom for play button */
-    
-    /* This one works! */
-    
-    *::-webkit-media-controls-start-playback-button {
-      display: none!important;
-      -webkit-appearance: none;
-    }
-
     video {
       position: absolute;
       right: 0;
@@ -202,15 +202,6 @@
       overflow: hidden;
       pointer-events: none;
       user-select: none;
-
-      &::-webkit-media-controls-start-playback-button,
-      &::-webkit-media-controls-panel,
-      &::-webkit-media-controls {
-        -webkit-appearance: none;
-        display: none !important;
-        opacity: 0 !important;
-        position: absolute; top: -9999px
-      }
     }
 
     &.forkify {
