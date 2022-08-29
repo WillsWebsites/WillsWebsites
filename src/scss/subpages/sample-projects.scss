@@ -14,38 +14,6 @@
   align-items: center;
   padding-top: 0px;
 
-  h1 {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 4px;
-      width: 0;
-      height: 3px;
-      border-radius: 5px;
-      background-color: $light;
-
-      animation: titleAccentAnimation ease 1s;
-      animation-delay: 0.6s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-
-      @media ($tablet) {
-        height: 4px;
-      }
-
-      @media ($desktop) {
-        height: 5px;
-      }
-    }
-
-    @media ($tablet-max) {
-      margin-bottom: 40px;
-    }
-  }
-
   @media ($mobile-large-max) {
     flex-direction: column;
 

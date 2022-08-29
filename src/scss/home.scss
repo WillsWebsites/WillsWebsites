@@ -92,7 +92,7 @@ html {
       @media ($tablet) {
         bottom: -20%;
         right: 20%;
-        width: 50%;
+        width: 45%;
       }
     }
   }
@@ -460,7 +460,7 @@ html {
             }
           }
 
-          &__inner {
+          &__inner, &__inner:active {
             -webkit-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
             -moz-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
             -khtml-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
