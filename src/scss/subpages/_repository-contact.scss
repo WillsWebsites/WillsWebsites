@@ -132,6 +132,10 @@
         max-height: 1000px;
         max-height: initial;
       }
+
+      @media ($desktop) {
+        left: 2%;
+      }
     }
   }
   .rc-right {
