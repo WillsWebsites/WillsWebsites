@@ -235,6 +235,29 @@ const trainingReveal = function (entries, observer) {
     }, 1000);
 
     // Tries to play the first two video elements on mobile and tablet. If there's an error (only error so far is IOS low power mode) then replace videos with images
+    // $(".training-projects").addClass("video-error");
+
+    // const imageSwapHandler = function(figure) {
+    //   const forkifyStandard = new URL("../../img/projects/posters/forkify-standard.jpg", import.meta.url);
+    //   const forkifyTall = new URL("../../img/projects/posters/forkify-tall.jpg", import.meta.url);
+    //   const oneDone = new URL("../../img/projects/posters/one-n-done.jpg", import.meta.url);
+
+    //   switch (true) {
+    //     case $(figure).hasClass('forkify-standard'):
+    //       $(figure).find('video').replaceWith(`<img src="${forkifyStandard}" alt="Forkify Preview" />`)
+    //       break;
+    //     case $(figure).hasClass('forkify-tall'):
+    //       $(figure).find('video').replaceWith(`<img src="${forkifyTall}" alt="Forkify Preview" />`)
+    //       break;
+    //     case $(figure).parent().hasClass('one-n-done'):
+    //       $(figure).find('video').replaceWith(`<img src="${oneDone}" alt="One N' Done Preview" />`)
+    //       break;
+    //   }
+    // }
+
+    // $('.training-item figure').each(function(){
+    //   imageSwapHandler(this);
+    // });
 
     if (i < 2) {
       entry.target
@@ -242,10 +265,7 @@ const trainingReveal = function (entries, observer) {
         .play()
         .then(() => {})
         .catch((err) => {
-          $(".training-projects").addClass("allow-controls");
-          $('.training-item video').attr('controls');
-
-          $('.forkify-standard video').replaceWith('<img src="./src/img/projects/posters/forkify-standard/jpg" alt="Forkify Preview" />');
+          $(".training-projects").addClass("video-error");
         });
     }
 

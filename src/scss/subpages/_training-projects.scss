@@ -30,13 +30,7 @@
   }
 
 
-  &.allow-controls { 
-    video {
-      overflow: initial;
-      pointer-events: all;
-      user-select: all;
-    }
-    
+  &.video-error {     
     @media ($laptop-max) {
       .low-power {
         display: block;
