@@ -14,10 +14,18 @@
     align-items: center;
 
     @media ($tablet) {
-        padding: 200px 0;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+      padding: 200px 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media ($laptop) {
+      justify-content: space-around;
+    }
+
+    @media ($desktop) {
+      justify-content: space-between;
     }
   }
 
@@ -32,25 +40,23 @@
     padding: 115px 5px;
 
     @media ($tablet) {
-        max-width: initial;
-        padding: 50px 0;
+      max-width: initial;
+      padding: 50px 0;
     }
 
     @media ($laptop) {
       padding: 50px 5%;
       max-width: 450px;
     }
-    
 
     @media ($desktop) {
-        min-height: 500px;
-        padding: 50px 0%;
-        max-width: initial;
+      min-height: 500px;
+      padding: 50px 0%;
+      max-width: initial;
     }
-    
 
     @media (min-width: 1350px) {
-        padding: 50px 8%;
+      padding: 50px 8%;
     }
 
     h2 {
@@ -90,7 +96,8 @@
     }
 
     @media ($tablet) and (max-width: 1299px) {
-      h2, p {
+      h2,
+      p {
         max-width: 400px;
       }
     }
@@ -143,7 +150,7 @@
       border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
       z-index: -1;
       transform: scale(1.1) rotate(190deg);
-      
+
       @media ($mobile-large) {
         top: 0;
         left: 0;
