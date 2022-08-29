@@ -29,6 +29,17 @@
   }
 }
 
+@keyframes mainAccent {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 90%;
+  }
+}
+
 @keyframes blob1 {
   0% {
     -webkit-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
@@ -55,8 +66,8 @@
     border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
   }
   80% {
-    -webkit-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
-    // -moz-border-radius: ;
+    -webkit-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+    -moz-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
     -khtml-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
     border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
   }

@@ -54,9 +54,10 @@
     }
   }
   .hero-left {
+    position: relative;
     width: 100%;
     height: 60vh;
-    min-height: 600px;
+    min-height: 450px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -74,29 +75,134 @@
     }
 
     .introduction {
-      width: 90%;
+      width: 80%;
+      max-width: 300px;
       margin: 0 auto;
+
+      @media ($mobile-large) {
+        max-width: 410px;
+      }
+
+      @media ($tablet) {
+        max-width: initial;
+      }
+
+      @media ($desktop) {
+        width: 90%;
+      }
+
+      @media ($desktop-large) {
+        margin-right: 100px;
+      }
+    }
+
+    .intro-upper {
+      position: relative;
+
+      &::before {
+        content: "";
+        height: 0;
+        width: 5px;
+        opacity: 0;
+        background-color: $tertiary;
+        border-radius: 5px;
+        animation: mainAccent 1s 0.6s forwards;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-53%);
+      }
     }
 
     h1 {
       margin-top: 0;
+      margin-left: 30px;
+      font-size: $medium;
       transform: translateX(-5px);
+
+      @media ($mobile-large) {
+        font-size: $large;
+      }
+
+      @media ($tablet) {
+        font-size: $x-large - 1rem;
+      }
+
+      @media ($laptop) {
+        font-size: $x-large - .5rem;
+      }
     }
     h4 {
-      font-size: $medium;
+      font-size: $x-small;
       font-family: $tertiary-font;
+      color: $light;
       text-transform: uppercase;
       letter-spacing: 3px;
-      margin-bottom: 0;
+      margin-bottom: 20px;
+      margin-top: 0;
+      margin-left: 30px;
+
+      @media ($mobile-large) {
+        font-size: $small;
+      }
+
+      @media ($tablet) {
+        font-size: $medium;
+      }
+
     }
+
+    @media ($tablet-max) {
+      .get-started {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-50%);
+      }
+    }
+
     p {
-      font-size: $medium;
+      font-size: $x-small-m;
+      color: $light;
+      margin-top: 40px;
+      width: 100%;
+      text-align: center;
+
+      @media ($mobile-large) {
+        font-size: $x-small;
+        margin-top: 50px;
+      }
+
+      @media ($tablet) {
+        font-size: $small;
+        margin-top: 75px;
+        text-align: left;
+      }
+    }
+
+    .down-arrow {
+      @media ($tablet) {
+        display: none;
+      }
+
+     img {
+        filter: brightness(0) invert(1);
+        width: 100%;
+        max-width: 30px;
+        height: auto;
+        margin: 10px auto 0;
+        transition: all .3s;
+      }
     }
   }
   .hero-right {
     width: 100%;
     height: 40vh;
-    min-height: 400px;
+    min-height: 300px;
     background-color: $secondary;
 
     @media ($tablet) {
@@ -217,7 +323,6 @@
           -moz-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           -khtml-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
-          transform: translateZ(0);
         }
 
         &::before {
@@ -258,23 +363,42 @@
       &.nav-project {
         top: 20%;
 
+
         .blob-btn {
           background-color: rgba($primary, 0.6);
+          -webkit-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+          -moz-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+          -khtml-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+          border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
 
           @media ($laptop) {
             animation: blob2 ease 15s;
             animation-delay: 0.5s;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
+          }
 
-            &::before {
+          &::before {
+            -webkit-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+            -moz-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+            -khtml-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+            border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+
+            @media($laptop) {
               animation: blob2 ease 15s;
               animation-delay: 0.5s;
               animation-iteration-count: infinite;
               animation-fill-mode: forwards;
             }
+          }
 
-            &__inner {
+          &__inner {
+            -webkit-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+            -moz-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+            -khtml-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+            border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
+
+            @media ($laptop) {
               animation: blob2 ease 15s;
               animation-delay: 0.5s;
               animation-iteration-count: infinite;
@@ -293,20 +417,40 @@
 
         .blob-btn {
           background-color: rgba($tertiary, 0.6);
+          -webkit-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+          -moz-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+          -khtml-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+          border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+
 
           @media ($laptop) {
             animation: blob3 ease 18s;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
             animation-delay: 0.7s;
+          }
 
-            &::before {
+          &::before {
+            -webkit-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+            -moz-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+            -khtml-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+            border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+
+            @media ($laptop) {
               animation: blob3 ease 18s;
               animation-delay: 0.7s;
               animation-iteration-count: infinite;
               animation-fill-mode: forwards;
             }
-            &__inner {
+          }
+
+          &__inner {
+            -webkit-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+            -moz-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+            -khtml-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+            border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+
+            @media ($laptop) {
               animation: blob3 ease 18s;
               animation-delay: 0.7s;
               animation-iteration-count: infinite;
