@@ -250,3 +250,9 @@ trainingProjects.forEach((project, i) => {
   }
   trainingObserver.observe(project);
 });
+
+video=getElementsByTagName('video');
+function removeControls(video){
+  video.removeAttribute('controls');
+}
+window.onload=removeControls(video);
