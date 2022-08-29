@@ -1,5 +1,9 @@
 @import "../_main.scss";
 @import "subpages";
+header {
+  top: 0 !important;
+  position: sticky !important;
+}
 
 main {
   .subpage-banner {
@@ -101,10 +105,6 @@ main {
         }
     }
   }
-}
-header {
-  top: 0;
-  position: sticky;
 }
 
 .blob-btn__blob {
