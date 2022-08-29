@@ -1,6 +1,5 @@
 // Training project Modal
 const modalHandler = function () {
-  // if (window.matchMedia("(min-width: 992px)").matches) {
   // Opening Modal and setting content
   const modal = $(".training-modal");
   const modalBg = $(".m-background");
@@ -216,7 +215,6 @@ const modalHandler = function () {
   };
   $(modalClose).click(hideModal);
   $(modalBg).click(hideModal);
-  // }
 };
 modalHandler();
 
