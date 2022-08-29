@@ -34,7 +34,7 @@
     video {
       overflow: initial;
       pointer-events: all;
-      user-select: initial;
+      user-select: all;
     }
     
     @media ($laptop-max) {

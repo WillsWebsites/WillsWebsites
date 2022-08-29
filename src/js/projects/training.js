@@ -243,6 +243,9 @@ const trainingReveal = function (entries, observer) {
         .then(() => {})
         .catch((err) => {
           $(".training-projects").addClass("allow-controls");
+          $('.training-item video').attr('controls');
+
+          $('.forkify-standard video').replaceWith('<img src="./src/img/projects/posters/forkify-standard/jpg" alt="Forkify Preview" />');
         });
     }
 
