@@ -226,13 +226,21 @@ $(window).resize(modalHandler);
 const trainingProjects = document.querySelectorAll(".training-item");
 
 const trainingReveal = function (entries, observer) {
-  entries.forEach((entry) => {
+  entries.forEach((entry, i) => {
     if (!entry.isIntersecting) return;
 
     entry.target.classList.add("training-reveal");
     setTimeout(() => {
       entry.target.style.transitionDelay = '0s';
     }, 1000);
+
+    entry.querySelector('video').play()
+    .then(() => {})
+     .catch((err) => {
+        i === 1 ? alert(`If you see this alert it's likely because you're on an IOS device on lower power mode. If so, please turn off low power mode to properly display the video collage. If not, please follow up using the contact form so I can look into the error further. -Will`) : '';
+        project.classList.add('allow-controls');
+    });
+
     observer.unobserve(entry.target);
   });
 };
@@ -247,11 +255,6 @@ trainingProjects.forEach((project, i) => {
     project.style.transitionDelay = `${Math.random().toFixed(4)}s`;
   } else {
     project.style.transitionDelay = `${i < 7 ? i * .1 : i * .07}s`;
-    project.querySelector('video').play()
-    .then(() => {})
-     .catch((err) => {
-        i == 1 ? alert('Please turn off low power mode to properly display video collage') : '';
-    });
   }
   trainingObserver.observe(project);
 });
