@@ -234,7 +234,7 @@ const trainingReveal = function (entries, observer) {
       entry.target.style.transitionDelay = '0s';
     }, 1000);
 
-    entry.querySelector('video').play()
+    entry.target.querySelector('video').play()
     .then(() => {})
      .catch((err) => {
         i === 1 ? alert(`If you see this alert it's likely because you're on an IOS device on lower power mode. If so, please turn off low power mode to properly display the video collage. If not, please follow up using the contact form so I can look into the error further. -Will`) : '';
