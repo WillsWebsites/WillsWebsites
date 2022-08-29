@@ -234,18 +234,19 @@ const trainingReveal = function (entries, observer) {
       entry.target.style.transitionDelay = "0s";
     }, 1000);
 
-    // Try to play the first two video elements on mobile and tablet. If there's an error (only error so far is IOS low power mode) then alert and adjust videos
-    i <= 2 ?
+    // Try to play the first two video elements on mobile and tablet. If there's an error (only error so far is IOS low power mode) then replace videos with 
+    let allowControls = false;
+
+    if (window.matchMedia('(max-width: 991px').matches && i < 2 && !allowControls) {
       entry.target
         .querySelector("video")
         .play()
         .then(() => {})
         .catch((err) => {
           $(".training-projects").addClass("allow-controls");
-          alert(
-            `If you see this alert it's likely because you're on an IOS device on lower power mode. If so, please turn off low power mode to properly display the video collage. If not, please follow up using the contact form so I can look into the error further. -Will  | Error Message: ${err}`
-          );
-        }) : '';
+          allowControls = true;
+        });
+    }
 
     observer.unobserve(entry.target);
   });
