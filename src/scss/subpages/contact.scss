@@ -2,7 +2,7 @@
 @import "subpages";
 header {
   top: 0 !important;
-  position: sticky !important;
+  left: 0;
 
   @media ($laptop) {
     position: relative;
