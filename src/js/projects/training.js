@@ -249,8 +249,8 @@ trainingProjects.forEach((project, i) => {
     project.style.transitionDelay = `${i < 7 ? i * .1 : i * .07}s`;
     project.querySelector('video').play()
     .then(() => {})
-     .catch((error) => {
-        alert('Please turn off low power mode to properly display video collage');
+     .catch((err) => {
+        i == 1 ? alert('Please turn off low power mode to properly display video collage') : '';
     });
   }
   trainingObserver.observe(project);
