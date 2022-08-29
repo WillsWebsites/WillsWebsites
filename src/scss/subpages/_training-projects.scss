@@ -183,8 +183,12 @@
       user-select: none;
 
       &::-webkit-media-controls-start-playback-button,
-      &::-webkit-media-controls-panel {
+      &::-webkit-media-controls-panel,
+      &::-webkit-media-controls {
+        -webkit-appearance: none;
         display: none !important;
+        opacity: 0 !important;
+        position: absolute; top: -9999px
       }
     }
 
