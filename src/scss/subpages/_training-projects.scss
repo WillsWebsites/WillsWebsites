@@ -182,9 +182,10 @@
       pointer-events: none;
       user-select: none;
 
-      &::-webkit-media-controls-start-playback-button {
+      &::-webkit-media-controls-start-playback-button,
+      &::-webkit-media-controls-panel {
         display: none !important;
-    }
+      }
     }
 
     &.forkify {
