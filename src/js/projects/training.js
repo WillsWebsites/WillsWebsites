@@ -234,17 +234,15 @@ const trainingReveal = function (entries, observer) {
       entry.target.style.transitionDelay = "0s";
     }, 1000);
 
-    // Try to play the first two video elements on mobile and tablet. If there's an error (only error so far is IOS low power mode) then replace videos with 
-    let allowControls = false;
+    // Tries to play the first two video elements on mobile and tablet. If there's an error (only error so far is IOS low power mode) then replace videos with images
 
-    if (window.matchMedia('(max-width: 991px').matches && i < 2 && !allowControls) {
+    if ((window.matchMedia('(max-width: 991px').matches) && i < 2) {
       entry.target
         .querySelector("video")
         .play()
         .then(() => {})
         .catch((err) => {
           $(".training-projects").addClass("allow-controls");
-          allowControls = true;
         });
     }
 
