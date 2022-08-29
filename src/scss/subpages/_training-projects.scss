@@ -29,6 +29,29 @@
     }
   }
 
+
+  &.allow-controls { 
+    video {
+      overflow: initial;
+      pointer-events: all;
+      user-select: initial;
+    }
+    
+    @media ($laptop-max) {
+      .low-power {
+        display: block;
+      }
+    }
+  }
+
+  .low-power {
+    text-align: center;
+    color: $light;
+    font-size: $x-small-m;
+    display: none;
+    margin-bottom: 10px;
+  }
+
   .container {
     width: 95%;
     max-width: 1900px;
@@ -74,27 +97,6 @@
 
   @media (min-width: 1700px) {
     height: 950px;
-  }
-
-  &.allow-controls { 
-    video {
-      overflow: initial;
-      pointer-events: all;
-      user-select: initial;
-    }
-    
-    @media ($laptop-max) {
-      .low-power {
-        display: block;
-      }
-    }
-  }
-
-  .low-power {
-    text-align: center;
-    color: $light;
-    font-size: $x-small-m;
-    display: none;
   }
 
   .training-item {
