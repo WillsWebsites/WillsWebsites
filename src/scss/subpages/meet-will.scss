@@ -1,0 +1,66 @@
+@import "../_main.scss";
+@import "subpages";
+
+
+.scroll-section {
+    position: relative;
+    background-color: $light;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: $primary;
+        z-index: -1;
+    }
+
+    &.scroll--active {
+        .sticky-left {
+            position: sticky;
+        }
+        .sticky-left, .scrollable-right p {
+            opacity: 1;
+        }
+    }
+    .container {
+        position: relative;
+        height: 80vh;
+        min-height: 700px;
+    }
+
+    .sticky-left {
+        position: relative;
+        top: 50%;
+        left: 0;
+        width: 40%;
+        height: auto;
+        display: flex;
+        transform: translateY(-50%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        margin-right: auto;
+        opacity: 0;
+        transition: all .2s ease;
+    }
+    .scrollable-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: transparent;
+        opacity: 1;
+        background-color: $primary;
+        transition: all .3s ease;
+    }
+}
