@@ -140,10 +140,16 @@ footer {
     }
 
     textarea {
+      padding-top: 5px;
       padding-left: 2px;
       min-height: 50px;
-      height: 75px;
+      height: 50px;
       max-height: 150px;
+
+      &::placeholder {
+        font-family: $primary-font;
+        font-size: $x-small;
+      }
     }
 
     .blob-btn {

@@ -71,7 +71,6 @@ form {
     max-width: 100%;
     font-size: $x-small;
     font-family: $tertiary-font;
-    font-weight: bold;
     min-height: 100px;
     max-height: 250px;
     overflow: scroll;
@@ -80,6 +79,7 @@ form {
 
     &::placeholder {
       color: white;
+      font-family: $tertiary-font;
     }
   }
 }
