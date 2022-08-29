@@ -252,6 +252,7 @@ html {
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
+    overflow: hidden;
 
     &::before {
       content: '';
@@ -319,10 +320,16 @@ html {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         width: 100%;
         height: 20%;
         min-height: 250px;
+        opacity: 0;
+
+        transform: translateZ(0) translate(-200px, -50%);
+        animation: leftEnter ease 1s;
+        animation-delay: 1.1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
       }
 
       .blob-btn {
@@ -421,6 +428,10 @@ html {
       &.nav-project {
         top: 20%;
 
+        @media ($tablet) {
+          animation-delay: .8s;
+        }
+
 
         .blob-btn {
           background-color: rgba($primary, 0.6);
@@ -473,6 +484,10 @@ html {
       &.nav-contact {
         top: 80%;
 
+        @media ($tablet) {
+          animation-delay: 1.4s;
+        }
+
         .blob-btn {
           background-color: rgba($tertiary, 0.6);
           -webkit-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
@@ -485,7 +500,7 @@ html {
             animation: blob3 ease 18s;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
-            animation-delay: 0.7s;
+            animation-delay: 0.2s;
           }
 
           &::before {
@@ -496,7 +511,7 @@ html {
 
             @media ($laptop) {
               animation: blob3 ease 18s;
-              animation-delay: 0.7s;
+              animation-delay: 0.2s;
               animation-iteration-count: infinite;
               animation-fill-mode: forwards;
             }
@@ -510,7 +525,7 @@ html {
 
             @media ($laptop) {
               animation: blob3 ease 18s;
-              animation-delay: 0.7s;
+              animation-delay: 0.2s;
               animation-iteration-count: infinite;
               animation-fill-mode: forwards;
             }
