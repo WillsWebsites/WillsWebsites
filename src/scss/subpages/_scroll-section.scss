@@ -40,7 +40,7 @@
         transition: all .3s ease;
 
         .sticky-content {
-            position: sticky;
+            position: fixed;
             height: auto;
             width: 100%;
             top: 50%;
@@ -121,7 +121,7 @@
         }
 
         .sticky-left {
-            background-color: rgba($secondary, .5);
+            background-color: rgba($secondary, .7);
 
             h2, h3 {
                 text-shadow: 2px 2px 4px rgba($dark, .5);

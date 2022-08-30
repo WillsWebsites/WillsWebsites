@@ -3,10 +3,18 @@
 const scrollSections = document.querySelectorAll(".scrollable-right");
 
 const sectionReveal = function (entries) {
+
   entries.forEach((entry) => {
     entry.target.closest('.scroll-section').classList.remove('scroll--active');
-    if (!entry.isIntersecting) return;
+
     
+    if (!entry.isIntersecting) return;
+
+    
+
+
+    
+
     entry.target.closest('.scroll-section').classList.add("scroll--active");
   });
 };
