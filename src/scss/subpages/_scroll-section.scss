@@ -14,15 +14,6 @@
     //     z-index: -1;
     // }
 
-    &.scroll--active {
-        .sticky-left, .scrollable-right p {
-            opacity: 1;
-            z-index: 1;
-        }
-        .scollable-inner {
-            opacity: 1;
-        }
-    }
     .container {
         position: relative;
         height: calc(100vh - 250px);
@@ -88,18 +79,26 @@
         opacity: 0;
         transition: .3s ease;
     }
+
+
     &.scroll--active {
+        .sticky-left, .scrollable-right p {
+            opacity: 1;
+            z-index: 1;
+        }
+        .scrollable-inner {
+            opacity: 1;
+        }
         .sticky-left {
             background-color: $secondary;
         }
         .scrollable-right {
             background-color: #253e47;
-            color: $light;
         }
     }
 
     .center-anchor {
         position: absolute;
-        transform: translateY(-30vh);
+        transform: translateY(-50vh);
     }
 }
