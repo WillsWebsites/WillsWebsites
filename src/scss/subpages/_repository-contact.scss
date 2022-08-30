@@ -133,6 +133,13 @@
         max-height: initial;
       }
 
+      @media ($laptop) {
+        animation: blob1 ease 20s;
+        animation-delay: 0s;
+        animation-iteration-count: 5;
+        animation-fill-mode: forwards;
+      }
+
       @media ($desktop) {
         left: 2%;
       }
@@ -172,6 +179,13 @@
         max-height: 1000px;
         max-height: initial;
         transform: scale(1.2) rotate(220deg);
+      }
+
+      @media ($laptop) {
+        animation: blob3 ease 15s;
+        animation-delay: 0.5s;
+        animation-iteration-count: 5;
+        animation-fill-mode: forwards;
       }
     }
 

@@ -264,6 +264,7 @@ const trainingReveal = function (entries, observer) {
         .then(() => {})
         .catch((err) => {
           $(".training-projects").addClass("video-error");
+          console.error(err);
         });
     }
 

@@ -162,6 +162,11 @@ footer {
       font-size: $x-small-m;
       min-width: 125px;
       margin-bottom: 10px;
+      border-radius: 10px;
+
+      &::before, &::after, &__inner {
+        border-radius: 10px;
+      }
     }
   }
 
