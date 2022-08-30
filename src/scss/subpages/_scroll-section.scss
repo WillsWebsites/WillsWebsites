@@ -1,6 +1,6 @@
 .scroll-section {
     position: relative;
-    background-color: rgba($light, .8);
+    background-color: rgba($primary-highlight, .75);
     z-index: 0;
 
     // &::after {
@@ -14,12 +14,19 @@
     //     z-index: -1;
     // }
 
+    &.scroll-intro .sticky-left {
+        filter: brightness(.9);
+        background-image: url(../../img/meet-will.jpg);
+    }
+
     .container {
         position: relative;
         height: calc(100vh - 250px);
         min-height: 600px;
-        max-width: initial;
-        width: 90%;
+        border-left: 2px solid $tertiary;
+        // max-width: initial;
+        // width: 80%;
+        transition: all .3s ease;
     }
 
     .sticky-left {
@@ -28,8 +35,22 @@
         left: 0;
         width: 30%;
         height: 100%;
-        background-color: rgba($secondary, 1);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
         padding: 50px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($primary, .95);
+            transition: all .4s ease-in-out;
+            z-index: 0;
+        }
 
         .sticky-content {
             position: sticky;
@@ -45,9 +66,10 @@
             margin-right: auto;
             color: $primary;
             transition: all .2s ease;
+            z-index: 1;
 
             a {
-                color: $primary;
+                color: rgba($light, .4);
             }
 
             h2 {
@@ -82,18 +104,31 @@
 
 
     &.scroll--active {
+        .container {
+            border-left-color: $light;
+        }
         .sticky-left, .scrollable-right p {
             opacity: 1;
             z-index: 1;
         }
+
+        .sticky-left {
+            a {
+                color: white;
+            }
+            &::after {
+                background-color: rgba($primary, .65);
+            }
+        }
         .scrollable-inner {
             opacity: 1;
         }
-        .sticky-left {
-            background-color: $secondary;
-        }
         .scrollable-right {
-            background-color: #253e47;
+            background-color: rgba($secondary, .6);
+
+            p {
+                color: white;
+            }
         }
     }
 
