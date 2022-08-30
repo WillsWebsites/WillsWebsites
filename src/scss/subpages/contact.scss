@@ -22,7 +22,7 @@ main {
   }
 
   .contact-form {
-    background-color: $light;
+    background-color: $primary-highlight;
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -38,7 +38,7 @@ main {
         transform: translateY(-50%);
         background-color: rgba(18, 38, 51, .1);
         border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
-        z-index: 0;
+        z-index: -1;
     
         @media ($tablet) {
           height: 100%;

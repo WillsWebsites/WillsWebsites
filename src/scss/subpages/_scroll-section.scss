@@ -1,6 +1,6 @@
 .scroll-section {
     position: relative;
-    background-color: rgba($primary-highlight, .75);
+    background-color: rgba($primary-highlight, .7);
     z-index: 0;
 
     // &::after {
@@ -24,6 +24,7 @@
         height: calc(100vh - 250px);
         min-height: 600px;
         border-left: 2px solid $tertiary;
+        border-right: 2px solid $tertiary;
         // max-width: initial;
         // width: 80%;
         transition: all .3s ease;
@@ -69,7 +70,7 @@
             z-index: 1;
 
             a {
-                color: rgba($light, .4);
+                color: rgba($light, 0);
             }
 
             h2 {
@@ -106,6 +107,7 @@
     &.scroll--active {
         .container {
             border-left-color: $light;
+            border-right-color: $light;
         }
         .sticky-left, .scrollable-right p {
             opacity: 1;

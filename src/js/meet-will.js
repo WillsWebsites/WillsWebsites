@@ -13,7 +13,7 @@ const sectionReveal = function (entries) {
 
 const projectObserver = new IntersectionObserver(sectionReveal, {
   root: null,
-  threshold: .6,
+  threshold: .65,
 });
 
 scrollSections.forEach((section, i) => {
