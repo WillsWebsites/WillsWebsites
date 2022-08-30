@@ -1,0 +1,105 @@
+.scroll-section {
+    position: relative;
+    background-color: rgba($light, .8);
+    z-index: 0;
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     right: 0;
+    //     top: 0;
+    //     width: 50%;
+    //     height: 100%;
+    //     background-color: $primary;
+    //     z-index: -1;
+    // }
+
+    &.scroll--active {
+        .sticky-left, .scrollable-right p {
+            opacity: 1;
+            z-index: 1;
+        }
+        .scollable-inner {
+            opacity: 1;
+        }
+    }
+    .container {
+        position: relative;
+        height: calc(100vh - 250px);
+        min-height: 600px;
+        max-width: initial;
+        width: 90%;
+    }
+
+    .sticky-left {
+        position:  absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        background-color: rgba($secondary, 1);
+        padding: 50px;
+
+        .sticky-content {
+            position: sticky;
+            height: auto;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            margin-right: auto;
+            color: $primary;
+            transition: all .2s ease;
+
+            a {
+                color: $primary;
+            }
+
+            h2 {
+                line-height: 1.15;
+                margin: 10px 0;
+            }
+            h3 {
+                margin-top: 10px;
+            }
+        }
+    }
+    .scrollable-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        background-color: $primary;
+        color: $light;
+        transition: all .3s ease;
+    }
+
+    .scrollable-inner {
+        opacity: 0;
+        transition: .3s ease;
+    }
+    &.scroll--active {
+        .sticky-left {
+            background-color: $secondary;
+        }
+        .scrollable-right {
+            background-color: #253e47;
+            color: $light;
+        }
+    }
+
+    .center-anchor {
+        position: absolute;
+        transform: translateY(-30vh);
+    }
+}

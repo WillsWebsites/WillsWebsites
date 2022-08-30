@@ -1,21 +1,23 @@
 // Scrolling section intersection observer
 
-const scrollSections = document.querySelectorAll(".scroll-section");
+const scrollSections = document.querySelectorAll(".scrollable-right");
 
 const sectionReveal = function (entries) {
   entries.forEach((entry) => {
-    entry.target.classList.remove('scroll--active');
+    entry.target.closest('.scroll-section').classList.remove('scroll--active');
     if (!entry.isIntersecting) return;
     
-    entry.target.classList.add("scroll--active");
+    entry.target.closest('.scroll-section').classList.add("scroll--active");
   });
 };
 
 const projectObserver = new IntersectionObserver(sectionReveal, {
   root: null,
-  threshold: 0.6,
+  threshold: .65,
 });
 
 scrollSections.forEach((section, i) => {
+    section.closest('.scroll-section').classList.remove('scroll--active');
+    section.secIndex = i;
   projectObserver.observe(section);
 });
