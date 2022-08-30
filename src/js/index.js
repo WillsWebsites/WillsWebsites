@@ -64,19 +64,41 @@ $(window).on("pageshow", function () {
 $('<div id="headerView" aria-hidden="true"/>').prependTo("body");
 const headerView = document.getElementById("headerView");
 
-const headerOptions = {
-  threshold: 1,
-  rootMargin: "50px",
-};
-
 const headerReveal = ([entry]) => {
   if (entry.isIntersecting) {
-    $('.header').removeClass('scrolled');
+    $(".header").removeClass("scrolled");
   } else {
-    $('.header').addClass('scrolled');
+    $(".header").addClass("scrolled");
   }
 };
 
-const headerObserver = new IntersectionObserver(headerReveal, headerOptions);
+const headerObserver = new IntersectionObserver(headerReveal, {
+  threshold: 1,
+  rootMargin: "50px",
+});
 
 headerObserver.observe(headerView);
+
+// Section scroll-in observer
+
+const sectionScroll = document.querySelectorAll(".scroll-in");
+
+const sectionReveal = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.add("section-revealed");
+
+    observer.unobserve(entry.target);
+  });
+};
+
+const sectionObserver = new IntersectionObserver(sectionReveal, {
+  root: null,
+  threshold: .1,
+  rootMargin: '20px'
+});
+
+sectionScroll.forEach(section => {
+  sectionObserver.observe(section)
+})
