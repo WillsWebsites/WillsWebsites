@@ -14,9 +14,12 @@ const resumeReveal = function (entries) {
     console.log(entry)
     
     categoryItems.forEach((item) => {
+      console.log(`1. ${entry.target.classList[1]}`)
       if (item.classList.contains(`${entry.target.classList[1]}`)) {
+        console.log(`2. Added ${entry.target.classList[1]}`)
         item.classList.add("scroll--active");
       } else {
+        console.log(`3. removed ${item}`)
         item.classList.remove("scroll--active");
       }
     });
@@ -27,7 +30,7 @@ const resumeReveal = function (entries) {
 
 const projectObserver = new IntersectionObserver(resumeReveal, {
   root: null,
-  threshold: 1,
+  threshold: .9,
 });
 
 resumeItems.forEach((item, i) => {
