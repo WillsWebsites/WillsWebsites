@@ -29,8 +29,6 @@ const scrollHandler = function (target) {
   }
 };
 
-document.querySelector("main").style.paddingTop = `${headerHeight}px`;
-
 //Anchor tag click implementation
 $('a[href*="#"]:not([href="#"])').click(function (e) {
   const urlPath = this.href.substring(0, this.href.indexOf("#")); // url wthout hash
@@ -102,3 +100,6 @@ const sectionObserver = new IntersectionObserver(sectionReveal, {
 sectionScroll.forEach(section => {
   sectionObserver.observe(section)
 })
+
+
+// document.querySelector("main").style.paddingTop = `${headerHeight}px`;
