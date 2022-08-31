@@ -3,7 +3,11 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 95%;
+
+  @media ($tablet) {
+    width: 100%;
+  }
 
   .form-info {
     display: flex;
@@ -16,10 +20,6 @@ form {
       flex-direction: row;
       align-items: center;
     }
-  }
-
-  @media ($tablet) {
-    width: 85%;
   }
 
   input {

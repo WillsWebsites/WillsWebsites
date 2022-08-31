@@ -5,7 +5,7 @@ header {
   left: 0;
 
   @media ($laptop) {
-    position: relative;
+    position: relative !important;
   }
 }
 body {
@@ -16,8 +16,10 @@ main {
   .subpage-banner {
     border-bottom: 2px solid $light;
 
-    .container {
-        padding-top: 25px;
+    @media ($laptop) {
+      .container {
+        padding-top: 25px !important;
+      }
     }
   }
 
@@ -39,33 +41,33 @@ main {
     //     background-color: rgba(18, 38, 51, .1);
     //     border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
     //     z-index: -1;
-    
+
     //     @media ($tablet) {
     //       height: 100%;
     //       width: 80%;
     //       max-height: initial;
     //     }
     //   }
-    
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   bottom: -5%;
-      //   right: -20%;
-      //   height: 60%;
-      //   width: 100%;
-      //   max-height: 700px;
-      //   background-color: rgba($tertiary, .12);
-      //   border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%;
-      //   z-index: -1;
 
-      //   @media ($tablet) {
-      //     bottom: -40%;
-      //     height: 80%;
-      //     width: 60%;
-      //     max-height: initial;
-      //   }
-      // }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: -5%;
+    //   right: -20%;
+    //   height: 60%;
+    //   width: 100%;
+    //   max-height: 700px;
+    //   background-color: rgba($tertiary, .12);
+    //   border-radius: 56% 44% 28% 72% / 33% 68% 32% 67%;
+    //   z-index: -1;
+
+    //   @media ($tablet) {
+    //     bottom: -40%;
+    //     height: 80%;
+    //     width: 60%;
+    //     max-height: initial;
+    //   }
+    // }
 
     .container {
       padding: 0 0 75px 0;
@@ -85,17 +87,17 @@ main {
         padding: 10px 10px;
 
         @media ($tablet) {
-            font-size: $small;
+          font-size: $small;
         }
       }
     }
 
     .blob-btn {
-        max-width: 300px;
-        
-        @media ($laptop) {
-            padding: 15px 25px;
-        }
+      max-width: 300px;
+
+      @media ($laptop) {
+        padding: 15px 25px;
+      }
     }
   }
 }

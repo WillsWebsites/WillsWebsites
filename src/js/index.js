@@ -101,5 +101,13 @@ sectionScroll.forEach(section => {
   sectionObserver.observe(section)
 })
 
-
-// document.querySelector("main").style.paddingTop = `${headerHeight}px`;
+const mainPadding = function() {
+  document.querySelector("main").style.paddingTop = 'initial';
+  if (window.matchMedia('(max-width: 991px').matches) {
+    document.querySelector("main").style.paddingTop = `${headerHeight}px`;
+  }
+}
+mainPadding();
+$(window).resize(function() {
+  mainPadding()
+});
