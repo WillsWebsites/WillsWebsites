@@ -18,6 +18,7 @@ $borderW: 2px;
 
 .blob-btn {
   $numOfBlobs: 4;
+  display: inline-block;
   z-index: 1;
   position: relative;
   padding: 15px 25px;

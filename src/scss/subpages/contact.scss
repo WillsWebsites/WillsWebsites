@@ -1,12 +1,9 @@
 @import "../_main.scss";
 @import "subpages";
 header {
+  position: relative !important;
   top: 0 !important;
   left: 0;
-
-  @media ($laptop) {
-    position: relative !important;
-  }
 }
 body {
   overflow-x: hidden;

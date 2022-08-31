@@ -1,9 +1,23 @@
 @import "../_main.scss";
 @import "subpages";
-@import "scroll-section";
+@import "resume";
 
-.subpage-banner {
+.will-intro {
     .container {
-        padding-top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .will-left {
+        width: 40%;
+
+        h2 {
+            line-height: 1.2;
+        }
+    }
+
+    .will-right {
+        width: 60%;
     }
 }

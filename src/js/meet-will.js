@@ -1,23 +1,33 @@
 // Scrolling section intersection observer
 
-// const scrollSections = document.querySelectorAll(".scrollable-right");
+const resumeItems = document.querySelectorAll(".resume-item");
+const categoryItems = document.querySelectorAll(".category-item");
 
-// const sectionReveal = function (entries) {
+const resumeReveal = function (entries) {
+  entries.forEach((entry) => {
+    entry.target.classList.remove("scroll--active");
 
-//   entries.forEach((entry) => {
-//     entry.target.closest('.scroll-section').classList.remove('scroll--active');
-//     if (!entry.isIntersecting) return;
-//     entry.target.closest('.scroll-section').classList.add("scroll--active");
-//   });
-// };
+    if (!entry.isIntersecting) return;
 
-// const projectObserver = new IntersectionObserver(sectionReveal, {
-//   root: null,
-//   threshold: .663,
-// });
+    categoryItems.forEach((item) => {
+      if (item.classList.contains(`${entry.target.classList[1]}`)) {
+        item.classList.add("scroll--active");
+      } else {
+        item.classList.remove("scroll--active");
+      }
+    });
 
-// scrollSections.forEach((section, i) => {
-//     section.closest('.scroll-section').classList.remove('scroll--active');
-//     section.secIndex = i;
-//   projectObserver.observe(section);
-// });
+    entry.target.classList.add("scroll--active");
+  });
+};
+
+const projectObserver = new IntersectionObserver(resumeReveal, {
+  root: null,
+  threshold: 1,
+});
+
+resumeItems.forEach((item, i) => {
+  item.classList.remove("scroll--active");
+  item.secIndex = i;
+  projectObserver.observe(item);
+});
