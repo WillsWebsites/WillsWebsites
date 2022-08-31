@@ -45,7 +45,8 @@ $(document).ready(function () {
 
     const projectObserver = new IntersectionObserver(projectReveal, {
       root: null,
-      threshold: 0.1,
+      // threshold: 0.1,
+      rootMargin: '-20px'
     });
 
     projects.forEach((project, i) => {

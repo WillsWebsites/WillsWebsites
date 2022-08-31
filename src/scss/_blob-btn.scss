@@ -1,4 +1,4 @@
-$cyan: $secondary;
+$cyan: $primary;
 $borderW: 2px;
 
 .project-btns .buttons {
@@ -23,7 +23,7 @@ $borderW: 2px;
   padding: 15px 25px;
   text-align: center;
   text-transform: uppercase;
-  color: $primary;
+  color: $light;
   font-size: 14px;
   font-weight: bold !important;
   font-family: $primary-font;
@@ -58,7 +58,7 @@ $borderW: 2px;
     top: 0;
     width: 100%;
     height: 100%;
-    border: $borderW solid $light;
+    border: $borderW solid $secondary;
     border-radius: 20px;
   }
 
