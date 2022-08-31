@@ -105,14 +105,16 @@
       <section id="section-1" class="section will-intro">
         <div class="overlay">
           <div class="container">
-            <div class="will-left">
-              <a href="#intro-anchor">
-                <h2>William<br />Schaefermeyer</h2>
-                <h3>Frontend Developer</h3>
-              </a>
-            </div>
+            <div class="will-left"></div>
             <div class="will-right">
-              <img src="./src/img/main-background.jpg" />
+              <h2>William Schaefermeyer</h2>
+              <h3>Frontend Developer</h3>
+              <p>
+                Nice to meet you! My name is William but you can call me Will if
+                you prefer. I am a Frontend Developer who enjoys building
+                creative, custom websites that focus on design and user
+                experience. Excited to get connected!
+              </p>
             </div>
           </div>
         </div>
@@ -120,36 +122,37 @@
       <section id="section-1" class="section digital-resume">
         <div class="overlay">
           <div class="container">
-            <h2>Digital Resume</h2>
+            <div class="resume-intro">
+              <h2>Digital Resume</h2>
+            </div>
             <div id="resume">
               <div class="categories">
                 <div class="categories-inner">
                   <div class="categories-list">
-                    <a class="category-item coding scroll--start"
-                      ><h3>Coding Experience</h3></a
-                    >
-                    <a class="category-item work"><h3>Work History</h3></a>
+                    <a class="category-item work scroll--start"><h3>Work History</h3></a>
                     <a class="category-item education"><h3>Education</h3></a>
-                    <a class="category-item skills"><h3>Skills & Accomplishments</h3></a>
+                    <a class="category-item skills"
+                      ><h3>Skills & Accomplishments</h3></a
+                    >
                     <a class="category-item personal"><h3>Personal</h3></a>
                   </div>
                 </div>
               </div>
 
               <div class="resume-content">
-                <div class="resume-item coding scroll--start">
-                  <p>
-                    Nice to meet you! My name is William and I am a Frontend
-                    Developer who enjoys building creative, custom websites with
-                    a focus on design and modern standards.
-                  </p>
-                </div>
-                <div class="resume-item work">
-                  <p>
-                    Nice to meet you! My name is William and I am a Frontend
-                    Developer who enjoys building creative, custom websites with
-                    a focus on design and modern standards.
-                  </p>
+                <div class="resume-item work scroll--start">
+                  <h4>Website Designer Lead</h4>
+                  <p>FMG Suite | Pleasant Grove, UT</p>
+                  <p>March 2021 - Current</p>
+                  <ul class="responsibilities">
+                    <li>Completed 92 websites from start to finish utilizing dashboard tools, HTML, CSS/SCSS, and JavaScript</li>
+                    <li>Managing a book of business of 10-20 clients at a time</li>
+                    <li>Having oversight and being a resource for a team of 8-10 incredible website designers</li>
+                    <li>Recieved CEO's Outstanding Manager Award in 2022</li>
+                    <li>Crafted and lead a 6 week coding bootcamp that taught HTML, CSS, and JavasScript basics</li>
+                    <li>Improved website design process in various areas. In some instances reducing parts of the process from 5+ hours to 10 minutes through automation of tasks</li>
+                    <li>Recognized as a coding and digital media “go-to” throughout the company. Assisted in various company departments with logo alteration, video editing, media compression/sizing, presentations, and front-end coding adjustments</li>
+                  </ul>
                 </div>
                 <div class="resume-item education">
                   <p>
@@ -177,15 +180,75 @@
           </div>
         </div>
       </section>
-      <section id="section-2" class="section more">
+      <section id="section-2" class="section contact-form">
         <div class="overlay">
           <div class="container">
-            <h2>A bit more about will</h2>
-            <p>
-              Nice to meet you! My name is William and I am a Frontend Developer
-              who enjoys building creative, custom websites with a focus on
-              design and modern standards.
-            </p>
+            <form
+              action="https://formsubmit.co/291228ff3f48bd22374de79b8c1cbeee"
+              method="POST"
+              class="formsubmit-form"
+            >
+              <h2>I'm excited to hear from you!</h2>
+              <input
+                type="hidden"
+                name="_next"
+                value="https://www.willswebsitesdesign.com/thanks.html"
+              />
+              <input
+                type="hidden"
+                name="_subject"
+                value="Will's Websites | Projects | Inquiry"
+              />
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="Thank you for submitting a message to Will's Websites! I look forward to getting in contact with you and will follow up promptly! Until then - Will"
+              />
+              <input type="text" name="_honey" style="display: none" />
+              <div class="form-info">
+                <input
+                  type="name"
+                  name="name"
+                  placeholder="Name*"
+                  title="Add a name"
+                  required
+                  class="required"
+                />
+                <input
+                  type="email"
+                  title="Not a valid email address. Should be in a similar format to 'willswebsites@example.com'"
+                  name="email"
+                  placeholder="Email Address*"
+                  pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                  required
+                  class="required"
+                />
+                <input
+                  type="phone"
+                  title="Please add a valid phone number"
+                  name="phone"
+                  placeholder="Phone"
+                  pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+                />
+              </div>
+              <textarea
+                name="message"
+                placeholder="Your message*"
+                required
+                class="required"
+              ></textarea>
+              <button type="submit" name="submit" class="blob-btn">
+                Submit
+                <span class="blob-btn__inner">
+                  <span class="blob-btn__blobs">
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                  </span>
+                </span>
+              </button>
+            </form>
           </div>
         </div>
       </section>

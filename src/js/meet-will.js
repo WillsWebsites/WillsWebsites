@@ -9,7 +9,7 @@ const resumeReveal = function (entries) {
 
     if (!entry.isIntersecting) return;
 
-    $('.coding').removeClass('scroll--start');
+    $('.work').removeClass('scroll--start');
     
     categoryItems.forEach((item) => {
       if (item.classList.contains(`${entry.target.classList[1]}`)) {
@@ -25,7 +25,7 @@ const resumeReveal = function (entries) {
 
 const projectObserver = new IntersectionObserver(resumeReveal, {
   root: null,
-  threshold: .99,
+  threshold: 1,
 });
 
 resumeItems.forEach((item, i) => {
