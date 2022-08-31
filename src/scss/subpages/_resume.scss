@@ -7,8 +7,23 @@
   }
 }
 
-.digital-resume .container {
-  padding-top: 0;
+.digital-resume {
+    background-color: $light;
+
+    .container {
+        background-color: $primary-highlight;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h2 {
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+      }
 }
 
 #resume {
@@ -43,25 +58,25 @@
       transition: opacity 0.2s;
       max-width: 100%;
 
-      &.scroll--active {
+      &.scroll--active, &.scroll--start {
         opacity: 1;
       }
 
       &.coding {
-        h2 {
+        h3 {
           justify-content: flex-start;
           margin-top: 50vh;
           transition: all .2s ease;
         }
 
-        &.scroll--active {
-            h2 {
+        &.scroll--active, &.scroll--start {
+            h3 {
                 margin-top: 27vh; 
             }
         }
       }
 
-      h2 {
+      h3 {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -70,6 +85,8 @@
         height: 100%;
         margin-right: auto;
         margin-left: auto;
+        font-family: $tertiary-font;
+        font-size: $medium;
       }
     }
   }
@@ -85,8 +102,12 @@
       opacity: .4;
       transition: all .3s ease;
 
-      &.scroll--active {
+      &.scroll--active, &.scroll--start {
         opacity: 1;
+      }
+
+      p {
+        color: $light;
       }
     }
   }

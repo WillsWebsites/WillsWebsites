@@ -9,6 +9,8 @@ const resumeReveal = function (entries) {
 
     if (!entry.isIntersecting) return;
 
+    $('.coding').removeClass('scroll--start');
+    
     categoryItems.forEach((item) => {
       if (item.classList.contains(`${entry.target.classList[1]}`)) {
         item.classList.add("scroll--active");
