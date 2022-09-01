@@ -93,7 +93,7 @@ const sectionReveal = function (entries, observer) {
 const sectionObserver = new IntersectionObserver(sectionReveal, {
   root: null,
   threshold: .1,
-  rootMargin: '20px'
+  rootMargin: '100px'
 });
 
 sectionScroll.forEach(section => {

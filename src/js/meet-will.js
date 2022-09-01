@@ -11,8 +11,8 @@ const resumeReveal = function (entries) {
     let current;
 
     // Remove start and active class to begin
-    $(".category-item").removeClass("scroll--start");
-    $(".category-item").removeClass("scroll--active");
+    $(".category-item, .resume-item").removeClass("scroll--start");
+    $(".category-item, .resume-item").removeClass("scroll--active");
 
     // Check for each item, add the active class to whichever is instersecting and set current variable to that item
     switch (true) {
