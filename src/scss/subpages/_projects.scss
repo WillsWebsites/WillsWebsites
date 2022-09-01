@@ -466,8 +466,7 @@
     color: $light;
     background-color: rgba($dark, 0.85);
     border-radius: 20px;
-    transition: all 0.35s ease-in-out;
-    transition-delay: 0.1s;
+    transition: all 0.3s ease-in-out;
 
     @media ($mobile-max) {
       border-radius: 10px;
@@ -480,7 +479,7 @@
     .mobile-info {
       opacity: 0;
       transition: 0.4s all ease-in-out;
-      transition-delay: 0.4s;
+      transition-delay: .1s;
     }
 
     h4 {
