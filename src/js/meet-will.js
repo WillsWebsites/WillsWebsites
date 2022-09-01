@@ -33,8 +33,7 @@ const resumeReveal = function (entries) {
         current = 'personal'
         break;
     }
-
-    console.log(current)
+    
     $(`.category-item:not(.${current}), .resume-item:not(.${current})`).removeClass('scroll--active');
 
     // $('.work').removeClass('scroll--start');
