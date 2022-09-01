@@ -101,7 +101,7 @@
           transition: all .4s ease-in-out;
 
           &::after {
-            top: 27%;
+            top: 88px;
             max-width: 225px;
           }
         }
@@ -144,7 +144,7 @@
       &.skills {
         h3 {
           &::after {
-            top: 63%;
+            top: 205px;
             max-width: 315px;
           }
         }
@@ -183,6 +183,7 @@
         text-align: center;
         width: 100%;
         height: 100%;
+        min-height: 315px;
         margin-right: auto;
         margin-left: auto;
         font-family: $secondary-font;
@@ -192,7 +193,7 @@
         &::after {
           content: '';
           position: absolute;
-          top: 56%;
+          top: 181px;
           left: 50%;
           width: 100%;
           height: 2px;
