@@ -124,7 +124,7 @@ const resumeReveal = function (entries) {
 
 const projectObserver = new IntersectionObserver(resumeReveal, {
   root: null,
-  threshold: 1.0,
+  threshold: 1,
 });
 
 resumeItems.forEach((item, i) => {
