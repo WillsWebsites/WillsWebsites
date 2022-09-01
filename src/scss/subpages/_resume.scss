@@ -5,6 +5,7 @@
     .container {
         background-color: rgba($primary-highlight, .95);
         padding-top: 0;
+        padding-bottom: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -55,10 +56,11 @@
   display: flex;
 
   .categories {
+    background-color: rgba($primary, .1);
     position: relative;
-    width: 40%;
-    padding-right: 80px;
+    width: calc(40% - 80px);
     padding-left: 0;
+    border-bottom-left-radius: 30px;
 
     .categories-inner {
       position: sticky;
@@ -204,7 +206,9 @@
 
   .resume-content {
     position: relative;
-    width: 60%;
+    width: calc(60% + 80px);
+    padding-left: 80px;
+    box-shadow: $shadow;
 
     .resume-item {
       position: relative;
