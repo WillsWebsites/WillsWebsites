@@ -78,7 +78,6 @@ const headerObserver = new IntersectionObserver(headerReveal, {
 headerObserver.observe(headerView);
 
 // Section scroll-in observer
-
 const sectionScroll = document.querySelectorAll(".scroll-in");
 
 const sectionReveal = function (entries, observer) {
@@ -99,4 +98,8 @@ const sectionObserver = new IntersectionObserver(sectionReveal, {
 
 sectionScroll.forEach(section => {
   sectionObserver.observe(section)
-})
+});
+
+$(window).on('load resize', function() {
+  $('main').css('padding-top', headerHeight);
+});
