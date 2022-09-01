@@ -7,6 +7,7 @@ const resumeReveal = function (entries) {
   entries.forEach((entry) => {
     // If entry isn't intersecting then don't account for it
     if (!entry.isIntersecting) return;
+    $('.work').removeClass('scroll--start');
 
     window.onscroll = function(e) {
 

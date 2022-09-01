@@ -62,7 +62,7 @@
       transition: opacity 0.2s;
       max-width: 100%;
 
-      &.scroll--active {
+      &.scroll--active, &.scroll--start {
         opacity: 1;
       }
 
@@ -73,7 +73,7 @@
           transition: all .4s ease-in-out;
         }
 
-        &.scroll--active {
+        &.scroll--active, &.scroll--start {
             h3 {
                 margin-top: 10vh; 
             }
@@ -111,7 +111,7 @@
       opacity: .4;
       transition: all .3s ease;
 
-      &.scroll--active {
+      &.scroll--active, &.scroll--start {
         opacity: 1;
       }
 
