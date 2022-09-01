@@ -45,7 +45,7 @@
     }
     .categories-list {
       position: relative;
-      height: 56vh;
+      height: 50vh;
     }
     .category-item {
       position: absolute;
@@ -62,7 +62,7 @@
       transition: opacity 0.2s;
       max-width: 100%;
 
-      &.scroll--active, &.scroll--start {
+      &.scroll--active {
         opacity: 1;
       }
 
@@ -70,12 +70,12 @@
         h3 {
           justify-content: flex-start;
           margin-top: 35vh;
-          transition: all .3s ease;
+          transition: all .4s ease-in-out;
         }
 
-        &.scroll--active, &.scroll--start {
+        &.scroll--active {
             h3 {
-                margin-top: 30vh; 
+                margin-top: 10vh; 
             }
         }
       }
