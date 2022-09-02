@@ -18,7 +18,7 @@ header {
   }
 }
 .h-container {
-  padding: 15px 0;
+  padding: 10px 0;
 }
 .h-inner {
   display: flex;
@@ -30,11 +30,19 @@ header {
 .logo-link {
   display: flex;
 }
-.main-logo {
+#main-logo {
   width: 100%;
   height: auto;
   max-width: 50px;
   transition: all 0.4s ease-in-out;
+}
+
+.homepage {
+  #main-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
 }
 .h-right {
   display: flex;

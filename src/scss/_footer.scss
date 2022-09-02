@@ -25,6 +25,15 @@ footer {
     }
   }
 
+  .main-logo {
+    width: 100%;
+    height: auto;
+    max-width: 80px;
+    @media ($laptop) {
+      margin: 0 0 20px 30px;
+    }
+  }
+
   //prettier-ignore
   h5, p {
     margin: 10px 0;
