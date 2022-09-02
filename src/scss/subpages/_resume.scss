@@ -32,10 +32,10 @@
             text-align: center;
             color: $light;
             font: $x-small-m;
-            padding: 10px 30px 0 30px;
 
             a {
               color: $light;
+              padding: 20px 30px;
 
               &:hover {
                 color: $secondary;
@@ -58,9 +58,21 @@
   .categories {
     background-color: rgba($primary, .1);
     position: relative;
-    width: calc(40% - 80px);
+    width: calc(40% - 60px);
     padding-left: 0;
     border-bottom-left-radius: 30px;
+
+    @media ($tablet) {
+      width: calc(40% - 50px);
+    }
+
+    @media ($laptop) {
+      width: calc(40% - 60px);
+    }
+
+    @media ($desktop) {
+      width: calc(40% - 80px);
+    }
 
     .categories-inner {
       position: sticky;
@@ -187,8 +199,12 @@
         margin-right: auto;
         margin-left: auto;
         font-family: $secondary-font;
-        font-size: $medium;
+        font-size: $small;
         z-index: 1;
+
+        @media ($laptop) {
+          font-size: $medium;
+        }
 
         &::after {
           content: '';
@@ -207,9 +223,22 @@
 
   .resume-content {
     position: relative;
-    width: calc(60% + 80px);
-    padding-left: 80px;
     box-shadow: $shadow;
+
+    @media ($tablet) {
+      width: calc(60% + 50px);
+      padding-left: 50px;
+    }
+
+    @media ($laptop) {
+      width: calc(60% + 60px);
+      padding-left: 60px;
+    }
+
+    @media ($desktop) {
+      width: calc(60% + 80px);
+      padding-left: 80px;
+    }
 
     .resume-item {
       position: relative;
@@ -219,9 +248,13 @@
       min-height: 50vh;
       padding-top: 15vh;
       padding-bottom: 15vh;
-      padding-right: 50px;
+      padding-right: 40px;
       opacity: .35;
       transition: all .3s ease;
+
+      @media ($laptop) {
+        padding-right: 50px;
+      }
 
       &.scroll--active, &.scroll--start {
         opacity: 1;
@@ -237,7 +270,11 @@
         padding-bottom: 10vh;
 
         .details {
-          margin-bottom: 30px;
+          margin-bottom: 20px;
+
+          @media ($desktop) {
+            margin-bottom: 20px;
+          }
         }
         .complete {
 
@@ -264,6 +301,20 @@
 
           p {
             margin-top: 5px;
+            margin-right: 4px;
+          }
+        }
+      }
+
+      &.education {
+        @media ($tablet) and ($laptop-max) {
+          ul li {
+            &:first-child {
+              width: 60%;
+            }
+            &:last-child {
+              width: 40%;
+            }
           }
         }
       }
@@ -277,19 +328,33 @@
           &:nth-child(even) {
             width: calc(40% - 10px);
             margin-right: 10px;
+
+            @media ($tablet) and ($laptop-max) {
+              margin-right: -5px;
+            }
           }
           &:nth-child(odd) {
             width: 60%;
+
+            @media ($tablet) and ($laptop-max) {
+              width: calc(60% + 15px);
+            }
           }
 
           &.libraries {
             max-width: 300px;
+
+            @media ($tablet) and ($laptop-max) {
+              ul {
+                flex-direction: column;
+              }
+            }
           }
 
           &.other {
             max-width: 450px;
           }
-          &.languages, &.libraries {
+          &.languages, &.media {
             margin-bottom: 30px;
           }
         }
@@ -304,6 +369,10 @@
           padding-left: 0;
           padding-top: 10px;
 
+          @media ($tablet) and ($laptop-max) {
+            width: 90%;
+          }
+
           img {
             width: auto;
             height: 100%;
@@ -317,6 +386,10 @@
             justify-content: center;
             align-items: flex-start;
             width: 25%;
+
+            &:nth-child(even) {
+              padding-right: 30px !important;
+            }
           }
         }
       }
@@ -326,7 +399,6 @@
         flex-wrap: wrap;
         list-style-type: square;
         width: 100%;
-        max-height: 250px;
         padding-left: 15px;
 
         li {
@@ -334,6 +406,29 @@
           margin: 5px 0;
           color: $light;
           padding: 5px 30px 5px 5px;
+
+          @media ($tablet) and ($laptop-max) {
+            &.completed-websites {
+              order: 1;
+            }
+            &.improved-process {
+              order: 2;
+            }
+            &.team-members {
+              order: 3;
+            }
+            &.ceo-award {
+              order: 5;
+              padding-right: 20px !important;
+            }
+            &.coding-bootcamp {
+              order: 4;
+              padding-right: 0 !important
+            }
+            &.book-of-business {
+              order: 6;
+            }
+          }
 
           &:nth-child(even) {
             padding-right: 0
