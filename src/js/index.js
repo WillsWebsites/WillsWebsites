@@ -12,7 +12,7 @@ const scrollHandler = function (target) {
     headerHeight = getHeaderHeight();
     //prettier-ignore
     $('html,body').stop().animate({
-      scrollTop: target.offset().top - headerHeight
+      scrollTop: target.offset().top - headerHeight + 1
       }, {
         // ensures that it goes all the way to the anchor link
         complete: function() {
@@ -20,7 +20,7 @@ const scrollHandler = function (target) {
           //prettier-ignore
           if(document.body.scrollTop !== headerHeight || document.documentElement.scrollTop !== headerHeight) {
             $('html,body').animate({
-              scrollTop: target.offset().top - headerHeight
+              scrollTop: target.offset().top - headerHeight + 1
             }, 1);
           }
           $('html,body').stop(true, true);
@@ -28,62 +28,6 @@ const scrollHandler = function (target) {
     });
   }
 };
-
-$(".page-meet-will .digital-resume a").on("load scroll touchend click resize", function () {
-  const locationPath = this.href;
-
-  if (window.matchMedia("(min-width: 992px)").matches &&
-  window.matchMedia("(min-height: 701px)").matches) {
-    if (this.href.length) {
-
-
-      // const resumeItem = this.href.slice(this.href.indexOf('#') + 1);
-
-      const pageCenter = ($(window).height() / 2);
-      const target = $(this.href.substring(this.href.indexOf("#")));
-
-      //prettier-ignore
-      $('html,body').stop().animate({
-        scrollTop: target.offset().top - pageCenter - 20
-        }, {
-          // ensures that it goes all the way to the anchor link
-          complete: function() {
-            //prettier-ignore
-            if(document.body.scrollTop !== headerHeight || document.documentElement.scrollTop !== headerHeight) {
-              $('html,body').animate({
-                scrollTop: target.offset().top - pageCenter - 20
-              }, 1);
-            }
-            $('html,body').stop(true, true);
-          }
-      });
-    }
-  }
-
-  if (
-    window.matchMedia("(max-width: 991px)").matches ||
-    (window.matchMedia("(min-width: 992px)").matches && window.matchMedia("(max-height: 700px)").matches)
-  ) {
-    switch (true) {
-      case locationPath.includes("#work"):
-        $(".category-item, .resume-item").removeClass("tab--active");
-        $(".work").addClass("tab--active");
-        break;
-      case locationPath.includes("#education"):
-        $(".category-item, .resume-item").removeClass("tab--active");
-        $(".education").addClass("tab--active");
-        break;
-      case locationPath.includes("#skills"):
-        $(".category-item, .resume-item").removeClass("tab--active");
-        $(".skills").addClass("tab--active");
-        break;
-      case locationPath.includes("#personal"):
-        $(".category-item, .resume-item").removeClass("tab--active");
-        $(".personal").addClass("tab--active");
-        break;
-    }
-  }
-});
 
 // Anchor tag click implementation
 $('body:not(.page-meet-will) a[href*="#"]:not([href="#"])').click(function (e) {
@@ -155,6 +99,8 @@ const sectionObserver = new IntersectionObserver(sectionReveal, {
 sectionScroll.forEach((section) => {
   sectionObserver.observe(section);
 });
+
+$("main").css("padding-top", headerHeight);
 
 $(window).on("load resize", function () {
   $("main").css("padding-top", headerHeight);

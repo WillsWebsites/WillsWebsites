@@ -33,6 +33,10 @@ form {
     @media ($tablet) {
       padding: 10px 30px;
     }
+
+    h2 {
+      color: $light;
+    }
   }
 
   .form-info {
