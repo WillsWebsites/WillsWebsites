@@ -54,7 +54,7 @@ resumeItems.forEach(item => {
 
 
 
-$(".page-meet-will .digital-resume a").on("load scroll touchend click resize", function () {
+$(".page-meet-will .digital-resume a").on("load scroll touchend click resize", function (e) {
   const locationPath = this.href;
 
   if (window.matchMedia("(min-width: 768px)").matches &&
@@ -87,6 +87,9 @@ $(".page-meet-will .digital-resume a").on("load scroll touchend click resize", f
     window.matchMedia("(max-width: 767px)").matches ||
     (window.matchMedia("(min-width: 768px)").matches && window.matchMedia("(max-height: 699px)").matches)
   ) {
+    e.preventDefault();
+    $('.category-item, .resume-item').removeClass('scroll--start');
+
     switch (true) {
       case locationPath.includes("#work"):
         $(".category-item, .resume-item").removeClass("tab--active");
@@ -104,6 +107,16 @@ $(".page-meet-will .digital-resume a").on("load scroll touchend click resize", f
         $(".category-item, .resume-item").removeClass("tab--active");
         $(".personal").addClass("tab--active");
         break;
+    }
+  }
+});
+
+$(window).on('resize load', function() {
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    $(".category-item, .resume-item").removeClass("scroll--active");
+
+    if (!($('category-item').hasClass('scroll--start'))) {
+      $(".work").addClass("scroll--start");
     }
   }
 });

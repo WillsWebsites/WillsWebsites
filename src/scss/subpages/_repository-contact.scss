@@ -199,8 +199,11 @@
       }
 
       @media ($desktop) {
-        left: 10%;
         transform: scale(1.2) rotate(220deg);
+      }
+
+      @media (min-width: 1400px) {
+        left: 10%;
       }
     }
 
