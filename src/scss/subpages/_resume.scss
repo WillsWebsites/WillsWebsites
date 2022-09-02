@@ -241,10 +241,12 @@
   .resume-content {
     position: relative;
     box-shadow: $shadow;
+    overflow: hidden;
 
     @media ($tablet) {
       width: calc(60% + 50px);
       padding-left: 50px;
+      padding-top: 10vh;
     }
 
     @media ($laptop) {
@@ -281,10 +283,19 @@
         }
       }
 
+      &.scroll--active::after {
+        opacity: .8;
+        transform: translate(0, -50%);
+      }
+
       &.work {
         border-top: 0;
-        padding-top: 10vh;
+        padding-top: 0;
         padding-bottom: 10vh;
+
+        &::after {
+          top: 35%;
+        }
 
         .details {
           margin-bottom: 20px;
@@ -381,6 +392,10 @@
         min-height: 45vh;
         padding-bottom: 5vh;
 
+        &::after {
+          top: 60%;
+        }
+
         .hobbies {
           list-style-type: none;
           padding-left: 0;
@@ -408,6 +423,30 @@
               padding-right: 30px !important;
             }
           }
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -50px;
+        top: 50%;
+        width: 0; 
+        height: 0; 
+        border-top: 13px solid transparent;
+        border-bottom: 13px solid transparent;
+        border-left: 13px solid $light;
+        transform: translate(-20px, -50%);
+        opacity: 0;
+        transition-delay: .02s;
+        transition: all .4s ease-in-out;
+
+        @media ($laptop) {
+          left: -60px;
+        }
+
+        @media ($desktop) {
+          left: -80px;
         }
       }
 
