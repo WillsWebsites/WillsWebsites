@@ -356,22 +356,23 @@
     .jump-item {
       position: absolute;
       left: 50%;
+      top: 50%;
 
-      &#work {
-        top: -125px;
-      }
+      // &#work {
+      //   top: -125px;
+      // }
 
-      &#education {
-        top: -225px;
-      }
+      // &#education {
+      //   top: -225px;
+      // }
 
-      &#skills {
-        top: -175px;
-      }
+      // &#skills {
+      //   top: -175px;
+      // }
 
-      &#personal {
-        top: -200px;
-      }
+      // &#personal {
+      //   top: -200px;
+      // }
     }
   }
 }

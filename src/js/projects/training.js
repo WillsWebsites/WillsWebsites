@@ -193,6 +193,7 @@ const modalHandler = function () {
   $(".training-item").click(function (e) {
     if (window.matchMedia("(min-width: 992px)").matches) {
       $(modal).addClass("modal-opened");
+      $('body').addClass('modal--disable');
       trainingInfoHandler(e);
     }
   });
@@ -200,6 +201,7 @@ const modalHandler = function () {
   $(".training-item .btn").on("click touchend", function (e) {
     if (window.matchMedia("(max-width: 991px)").matches) {
       $(modal).addClass("modal-opened");
+      $('body').addClass('modal--disable');
       trainingInfoHandler(e);
     }
   });
@@ -207,6 +209,7 @@ const modalHandler = function () {
   // Closing Modal and clearing content
 
   const hideModal = function () {
+    $('body').removeClass('modal--disable');
     $(modal).removeClass("modal-opened");
     $(modal).removeClass("modal-construction");
     $(modalTitle).text("");

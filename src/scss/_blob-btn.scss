@@ -61,6 +61,7 @@ $borderW: 2px;
     height: 100%;
     border: $borderW solid $secondary;
     border-radius: 20px;
+    overflow: hidden;
   }
 
   &:after {
@@ -71,6 +72,7 @@ $borderW: 2px;
     top: $borderW * 1.5;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 
     transition: all 0.3s 0.2s;
     border-radius: 20px;
