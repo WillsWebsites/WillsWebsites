@@ -57,8 +57,8 @@ resumeItems.forEach(item => {
 $(".page-meet-will .digital-resume a").on("load scroll touchend click resize", function () {
   const locationPath = this.href;
 
-  if (window.matchMedia("(min-width: 992px)").matches &&
-  window.matchMedia("(min-height: 701px)").matches) {
+  if (window.matchMedia("(min-width: 768px)").matches &&
+  window.matchMedia("(min-height: 700px)").matches) {
     if (this.href.length) {
 
 
@@ -84,8 +84,8 @@ $(".page-meet-will .digital-resume a").on("load scroll touchend click resize", f
   }
 
   if (
-    window.matchMedia("(max-width: 991px)").matches ||
-    (window.matchMedia("(min-width: 992px)").matches && window.matchMedia("(max-height: 700px)").matches)
+    window.matchMedia("(max-width: 767px)").matches ||
+    (window.matchMedia("(min-width: 768px)").matches && window.matchMedia("(max-height: 699px)").matches)
   ) {
     switch (true) {
       case locationPath.includes("#work"):

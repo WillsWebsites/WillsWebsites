@@ -54,16 +54,25 @@
 
 #resume {
   display: flex;
+  flex-direction: column;
+
+  @media ($tablet) {
+    flex-direction: row;
+  }
+
+  @media ($tablet) and ($height-max) {
+    flex-direction: column;
+  }
 
   .categories {
     background-color: rgba($primary, .1);
     position: relative;
-    width: calc(40% - 60px);
-    padding-left: 0;
-    border-bottom-left-radius: 30px;
+    width: 100%;
 
     @media ($tablet) {
       width: calc(40% - 50px);
+      padding-left: 0;
+      border-bottom-left-radius: 30px;
     }
 
     @media ($laptop) {
@@ -74,14 +83,26 @@
       width: calc(40% - 80px);
     }
 
+    @media ($tablet) and ($height-max) {
+      width: 100%;
+    }
+
     .categories-inner {
-      position: sticky;
-      top: 30vh;
-      padding-top: 30px;
+
+      @media ($tablet) and ($height-min) {
+        position: sticky;
+        top: 30vh;
+        padding-top: 30px;
+      }
     }
     .categories-list {
       position: relative;
-      height: 35vh;
+      min-height: 200px;
+
+      @media ($tablet) and ($height-min) {
+        position: relative;
+        height: 35vh;
+      }
     }
     .category-item {
       position: absolute;
@@ -120,12 +141,20 @@
               top: 88px;
               max-width: 225px;
             }
+
+            @media (min-height: 1200px) and ($laptop-max) {
+              top: 70px;
+            }
           }
         }
 
         &.scroll--active, &.scroll--start {
             h3 {
                 margin-top: 11vh; 
+
+                @media (min-height: 1200px) and ($laptop-max) {
+                  margin-top: 17vh;
+                }
             }
         }
       }
@@ -158,6 +187,7 @@
             @media ($laptop) {
               max-width: 175px;
             }
+            
           }
         }
       }
@@ -170,6 +200,10 @@
 
             @media ($laptop) {
               top: 207px;
+            }
+
+            @media (min-height: 1200px) and ($laptop-max) {
+              top: 229px;
             }
           }
         }
@@ -233,6 +267,10 @@
           border-radius: 5px;
           transform: translateX(-50%);
           background-color: rgba($light, .7);
+
+          @media (min-height: 1200px) and ($laptop-max) {
+            top: 210px;
+          }
         }
       }
     }
@@ -437,6 +475,7 @@
         border-bottom: 13px solid transparent;
         border-left: 13px solid $light;
         transform: translate(-20px, -50%);
+        filter: drop-shadow(1px 3px 2px rgba($dark, .7));
         opacity: 0;
         transition-delay: .02s;
         transition: all .4s ease-in-out;
