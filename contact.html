@@ -121,7 +121,9 @@
               method="POST"
               class="formsubmit-form"
             >
-              <h2>I'm excited to hear from you!</h2>
+              <div class="form-upper">
+                <h2>I'm excited to hear from you!</h2>
+              </div>
               <input
                 type="hidden"
                 name="_next"
@@ -138,38 +140,40 @@
                 value="Thank you for submitting a message to Will's Websites! I look forward to getting in contact with you and will follow up promptly! Until then - Will"
               />
               <input type="text" name="_honey" style="display: none" />
-              <div class="form-info">
-                <input
-                  type="name"
-                  name="name"
-                  placeholder="Name*"
-                  title="Add a name"
+              <div class="form-container">
+                <div class="form-info">
+                  <input
+                    type="name"
+                    name="name"
+                    placeholder="Name*"
+                    title="Add a name"
+                    required
+                    class="required"
+                  />
+                  <input
+                    type="email"
+                    title="Not a valid email address. Should be in a similar format to 'willswebsites@example.com'"
+                    name="email"
+                    placeholder="Email Address*"
+                    pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                    required
+                    class="required"
+                  />
+                  <input
+                    type="phone"
+                    title="Please add a valid phone number"
+                    name="phone"
+                    placeholder="Phone"
+                    pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+                  />
+                </div>
+                <textarea
+                  name="message"
+                  placeholder="Your message*"
                   required
                   class="required"
-                />
-                <input
-                  type="email"
-                  title="Not a valid email address. Should be in a similar format to 'willswebsites@example.com'"
-                  name="email"
-                  placeholder="Email Address*"
-                  pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-                  required
-                  class="required"
-                />
-                <input
-                  type="phone"
-                  title="Please add a valid phone number"
-                  name="phone"
-                  placeholder="Phone"
-                  pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
-                />
+                ></textarea>
               </div>
-              <textarea
-                name="message"
-                placeholder="Your message*"
-                required
-                class="required"
-              ></textarea>
               <button type="submit" name="submit" class="blob-btn">
                 Submit
                 <span class="blob-btn__inner">

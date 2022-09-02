@@ -1,12 +1,38 @@
+.contact-form {
+  background-color: $light;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 95%;
+  background-color: $primary-highlight;
+  margin: 0 auto;
+  border-radius: 50px;
+  box-shadow: $shadow;
+  z-index: 1;
 
   @media ($tablet) {
     width: 100%;
+  }
+
+  .form-upper {
+    width: 100%;
+    padding: 0 30px;
+    background-color: $primary;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom: 2px solid $light;
+    text-align: center;
+
+    @media ($tablet) {
+      padding: 10px 30px;
+    }
   }
 
   .form-info {
@@ -17,8 +43,28 @@ form {
     width: 100%;
 
     @media ($tablet) {
-      flex-direction: row;
-      align-items: center;
+      width: 40%;
+      justify-content: flex-start;
+    }
+
+    @media ($desktop) {
+      width: 35%;
+    }
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+    padding: 20px 30px 20px 30px;
+    background-color: #2a434c;
+    box-shadow: 0 2px 6px rgba($dark, 0.1);
+
+    @media ($tablet) {
+      display: flex;
+      max-width: initial;
+      margin-bottom: 40px;
+      padding: 30px 50px 75px 50px;
     }
   }
 
@@ -35,13 +81,18 @@ form {
     font-size: $x-small;
 
     @media ($tablet) {
-      width: 50%;
-      margin: 10px;
+      width: calc(100% - 30px);
+      margin: 10px 30px 10px 10px;
       padding: 10px 20px 10px 0;
     }
 
     @media ($laptop) {
       font-size: $small;
+    }
+
+    @media ($desktop) {
+      margin: 10px 50px 10px 10px;
+      width: calc(100% - 50px);
     }
 
     &::placeholder {
@@ -60,9 +111,21 @@ form {
       -webkit-text-fill-color: #fff !important;
     }
   }
+  .blob-btn {
+    margin-bottom: 20px;
+    max-width: 300px;
+
+    @media ($tablet) {
+      margin-bottom: 40px;
+    }
+
+    @media ($laptop) {
+      padding: 15px 25px;
+    }
+  }
 
   textarea {
-    padding: 10px 20px;
+    padding: 10px 20px 10px 0;
     background-color: transparent;
     outline: none;
     border: none;
@@ -71,11 +134,23 @@ form {
     max-width: 100%;
     font-size: $x-small;
     font-family: $tertiary-font;
-    min-height: 100px;
+    min-height: 75px;
     max-height: 250px;
     overflow: visible;
     resize: vertical;
     scrollbar-color: $light;
+
+    @media ($tablet) {
+      width: 60%;
+      max-width: initial;
+      min-height: 100px;
+      padding: 20px;
+      font-size: $small;
+    }
+
+    @media ($desktop) {
+      width: 65%;
+    }
 
     &::placeholder {
       color: white;

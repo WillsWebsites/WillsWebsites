@@ -5,13 +5,13 @@
       .rc-left::before {
         animation: blob1 ease 20s;
         animation-delay: 0s;
-        animation-iteration-count: 5;
+        animation-iteration-count: infinite;
         animation-fill-mode: forwards;
       }
       .rc-right::before {
-        animation: blob3 ease 15s;
+        animation: blob2 ease 15s;
         animation-delay: .5s;
-        animation-iteration-count: 5;
+        animation-iteration-count: infinite;
         animation-fill-mode: forwards;
       }
     }
@@ -68,7 +68,7 @@
     }
 
     @media ($desktop) {
-      min-height: 500px;
+      min-height: 475px;
       padding: 50px 0%;
       max-width: initial;
     }
@@ -81,6 +81,7 @@
       font-size: $medium;
       text-align: center;
       line-height: 1.2;
+      margin-bottom: 0;
 
       @media (min-width: 1300px) {
         font-size: $large;
@@ -189,6 +190,15 @@
         width: 90%;
         max-height: 1000px;
         max-height: initial;
+        transform: scale(1.2) rotate(240deg);
+      }
+
+      @media ($laptop) {
+        left: 5%;
+      }
+
+      @media ($desktop) {
+        left: 10%;
         transform: scale(1.2) rotate(220deg);
       }
     }
@@ -196,6 +206,48 @@
     @media ($tablet) {
       width: 48%;
       padding-right: 0;
+    }
+
+    form {
+      background-color: transparent;
+      box-shadow: none;
+
+      .form-info {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+
+        input {
+          font-size: $x-small;
+          border-bottom: 1px solid $light;
+          margin: 5px 0;
+
+          @media ($desktop) {
+            font-size: $small;
+            border-bottom: 2px solid $light;
+          }
+        }
+
+        @media ($desktop) {
+          max-width: 425px;
+        }
+      }
+      textarea {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 0 auto;
+        padding-left: 0;
+        font-size: $x-small;
+
+        @media ($desktop) {
+          max-width: 425px;
+          font-size: $small;
+        }
+      }
+
+      .blob-btn {
+        margin-bottom: 0;
+      }
     }
   }
 }
