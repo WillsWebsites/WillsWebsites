@@ -303,7 +303,7 @@ const removeAutoplay = function() {
       .removeAttr("loop")
       .removeAttr("playsinline");
     const videos = document.querySelectorAll(".training-item video");
-    for (video of videos) {
+    for (let video of videos) {
       video.pause();
     }
   }
