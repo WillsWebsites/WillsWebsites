@@ -82,21 +82,21 @@ const Project = (props) => {
       builtWith: ["HTML", "SCSS/CSS", "JS/jQuery", "FMG Suite Platform"],
     },
     {
-      company: "Anna Hartwell Financial Strategist",
+      company: "Makers Wealth Management",
       companyDescription:
-        "Anna Hartwell provides a customized approach to finance. She is an expert in the field who can help people make the best decisions for themselves and their families.",
-      url: "https://www.hartwellfp.com/",
-      urlShort: "hartwellfp.com",
+        "MAKERS Wealth Management is a woman-owned comprehensive financial advisory practice that empowers clients to reach their financial goals.",
+      url: "https://www.makerswealthmanagement.com/",
+      urlShort: "makerswealthmanagement.com",
       desktopImg: new URL(
-        "../../img/projects/desktop/hartwell.jpg?width=1329&height=778",
+        "../../img/projects/desktop/makers.jpg?width=1329&height=778",
         import.meta.url
       ),
       mobileImg: new URL(
-        "../../img/projects/mobile/hartwell-mobile.jpg?width=393&height=711",
+        "../../img/projects/mobile/makers-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
       logo: new URL(
-        "../../img/projects/logos/hartwell-logo.png",
+        "../../img/projects/logos/makers-logo.png",
         import.meta.url
       ),
       builtWith: ["HTML", "CSS", "JS/jQuery", "FMG Suite Platform"],
@@ -138,24 +138,24 @@ const Project = (props) => {
       builtWith: ["HTML", "CSS", "JS/jQuery", "FMG Suite Platform"],
     },
     {
-      company: "XCountry",
+      company: "Anna Hartwell Financial Strategist",
       companyDescription:
-        "XCountry provides financial game plans that are designed to help clients achieve their individual financial goals throughout the investment curve.",
-      url: "https://www.xcountry.financial/",
-      urlShort: "xcountry.financial",
+        "Anna Hartwell provides a customized approach to finance. She is an expert in the field who can help people make the best decisions for themselves and their families.",
+      url: "https://www.hartwellfp.com/",
+      urlShort: "hartwellfp.com",
       desktopImg: new URL(
-        "../../img/projects/desktop/xcountry.jpg?width=1329&height=778",
+        "../../img/projects/desktop/hartwell.jpg?width=1329&height=778",
         import.meta.url
       ),
       mobileImg: new URL(
-        "../../img/projects/mobile/xcountry-mobile.jpg?width=393&height=711",
+        "../../img/projects/mobile/hartwell-mobile.jpg?width=393&height=711",
         import.meta.url
       ),
       logo: new URL(
-        "../../img/projects/logos/xcountry-logo.png",
+        "../../img/projects/logos/hartwell-logo.png",
         import.meta.url
       ),
-      builtWith: ["HTML", "SCSS/CSS", "JS/jQuery", "FMG Suite Platform"],
+      builtWith: ["HTML", "CSS", "JS/jQuery", "FMG Suite Platform"],
     },
   ];
 
