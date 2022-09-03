@@ -16,7 +16,7 @@ const ProjectDesktop = (props) => {
           </div>
         </div>
         <figure className="screen-window">
-          <img src={props.desktopImg} />
+          <img src={props.desktopImg} alt={`${props.company} Desktop Preview`} />
         </figure>
         <div className="desktop-overlay">
           <button className="close-details">X</button>

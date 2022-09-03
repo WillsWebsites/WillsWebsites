@@ -16,6 +16,7 @@ const ProjectItem = (props) => {
       />
 
       <ProjectMobile
+      company={props.company}
         urlShort={props.urlShort}
         mobileImg={props.mobileImg}
         builtWith={props.builtWith}

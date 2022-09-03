@@ -14,7 +14,7 @@ const ProjectMobile = (props) => {
               </div>
             </div>
             <figure>
-              <img src={props.mobileImg} />
+              <img src={props.mobileImg} alt={`${props.company} Mobile Preview`} />
             </figure>
           </div>
         </div>
