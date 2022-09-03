@@ -49,14 +49,16 @@ $('body:not(.page-meet-will) a[href*="#"]:not([href="#"])').click(function (e) {
 });
 
 // Go to the anchor tag on site load
-$(window).on("pageshow", function () {
-  const hash = window.location.hash;
-  //prettier-ignore
-  if (hash == '' || hash == '#' || hash == undefined) return false;
-
-  const target = $(hash);
-  scrollHandler(target);
-});
+if (!($('body').hasClass('.page-meet-will'))) {
+  $(window).on("pageshow", function () {
+    const hash = window.location.hash;
+    //prettier-ignore
+    if (hash == '' || hash == '#' || hash == undefined) return false;
+  
+    const target = $(hash);
+    scrollHandler(target);
+  });
+}
 
 // Header observer
 $('<div id="headerView" aria-hidden="true"/>').prependTo("body");
