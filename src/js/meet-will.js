@@ -116,6 +116,10 @@ $(window).on("resize load", function () {
   if (window.matchMedia("(max-width: 767px)").matches) {
     $(".category-item, .resume-item").removeClass("scroll--active");
 
+
+    // Only want to add scroll--start on resize if nothing has scoll--start, and nothing is active. 
+    // Makes sure something is there if nothing is active
+    
     if (
       !$(".category-item").hasClass("scroll--start") &&
       (!$(".category-item").hasClass("tab--active") &&
