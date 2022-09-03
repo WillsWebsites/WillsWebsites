@@ -295,7 +295,7 @@ trainingProjects.forEach((project, i) => {
 
 // Don't autoplay videos on reduce motion settings
 const removeAutoplay = function() {
-  if (window.matchMedia("(prefers-reduced-motion")) {
+  if (window.matchMedia("(prefers-reduced-motion").matches) {
     $(".training-item video")
       .attr('preload', 'none')
       .removeAttr('muted')
