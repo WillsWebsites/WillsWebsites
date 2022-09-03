@@ -89,7 +89,7 @@ $(".page-meet-will .digital-resume a:not(.blob-btn)").on(
       (window.matchMedia("(min-width: 768px)").matches &&
         window.matchMedia("(max-height: 699px)").matches)
     ) {
-      e.preventDefault();
+      // e.preventDefault();
       $(".category-item, .resume-item").removeClass("scroll--start");
 
       switch (true) {
