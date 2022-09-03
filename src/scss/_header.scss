@@ -41,6 +41,10 @@ header {
   height: auto;
   max-width: 40px;
   transition: all 0.4s ease-in-out;
+
+  @media ($tablet) {
+    transform: translateY(2px);
+  }
 }
 
 .homepage {
