@@ -113,12 +113,16 @@ $borderW: 2px;
   &__blob {
     position: absolute;
     top: $borderW;
-    width: calc(100% / $numOfBlobs);
+    width: 15%;
     height: 100%;
     background: $tertiary;
     border-radius: 100%;
     transform: translate3d(0, 150%, 0) scale(1.7);
     transition: transform 0.45s;
+
+    @media ($mobile-large) {
+      width: calc(100% / $numOfBlobs);
+    }
 
     @supports (filter: url("#goo")) {
       transform: translate3d(0, 150%, 0) scale(1.4);
