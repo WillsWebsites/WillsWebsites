@@ -62,6 +62,12 @@ $(document).ready(function () {
   const websiteCount = document.getElementById("website-count");
 
   const barAnimation = function () {
+    if (window.matchMedia('(prefers-reduced-motion').matches) {
+      websitesBar.style.height = 92 * 0.8 + "%";
+      websiteCount.textContent = Math.floor(92);
+      return;
+    };
+
     setTimeout(() => {
       let height = 1;
       let adjustHeight = setInterval(frame, 0.1);

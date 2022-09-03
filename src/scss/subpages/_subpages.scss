@@ -41,6 +41,11 @@ body:not(.page-thanks) .subpage-banner {
       @media ($desktop) {
         height: 5px;
       }
+
+      @media (prefers-reduced-motion) {
+        animation: none !important;
+        width: 100% !important;
+      }
     }
 
     @media ($tablet-max) {

@@ -193,7 +193,7 @@ const modalHandler = function () {
   $(".training-item").click(function (e) {
     if (window.matchMedia("(min-width: 992px)").matches) {
       $(modal).addClass("modal-opened");
-      $('body').addClass('modal--disable');
+      $("body").addClass("modal--disable");
       trainingInfoHandler(e);
     }
   });
@@ -201,7 +201,7 @@ const modalHandler = function () {
   $(".training-item .btn").on("click touchend", function (e) {
     if (window.matchMedia("(max-width: 991px)").matches) {
       $(modal).addClass("modal-opened");
-      $('body').addClass('modal--disable');
+      $("body").addClass("modal--disable");
       trainingInfoHandler(e);
     }
   });
@@ -209,7 +209,7 @@ const modalHandler = function () {
   // Closing Modal and clearing content
 
   const hideModal = function () {
-    $('body').removeClass('modal--disable');
+    $("body").removeClass("modal--disable");
     $(modal).removeClass("modal-opened");
     $(modal).removeClass("modal-construction");
     $(modalTitle).text("");
@@ -222,9 +222,9 @@ const modalHandler = function () {
 modalHandler();
 
 $(window).resize(modalHandler);
-$(document).ready(function() {
+$(document).ready(function () {
   modalHandler();
-})
+});
 
 // Training Projects Observer
 const trainingProjects = document.querySelectorAll(".training-item");
@@ -262,7 +262,8 @@ const trainingReveal = function (entries, observer) {
     // $('.training-item figure').each(function(){
     //   imageSwapHandler(this);
     // });
-
+    if (window.matchMedia('(prefers-reduced-motion)').matches) return;
+    
     if (i < 2) {
       entry.target
         .querySelector("video")
@@ -291,3 +292,27 @@ trainingProjects.forEach((project, i) => {
   }
   trainingObserver.observe(project);
 });
+
+// Don't autoplay videos on reduce motion settings
+const removeAutoplay = function() {
+  if (window.matchMedia("(prefers-reduced-motion")) {
+    $(".training-item video")
+      .attr('preload', 'none')
+      .removeAttr('muted')
+      .removeAttr("autoplay")
+      .removeAttr("loop")
+      .removeAttr("playsinline");
+    videos = document.querySelectorAll(".training-item video");
+    for (video of videos) {
+      video.pause();
+    }
+  }
+}
+removeAutoplay();
+
+$(document).ready(function() {
+  removeAutoplay();
+});
+$(window).resize(function() {
+  removeAutoplay();
+})

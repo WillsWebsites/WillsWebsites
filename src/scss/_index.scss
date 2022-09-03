@@ -178,6 +178,10 @@ section {
     height: auto;
     max-width: 50px;
     transform: translate(-50%, -50%);
+
+    @media (prefers-reduced-motion) {
+      max-width: 75px;
+    }
   }
 
   .loading-ring {
@@ -199,6 +203,11 @@ section {
     border-radius: 50%;
     animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: $light transparent transparent transparent;
+
+    @media (prefers-reduced-motion) {
+      animation: none;
+      display: none !important;
+    }
   }
   .loading-ring div:nth-child(1) {
     animation-delay: -0.45s;

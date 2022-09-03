@@ -110,6 +110,14 @@
     min-height: 190px;
     opacity: 0;
 
+    @media (prefers-reduced-motion) {
+      transform: translateZ(0) !important;
+
+      .btn {
+        transform: translateZ(0) translate(0, 0) !important;
+      }
+    }
+
     &.training-reveal {
       opacity: 1;
       -webkit-transform: translateZ(0) translate(0, 0) !important;

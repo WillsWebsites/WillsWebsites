@@ -89,6 +89,10 @@
     margin-bottom: 100px;
   }
 
+  @media (prefers-reduced-motion) {
+    transform: translateY(0);
+  }
+
   &.project-reveal {
     opacity: 1;
     transform: translateY(0);
