@@ -44,8 +44,8 @@
         width: 50%;
 
         @media (max-width: 460px) {
-          &:last-child a {
-            min-height: 65px;
+          &:last-child a, &:nth-last-child(2) a {
+            min-height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
