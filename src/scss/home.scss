@@ -412,10 +412,6 @@ html {
           -khtml-border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
           border-radius: 38% 62% 60% 40% / 44% 38% 62% 56%;
 
-          @media ($mobile-large-max) {
-            left: 20%;
-          }
-
           @media ($laptop) {
             animation: blob1 ease 22s;
             animation-iteration-count: infinite;
