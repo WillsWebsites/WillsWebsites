@@ -353,6 +353,12 @@ html {
         transition: all 0.3s ease-in-out;
         overflow: hidden;
 
+        @media ($laptop-max) {
+          &:hover, &:active {
+            background-color: $primary-highlight !important;
+          }
+        }
+
         @media ($mobile-large) {
           font-size: $small - 0.2rem;
         }
@@ -440,6 +446,12 @@ html {
           -khtml-border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
           border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
 
+          @media ($laptop-max) {
+            &:hover, &:active {
+              background-color: $primary !important;
+            }
+          }
+
           @media ($laptop) {
             animation: blob2 ease 15s;
             animation-delay: 0.5s;
@@ -494,6 +506,12 @@ html {
           -moz-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
           -khtml-border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
           border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
+
+          @media ($laptop-max) {
+            &:hover, &:active {
+              background-color: $tertiary !important;
+            }
+          }
 
 
           @media ($laptop) {
