@@ -344,7 +344,7 @@
     box-shadow: $shadow;
     overflow: hidden;
 
-    @media ($tablet) {
+    @media ($tablet) and ($height-min) {
       width: calc(60% + 50px);
       padding-left: 50px;
       padding-top: 10vh;
