@@ -65,10 +65,16 @@
             background-color: $primary-highlight;
             border-radius: 7px;
             border: 2px solid $light;
+            transition: all .3s ease;
           }
 
           &:hover {
             color: $secondary;
+          }
+
+          &.link--active {
+            background-color: $tertiary;
+            color: $light;
           }
         }
       }
@@ -570,6 +576,7 @@
 
             @media ($mobile-large-max) {
               margin-right: 10px;
+              max-height: 25px;
             }
           }
 

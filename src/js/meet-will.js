@@ -53,8 +53,8 @@ resumeItems.forEach((item) => {
 
 
 
-$(".page-meet-will .digital-resume a:not(.blob-btn)").on(
-  "load scroll touchend click resize",
+$(".categories-list a, .category-links a").on(
+  "load touchend click resize",
   function (e) {
     const locationPath = this.href;
 
@@ -89,25 +89,30 @@ $(".page-meet-will .digital-resume a:not(.blob-btn)").on(
       (window.matchMedia("(min-width: 768px)").matches &&
         window.matchMedia("(max-height: 699px)").matches)
     ) {
-      // e.preventDefault();
+      e.preventDefault();
       $(".category-item, .resume-item").removeClass("scroll--start");
+      $('.category-links a').removeClass('link--active');
 
       switch (true) {
         case locationPath.includes("#work"):
           $(".category-item, .resume-item").removeClass("tab--active");
           $(".work").addClass("tab--active");
+          $('.category-links a:contains("Work")').addClass('link--active');
           break;
         case locationPath.includes("#education"):
           $(".category-item, .resume-item").removeClass("tab--active");
           $(".education").addClass("tab--active");
+          $('.category-links a:contains("Education")').addClass('link--active');
           break;
         case locationPath.includes("#skills"):
           $(".category-item, .resume-item").removeClass("tab--active");
           $(".skills").addClass("tab--active");
+          $('.category-links a:contains("Skills")').addClass('link--active');
           break;
         case locationPath.includes("#personal"):
           $(".category-item, .resume-item").removeClass("tab--active");
           $(".personal").addClass("tab--active");
+          $('.category-links a:contains("Personal")').addClass('link--active');
           break;
       }
     }
