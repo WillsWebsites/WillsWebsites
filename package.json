@@ -34,6 +34,7 @@
     "core-js": "^3.22.3",
     "fracty": "^1.0.9",
     "lodash-es": "^4.17.21",
+    "parcel-plugin-ogimage": "^1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "4.0.1",
