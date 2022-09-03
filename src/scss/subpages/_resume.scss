@@ -365,7 +365,7 @@
       display: none;
       flex-direction: column;
       justify-content: center;
-      padding: 30px;
+      padding: 45px 30px;
       transition: all 0.3s ease;
 
       @media ($tablet) and ($height-min) {
@@ -543,8 +543,10 @@
       }
 
       &.personal {
-        min-height: 45vh;
-        padding-bottom: 5vh;
+        @media ($tablet) {
+          min-height: 45vh;
+          padding-bottom: 5vh;
+        }
 
         &::after {
           top: 60%;
