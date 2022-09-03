@@ -222,6 +222,9 @@ const modalHandler = function () {
 modalHandler();
 
 $(window).resize(modalHandler);
+$(document).ready(function() {
+  modalHandler();
+})
 
 // Training Projects Observer
 const trainingProjects = document.querySelectorAll(".training-item");
