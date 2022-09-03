@@ -49,7 +49,7 @@ $('body:not(.page-meet-will) a[href*="#"]:not([href="#"])').click(function (e) {
 });
 
 // Go to the anchor tag on site load
-if (!($('body').hasClass('.page-meet-will'))) {
+if ('body:not(.page-meet-will)') {
   $(window).on("pageshow", function () {
     const hash = window.location.hash;
     //prettier-ignore
