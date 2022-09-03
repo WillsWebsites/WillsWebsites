@@ -51,7 +51,9 @@ resumeItems.forEach((item) => {
   projectObserver.observe(item);
 });
 
-$(".page-meet-will .digital-resume a").on(
+
+
+$(".page-meet-will .digital-resume a:not(.blob-btn)").on(
   "load scroll touchend click resize",
   function (e) {
     const locationPath = this.href;
