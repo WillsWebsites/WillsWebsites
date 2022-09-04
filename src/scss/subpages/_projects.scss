@@ -330,14 +330,18 @@
       .info-content {
         p {
           margin-top: 5px;
-          font-size: $x-small-m - 0.2rem !important;
+          font-size: $x-small-m - 0.1rem !important;
 
           @media ($mobile) {
             font-size: $x-small-m !important;
           }
 
-          @media ($mobile-large) {
+          @media (min-width: 480px) {
             font-size: $x-small-m + 0.1rem !important;
+          }
+
+          @media ($mobile-large) {
+            font-size: $x-small-m + 0.2rem !important;
           }
 
           @media ($tablet) {
@@ -364,7 +368,7 @@
             margin-top: 20px;
           }
 
-          @media ($laptop) {
+          @media (min-width: 1050px) {
             flex-direction: row;
           }
 
@@ -372,18 +376,23 @@
             color: $light;
             background-color: $primary;
             border-color: $secondary-highlight;
-            font-size: $x-small-m;
+            font-size: $x-small-m - 0.1rem;
             letter-spacing: 2px;
             margin: 0;
             min-width: 160px;
             border-width: 2px;
-            padding: 7px 15px;
+            padding: 5px 10px;
             display: none;
+
+            @media ($mobile) {
+              padding: 7px 15px;
+              font-size: $x-small-m;
+            }
 
             &:first-child {
               margin-bottom: 5px;
 
-              @media ($laptop) {
+              @media (min-width: 1050px) {
                 margin-right: 10px;
                 margin-bottom: 0;
               }

@@ -6,7 +6,7 @@ const Project = (props) => {
     {
       company: "Golf Tribe",
       companyDescription:
-        "Golf Tribe is a custom website build for a friend's virtual golf simulator business. When Golf Tribe  members log in they are able to schedule bookings, get directions, and view their account.",
+        "Golf Tribe is a virtual golf simulator company. When Golf Tribe  members log in they are able to schedule bookings, get directions, and view their account.",
       url: "https://golf-tribe.com",
       urlShort: "golf-tribe.com",
       desktopImg: new URL(
