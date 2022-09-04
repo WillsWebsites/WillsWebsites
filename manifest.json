@@ -3,18 +3,18 @@
   "name": "Will's Websites | Projects | Meet Will | Contact",
   "icons": [
     {
-      "src": "mainfavicon.ico",
+      "src": "./src/img/brand/mainfavicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "mainlogo192.png",
+      "src": "./src/img/brand/mainlogo192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "maskable"
     },
     {
-      "src": "mainlogo512.png",
+      "src": "./src/img/brand/mainlogo512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"

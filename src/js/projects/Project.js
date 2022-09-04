@@ -84,7 +84,7 @@ const Project = (props) => {
     {
       company: "Makers Wealth Management",
       companyDescription:
-        "MAKERS Wealth Management incorporates branded 3rd party photography and copy. The website is tightly tailored to have a simple, consistent, brand-focused design.",
+        "MAKERS Wealth Management incorporates branded third-party photography and copy. The website is tightly tailored to have a simple, consistent, brand-focused design.",
       url: "https://www.makerswealthmanagement.com/",
       urlShort: "makerswealthmanagement.com",
       desktopImg: new URL(
