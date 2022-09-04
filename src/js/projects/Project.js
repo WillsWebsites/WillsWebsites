@@ -44,7 +44,7 @@ const Project = (props) => {
     {
       company: "Concord",
       companyDescription:
-        "A custom developed website from start to finish. Built from a third party company's custom Figma design that focuses on developing a brand image.",
+        "A custom developed website from start to finish. A site that focuses on developing a consistent, structured brand image.",
       url: "https://www.cwmofnewengland.com/",
       urlShort: "cwmofnewengland.com",
       desktopImg: new URL(
