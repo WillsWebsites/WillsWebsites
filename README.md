@@ -40,7 +40,8 @@ There you can view my work history (with a link to LinkedIn), education, skills 
 
 ***
 ## Contact
-![Contact Page Preview](./src/img/readme-preview/contact-preview.png)
 
 I'm excited to hear from you!
+
+![Contact Page Preview](./src/img/readme-preview/contact-preview.png)
 
