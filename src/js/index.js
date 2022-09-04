@@ -12,7 +12,7 @@ const scrollHandler = function (target) {
     headerHeight = getHeaderHeight();
     //prettier-ignore
     $('html,body').stop().animate({
-      scrollTop: target.offset().top - headerHeight + 1
+      scrollTop: target.offset().top - headerHeight
       }, {
         // ensures that it goes all the way to the anchor link
         complete: function() {
@@ -20,7 +20,7 @@ const scrollHandler = function (target) {
           //prettier-ignore
           if(document.body.scrollTop !== headerHeight || document.documentElement.scrollTop !== headerHeight) {
             $('html,body').animate({
-              scrollTop: target.offset().top - headerHeight + 1
+              scrollTop: target.offset().top - headerHeight
             }, 1);
           }
           $('html,body').stop(true, true);
