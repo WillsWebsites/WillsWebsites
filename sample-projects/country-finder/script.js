@@ -53,7 +53,7 @@ const getCountryData = (country) => {
         "Neighboring country not found"
       );
     })
-    .then((data) => renderCountry(data, "neighbour"))
+    .then((data) => renderCountry(data, "neighbor"))
     .catch((err) => {
       console.error(`${err} 😩`);
       renderError(`Something went wrong: ${err.message.toLowerCase()}`);

@@ -50,7 +50,7 @@ const modalHandler = function () {
           [
             `A convenient recipe finder that you can use to discover and save tasty new recipes.`,
             `Search recipes by typing a type of food into the search bar. Click through the options to view the recipes. You can also increase the servings and even bookmark your favorite recipes. If you have some recipes of your own, you can also add them and they will be automatically added as a bookmark.`,
-            `How to write a more complex application using a MVC, object-oriented architecture. Handled resolved and rejected promises from POST and GET requests to a recipe API. Further learned how to use external libraries such as Fracty.`,
+            `How to write a more complex application using an MVC, object-oriented architecture. Handled resolved and rejected promises from POST and GET requests to a recipe API. Further learned how to use external libraries such as Fracty.`,
           ],
           "forkify",
           "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/forkify",
@@ -63,7 +63,7 @@ const modalHandler = function () {
           `One-N'-Done`,
           [
             `A 2-player game to see who can get to 100 points first. But be careful, if you roll a 1 then any points you haven't held will be lost!`,
-            `The goal is to be the first player to 100 points. You accumulate points by rolling the dice and then 'holding' those points. However if you roll a '1' then whatever points you haven't held will be lost and it will switch to the other players turn. Don't get too greedy!`,
+            `The goal is to be the first player to 100 points. You accumulate points by rolling the dice and then 'holding' those points. However if you roll a '1' then whatever points you haven't held will be lost and it will switch to the other player's turn. Don't get too greedy!`,
             `How to manipulate things in the DOM based on random numbers. Tied in user input based on different portions of logic and provided feedback to the user.`,
           ],
           "one-n-done",
@@ -92,7 +92,7 @@ const modalHandler = function () {
           "Bankist",
           [
             `A mock banking website that neatly displays the company's details to help guide clients to open up an account.`,
-            `Scroll through the website and interact with features such as the Operation section's "tab divider", or the Testimonial section's "rotator". You can also click on open an account buttons to mock sign up for an account (doesn't create a real account).`,
+            `Scroll through the website and interact with features such as the Operation section's "tab divider", or the Testimonial section's "rotator". You can also click on any of the buttons that mention opening an account to mock sign up for an account (doesn't create a real account).`,
             `How to implement Lazy Loading images for increased speed and performance. Creating a tab divider content to display different pieces of content based on user selection. Creating a rotator to rotate through different slides of content.`,
           ],
           "bankist",
@@ -119,8 +119,8 @@ const modalHandler = function () {
         modalContentHandler(
           "Thread Bank",
           [
-            `An online banking application where you can mock transfer money to other accounts, request loans, and even close your account if you want (not actual transactions).`,
-            `Get started by logging in using demo login credentials. Once inside you can request a loan which can take a few seconds to process, or you can transfer money by inputting another demo users information, or close your account by confirming your demo credentials. You can also sort the transactions in the list, and keep in mind it will log you out of your account after 10 minutes for security reasons!`,
+            `An online banking application where you can mock transfer money to other accounts, request loans, and close your account if you desire (not actual transactions).`,
+            `Get started by logging in using either of the demo login credentials. Once inside you can request a loan which can take a few seconds to process, or you can transfer money by inputting another demo users information, or close your account by confirming your demo credentials. You can also sort the transactions in the list, and keep in mind it will log you out of your account after 10 minutes for security reasons!`,
             `How to write a more complex application with different areas of logic. Working with mock authentication, timers, sorting, and internationalization of formatting dates, currencies, and time.`,
           ],
           "thread-bank",
@@ -149,7 +149,7 @@ const modalHandler = function () {
           [
             `An application to keep track of outgoing expenses and sort them by year.`,
             `There are already a few sample expense items so you can see how it functions. Add as many other expenses as you'd like into the tracker and then sort them by year to keep things organized.`,
-            `How to structure React components. Focused on structuring the component tree to keep things organized while still being accessible. Passed data through multiple components using props.`,
+            `Focused on structuring the component filing system to keep things organized while still being accessible. Passed data through multiple components using props and rendered changes to the DOM.`,
           ],
           "expense-tracker",
           "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/expense-tracker",

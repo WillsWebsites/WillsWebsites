@@ -24,7 +24,7 @@ const Project = (props) => {
     {
       company: "Concordia Exchange",
       companyDescription:
-        "Concordia Exchange is a custom designed website that utilizes various decorative elements, graphics, and interactive features (see Resources > Health Insurance).",
+        "Concordia Exchange is a custom designed website that utilizes various decorative elements, graphics, and interactive features to provide information easily to their clients.",
       url: "https://www.concordiaexchange.com/",
       urlShort: "concordiaexchange.com",
       desktopImg: new URL(
@@ -44,7 +44,7 @@ const Project = (props) => {
     {
       company: "Concord",
       companyDescription:
-        "A custom developed website from start to finish. Built from a third party company's custom Figma design that's focused on developing a brand image.",
+        "A custom developed website from start to finish. Built from a third party company's custom Figma design that focuses on developing a brand image.",
       url: "https://www.cwmofnewengland.com/",
       urlShort: "cwmofnewengland.com",
       desktopImg: new URL(
@@ -64,7 +64,7 @@ const Project = (props) => {
     {
       company: "Nestegg Advisors, Inc.",
       companyDescription:
-        "The NestEgg Advisors website highlights features such as timed modals, gated content, events with regisration, forms, and is paired with a clean and simple look.",
+        "The NestEgg Advisors website highlights features such as timed modals, gated content, events with regisration, forms, and is combined with a clean and simple look.",
       url: "https://www.nesteggadvisors.net/",
       urlShort: "nesteggadvisors.net",
       desktopImg: new URL(
