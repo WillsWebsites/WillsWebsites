@@ -23,7 +23,7 @@ In the live website section you can view 8 featured live websites. Every item in
 
 #### Training & Practice Projects
 
-Training projects focused primarily on Vanilla JavaScript and React. The section itself is a video collage created with CSS Grid and has 4 separate layouts for different screen sizes. All of the projects come with more information once you click on the project to open up the modal. Each project has an introduction, instructions, project takeaways, what the focus of the project was, necessary accreditation, a link to the project, and the link to the project repository.
+Training projects focused primarily on JavaScript and React. The section itself is a video collage created with CSS Grid and has 4 separate layouts for different screen sizes. All of the projects come with more information once you click on the project to open up the modal. Each project has an introduction, instructions, project takeaways, what the focus of the project was, necessary accreditation, a link to the project, and the link to the project repository.
 
 ![Training Projects Preview](./src/img/readme-preview/training-projects-preview.png)
 
