@@ -1,7 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import ProjectItem from "./ProjectItem";
 
 const Project = (props) => {
+  // const [project, setProject] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const projectsList = [
     {
       company: "Golf Tribe",
@@ -158,6 +161,36 @@ const Project = (props) => {
       builtWith: ["HTML", "CSS", "JS/jQuery", "FMG Suite Platform"],
     },
   ];
+
+  useEffect(() => {
+    (async function projectLoading() {
+      console.log('testing1')
+          // Projects Observer
+          const projects = document.querySelectorAll(".project-item");
+
+          const projectReveal = function (entries, observer) {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("project-reveal");
+              observer.unobserve(entry.target);
+            });
+          };
+
+          const projectObserver = new IntersectionObserver(projectReveal, {
+            root: null,
+            // threshold: 0.1,
+            rootMargin: '-20px'
+          });
+
+          projects.forEach((project, i) => {
+            project.style.transitionDelay = `${
+              i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
+            }s`;
+            projectObserver.observe(project);
+          });
+    })();
+   }, []);
 
   return (
     <Fragment>

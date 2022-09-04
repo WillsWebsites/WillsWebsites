@@ -28,33 +28,33 @@ liveSites.render(<Project />);
 // });
 
 // images.forEach(img => imageObserver.observe(img));
-
+console.log('testing-2')
 $(document).ready(function () {
   setTimeout(() => {
-    // Projects Observer
-    const projects = document.querySelectorAll(".project-item");
+    // // Projects Observer
+    // const projects = document.querySelectorAll(".project-item");
 
-    const projectReveal = function (entries, observer) {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
+    // const projectReveal = function (entries, observer) {
+    //   entries.forEach((entry) => {
+    //     if (!entry.isIntersecting) return;
 
-        entry.target.classList.add("project-reveal");
-        observer.unobserve(entry.target);
-      });
-    };
+    //     entry.target.classList.add("project-reveal");
+    //     observer.unobserve(entry.target);
+    //   });
+    // };
 
-    const projectObserver = new IntersectionObserver(projectReveal, {
-      root: null,
-      // threshold: 0.1,
-      rootMargin: '-20px'
-    });
+    // const projectObserver = new IntersectionObserver(projectReveal, {
+    //   root: null,
+    //   // threshold: 0.1,
+    //   rootMargin: '-20px'
+    // });
 
-    projects.forEach((project, i) => {
-      project.style.transitionDelay = `${
-        i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
-      }s`;
-      projectObserver.observe(project);
-    });
+    // projects.forEach((project, i) => {
+    //   project.style.transitionDelay = `${
+    //     i % 2 === 0 ? 0.2 + i * 0.03 : 0.4 + i * 0.02
+    //   }s`;
+    //   projectObserver.observe(project);
+    // });
   }, 300);
 
   // Website Count Bar Animation

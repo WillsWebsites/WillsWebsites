@@ -451,13 +451,6 @@
         transform: translateX(-100px);
       }
 
-      // &.training-reveal {
-      //   margin-left: -200px;
-      //   animation: leftReveal ease 0.8s;
-      //   animation-iteration-count: 1;
-      //   animation-fill-mode: forwards;
-      // }
-
       .btn {
         border-color: white;
         color: white;
@@ -672,7 +665,7 @@
       background-color: #2a3334;
       
       @media ($tablet) {
-        transform: translateY(200px);
+        transform: translateY(160px);
       }
 
       .btn {
