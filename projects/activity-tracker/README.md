@@ -7,6 +7,6 @@
 ## Project Takeaways:
 ### How to work with an external library/API in a more complex, object-oriented structure. Rendered an interactive map that allows users to place pins based on location.
 ## Focus:
-### ![JavaScript Icon](../../src/img/js.png)
+### ![JavaScript Icon](../../src/img/misc/js.png)
 ## Credit:
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)

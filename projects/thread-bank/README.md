@@ -6,4 +6,4 @@
 ## Project Takeaways:
 ### How to write a more complex application with different areas of logic. Working with mock authentication, timers, sorting, and internationalization of formatting dates, currencies, and time.
 ## Focus:
-### ![JavaScript Icon](../../src/img/js.png)
+### ![JavaScript Icon](../../src/img/misc/js.png)

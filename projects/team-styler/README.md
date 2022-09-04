@@ -7,4 +7,4 @@
 ## Project Takeaways:
 ### How to build a React application from scratch and structure/organize it in a convenient and reusable way. Also added a modal to adjust settings and apply css based on user input. Implemented various hooks and modern React features.
 ## Focus:
-### ![Atom Icon](../../src/img/atom.png)
+### ![Atom Icon](../../src/img/misc/.png)

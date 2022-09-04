@@ -6,6 +6,6 @@
 ## Project Takeaways:
 ### How to write a more complex application using an MVC, object-oriented architecture. Handled resolved and rejected promises from POST and GET requests to a recipe API. Further learned how to use external libraries such as Fracty.
 ## Focus:
-### ![JavaScript Icon](../../src/img/js.png)
+### ![JavaScript Icon](../../src/img/misc/js.png)
 ## Credit:
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)

@@ -7,6 +7,6 @@
 ## Project Takeaways:
 ### How to deal with AJAX calls to an external API and handle both resolved and rejected promises. Also focused on handling user input to search for external data and ultimately have that data displayed to the DOM.
 ## Focus:
-### ![JavaScript Icon](../../src/img/js.png)
+### ![JavaScript Icon](../../src/img/misc/js.png)
 ## Credit:
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)

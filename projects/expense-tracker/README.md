@@ -6,6 +6,6 @@
 ## Project Takeaways:
 ### Focused on structuring the component filing system to keep things organized while still being accessible. Passed data through multiple components using props and rendered changes to the DOM.
 ## Focus:
-### ![Atom Icon](../../src/img/atom.png)
+### ![Atom Icon](../../src/img/misc/atom.png)
 ## Credit: 
 ### Project idea credit to Maximilian Schwarzmüller of [Academind](https://academind.com/)

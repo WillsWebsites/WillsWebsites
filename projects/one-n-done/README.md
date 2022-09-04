@@ -6,6 +6,6 @@
 ## Project Takeaways:
 ### How to manipulate things in the DOM based on random numbers. Tied in user input based on different portions of logic and provided feedback to the user.
 ## Focus:
-### ![JavaScript Icon](../../src/img/js.png)
+### ![JavaScript Icon](../../src/img/misc/js.png)
 ## Credit:
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)

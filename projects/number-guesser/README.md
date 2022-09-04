@@ -6,6 +6,6 @@
 ## Project Takeaways:
 ### How to implement logic based on user feedback and adjust the DOM accordingly.
 ## Focus:
-### ![JavaScript Icon](../../src/img/js.png)
+### ![JavaScript Icon](../../src/img/misc/js.png)
 ## Credit:
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)

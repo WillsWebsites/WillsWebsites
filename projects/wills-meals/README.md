@@ -6,6 +6,6 @@
 ## Project Takeaways:
 ### How to configure an app wide context for managing state. Creating items based on user input and needing to handle the side effects that happen as a result of working with form and user input.
 ## Focus:
-### ![Atom Icon](../../src/img/atom.png)
+### ![Atom Icon](../../src/img/misc/atom.png)
 ## Credit:
 ### Project idea credit to Maximilian Schwarzmüller of [Academind](https://academind.com/)
