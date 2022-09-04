@@ -6,7 +6,7 @@ const Project = (props) => {
     {
       company: "Golf Tribe",
       companyDescription:
-        "Golf Tribe is a golf simulator built to take advantage of the most advanced launch monitor technology at a fraction of the price of other hitting bays.",
+        "Golf Tribe is a custom website build for a friend's virtual golf simulator business. When Golf Tribe  members log in they are able to schedule bookings, get directions, and view their account.",
       url: "https://golf-tribe.com",
       urlShort: "golf-tribe.com",
       desktopImg: new URL(
@@ -24,7 +24,7 @@ const Project = (props) => {
     {
       company: "Concordia Exchange",
       companyDescription:
-        "Concordia Exchange is an insurtech company that partners with insurance brokers of organizations with more than 50 employees who want to reduce their employee group insurance costs.",
+        "Concordia Exchange is a custom designed website that utilizes various decorative elements, graphics, and interactive features (see Resources > Health Insurance).",
       url: "https://www.concordiaexchange.com/",
       urlShort: "concordiaexchange.com",
       desktopImg: new URL(
@@ -44,7 +44,7 @@ const Project = (props) => {
     {
       company: "Concord",
       companyDescription:
-        "Concord uses a 3-step process to offer financial planning services to help you plan for the certainty of uncertainty.",
+        "A custom developed website from start to finish. Built from a third party company's custom Figma design that's focused on developing a brand image.",
       url: "https://www.cwmofnewengland.com/",
       urlShort: "cwmofnewengland.com",
       desktopImg: new URL(
@@ -64,7 +64,7 @@ const Project = (props) => {
     {
       company: "Nestegg Advisors, Inc.",
       companyDescription:
-        "The NestEgg Advisors team strives to be competent, reliable and sensitive to your concerns so that they can make the management of your finances as simple as possible.",
+        "The NestEgg Advisors website highlights features such as timed modals, gated content, events with regisration, forms, and is paired with a clean and simple look.",
       url: "https://www.nesteggadvisors.net/",
       urlShort: "nesteggadvisors.net",
       desktopImg: new URL(
@@ -84,7 +84,7 @@ const Project = (props) => {
     {
       company: "Makers Wealth Management",
       companyDescription:
-        "MAKERS Wealth Management is a woman-owned comprehensive financial advisory practice that empowers clients to reach their financial goals.",
+        "MAKERS Wealth Management incorporates branded 3rd party photography and copy. The website is tightly tailored to have a simple, consistent, brand-focused design.",
       url: "https://www.makerswealthmanagement.com/",
       urlShort: "makerswealthmanagement.com",
       desktopImg: new URL(
@@ -104,7 +104,7 @@ const Project = (props) => {
     {
       company: "WealthRhino",
       companyDescription:
-        "Smart & successful professionals enlist a WealthRhino advisor to guide them through all of life's most important financial decisions.",
+        "Focused on credibility, Wealth Rhino is a website that makes their clients feel at home. It also features forms, gated content, and even merchandise!",
       url: "https://www.wealthrhino.com/",
       urlShort: "wealthrhino.com",
       desktopImg: new URL(
@@ -120,7 +120,7 @@ const Project = (props) => {
     },
     {
       company: "Hemlock Wealth",
-      companyDescription: `Hemlock Wealth is a company rooted in the financial industry with the goal to provide you and your family the future you deserve.`,
+      companyDescription: `Hemlock Wealth is a company rooted in the financial industry that focuses on a relaxed financial planning experience, much like the outdoors.`,
       url: "https://www.hemlockwealth.com/",
       urlShort: "hemlockwealth.com",
       desktopImg: new URL(
@@ -140,7 +140,7 @@ const Project = (props) => {
     {
       company: "Anna Hartwell Financial Strategist",
       companyDescription:
-        "Anna Hartwell provides a customized approach to finance. She is an expert in the field who can help people make the best decisions for themselves and their families.",
+        "Anna Hartwell provides a customized approach to finance and gives a safe space for women to manage their finances.",
       url: "https://www.hartwellfp.com/",
       urlShort: "hartwellfp.com",
       desktopImg: new URL(
