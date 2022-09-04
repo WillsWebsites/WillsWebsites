@@ -53,7 +53,7 @@ const modalHandler = function () {
             `How to write a more complex application using an MVC, object-oriented architecture. Handled resolved and rejected promises from POST and GET requests to a recipe API. Further learned how to use external libraries such as Fracty.`,
           ],
           "forkify",
-          "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/forkify",
+          "https://github.com/WillsWebsites/wills-websites/tree/main/projects/forkify",
           "JS",
           "jonas"
         );
@@ -67,7 +67,7 @@ const modalHandler = function () {
             `How to manipulate things in the DOM based on random numbers. Tied in user input based on different portions of logic and provided feedback to the user.`,
           ],
           "one-n-done",
-          "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/one-n-done",
+          "https://github.com/WillsWebsites/wills-websites/tree/main/projects/one-n-done",
           "JS",
           "jonas"
         );
@@ -81,7 +81,7 @@ const modalHandler = function () {
             `How to deal with AJAX calls to an external API and handle both resolved and rejected promises. Also focused on handling user input to search for external data and ultimately have that data displayed to the DOM.`,
           ],
           "country-finder",
-          "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/country-finder",
+          "https://github.com/WillsWebsites/wills-websites/tree/main/projects/country-finder",
           "JS",
           "jonas",
           true
@@ -96,7 +96,7 @@ const modalHandler = function () {
             `How to implement Lazy Loading images for increased speed and performance. Creating a tab divider content to display different pieces of content based on user selection. Creating a rotator to rotate through different slides of content.`,
           ],
           "bankist",
-          "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/bankist",
+          "https://github.com/WillsWebsites/wills-websites/tree/main/projects/bankist",
           "JS",
           "jonas"
         );
@@ -110,7 +110,7 @@ const modalHandler = function () {
             `How to implement logic based on user feedback and adjust the DOM accordingly.`,
           ],
           "number-guesser",
-          "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/number-guesser",
+          "https://github.com/WillsWebsites/wills-websites/tree/main/projects/number-guesser",
           "JS",
           "jonas"
         );
@@ -124,7 +124,7 @@ const modalHandler = function () {
             `How to write a more complex application with different areas of logic. Working with mock authentication, timers, sorting, and internationalization of formatting dates, currencies, and time.`,
           ],
           "thread-bank",
-          "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/thread-bank",
+          "https://github.com/WillsWebsites/wills-websites/tree/main/projects/thread-bank",
           "JS",
           "jonas"
         );
@@ -138,7 +138,7 @@ const modalHandler = function () {
             `How to configure an app wide context for managing state. Creating items based on user input and needing to handle the side effects that happen as a result of working with form and user input.`,
           ],
           "wills-meals",
-          "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/wills-meals",
+          "https://github.com/WillsWebsites/wills-websites/tree/main/projects/wills-meals",
           "React",
           "maximillian"
         );
@@ -152,7 +152,7 @@ const modalHandler = function () {
             `Focused on structuring the component filing system to keep things organized while still being accessible. Passed data through multiple components using props and rendered changes to the DOM.`,
           ],
           "expense-tracker",
-          "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/expense-tracker",
+          "https://github.com/WillsWebsites/wills-websites/tree/main/projects/expense-tracker",
           "React",
           "maximillian"
         );
@@ -166,7 +166,7 @@ const modalHandler = function () {
             `How to build a React application from scratch and structure/organize it in a convenient and reusable way. Also added a modal to adjust settings and apply css based on user input. Implemented various hooks and modern React features.`,
           ],
           "team-styler",
-          "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/team-styler",
+          "https://github.com/WillsWebsites/wills-websites/tree/main/projects/team-styler",
           "React",
           "self",
           true
@@ -181,7 +181,7 @@ const modalHandler = function () {
             `How to work with an external library/API in a more complex, object-oriented structure. Rendered an interactive map that allows users to place pins based on location.`,
           ],
           "activity-tracker",
-          "https://github.com/WillsWebsites/wills-websites/tree/main/sample-projects/activity-tracker",
+          "https://github.com/WillsWebsites/wills-websites/tree/main/projects/activity-tracker",
           "JS",
           "jonas",
           true
