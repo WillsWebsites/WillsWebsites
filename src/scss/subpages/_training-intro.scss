@@ -8,7 +8,7 @@
     right: 0;
     height: 90%;
     width: 95%;
-    background-image: linear-gradient(270deg, rgba($secondary, 0.05), rgba($secondary, 0.3));
+    background-image: linear-gradient(270deg, rgba($secondary, 0.05), rgba($secondary, 0.25));
     border-top-left-radius: 75px;
     border-bottom-left-radius: 75px;
     box-shadow: 0 8px 16px #23232326;
@@ -20,7 +20,7 @@
 
     @media ($laptop) {
       width: 75%;
-      background-image: linear-gradient(270deg, rgba($secondary, 0.08), rgba($secondary, 0.33));
+      background-image: linear-gradient(270deg, rgba($secondary, 0.08), rgba($secondary, 0.28));
     }
 
     @media ($desktop) {

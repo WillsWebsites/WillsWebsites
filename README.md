@@ -4,7 +4,7 @@
 
 There are three main subpages on the website: Projects, Meet Will, and Contact
 
-![Will's Websites Home Page Preview](./src/img/social-test.jpg)
+![Will's Websites Home Page Preview](./src/img/social/home.jpg.jpg)
 
 ***
 ## Projects
