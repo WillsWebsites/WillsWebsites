@@ -11,4 +11,4 @@
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)
 
 ***
-[Open Forkify](https://www.willswebsitesdesign/projects/forkify.html)
+[Open Forkify](https://www.willswebsitesdesign.com/projects/forkify.html)

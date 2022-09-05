@@ -11,4 +11,4 @@
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)
 
 ***
-[Open Bankist](https://www.willswebsitesdesign/projects/bankist.html)
+[Open Bankist](https://www.willswebsitesdesign.com/projects/bankist.html)

@@ -12,4 +12,4 @@
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)
 
 ***
-[Open Country Finder](https://www.willswebsitesdesign/projects/country-finder.html)
+[Open Country Finder](https://www.willswebsitesdesign.com/projects/country-finder.html)
