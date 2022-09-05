@@ -30,7 +30,6 @@ liveSites.render(<Project />);
 // images.forEach(img => imageObserver.observe(img));
 
 $(document).ready(function () {
-
   // Website Count Bar Animation
   const websitesBar = document.getElementById("websites-bar");
   const websiteCount = document.getElementById("website-count");
@@ -84,22 +83,3 @@ $(document).ready(function () {
     websiteCount.textContent = Math.floor(92);
   }
 });
-
-// // Fix mobile touch on projects
-// setTimeout(() => {
-//   function mobileDetails() {
-//     if (window.matchMedia("(max-width: 991px)").matches) {
-//       $(".open-details").on("click touchend", function () {
-//         $(this).closest(".project-item").addClass("reveal-details");
-//       });
-
-//       $(".close-details").on("click touchend", function () {
-//         $(this).closest(".project-item").removeClass("reveal-details");
-//       });
-//     }
-//   }
-//   mobileDetails();
-//   $(window).on("load resize", function () {
-//     mobileDetails();
-//   });
-// }, 300);

@@ -358,7 +358,7 @@ html {
         overflow: hidden;
 
         @media ($laptop-max) {
-          &:hover, &:active {
+          &:hover, &:active, &.blob--active {
             background-color: $primary-highlight !important;
           }
         }
@@ -463,7 +463,7 @@ html {
           border-radius: 47% 53% 49% 51% / 34% 67% 33% 66%;
 
           @media ($laptop-max) {
-            &:hover, &:active {
+            &:hover, &:active, &.blob--active {
               background-color: $primary !important;
             }
           }
@@ -536,7 +536,7 @@ html {
           border-radius: 33% 67% 45% 55% / 69% 33% 67% 31%;
 
           @media ($laptop-max) {
-            &:hover, &:active {
+            &:hover, &:active, &.blob--active {
               background-color: $tertiary !important;
             }
           }
