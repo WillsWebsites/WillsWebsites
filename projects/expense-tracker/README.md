@@ -9,3 +9,6 @@
 ### ![Atom Icon](../../src/img/misc/atom.png)
 ## Credit: 
 ### Project idea credit to Maximilian Schwarzmüller of [Academind](https://academind.com/)
+
+***
+[Open Expense Tracker](../expense-tracker.html)

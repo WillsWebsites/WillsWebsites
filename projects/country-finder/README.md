@@ -10,3 +10,6 @@
 ### ![JavaScript Icon](../../src/img/misc/js.png)
 ## Credit:
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)
+
+***
+[Open Country Finder](../country-finder.html)

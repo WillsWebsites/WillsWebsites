@@ -2,7 +2,7 @@
 # Will's Websites
 ## Hello! Welcome to Will's Websites. 
 
-There are three main subpages on the website: Projects, Meet Will, and Contact
+There are three main subpages on the website:
 - [Projects](#projects)
 - [Meet Will](#meet-will)
 - [Contact](#contact)
@@ -49,4 +49,4 @@ I'm excited to hear from you!
 ![Contact Page Preview](./src/img/readme-preview/contact-preview.png)
 
 ***
-[View Will's Websites](https://www.willswebsitesdesign.com)
+[Open Will's Websites](https://www.willswebsitesdesign.com)
