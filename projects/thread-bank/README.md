@@ -9,4 +9,4 @@
 ### ![JavaScript Icon](../../src/img/misc/js.png)
 
 ***
-[Open Thread Bank](../thread-bank.html)
+[Open Thread Bank](https://www.willswebsitesdesign/projects/thread-bank.html)

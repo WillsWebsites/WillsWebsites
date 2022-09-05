@@ -12,4 +12,4 @@
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)
 
 ***
-[Open Activity Tracker](../activity-tracker.html)
+[Open Activity Tracker](https://www.willswebsitesdesign/projects/activity-tracker.html)

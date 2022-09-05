@@ -11,4 +11,4 @@
 ### Project idea credit to Maximilian Schwarzmüller of [Academind](https://academind.com/)
 
 ***
-[Open Expense Tracker](../expense-tracker.html)
+[Open Expense Tracker](https://www.willswebsitesdesign/projects/expense-tracker.html)

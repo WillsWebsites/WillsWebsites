@@ -11,4 +11,4 @@
 ### Project idea credit to Maximilian Schwarzmüller of [Academind](https://academind.com/)
 
 ***
-[Open Will's Meals](../wills-meals.html)
+[Open Will's Meals](https://www.willswebsitesdesign/projects/wills-meals.html)

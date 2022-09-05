@@ -10,4 +10,4 @@
 ### ![Atom Icon](../../src/img/misc/.png)
 
 ***
-[Open Team Styler](../team-styler.html)
+[Open Team Styler](https://www.willswebsitesdesign/projects/team-styler.html)

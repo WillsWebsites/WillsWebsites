@@ -11,4 +11,4 @@
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)
 
 ***
-[Open Number Guesser](../number-guesser.html)
+[Open Number Guesser](https://www.willswebsitesdesign/projects/number-guesser.html)

@@ -11,4 +11,4 @@
 ### Project idea credit to Jonas Schmedtmann of [Coding Heroes](https://codingheroes.io/)
 
 ***
-[Open One-N'-Done](../one-n-done.html)
+[Open One-N'-Done](https://www.willswebsitesdesign/projects/one-n-done.html)
