@@ -114,7 +114,7 @@ section {
     }
   }
 
-  @media ($desktop) {
+  @media (min-width: 1400px) {
     width: $container;
     max-width: $container-max;
   }

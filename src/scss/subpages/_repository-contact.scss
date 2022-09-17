@@ -37,10 +37,6 @@
 
   .overlay {
     overflow: hidden;
-
-    @media ($tablet) {
-      overflow: initial;
-    }
   }
 
   .container {
