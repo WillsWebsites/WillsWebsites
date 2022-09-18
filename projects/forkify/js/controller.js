@@ -39,6 +39,7 @@ const controlSearchResults = async function () {
 
     // Get search query
     const query = SearchView.getQuery();
+    console.log(ResultsView)
     if (!query) return ResultsView.renderError(this._errorMessage);
 
     // Load search results
@@ -119,7 +120,7 @@ const controlAddRecipe = async function(newRecipe) {
     console.error(err);
     AddRecipeView.renderError(err.message);
   }
-  location.reload();
+  window.location.hash.slice(1).reload();
 }
 
 const init = function () {
