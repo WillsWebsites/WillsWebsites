@@ -489,19 +489,46 @@
               padding-right: 10px;
             }
 
-            @media ($tablet) and ($desktop-max) {
-              width: calc(50% - 20px);
+            @media ($tablet) and ($laptop-max) {
+              margin-right: 10px;
+
               ul {
                 flex-flow: row wrap;
 
                 li {
                   padding: 5px 25px 5px 0;
+
+                  &:nth-child(even) {
+                    margin-left: 5px;
+                    width: calc(50% - 5px);
+                  }
                 }
               }
+            }
+
+            @media ($tablet) and ($desktop-max) {
+              width: calc(50% - 10px);
             }
           }
 
           &.media {
+            @media ($tablet) and ($laptop-max) {
+              width: 50%;
+
+              ul {
+                flex-flow: row wrap;
+
+                li {
+                  padding: 5px 25px 5px 0;
+
+                  &:nth-child(even) {
+                    margin-left: 5px;
+                    width: calc(50% - 5px);
+                  }
+                }
+              }
+            }
+
             @media ($tablet) and ($desktop-max) {
               width: 50%;
             }

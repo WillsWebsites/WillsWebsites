@@ -61,14 +61,17 @@ header {
 }
 
 /* Desktop Navigation */
-.subpage .nav {
-  display: flex;
-  align-items: center;
-
-  @media ($laptop-max) {
+.subpage .desktop-navigation {
+  @media ($tablet-max) {
     display: none;
   }
+
+  .nav {
+    display: flex;
+    align-items: center;
+  }
 }
+
 .nav-list {
   display: flex;
   list-style-type: none;
@@ -98,7 +101,7 @@ header {
   align-items: center;
   height: 100%;
 
-  @media ($laptop) {
+  @media ($tablet) {
     display: none;
   }
 }
