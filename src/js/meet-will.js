@@ -3,6 +3,47 @@
 const resumeItems = document.querySelectorAll(".resume-item");
 const categoryItems = document.querySelectorAll(".category-item");
 
+// const scrollTabHandler = function () {
+//   if (window.matchMedia("(max-width: 767px)").matches) {
+//     $(".category-item, .resume-item").removeClass("scroll--active");
+
+//     // Only want to add scroll--start on resize if nothing has scoll--start, and nothing is active.
+//     // Makes sure something is there if nothing is active
+
+//     if (
+//       !$(".category-item").hasClass("scroll--start") &&
+//       !$(".category-item").hasClass("tab--active") &&
+//       !$(".category-item").hasClass("scroll--active")
+//     ) {
+//       $(".work").addClass("scroll--start");
+//     }
+
+//     $('.category-links a:contains("Work")').addClass("link--active");
+//   } else {
+//     $(".category-item, .resume-item").removeClass("tab--active");
+//     $(".category-links a").removeClass("link--active");
+//   }
+// };
+
+const scrollTabHandler = function () {
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    $(".category-item, .resume-item").removeClass("scroll--active");
+    // Only want to add scroll--start on resize if nothing has scoll--start, and nothing is active.
+    // Makes sure something is there if nothing is active
+    if (
+      !$(".category-item").hasClass("scroll--start") &&
+      !$(".category-item").hasClass("tab--active") &&
+      !$(".category-item").hasClass("scroll--active")
+    ) {
+      $(".work").addClass("scroll--start");
+    }
+    $('.category-links a:contains("Work")').addClass("link--active");
+  } else {
+    $(".category-item, .resume-item").removeClass("tab--active");
+    $(".category-links a").removeClass("link--active");
+  }
+};
+
 const resumeReveal = function (entries) {
   entries.forEach((entry) => {
     // If entry isn't intersecting then don't account for it
@@ -34,6 +75,9 @@ const resumeReveal = function (entries) {
         $(".personal").addClass("scroll--active");
         current = "personal";
         break;
+      default:
+        console.warn("No resume item found");
+        break;
     }
 
     // Remove the active class from each item that isn't the current one to make sure there is only one active at a time.
@@ -50,8 +94,6 @@ const projectObserver = new IntersectionObserver(resumeReveal, {
 resumeItems.forEach((item) => {
   projectObserver.observe(item);
 });
-
-
 
 $(".categories-list a, .category-links a").on(
   "load touchend click resize",
@@ -91,50 +133,47 @@ $(".categories-list a, .category-links a").on(
     ) {
       e.preventDefault();
       $(".category-item, .resume-item").removeClass("scroll--start");
-      $('.category-links a').removeClass('link--active');
+      $(".category-links a").removeClass("link--active");
 
       switch (true) {
         case locationPath.includes("#work"):
           $(".category-item, .resume-item").removeClass("tab--active");
           $(".work").addClass("tab--active");
-          $('.category-links a:contains("Work")').addClass('link--active');
+          $('.category-links a:contains("Work")').addClass("link--active");
           break;
         case locationPath.includes("#education"):
           $(".category-item, .resume-item").removeClass("tab--active");
           $(".education").addClass("tab--active");
-          $('.category-links a:contains("Education")').addClass('link--active');
+          $('.category-links a:contains("Education")').addClass("link--active");
           break;
         case locationPath.includes("#skills"):
           $(".category-item, .resume-item").removeClass("tab--active");
           $(".skills").addClass("tab--active");
-          $('.category-links a:contains("Skills")').addClass('link--active');
+          $('.category-links a:contains("Skills")').addClass("link--active");
           break;
         case locationPath.includes("#personal"):
           $(".category-item, .resume-item").removeClass("tab--active");
           $(".personal").addClass("tab--active");
-          $('.category-links a:contains("Personal")').addClass('link--active');
+          $('.category-links a:contains("Personal")').addClass("link--active");
+          break;
+        default:
+          console.warn("No link found");
           break;
       }
     }
   }
 );
 
-$(window).on("resize load", function () {
-  if (window.matchMedia("(max-width: 767px)").matches) {
-    $(".category-item, .resume-item").removeClass("scroll--active");
-
-
-    // Only want to add scroll--start on resize if nothing has scoll--start, and nothing is active. 
-    // Makes sure something is there if nothing is active
-    
-    if (
-      !$(".category-item").hasClass("scroll--start") &&
-      (!$(".category-item").hasClass("tab--active") &&
-        !$(".category-item").hasClass("scroll--active"))
-    ) {
-      $(".work").addClass("scroll--start");
-    }
-  } else {
-    $(".category-item, .resume-item").removeClass("tab--active");
-  }
+$(window).on("resize", function () {
+  scrollTabHandler();
 });
+
+$(document).on("load", function () {
+  scrollTabHandler();
+});
+
+const init = function () {
+  scrollTabHandler();
+};
+
+init();
