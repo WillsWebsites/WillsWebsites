@@ -42,7 +42,7 @@ body.modal--disable {
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
 
-      @media ($tablet) {
+      @media ($tablet) and (min-height: 992px) {
         top: initial;
         left: initial;
         bottom: 0;
@@ -61,6 +61,11 @@ body.modal--disable {
     @media ($tablet-max) {
       .m-content {
         margin-top: 60px;
+      }
+    }
+    @media ($tablet) and (max-height: 991px) {
+      .m-content {
+        margin-top: 60px !important;
       }
     }
   }

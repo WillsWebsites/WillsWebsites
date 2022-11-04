@@ -65,7 +65,7 @@
             background-color: $primary-highlight;
             border-radius: 7px;
             border: 2px solid $light;
-            transition: all .3s ease;
+            transition: all 0.3s ease;
           }
 
           &:hover {
@@ -133,7 +133,6 @@
     .categories-list {
       position: relative;
       min-height: 150px;
-      
 
       @media ($tablet) {
         min-height: 225px;
@@ -455,6 +454,10 @@
         flex-wrap: wrap;
         justify-content: flex-start;
 
+        @media ($tablet) and ($laptop-max) and ($height-min) {
+          padding-right: 20px;
+        }
+
         .skill-area {
           width: 100%;
           margin-bottom: 30px;
@@ -478,6 +481,29 @@
             @media ($mobile-large) and ($laptop-max) {
               width: calc(40% - 20px);
               margin-right: 20px;
+            }
+          }
+
+          &.languages {
+            @media ($laptop) {
+              padding-right: 10px;
+            }
+
+            @media ($tablet) and ($desktop-max) {
+              width: calc(50% - 20px);
+              ul {
+                flex-flow: row wrap;
+
+                li {
+                  padding: 5px 25px 5px 0;
+                }
+              }
+            }
+          }
+
+          &.media {
+            @media ($tablet) and ($desktop-max) {
+              width: 50%;
             }
           }
 
