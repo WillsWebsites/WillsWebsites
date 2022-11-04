@@ -3,33 +3,13 @@
 const resumeItems = document.querySelectorAll(".resume-item");
 const categoryItems = document.querySelectorAll(".category-item");
 
-// const scrollTabHandler = function () {
-//   if (window.matchMedia("(max-width: 767px)").matches) {
-//     $(".category-item, .resume-item").removeClass("scroll--active");
-
-//     // Only want to add scroll--start on resize if nothing has scoll--start, and nothing is active.
-//     // Makes sure something is there if nothing is active
-
-//     if (
-//       !$(".category-item").hasClass("scroll--start") &&
-//       !$(".category-item").hasClass("tab--active") &&
-//       !$(".category-item").hasClass("scroll--active")
-//     ) {
-//       $(".work").addClass("scroll--start");
-//     }
-
-//     $('.category-links a:contains("Work")').addClass("link--active");
-//   } else {
-//     $(".category-item, .resume-item").removeClass("tab--active");
-//     $(".category-links a").removeClass("link--active");
-//   }
-// };
-
 const scrollTabHandler = function () {
   if (window.matchMedia("(max-width: 767px)").matches) {
     $(".category-item, .resume-item").removeClass("scroll--active");
+
     // Only want to add scroll--start on resize if nothing has scoll--start, and nothing is active.
     // Makes sure something is there if nothing is active
+
     if (
       !$(".category-item").hasClass("scroll--start") &&
       !$(".category-item").hasClass("tab--active") &&
@@ -37,6 +17,7 @@ const scrollTabHandler = function () {
     ) {
       $(".work").addClass("scroll--start");
     }
+
     $('.category-links a:contains("Work")').addClass("link--active");
   } else {
     $(".category-item, .resume-item").removeClass("tab--active");
