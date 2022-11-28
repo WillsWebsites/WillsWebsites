@@ -1,4 +1,4 @@
-![Will's Websites Logo Preview](./src/img/readme-preview/main-logo-preview.png)
+![Will's Websites Logo Preview](./src/img/readme-preview/new-main-logo-preview.png)
 
 # Will's Websites
 
