@@ -316,6 +316,10 @@
     box-shadow: $shadow;
     overflow: hidden;
 
+    @media ($tablet-max) {
+      border-radius: 20px;
+    }
+
     @media ($tablet) and ($height-min) {
       width: calc(60% + 50px);
       padding-left: 50px;
