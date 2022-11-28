@@ -1,23 +1,25 @@
 ![Will's Websites Logo Preview](./src/img/readme-preview/main-logo-preview.png)
+
 # Will's Websites
-## Hello! Welcome to Will's Websites. 
+
+## Hello! Welcome to Will's Websites.
 
 There are three main subpages on the website:
+
 - [Projects](#projects)
 - [Meet Will](#meet-will)
 - [Contact](#contact)
 
-![Will's Websites Home Page Preview](./src/img/social/home.jpg)
+---
 
-***
 ## Projects
 
 Carefully crafted websites with a focus on design and user experience — built with modern technologies and techniques.
 
 ![Projects Page Preview](./src/img/readme-preview/projects-page-preview.png)
 
-
 ### View live websites and practice/training projects
+
 #### Live Websites
 
 In the live website section you can view 8 featured live websites. Every item in desktop and mobile previews of the projects is built out in code rather than an image — besides the background images that is. You can even see on mobile the short url's on the preview url bar can be copy/pasted. The projects items themsevles are created in React in order to keep the html document lean and keep down on repetitive code.
@@ -32,7 +34,8 @@ Training projects focused primarily on JavaScript and React. The section itself 
 
 ##### At the end of the Project page you can view the link to website repository and choose to fill out the contact form if you desire.
 
-***
+---
+
 ## Meet Will
 
 The Meet Will page utilizes an intersection observer to neatly display the main areas of focus in a scrolling digital resume.
@@ -41,12 +44,14 @@ There you can view my work history (with a link to LinkedIn), education, skills 
 
 ![Meet Will Page Preview](./src/img/readme-preview/meet-will-preview.png)
 
-***
+---
+
 ## Contact
 
 I'm excited to hear from you!
 
 ![Contact Page Preview](./src/img/readme-preview/contact-preview.png)
 
-***
+---
+
 [Open Will's Websites](https://www.willswebsitesdesign.com)
