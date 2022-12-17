@@ -35,11 +35,11 @@ $(document).ready(function () {
   const websiteCount = document.getElementById("website-count");
 
   const barAnimation = function () {
-    if (window.matchMedia('(prefers-reduced-motion').matches) {
-      websitesBar.style.height = 92 * 0.8 + "%";
-      websiteCount.textContent = Math.floor(92);
+    if (window.matchMedia("(prefers-reduced-motion").matches) {
+      websitesBar.style.height = 94 * 0.8 + "%";
+      websiteCount.textContent = Math.floor(94);
       return;
-    };
+    }
 
     setTimeout(() => {
       let height = 1;
@@ -52,10 +52,10 @@ $(document).ready(function () {
       };
 
       function frame() {
-        if (height >= 92) {
+        if (height >= 94) {
           clearInterval(adjustHeight);
         } else if (height >= 88) {
-          websitesHandler(0.03);
+          websitesHandler(0.04);
         } else if (height >= 82) {
           websitesHandler(0.07);
         } else if (height >= 70) {
@@ -79,7 +79,7 @@ $(document).ready(function () {
   if (window.matchMedia("(min-width: 768px)").matches) {
     barAnimation();
   } else {
-    websitesBar.style.height = 92 * 0.8 + "%";
-    websiteCount.textContent = Math.floor(92);
+    websitesBar.style.height = 94 * 0.8 + "%";
+    websiteCount.textContent = Math.floor(94);
   }
 });
